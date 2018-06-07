@@ -1,0 +1,78 @@
+.term-control {
+    border: solid 1px #888;
+    display: inline-block;
+    padding: 2px;
+}
+
+.support-list {
+    display: inline-block;
+}
+
+.support-h {
+    height: 35px;
+    border-bottom-width: 4px;
+    padding-bottom: 2px;
+    border-bottom-style: solid;
+    border-color: #00118c;
+    line-height: 1.2;
+    width: 70px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.support-cell {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    margin: 2px;
+    text-align: center;
+    color: white;
+    vertical-align: middle;
+    outline: 1px solid #584E3B;
+}
+
+.support-cell.support-full {
+    background-color: #39b54a;
+}
+
+.support-cell.support-partial {
+    background-color: #a8bd04;
+}
+
+.support-cell.support-unparsable {
+    background-color: #ff0000;
+}
+
+.support-cell.support-ignored {
+    background-color: #c44230;
+}
+
+.spaced-support-bar {
+    display: inline-block;
+    margin-left: 70px;
+}
+
+.term-param {
+    color: blueviolet;
+    text-decoration: underline;
+}
+
+.seq-description {margin-top: 2em;}
+
+table.invisible-table td, table.invisible-table th {
+    padding: 3px 2px;
+}
+
+table.visible-table {
+    text-align: left;
+    border-collapse: collapse;
+}
+table.visible-table td, table.visible-table th {
+    border: 1px solid #AAAAAA;
+    padding: 3px 2px;
+}
+table.visible-table tr:nth-child(even) {
+    background: #EBF5FF;
+}
+table.visible-table thead th {
+    font-weight: bold;
+}

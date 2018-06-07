@@ -1,0 +1,75 @@
+{% extends "layout.html" %}
+{% from "macros/seq.html" import seq %}
+{% from "macros/seq.html" import seq_list %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block body %}
+  <div class="container">
+
+  <h2>{{ this.title }}</h2>
+  {{ seq(this.seq) }}
+  <div class='spaced-support-bar'>
+    {% if this.implnotes %}
+    {% for impl, params in bag('impls').items() %}
+        {% for blk in this.implnotes.blocks %}
+        {% if impl == blk.impl %}
+        <div class='support-list'><div class='support-h'>{{blk.impl}}</div><div class='support-cell support-{{blk.level}}'>
+        {% if blk.level == "full" %}
+        ✔
+        {% elif blk.level == "partial" %}
+        ✓
+        {% elif blk.level == "ignored" %}
+        ∅
+        {% elif blk.level == "unparsable" %}
+        ☹
+        {% endif %}
+       </div></div>
+        {% endif %}
+        {% endfor %}
+    {% endfor %}
+    {% endif %}
+  </div>
+  <div>
+    {% for blk in this.seq.blocks %}
+    {% if blk._flowblock == 'numeric_parameter' and blk.default %}
+        {{ blk.name }} = {{ blk.default }} <br>
+    {% endif %}
+    {% endfor %}
+  </div>
+  <div class='seq-description'>
+  {{ this.body }}
+  </div>
+  {% set sub_cmds = site.query('/seq').filter(F._id.startswith_cs(this._id + '-')) %}
+  {% if sub_cmds.count() %}
+  <div>
+    <p>See these sub commands:</p>
+    {{ seq_list(sub_cmds) }}
+  </div>
+  {% endif %}
+
+     {% if this.implnotes %}
+     {% for impl, params in bag('impls').items() %}
+        {% for blk in this.implnotes.blocks %}
+        {% if impl == blk.impl %}
+        {% if blk.since or blk.body %}
+        <h4>{{blk.impl}} (
+        {% if blk.level == "full" %}
+        ✔
+        {% elif blk.level == "partial" %}
+        ✓
+        {% elif blk.level == "ignored" %}
+        ∅
+        {% elif blk.level == "unparsable" %}
+        ☹
+        {% endif %}
+        )</h4>
+        {% if blk.since %}
+        <p>since: {{ blk.since }}</p>
+        {% endif %}
+        {{ blk.body }}
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+    {% endfor %}
+    {% endif %}
+  </div>
+{% endblock %}

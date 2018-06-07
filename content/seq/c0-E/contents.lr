@@ -1,0 +1,32 @@
+title: Answerback (ENQ)
+---
+body: Sends "answer back" string. This is genereally configurable.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body:
+
+Defaults to empty string.
+Configurable via "answerbackString" resource.
+#### impl ####
+impl: konsole
+----
+level: full
+----
+since: 
+----
+body: Fixed to an empty string.
+---
+seq:
+
+#### c0 ####
+name: ENQ
+----
+hex: 05

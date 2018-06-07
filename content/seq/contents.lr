@@ -1,0 +1,63 @@
+_model: sequence-list
+---
+title: Escape Sequences
+---
+body:
+
+Additionally there are character set definition sequences that follow a distinct pattern.
+These sequences are not used in UTF-8 mode but only in traditional 7 or 8 bit ISO-2022 mode.
+
+<table class='visible-table'>
+<tr><th>Sequence shape</th><th>Select Characterset Result</th></tr>
+<tr><td>ESC ( rest</td><td>-> Setup G0 charset with 94 characters</td></tr>
+<tr><td>ESC ) rest</td><td>-> Setup G1 charset with 94 characters</td></tr>
+<tr><td>ESC * rest</td><td>-> Setup G2 charset with 94 characters</td></tr>
+<tr><td>ESC + rest</td><td>-> Setup G3 charset with 94 characters</td></tr>
+<tr></tr>
+<tr><td>ESC - rest96</td><td>-> Setup G1 charset 96 characters</td></tr>
+<tr><td>ESC . rest96</td><td>-> Setup G2 charset 96 characters</td></tr>
+<tr><td>ESC / rest96</td><td>-> Setup G3 charset 96 characters</td></tr>
+</table>
+
+<p>Where rest is:</p>
+<table class='visible-table'>
+<tr><th>rest</th><th>Character set</th></tr>
+<tr><td>B</td><td>ASCII</td></tr>
+<tr><td>A</td><td>British</td></tr>
+<tr><td>0</td><td>DEC_Spec_Graphic</td></tr>
+<tr><td>1</td><td>DEC_Alt_Chars</td></tr>
+<tr><td>2</td><td>DEC_Alt_Graphics</td></tr>
+<tr><td>&lt;</td><td>DEC_Supp</td></tr>
+<tr><td>4</td><td>Dutch</td></tr>
+<tr><td>5</td><td>Finnish</td></tr>
+<tr><td>C</td><td>Finnish2</td></tr>
+<tr><td>R</td><td>French</td></tr>
+<tr><td>f</td><td>French2</td></tr>
+<tr><td>Q</td><td>French_Canadian</td></tr>
+<tr><td>K</td><td>German</td></tr>
+<tr><td>Y</td><td>Italian</td></tr>
+<tr><td>E</td><td>Norwegian_Danish2</td></tr>
+<tr><td>6</td><td>Norwegian_Danish3</td></tr>
+<tr><td>Z</td><td>Spanish</td></tr>
+<tr><td>7</td><td>Swedish</td></tr>
+<tr><td>H</td><td>Swedish2</td></tr>
+<tr><td>=</td><td>Swiss</td></tr>
+<tr><td>A</td><td>British_Latin_1,</td></tr>
+<tr><td>&gt;</td><td>DEC_Technical</td></tr>
+<tr><td>9</td><td>French_Canadian2</td></tr>
+<tr><td>`</td><td>Norwegian_Danish</td></tr>
+<tr><td> %5</td><td>DEC_Supp_Graphic</td></tr>
+<tr><td>% 6</td><td>Portugese</td></tr>
+<tr><td>% 0</td><td>no change?</td></tr>
+<tr><td>% 2</td><td>no change?</td></tr>
+<tr><td>% 3</td><td>no change?</td></tr>
+<tr><td>% =</td><td>no change?</td></tr>
+</table>
+
+<p>Where rest96 is:</p>
+<table class='visible-table'>
+<tr><th>rest96</th><th>Character set</th></tr>
+<tr><td>A</td><td>Latin-1 Supplemental</td></tr>
+</table>
+
+See https://github.com/ThomasDickey/xterm-snapshots/blob/master/charsets.c for detailed character mapping tables.

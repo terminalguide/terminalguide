@@ -1,0 +1,110 @@
+{% macro seq(l) %}
+    <div class='term-control'>
+    {% for blk in l.blocks %}
+    {% if blk._flowblock == 'csi' %}
+        <span class='term-literal'><ruby>ESC<rt>1B</rt>[<rt>5B</rt></ruby></span>
+    {% elif blk._flowblock == 'numeric_parameter' %}
+        {% if loop.previtem._flowblock == 'numeric_parameter' or loop.previtem._flowblock == 'numeric_fixed' %}
+        <span class='term-literal'><ruby>;<rt>3b</rt></ruby></span>
+        {% endif %}
+        <span class='term-param'><ruby>Ⓝ<rt>{{blk.name}}</rt></ruby></span>
+    {% elif blk._flowblock == 'numeric_fixed' %}
+        {% if loop.previtem._flowblock == 'numeric_parameter' or loop.previtem._flowblock == 'numeric_fixed' %}
+        <span class='term-literal'><ruby>;<rt>3b</rt></ruby></span>
+        {% endif %}
+        <span class='term-literal'><ruby>{{ blk.val }}<rt>{{blk.val|hex}}</rt></ruby></span>
+    {% elif blk._flowblock == 'final' %}
+        <span class='term-literal'><ruby>{{blk.name}}<rt>{{blk.name|hex}}</rt></ruby></span>
+    {% elif blk._flowblock == 'intermediate' %}
+    {% if blk.name != 'SPACE' %}
+        <span class='term-literal'><ruby>{{blk.name}}<rt>{{blk.name|hex}}</rt></ruby></span>
+    {% else %}
+        <span class='term-literal'><ruby>␣<rt>20</rt></ruby></span>
+    {% endif %}
+    {% elif blk._flowblock == 'c0' %}
+        <span class='term-literal'><ruby>{{blk.name}}<rt>{{blk.hex}}</rt></ruby></span>
+    {% elif blk._flowblock == 'esc' %}
+        <span class='term-literal'><ruby>ESC<rt>1B</rt></ruby></span>
+    {% elif blk._flowblock == 'dcs' %}
+        <span class='term-literal'><ruby>ESC<rt>1B</rt></ruby> <ruby>P<rt>50</rt></ruby></span>
+    {% elif blk._flowblock == 'osc' %}
+        <span class='term-literal'><ruby>ESC<rt>1B</rt></ruby> <ruby>]<rt>5D</rt></ruby></span>
+    {% elif blk._flowblock == 'st' %}
+        <span class='term-literal'><ruby>ESC<rt>1B</rt></ruby> <ruby>\<rt>5C</rt></ruby></span>
+    {% endif %}
+    {% endfor %}
+    </div>
+{% endmacro %}
+
+{% macro seq_simple(l) %}
+    <div class='term-control-simple'>
+    {% for blk in l.blocks %}
+    {% if blk._flowblock == 'csi' %}
+        <span class='term-literal'>ESC [</span>
+    {% elif blk._flowblock == 'numeric_parameter' %}
+        {% if loop.previtem._flowblock == 'numeric_parameter' or loop.previtem._flowblock == 'numeric_fixed' %}
+        <span class='term-literal'>;</span>
+        {% endif %}
+        <span class='term-param'>Ⓝ</span>
+    {% elif blk._flowblock == 'numeric_fixed' %}
+        {% if loop.previtem._flowblock == 'numeric_parameter' or loop.previtem._flowblock == 'numeric_fixed' %}
+        <span class='term-literal'>;</span>
+        {% endif %}
+        <span class='term-literal'>{{ blk.val }}</span>
+    {% elif blk._flowblock == 'final' %}
+        <span class='term-literal'>{{blk.name}}</span>
+    {% elif blk._flowblock == 'intermediate' %}
+    {% if blk.name != 'SPACE' %}
+        <span class='term-literal'>{{blk.name}}</span>
+    {% else %}
+        <span class='term-literal'>␣</span>
+    {% endif %}
+    {% elif blk._flowblock == 'c0' %}
+        <span class='term-literal'>{{blk.name}}</span>
+    {% elif blk._flowblock == 'esc' %}
+        <span class='term-literal'>ESC</span>
+    {% elif blk._flowblock == 'dcs' %}
+        <span class='term-literal'>ESC P</span>
+    {% elif blk._flowblock == 'osc' %}
+        <span class='term-literal'>ESC ]</span>
+    {% elif blk._flowblock == 'st' %}
+        <span class='term-literal'>ESC \</span>
+    {% endif %}
+    {% endfor %}
+    </div>
+{% endmacro %}
+
+{% macro seq_list(l) %}
+    <table class='invisible-table'>
+    <tr>
+    <td></td><td></td><td></td>
+    {% for impl, params in bag('impls').items() %}
+    <td>{{impl}}</td>
+    {% endfor %}
+    </tr>
+    {% for s in l %}
+    <tr>
+    <td>{{ seq_simple(s.seq) }}</td><td>&nbsp;&nbsp;</td><td><a href='{{ s|url }}'>{{ s.title }}</a></td>
+    {% for impl, params in bag('impls').items() %}
+        <td>
+        {% if s.implnotes %}
+        {% for blk in s.implnotes.blocks %}
+        {% if impl == blk.impl %}
+        {% if blk.level == "full" %}
+        ✔
+        {% elif blk.level == "partial" %}
+        ✓
+        {% elif blk.level == "ignored" %}
+        ∅
+        {% elif blk.level == "unparsable" %}
+        ☹
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+        </td>
+    {% endfor %}
+    </tr>
+    {% endfor %}
+    </table>
+{% endmacro %}

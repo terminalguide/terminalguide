@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+{% from "macros/seq.html" import seq_simple %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block body %}
+  <div class="container">
+  <h2>{{ this.title }}</h2>
+    <table>
+    <tr>
+    <td></td><td></td><td></td>
+    {% for impl, params in bag('impls').items() %}
+    <td>{{impl}}</td>
+    {% endfor %}
+    </tr>
+    {% for s in this.children %}
+    <tr>
+    <td>{{ s.number }}</td><td>&nbsp;&nbsp;</td><td><a href='{{ s|url }}'>{{ s.title }}</a></td>
+    {% for impl, params in bag('impls').items() %}
+        <td>
+        {% if s.implnotes %}
+        {% for blk in s.implnotes.blocks %}
+        {% if impl == blk.impl %}
+        {% if blk.level == "full" %}
+        ✔
+        {% elif blk.level == "ignored" %}
+        ∅
+        {% elif blk.level == "unparsable" %}
+        ☹
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+        </td>
+    {% endfor %}
+    </tr>
+    {% endfor %}
+  </div>
+{% endblock %}

@@ -1,0 +1,33 @@
+title: Bell (BEL)
+---
+body:
+
+Traditionally rings a bell.
+
+Current implementation vary in how this is interpretet. Most implementations still support an audible signal but often also offer setting window manager urgency hints or other advanced reactions.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: audible beep, urgency hint, visual bell, raise window
+#### impl ####
+impl: konsole
+----
+level: full
+----
+since: 
+----
+body: audible beep, visual bell, KNotify
+---
+seq:
+
+#### c0 ####
+name: BEL
+----
+hex: 07
