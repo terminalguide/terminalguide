@@ -1,0 +1,5 @@
+[build]
+  base    = "."
+  publish = "_site-build"
+  command = "lektor build --output-path _site-build"
+
