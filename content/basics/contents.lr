@@ -1,8 +1,6 @@
-_model: page2
+_model: page
 ---
 title: Basics
----
-_template: page.html
 ---
 body:
 
