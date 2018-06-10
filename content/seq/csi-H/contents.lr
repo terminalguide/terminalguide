@@ -1,0 +1,45 @@
+title: Set Cursor Position (CUP)
+---
+body:
+
+Move cursor to the position indicated by `row` and `column`
+
+If `column` is 0, it is adjusted to 1. If `column` is greater than the right-most column it is adjusted to the right-most column.
+
+If `row` is 0, it is adjusted to 1. If `row` is greater than the bottom-most row it is adjusted to the bottom-most row.
+
+`column` == 1 is the left-most column. `row` == 1 is the top-most row.
+
+{{ snip('unset-pending-wrap') }}
+
+If [origin mode][mode-p6] is set the cursor row will be moved relative to the top  margin row and adjusted to be above or at bottom-most row in the {current scroll region}.
+
+If origin mode is set and  [left and right margin mode][mode-p69] is set the cursor will  be moved relative to the left margin column and adjusted to be on or left of the right margin column.
+
+[mode-p6]: /mode/p6/
+[mode-p69]: /mode/p69/
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### numeric_parameter ####
+name: row
+----
+default: 1
+#### numeric_parameter ####
+name: column
+----
+default: 1
+#### final ####
+name: H
