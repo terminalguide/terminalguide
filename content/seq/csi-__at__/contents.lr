@@ -1,0 +1,49 @@
+title: Insert Blanks (ICH)
+---
+body:
+
+Inserts `amount` spaces at current cursor position moving existing cell contents to the right.
+Cell content that would be copied to the right of the {right margin} of the {current scroll region} is discarded. The cursor position is not changed.
+
+{{snip('unset-pending-wrap')}}
+
+If the insert of the spaces splits a multi cell character that character is replaced by spaces.
+If no right margin is set, if the move splits a multi cell character that character is replaced by spaces. In case a right margin is set, the multi cell character is clipped at the right margin.
+<!-- xterm test cases:
+no margins:
+echo -ne "\033[2J\033[1;1H\033[42mあ23ぬ\033[1;3H\033[0m\033[75@\n"
+margins:
+echo -ne "\033[2J\033[1;1H\033[?69h\033[1;3s\033[42mあ23ぬ\033[0m\033[1;1H\033[2@\033[?69l\n\n"
+-->
+
+All cleared space is colored according to the current {SGR state}.
+
+The cells erased will be copy-able to via selection.
+
+In [left and right margin mode][mode-p69] the margins are respected. If the current cursor position is outside of the current scroll region nothing is changed.
+
+[mode-p69]: /mode/p69/
+
+
+
+---
+seq:
+
+#### csi ####
+#### numeric_parameter ####
+name: amount
+----
+default: 1
+#### final ####
+name: @
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 

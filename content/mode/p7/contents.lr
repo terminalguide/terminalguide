@@ -1,0 +1,29 @@
+title: Wraparound Mode (DECAWM)
+---
+body:
+
+Enable or disable automatic line wrapping.
+
+If disabled:
+* cursor will stop advancing on right-most column of the scroll region or screen. Printing additional characters will (repeatedly) overwrite the cell at the cursor position.
+
+If enabled:
+* printing to the last cell in the scroll region or screen will leave the cursor at that cell and set the pending wrap  state of the cursor.
+* printing  while the pending wrap state of the cursor is set will wrap back to the left-most column in the scroll region, unset the pending wrap state and invoke {{seq_link('c=ESC-D')}}. In some terminals it also saves the information that the line was wrapped for resize and clipboard heuristics.
+
+See [printing](/printing) for a detailed discussion of the wrapping process.
+
+[c=ESC-D]: /seq/c=ESC-D
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+number: ?7

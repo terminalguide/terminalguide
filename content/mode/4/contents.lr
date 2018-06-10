@@ -1,0 +1,26 @@
+title: Insert Mode (IRM)
+---
+body:
+
+Printing either overwrites the cell the cursor points to or shifts it's contents to the right.
+
+If disabled:
+* Printed text will overwrite the cell the cursor points to.
+
+If enabled:
+* The contents of the cell the cursor points and all cells right to it is shifted to right before the character is printed.
+
+See [printing](/printing) for a detailed discussion of the process.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+number: 4

@@ -1,0 +1,34 @@
+title: Scroll Up (SU)
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body:
+
+TODO scroll-lock
+---
+seq:
+
+#### csi ####
+#### numeric_parameter ####
+name: amount
+----
+default: 1
+#### final ####
+name: S
+---
+body:
+
+Removes `amount` lines from the top of the scroll region
+
+TODO TODO TODO
+
+If scrolling clears whole screen, then TODO
+
+Does not change the (absolute) cursor position.

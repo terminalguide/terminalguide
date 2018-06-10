@@ -1,0 +1,40 @@
+_model: page
+---
+title: Printing characters
+---
+body:
+
+#### markdown ####
+body:
+
+When an application sends a character to the terminal that is not part of a control sequence and is a non control character the terminal adds this character to the cell array.
+
+TODO: zero width composing characters
+
+If the pending-wrap state is set:
+* If {{mode_link('p7')}} is set:
+ * some terminals save the fact that the line wrapped for their terminal resize and clipboard heuristics.
+ * TODO auto printing state
+ * invoke {{seq_link('c=ESC-D')}}
+ * Move the cursor to the left margin if the scrolling region
+* unset pending-wrap state
+
+<!-- TODO investigate xterm comment about the possibility that no space might be available in left right mode in some situations https://github.com/ThomasDickey/xterm-snapshots/blob/f004909722bfe0fd43324eb7bd889b4e22966620/charproc.c#L5115 -->
+
+<!-- TODO soft-hyphen handling -->
+
+If {{mode_link('p7')}} is set:
+* If the cursor is on or left of the right-most column in the scrolling region:
+ * If the [width](/width) of the printed character is bigger than the space between the cursor (inclusive) and the right-most column of the scrolling region, force a wrap as if the pending wrap state was set (don't force a second wrap if it was set)
+* Else:
+ * If the [width](/width) of the printed character is bigger than the space between the cursor (inclusive) and the right-most column of the screen, force a wrap as if the pending wrap state was set (don't force a second wrap if it was set)
+
+If {{mode_link('4')}} is active the current content of the cell pointed to by the cursor is moved right as if by invoking {{seq_link('csi-__at__')}} with the [width](/width) of the printed character.
+
+If the current {SGR state} include 'invisible' the character is replaced by the same number of spaces as it's original width. 
+
+Then the character is placed into the cell the cursor points to. If the width of the character is greater than 1 the cell and cells to the right are used. Then the cursor is moved right by the amount of cells corresponding to the width. If the cursor would cross the right margin in this mode the cursor is placed at the right margin and the pending wrap state is set.
+
+If update splits a multi cell character that character is erased by replacing it with spaces.
+
+The cells filled with the character or erased because of splitted multi cell characters is colored and styled according to the current {SGR state}.
