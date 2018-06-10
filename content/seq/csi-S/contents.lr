@@ -27,7 +27,7 @@ body:
 
 Removes `amount` lines from the top of the scroll region
 
-TODO TODO TODO
+{{snip('placeholder-page')}}
 
 If scrolling clears whole screen, then TODO
 
