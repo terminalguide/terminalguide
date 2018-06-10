@@ -19,6 +19,50 @@ def snip_resolver(name):
         val = 'SNIPPET missing: ' + name
     return val
 
+def mode_link(mode):
+    try:
+        ctx = get_ctx()
+        if not ctx:
+            return 'DEVMODE?'
+
+        pad = ctx.pad
+
+        record = pad.get('/mode/' + mode)
+        if record:
+            title = record['title']
+            if title.endswith(')'):
+                title = title[:title.rindex('(')]
+            title = title.lower()
+        else:
+            title = "mode not found: " + mode
+        return '[{title}]({url})'.format(title=title, url='/mode/' + mode)
+    except Exception as ex:
+        print('failed:', ex)
+        raise
+
+
+def seq_link(seq):
+    try:
+        ctx = get_ctx()
+        if not ctx:
+            return 'DEVMODE?'
+
+        pad = ctx.pad
+
+        record = pad.get('/seq/' + seq)
+        if record:
+            title = record['title']
+            if title.endswith(')'):
+                title = title[:title.rindex('(')]
+            title = title.lower()
+        else:
+            title = "Sequence not found: " + seq
+        return '[{title}]({url})'.format(title=title, url='/seq/' + seq)
+    except Exception as ex:
+        print('failed:', ex)
+        raise
+
+
 def jinja_hex(s):
     r = []
     for ch in s:
@@ -32,3 +76,5 @@ class ToolsPlugin(Plugin):
     def on_setup_env(self, **extra):
         self.env.jinja_env.filters['hex'] = jinja_hex
         self.env.jinja_env.globals['snip'] = snip_resolver
+        self.env.jinja_env.globals['mode_link'] = mode_link
+        self.env.jinja_env.globals['seq_link'] = seq_link
