@@ -1,6 +1,23 @@
 # -*- coding: utf-8 -*-
-from lektor.pluginsystem import Plugin
+import os.path
 
+from lektor.pluginsystem import Plugin
+from lektor.context import get_ctx
+
+def snip_resolver(name):
+    ctx = get_ctx()
+    if not ctx:
+        return 'DEVMODE?'
+    val = 'SNIPPET ' + name
+    env = ctx.env
+    filename = os.path.join(env.root_path, 'snippets', name + '.txt')
+    if os.path.exists(filename):
+        with open(filename, 'r') as f:
+            val = f.read()
+        ctx.record_dependency(filename)
+    else:
+        val = 'SNIPPET missing: ' + name
+    return val
 
 def jinja_hex(s):
     r = []
@@ -14,3 +31,4 @@ class ToolsPlugin(Plugin):
 
     def on_setup_env(self, **extra):
         self.env.jinja_env.filters['hex'] = jinja_hex
+        self.env.jinja_env.globals['snip'] = snip_resolver
