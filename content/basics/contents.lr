@@ -1,0 +1,85 @@
+_model: page2
+---
+title: Basics
+---
+_template: page.html
+---
+body:
+
+#### markdown ####
+body:
+
+Applications using a terminal as user interface interact with a terminal program with a bidirectional stream of bytes.
+
+The interaction of the program with the terminal is restricted to this byte channel. This byte channel is usually mediated by a tty-layer in the kernel. This layer can possibly transform the byte streams in both directions and is stateful. The application can control this layer by OS specific calls (out of band).
+#### diagram ####
+scale: 0.8
+----
+body:
+
+
++----------------------+      input    +---------------------+  transformed  +---------------------+
+|                      | +-----------> |                     | +-----------> |                     |
+|  Terminal            |               |                     |     input     |  Application        |
+|                      |               |  Kernel             |               |                     |
+|                      |               |  Tty - Layer        | <--termios--> |                     |
+|                      |  transformed  |                     |               |                     |
+|                      | <-----------+ |                     | <-----------+ |                     |
++----------------------+     output    +---------------------+     output    +---------------------+
+#### markdown ####
+body: This simple model  might be extended by many additional layers if remote connections or intercepting programs are involved.
+#### diagram ####
+scale: 0.8
+----
+body:
+
+    +-----------+       +---------+       +------------+
+    |           |       |         |       |            |
+    | Terminal  | <---> | kernel  | <---> | ssh client |
+    +-----------+       +---------+       +------+-----+
+                                                 :
+                                                 :
+                                                 : network
+                                                 :
+ +--------------+       +---------+       +------------+
+ |              |       |         |       |            |
+ | multiplexer  | <---> | kernel  | <---> | ssh server |
+ +--------------+       +---------+       +------------+
+
+      ^      ^
+      |      +-------------+
+      |                    |
+      |                    |
+      v                    v
+
+ +---------+          +---------+
+ |         |          |         |
+ | kernel  |          | kernel  |
+ +---------+          +---------+
+
+      ^                    ^
+      |                    |
+      v                    v
+
++--------------+     +--------------+
+|              |     |              |
+| Application  |     | Application  |
++--------------+     +--------------+
+#### markdown ####
+body:
+
+The communication between the application and the terminal consists of characters to display and in-band control information communicated by [control characters and escape sequences](/seq).
+
+The display model of an terminal is a two dimensional array of fixed size character cells. These cells have a character content (possible including [combining characters](/width)). Each cell also has additional attributes like foreground and background color and bold, etc.
+
+As special case there are some characters, that occupy two of these cells. For example Japanese characters. These characters can occupy any two bordering cells on the same line.
+
+Many terminal emulators additionally save information for lines and cells for heuristics concerning line rewrapping on terminal resize or clipboard copy operations from the terminal to other applications.
+
+The terminal maintains a cursor position that acts as a base for adding additional characters from the communication stream and for various control sequences. Depending on the state this cursor can also be visible for the user. The cursor can point to any of the cells of the terminal. Additional if a character is added to the last column of a line it has a special state that signifies a "pending line wrap". In this state the cursor is reported back on the last column of the line and (if visible) is also shown on the last column. But adding an additional character first executes the pending wrap (moving the cursor to the left most column) and then adds the character. (FIXME scrolling region)
+
+The basic operation for printing characters to the screen, is that the application outputs a character (that is not a control character or part of an escape sequence) which then overwrites the cell contents at the location of the cursor (possible first executing a pending wrap) and then moves the cursor right by the number of cells occupied by the character. If the remaining space is not sufficient for a wide character the terminal will wrap before handling that character.
+
+Some terminals maintain a scrollback buffer in addition to the character data in the cell described above to save lines that have been scrolled out of the character architecturally defined array of cells. These are used to allow the user of the terminal to view these lines but generally do not influence terminal operation as observable by the application (some terminals move data back from the scrollback buffer when a terminal is resized to a larger number of rows)
+
+The operation of the terminal is controlled by a set of [modes](/mode) and various additional state. This state includes the current attributes used for changed cells, scrolling regions and additional data.
