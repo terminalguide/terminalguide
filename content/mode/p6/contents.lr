@@ -1,0 +1,16 @@
+title: Cursor Origin
+---
+body: {{snip('placeholder-page')}}
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: TODO: Seems to be cleared on window resize
+---
+number: ?6

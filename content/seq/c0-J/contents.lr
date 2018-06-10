@@ -1,0 +1,28 @@
+title: Line Feed (LF)
+---
+body:
+
+Invoke {{seq_link('c=ESC-D')}}
+
+If {{mode_link('20')}} is set:
+* Invoke {{seq_link('c0-M')}}
+
+TODO auto printing state
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### c0 ####
+name: LF
+----
+hex: A0

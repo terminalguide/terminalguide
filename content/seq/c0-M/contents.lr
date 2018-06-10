@@ -1,0 +1,33 @@
+title: Carriage Return (CR)
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### c0 ####
+name: CR
+----
+hex: 0D
+---
+body:
+
+Move the cursor to the left-most column.
+
+{{snip('unset-pending-wrap')}}
+
+If [left and right margin mode][mode-p69] is set and a left margin set and the cursor is on or right of the left margin column it is moved to the left margin. If the cursor is left of the left margin the cursor is moved to column 0.
+
+If a left margin is set and [origin mode][mode-p6] is set the cursor will always move to the left margin column.
+
+[mode-p6]: /mode/p6/
+[mode-p69]: /mode/p69/
+

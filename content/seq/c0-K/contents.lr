@@ -1,0 +1,21 @@
+title: Vertical Tab (VT)
+---
+body: Same effect as {{seq_link('c0-J')}}
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### c0 ####
+name: VT
+----
+hex: 0B
