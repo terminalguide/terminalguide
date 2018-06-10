@@ -1,6 +1,10 @@
 {% extends "layout.html" %}
 {% block title %}{{ this.title }}{% endblock %}
 {% block body %}
+  <div class="container">
   <h2>{{ this.title }}</h2>
+  </div>
+  <div class="container">
   {{ this.body }}
+  </div>
 {% endblock %}
