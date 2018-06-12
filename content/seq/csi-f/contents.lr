@@ -1,0 +1,42 @@
+title:
+
+Alias: 
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### numeric_parameter ####
+name: row
+----
+default: 1
+#### numeric_parameter ####
+name: column
+----
+default: 1
+#### final ####
+name: f
+---
+body:
+
+Alias for [Set Cursor Position][csi-H]
+
+[csi-H]: /seq/csi-H

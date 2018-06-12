@@ -1,0 +1,32 @@
+title: Select Cursor Style Steady Bar
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### numeric_fixed ####
+val: 6
+#### intermediate ####
+name: SPACE
+#### final ####
+name: q
+---
+body: Set the cursor style to left-side bar and non-blinking

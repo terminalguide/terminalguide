@@ -47,3 +47,18 @@ level: full
 since: 
 ----
 body: 
+#### impl ####
+impl: konsole
+----
+level: partial
+----
+since: 
+----
+body:
+
+The erased cells are not colored according to current SGR state.
+
+If the cursor points inside a multi cell character  the behaviour differs from other terminals.
+<!-- reproducer 
+echo -en '\033cAあDE\nAあDE\033[1;3H\033[41m\033[1@\n\nx\n\033[0m'
+-->

@@ -1,0 +1,38 @@
+title: Scroll Down (SD)
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: todo
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: todo
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### numeric_parameter ####
+name: amount
+----
+default: 1
+#### final ####
+name: T
+---
+body:
+
+See also [Track Mouse][csi-T_5arg] which shares this code. This command is distingished by having only one parameter and having the first parameter != 0
+
+{{snip('placeholder-page')}}
+
+[csi-T_5arg]: /seq/csi-T_5arg

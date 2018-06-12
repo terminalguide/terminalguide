@@ -1,0 +1,30 @@
+title: Report Current Working Directory
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: ignored
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: todo
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### osc ####
+#### numeric_fixed ####
+val: 7
+#### numeric_parameter ####
+name: p1
+----
+default: 

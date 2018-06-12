@@ -1,0 +1,45 @@
+title: Reset Mode (?) (RM)
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: Supports deactivating up to 30 modes in one sequence.
+#### impl ####
+impl: konsole
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### numeric_parameter ####
+name: mode
+----
+default: 0
+#### intermediate ####
+name: ?
+#### final ####
+name: l
+---
+body:
+
+TODO: This sequence takes multiple parameters each with the same interpretation
+
+Set mode to active.
+
+See [the modes prefixed with '?'][mode] for possible modes to use with this sequence.
+
+Modes can be activated using [Set Mode (?)][csi-h|P].
+
+[mode]: /mode
+[csi-h|P]: /seq/csi-h|P

@@ -1,0 +1,24 @@
+title: Mode TODO ?1004
+---
+body: {{snip('placeholder-page')}}
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: todo
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: todo
+----
+since: 
+----
+body: 
+---
+number: ?1004

@@ -1,0 +1,43 @@
+title: Cursor Left (CUB)
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### numeric_parameter ####
+name: amount
+----
+default: 1 (0 is 1)
+#### final ####
+name: D
+---
+body:
+
+Move the cursor to the left `amount` cells.
+
+{{snip('unset-pending-wrap')}}
+
+If {{mode_link('p45')}} is not set:
+* Move the cursor `amount` cells left. If it would cross the left-most column of the scrolling region, stop at the left-most column of the scrolling region. If the cursor would move left of the left-most column of the screen, move to the left most column of the screen.
+
+Else:
+* If the pending wrap state is set, reduce `amount` by one.
+* TODO

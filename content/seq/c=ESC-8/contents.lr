@@ -1,0 +1,48 @@
+title: Restore Cursor (DECRC)
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: partial
+----
+since: 
+----
+body:
+
+As of xterm 333 in [left and right margin mode][mode-p69] restoring of the cursor position is broken.
+
+[mode-p69]: /mode/p69/
+#### impl ####
+impl: konsole
+----
+level: todo
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### esc ####
+#### final ####
+name: 8
+---
+body:
+
+Restore cursor position and other state.
+
+To save the state use [Save Cursor][c=ESC-7]
+
+The following state is restored:
+* GL and GR character sets.
+* G0, G1, G2, G3 character sets.
+* BOLD | BLINK | UNDERLINE | INVERSE | ATR_FAINT | ATR_ITALIC | ATR_STRIKEOUT | ATR_DBL_UNDER | ATR_DIRECT_FG | ATR_DIRECT_BG | BG_COLOR | FG_COLOR | INVISIBLE | PROTECTED
+* TODO what does this mean for color exactly?
+* the saved cursor position is relative to the origin set via orign mode.
+* TODO do_wrap
+
+If not save was done before values are reset to their hard reset values. (TODO check if this is true)
+
+[c=ESC-7]: /seq/c=ESC-7

@@ -1,0 +1,46 @@
+title: Set Top and Bottom Margins (DECSTBM)
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: partial
+----
+since: 
+----
+body: If `bottom` is bigger than the number of the bottom-most row, the sequence is ignored.
+---
+seq:
+
+#### csi ####
+#### numeric_parameter ####
+name: top
+----
+default: 1
+#### numeric_parameter ####
+name: bottom
+----
+default: see description
+#### final ####
+name: r
+---
+body:
+
+Set Top and Bottom Margins
+
+If `bottom` is not specified, 0 or bigger than the number of the bottom-most row, it is adjusted to the number of the bottom most row.
+
+if `top` is below the bottom-most row, adjust it to the bottom-most row.
+
+If `top` < `bottom` set the top and bottom row of the scroll region according to `top` and `bottom` and move the cursor to the top-left cell of the display (when in [origin mode][mode-p6] is set to the top-left cell of the scroll region).
+
+[mode-p6]: /mode/p6/

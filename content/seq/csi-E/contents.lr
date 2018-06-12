@@ -1,0 +1,41 @@
+title: Cursor Next Line (CNL)
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: ignored
+----
+since: 
+----
+body: https://bugs.kde.org/show_bug.cgi?id=331656
+---
+seq:
+
+#### csi ####
+#### numeric_parameter ####
+name: amount
+----
+default: 1
+#### final ####
+name: E
+---
+body:
+
+Move ´amount` lines down and to the beginning of the line.
+
+If `amount` is 0, it is adjusted to 1.
+
+This is a composition of [Cursor Down][csi-B] with the given `amount` parameter and [Carriage Return][c0-M].
+
+[c0-M]: /seq/c0-M
+[csi-B]: /seq/csi-B

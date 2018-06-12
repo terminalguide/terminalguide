@@ -1,0 +1,31 @@
+title: Open Url
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: ignored
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: ignored
+----
+since: 
+----
+body: From commented code in konsole source.
+---
+seq:
+
+#### osc ####
+#### numeric_fixed ####
+val: 31
+#### numeric_parameter ####
+name: p1
+----
+default: 
+#### st ####

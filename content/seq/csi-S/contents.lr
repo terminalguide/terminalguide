@@ -5,13 +5,19 @@ implnotes:
 #### impl ####
 impl: xterm
 ----
-level: full
+level: todo
 ----
 since: 
 ----
-body:
-
-TODO scroll-lock
+body: TODO scroll-lock
+#### impl ####
+impl: konsole
+----
+level: todo
+----
+since: 
+----
+body: 
 ---
 seq:
 

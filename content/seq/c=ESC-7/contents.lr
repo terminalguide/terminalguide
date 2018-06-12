@@ -1,0 +1,49 @@
+title: Save Cursor (DECSC)
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: partial
+----
+since: 
+----
+body:
+
+As of xterm 333 in [left and right margin mode][mode-p69] restoring of the cursor position is broken.
+
+[mode-p69]: /mode/p69/
+#### impl ####
+impl: konsole
+----
+level: todo
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### esc ####
+#### final ####
+name: 7
+---
+body:
+
+Save cursor position and further state.
+
+TODO: Fix this after fully documenting restore.
+
+The following state is saved:
+* current cursor position (row, column)
+* TODO: xw->flags
+* currently selected character set for gl and gr.
+* TODO do_wrap
+* currently selected color (TODO)
+
+One saved state is kept per screen (main / alternative). If for the current screen state was already saved it is overwritten.
+
+The state can be restored using [Restore Cursor][c=ESC-8]
+
+[c=ESC-8]: /seq/c=ESC-8

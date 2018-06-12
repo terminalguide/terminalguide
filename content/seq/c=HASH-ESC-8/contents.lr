@@ -1,0 +1,34 @@
+title: Fill Screen with E (DECALN)
+---
+body:
+
+Resets all margins and fills the whole screen with the character 'E'
+
+Sets the cursor to the top left corner.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: partial
+----
+since: 
+----
+body: Does not set the cursor position.
+---
+seq:
+
+#### esc ####
+#### intermediate ####
+name: #
+#### final ####
+name: 8

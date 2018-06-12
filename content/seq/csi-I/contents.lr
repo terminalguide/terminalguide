@@ -1,0 +1,32 @@
+title: Cursor Horizontal Forward Tabulation (CHT)
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### numeric_parameter ####
+name: amount
+----
+default: 1
+#### final ####
+name: I
+---
+body: Invoke {{seq_link('c0-I')}} `amount` times.

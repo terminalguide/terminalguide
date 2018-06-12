@@ -1,0 +1,32 @@
+title: Return Terminal ID (DECID)
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### esc ####
+#### final ####
+name: Z
+---
+body:
+
+Same as [Primary Device Attributes][csi-c] without parameters
+
+[csi-c]: /seq/csi-c

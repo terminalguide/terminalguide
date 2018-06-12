@@ -1,0 +1,42 @@
+title: Set Double Height Line Bottom Half (DECDHL)
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: Seems not to work with some fonts
+#### impl ####
+impl: konsole
+----
+level: todo
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### esc ####
+#### intermediate ####
+name: #
+#### final ####
+name: 4
+---
+body:
+
+Display double width and double height text.
+
+Sets a per line attribute that allows displaying double height text. For proper text display two lines with identical text content need to be output. The first line needs to be set with [Set Double Height Line Top Half][c=HASH-ESC-3] and the second line needs to be set with this control.
+
+If the line mode is switched from single width to this mode, the number of columns is halved. If the cursor was in the second half of the row, the cursor is moved to the new right-most column. The columns no longer visible keep their contents and are reveals when [Set Single Width Line][c=HASH-ESC-5] is set for the line.
+
+In [left and right margin mode][mode-p69] this control is ignored.
+
+[mode-p69]: /mode/p69/
+[c=HASH-ESC-3]: /seq/c=HASH-ESC-3/
+[c=HASH-ESC-5]: /seq/c=HASH-ESC-5/

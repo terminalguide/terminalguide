@@ -1,0 +1,32 @@
+title: Selective Erase Display [DISPATCH] (DECSED)
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### intermediate ####
+name: ?
+#### numeric_parameter ####
+name: cmd
+----
+default: 0
+#### final ####
+name: J

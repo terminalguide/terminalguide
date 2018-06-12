@@ -1,0 +1,32 @@
+body:
+
+Printable characters with value < 128 are using G3.
+
+See ECMA-043 for background
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### esc ####
+#### final ####
+name: o
+---
+title: Locking Shift 3 (LS3)

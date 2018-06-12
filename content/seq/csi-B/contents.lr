@@ -1,0 +1,43 @@
+title: Cursor Down (CUD)
+---
+body:
+
+Move the cursor down `amount` lines.
+
+{{snip('unset-pending-wrap')}}
+
+If the {current scroll region} is set and the cursor is on or above bottom-most line of it then the cursor may move down only until it reaches the bottom-most line of current scroll region.
+
+If the {current scroll region} is not set or the cursor is below bottom-most line of current scroll region it may move down until the bottom of the screen.
+
+If `amount` is greater than the maximum move distance then it is internally adjusted to the maximum. This sequence will not scroll the screen or scroll region.
+
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### numeric_parameter ####
+name: amount
+----
+default: 1
+#### final ####
+name: B

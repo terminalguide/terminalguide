@@ -1,0 +1,51 @@
+_model: page
+---
+title: Wide characters and combining characters
+---
+body:
+
+#### markdown ####
+body:
+
+## Combining Code Points
+
+Printing one or more zero width combining character after a positive width character combines those combining characters into the base character.
+<!-- test case: a + COMBINING DIAERESIS
+echo -ne "\033[2J\033[0;0Ha\xCC\x88xx\n"
+test case a + COMBINING DIAERESIS + COMBINING BREVE + COMBINING BREVE BELOW + COMBINING SHORT SOLIDUS OVERLAY
+(first two have a precomposed codepoint)
+echo -ne "\033[2J\033[0;0Ha\xCC\x88\0314\0206\xCC\xAE\0314\0267xx\n"
+test case i + COMBINING SHORT SOLIDUS OVERLAY + COMBINING BREVE BELOW + COMBINING DIAERESIS
+echo -ne "\033[2J\033[0;0Hi\0314\0267\xCC\xAE\0314\0206xx\n"
+-->
+### xterm
+saves 0-5 (option combiningChars: default 2) combining code points per cell in addition to the base character.
+If a the base character with the combining codepoint has a precomposed form xterm it does not take one of these storage slots by default(resource precompose).
+
+### vte
+TODO
+
+### konsole
+TODO
+
+### putty
+TODO
+(putty ignores at least COMBINING DIAERESIS)
+
+### urxvt
+TODO
+<!--
+seems to support min 5?
+echo -ne "\033[2J\033[0;0Ha\xCC\x88\0314\0206\xCC\xAE\0314\0267\xCD\xA2xx\n"
+-->
+
+
+
+### xterm allows late combining
+<!-- late combining test:
+echo -ne "\033[2J\033[0;0Haxx\033[0;0H\xCC\x88\n"
+-->
+When any cursor movement places the cursor on a cell printing just a combining character will compose that character to the already placed character in that cell (if the character width is not changed by that)
+
+Other implementations tend to just ignore the combining character
+

@@ -1,0 +1,31 @@
+title: Set Session Icon
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: ignored
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: todo
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### osc ####
+#### numeric_fixed ####
+val: 32
+#### numeric_parameter ####
+name: name
+----
+default: 
+#### st ####

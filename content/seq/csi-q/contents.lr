@@ -1,0 +1,32 @@
+title: Load LEDs (DECLL)
+---
+body: {{snip('placeholder-page')}}
+---
+seq:
+
+#### csi ####
+#### numeric_parameter ####
+name: cmd
+----
+default: 0
+#### final ####
+name: q
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: todo
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: ignored
+----
+since: 
+----
+body: 

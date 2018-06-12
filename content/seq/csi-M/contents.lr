@@ -1,0 +1,56 @@
+title: Delete Line (DL)
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: partial
+----
+since: 
+----
+body:
+
+`amount` == 0 is adjusted to 1
+
+xterm as of 333 has the follwing glitches:
+* in left and right margin mode mode with set margins the terminal needs to be forced to redraw to see the actual cell buffer contents.
+* in left and right margin mode mode with set margins behaviour with multi cell characters is erratic.
+#### impl ####
+impl: konsole
+----
+level: todo
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### numeric_parameter ####
+name: amount
+----
+default: 1
+#### final ####
+name: M
+---
+body:
+
+TODO ResetWrap
+
+Removes `amount` lines from the current cursor row down. The remaining lines to the bottom margin are shifted up and space from the bottom margin up is filled with empty lines.
+
+If the current cursor position is outside of the {current scroll region} it does nothing.
+
+If `amount` is greater than the remaining number of lines in the scrolling region it is adjusted down.
+
+In [left and right margin mode][mode-p69] the margins are respected; lines are only scrolled in the scroll region.
+
+If the cell movement splits a multi cell character that character cleared, by replacing it by spaces.
+
+All cleared space is colored according to the current {SGR state}.
+
+Moves the cursor to the left margin.
+
+[mode-p69]: /mode/p69/

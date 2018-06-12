@@ -1,0 +1,31 @@
+title: xxx (DECKPAM)
+---
+body:
+
+TODO
+Same as set mode ?66
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: todo
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### esc ####
+#### final ####
+name: =

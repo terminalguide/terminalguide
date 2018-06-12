@@ -1,0 +1,33 @@
+title: Shift Out (SO)
+---
+body:
+
+{{snip('placeholder-page')}}
+
+SO invokes G1 into GL
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### c0 ####
+name: SO
+----
+hex: 0E

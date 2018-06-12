@@ -1,0 +1,42 @@
+title: Tab Clear (TBC)
+---
+body:
+
+Clear tab stops.
+
+If `cmd` is 0, set the column that the cursor is on to be not a tab stop.
+
+IF `cmd` is 3, remove all tab stops.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: partial
+----
+since: 
+----
+body:
+
+If `cmd` is 0 and the cursor is in pending wrap state, this sequence does not have any effect.
+
+TODO: If `cmd` is 3 tab stops beyond the end of the screen might not be cleared? (might be observable after later resize)
+---
+seq:
+
+#### csi ####
+#### numeric_parameter ####
+name: cmd
+----
+default: 0
+#### final ####
+name: g

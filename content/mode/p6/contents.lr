@@ -7,10 +7,18 @@ implnotes:
 #### impl ####
 impl: xterm
 ----
-level: full
+level: todo
 ----
 since: 
 ----
 body: TODO: Seems to be cleared on window resize
+#### impl ####
+impl: konsole
+----
+level: todo
+----
+since: 
+----
+body: 
 ---
 number: ?6

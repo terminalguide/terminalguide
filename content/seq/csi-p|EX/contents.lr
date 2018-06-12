@@ -1,0 +1,30 @@
+title: Soft Reset (DECSTR)
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: todo
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: ignored
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### intermediate ####
+name: !
+#### final ####
+name: p
+---
+body: {{snip('placeholder-page')}}

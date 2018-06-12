@@ -1,0 +1,32 @@
+title: Linefeed mode
+---
+body:
+
+If unset:
+* {{seq_link('c0-J')}} is just a linefeed.
+
+If set:
+* {{seq_link('c0-J')}} automatically adds a {{seq_link('c0-M')}}
+
+Usually translation from Linefeed ('\n') is performed by the kernel tty layer not the terminal. Applications generally expect this mode to be unset.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: todo
+----
+since: 
+----
+body: 
+---
+number: 20

@@ -1,0 +1,44 @@
+title: Cursor Right (CUF)
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### numeric_parameter ####
+name: amount
+----
+default: 1
+#### final ####
+name: C
+---
+body:
+
+Move the cursor right `amount` lines.
+
+{{snip('unset-pending-wrap')}}
+
+If [left and right margin mode][mode-p69] is set and a right margin is set and the cursor is on or left of the right-most line of it then the cursor may move right only until it reaches the right-most column of current scroll region.
+
+If left and right margin mode is not set or a right margin is not set or the cursor is right of right-most column of current scroll region it may move right until the right-most column of the screen.
+
+If amount is greater than the maximum move distance then it is internally adjusted to the maximum. This sequence will not scroll the screen or scroll region.
+
+[mode-p69]: /mode/p69/

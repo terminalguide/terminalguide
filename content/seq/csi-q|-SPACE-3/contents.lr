@@ -1,0 +1,32 @@
+title: Select Cursor Style Blinking Underline
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### numeric_fixed ####
+val: 3
+#### intermediate ####
+name: SPACE
+#### final ####
+name: q
+---
+body: Set the cursor style to underline and blinking

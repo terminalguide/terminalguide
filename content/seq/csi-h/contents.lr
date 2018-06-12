@@ -1,0 +1,43 @@
+title: Set Mode (SM)
+---
+body:
+
+TODO: This sequence takes multiple parameters each with the same interpretation
+
+Set mode to active.
+
+See [the modes not prefixed with '?'][mode] for possible modes to use with this sequence.
+
+Modes can be deactivated using [Reset Mode][csi-l].
+
+[mode]: /mode
+[csi-l]: /seq/csi-l
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: Supports activating up to 30 modes in one sequence.
+#### impl ####
+impl: konsole
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### numeric_parameter ####
+name: mode
+----
+default: 0
+#### final ####
+name: h

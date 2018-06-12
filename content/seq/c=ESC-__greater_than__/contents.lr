@@ -1,0 +1,31 @@
+title: xxx (DECKPNM)
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: todo
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### esc ####
+#### final ####
+name: >
+---
+body:
+
+TODO
+Same as reset mode ?66

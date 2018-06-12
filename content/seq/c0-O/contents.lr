@@ -1,0 +1,33 @@
+title: Shift In (SI)
+---
+body:
+
+{{snip('placeholder-page')}}
+
+SI invokes G0 into to GL
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### c0 ####
+name: SI
+----
+hex: 0F

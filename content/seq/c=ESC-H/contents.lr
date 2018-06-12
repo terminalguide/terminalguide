@@ -1,0 +1,28 @@
+title: Horizontal Tab Set (HTS)
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: partial
+----
+since: 
+----
+body: Xterm only allows columns 1-1024 to contain tab stops.
+#### impl ####
+impl: konsole
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### esc ####
+#### final ####
+name: H
+---
+body: Mark current column as tab stop column.

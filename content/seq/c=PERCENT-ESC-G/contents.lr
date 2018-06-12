@@ -1,0 +1,30 @@
+title: Enable UTF-8 mode
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: If resource utf8 is set to 'always' this control has no effect as UTF-8 mode is permanently on.
+#### impl ####
+impl: konsole
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### esc ####
+#### intermediate ####
+name: %
+#### final ####
+name: G
+---
+body: Set character set to UTF-8.

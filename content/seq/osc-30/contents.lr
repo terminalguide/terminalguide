@@ -1,0 +1,31 @@
+title: Set Session Name
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: ignored
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: todo
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### osc ####
+#### numeric_fixed ####
+val: 30
+#### numeric_parameter ####
+name: name
+----
+default: 
+#### st ####

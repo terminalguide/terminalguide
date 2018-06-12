@@ -1,0 +1,33 @@
+title: Backspace (BS)
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### c0 ####
+name: BS
+----
+hex: 08
+---
+body:
+
+Same as [Cursor Left][csi-D] with `amount` = 1
+
+[csi-D]: /seq/csi-D

@@ -1,0 +1,38 @@
+title: Set Single Width Line (DECSWL)
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: todo
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### esc ####
+#### intermediate ####
+name: #
+#### final ####
+name: 5
+---
+body:
+
+Resets a line to normal single width and single height display mode.
+
+This undoes the effect of [Set Double Height Line Top Half ][c=HASH-ESC-3], [Set Double Height Line Bottom Half ][c=HASH-ESC-4] and [Set Double Width Line][c=HASH-ESC-6]. The displayable columns are restored and the previously hidden text is revealed.
+
+[c=HASH-ESC-3]: /seq/c=HASH-ESC-3/
+[c=HASH-ESC-4]: /seq/c=HASH-ESC-4/
+[c=HASH-ESC-6]: /seq/c=HASH-ESC-6/

@@ -1,0 +1,29 @@
+title: Cancel (CAN)
+---
+body: Cancel  current unfinished sequence.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: todo
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: todo
+----
+since: 
+----
+body: _currentScreen->displayCharacter     (    0x2592)
+---
+seq:
+
+#### c0 ####
+name: CAN
+----
+hex: 18

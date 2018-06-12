@@ -1,0 +1,34 @@
+title: Restore Mode
+---
+body: {{snip('placeholder-page')}}
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: todo
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: partial
+----
+since: 
+----
+body: Only some modes  support restore/save
+---
+seq:
+
+#### csi ####
+#### intermediate ####
+name: ?
+#### numeric_parameter ####
+name: mode
+----
+default: none
+#### final ####
+name: r

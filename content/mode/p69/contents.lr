@@ -12,6 +12,14 @@ level: full
 since: 
 ----
 body: 
+#### impl ####
+impl: konsole
+----
+level: ignored
+----
+since: 
+----
+body: 
 ---
 num: ?69
 ---

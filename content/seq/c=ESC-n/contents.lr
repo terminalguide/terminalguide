@@ -1,0 +1,32 @@
+title: Locking Shift 2 (LS2)
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### esc ####
+#### final ####
+name: n
+---
+body:
+
+Printable characters with value < 128 are using G2.
+
+See ECMA-043 for background

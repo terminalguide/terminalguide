@@ -10,6 +10,14 @@ level: full
 since: 
 ----
 body: 
+#### impl ####
+impl: konsole
+----
+level: full
+----
+since: 
+----
+body: 
 ---
 seq:
 
@@ -19,7 +27,7 @@ name: D
 ---
 body:
 
-Move the cursor to the next line in the scrolling region, possibly scroling.
+Move the cursor to the next line in the scrolling region, possibly scrolling.
 
 If the cursor is outside of the scrolling region:
 * move the cursor one line down if it is not on the bottom-most line of the screen.
