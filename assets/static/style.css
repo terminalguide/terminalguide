@@ -46,6 +46,10 @@
     background-color: #c44230;
 }
 
+.support-cell.support-todo {
+    background-color: #808080;
+}
+
 .spaced-support-bar {
     display: inline-block;
     margin-left: 70px;
