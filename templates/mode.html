@@ -13,6 +13,8 @@
         <div class='support-list'><div class='support-h'>{{blk.impl}}</div><div class='support-cell support-{{blk.level}}'>
         {% if blk.level == "full" %}
         ✔
+        {% elif blk.level == "partial" %}
+        ✓
         {% elif blk.level == "ignored" %}
         ∅
         {% elif blk.level == "unparsable" %}
@@ -38,6 +40,8 @@
         <h4>{{blk.impl}} (
         {% if blk.level == "full" %}
         ✔
+        {% elif blk.level == "partial" %}
+        ✓
         {% elif blk.level == "ignored" %}
         ∅
         {% elif blk.level == "unparsable" %}

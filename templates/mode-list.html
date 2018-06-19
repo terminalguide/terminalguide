@@ -21,6 +21,8 @@
         {% if impl == blk.impl %}
         {% if blk.level == "full" %}
         ✔
+        {% elif blk.level == "partial" %}
+        ✓
         {% elif blk.level == "ignored" %}
         ∅
         {% elif blk.level == "unparsable" %}
