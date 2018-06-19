@@ -13,11 +13,15 @@ body: Seems not to work with some fonts
 #### impl ####
 impl: konsole
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
-body: 
+body:
+
+Konsole threats this control and {{seq_link('c=HASH-ESC-3')}} identical. Konsole draws the first line with this per line attribute as double height and then unconditionally skips the next line.
+
+Interaction with view-port scrolling is erratic.
 ---
 seq:
 

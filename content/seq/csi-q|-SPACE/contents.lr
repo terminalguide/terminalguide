@@ -9,7 +9,7 @@ level: full
 ----
 since: 
 ----
-body: 
+body: If `cmd ` == 0 uses blinking block
 #### impl ####
 impl: konsole
 ----
@@ -17,7 +17,7 @@ level: full
 ----
 since: 
 ----
-body: 
+body: If `cmd ` == 0 uses blinking block
 ---
 seq:
 
