@@ -1,0 +1,26 @@
+title: Underline
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: full
+----
+since: 
+----
+body: 
+---
+number: 4
+---
+body: Show cell with underline.
+---
+resetnumber: 24

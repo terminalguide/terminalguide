@@ -1,0 +1,26 @@
+title: Double Unterline
+---
+body: Show cell with double underline.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: partial
+----
+since: 
+----
+body: xterm displays a single underline.
+#### impl ####
+impl: konsole
+----
+level: ignored
+----
+since: 
+----
+body: 
+---
+number: 21
+---
+resetnumber: 24

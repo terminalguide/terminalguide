@@ -1,0 +1,26 @@
+title: Overline
+---
+body: Show cell with overline.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: ignored
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: full
+----
+since: 
+----
+body: 
+---
+number: 53
+---
+resetnumber: 55

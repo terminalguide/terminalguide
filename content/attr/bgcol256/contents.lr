@@ -1,0 +1,41 @@
+title: 256 Color Background
+---
+body:
+
+Change background color to specific palette color.
+
+This has multiple possible forms.
+
+<table class='visible-table'>
+<tr><th></th><th>Attribute</th><th></th></tr>
+<tr><td>(1)</td><td>48:5:Ⓝ</td><td>additional subparameters are ignored</td></tr>
+<tr><td>(2)</td><td>48;5:Ⓝ</td><td>additional subparameters are ignored</td></tr>
+<tr><td>(3)</td><td>48;5;Ⓝ</td><td></td></tr>
+</table>
+
+The color palette can be modified by {{seq_link('osc-4')}}, {{seq_link('osc-5')}}, {{seq_link('osc-6')}}, {{seq_link('osc-106')}}, {{seq_link('osc-104')}} and {{seq_link('osc-105')}}.
+
+See {{sgr_link('fgcol256')}} for the default palette.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: xterm supports forms 1, 2 and 3.
+#### impl ####
+impl: konsole
+----
+level: partial
+----
+since: 
+----
+body: konsole only supports form 3
+---
+number: 48:5:...
+---
+resetnumber: 49

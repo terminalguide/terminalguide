@@ -1,0 +1,43 @@
+title: Bright 8 Color Background
+---
+body:
+
+Set the background color attribute.
+
+These attributes set the bright named colors. The black color is a grey darker than the non bright "white".
+
+<table class="visible-table">
+<tr><td>100</td><td>bright "black"</td></tr>
+<tr><td>101</td><td>bright red</td></tr>
+<tr><td>102</td><td>bright green</td></tr>
+<tr><td>103</td><td>bright yellow</td></tr>
+<tr><td>104</td><td>bright blue</td></tr>
+<tr><td>105</td><td>bright magenta</td></tr>
+<tr><td>106</td><td>bright cyan</td></tr>
+<tr><td>107</td><td>bright white</td></tr>
+</table>
+
+In practice these colors can be customized or selected from a theme in most terminals. The exact values can vary wildly.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: full
+----
+since: 
+----
+body: 
+---
+number: 100-107
+---
+resetnumber: 49

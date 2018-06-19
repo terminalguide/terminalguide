@@ -1,6 +1,10 @@
 title: Select Graphic Rendition (SGR)
 ---
-body: {{snip('placeholder-page')}}
+body:
+
+Set rendering attributes.
+
+See [attributes](/attr) for details about the attributes.
 ---
 implnotes:
 
@@ -15,7 +19,7 @@ body:
 #### impl ####
 impl: konsole
 ----
-level: todo
+level: full
 ----
 since: 
 ----

@@ -1,0 +1,26 @@
+title: Inverse
+---
+body: Selects rendering with swapped foreground and background colors.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: full
+----
+since: 
+----
+body: 
+---
+number: 7
+---
+resetnumber: 27

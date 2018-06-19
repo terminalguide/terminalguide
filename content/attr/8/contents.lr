@@ -1,0 +1,26 @@
+title: Invisible
+---
+body: Printed text is made invisible or replaced by spaces of the same width.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: xterm replaces invisible text with spaces. Invisible text can not be copied using the clipboard functions.
+#### impl ####
+impl: konsole
+----
+level: partial
+----
+since: 
+----
+body: In konsole invisible text can be copied using the clipboard functions.
+---
+number: 8
+---
+resetnumber: 28

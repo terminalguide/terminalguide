@@ -1,0 +1,26 @@
+title: Blink
+---
+body: Set blinking text attribute.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: full
+----
+since: 
+----
+body: 
+---
+number: 5
+---
+resetnumber: 25

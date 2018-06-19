@@ -1,0 +1,37 @@
+title: Bold
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body:
+
+Sets bold font and also forces named colors into the bright variant.
+
+The bright variant is applied in a way that makes the background bright when combined with {{sgr_link('7')}}
+#### impl ####
+impl: konsole
+----
+level: full
+----
+since: 
+----
+body: Sets bold font and also forces named colors into the bright variant.
+---
+number: 1
+---
+resetnumber: 22
+---
+body:
+
+Sets bold rendering.
+
+The actual effect varies by terminal.
+Common effects:
+* force named colors into the bright variant
+* usage of a bold font

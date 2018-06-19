@@ -1,0 +1,43 @@
+title: 8 Colors Foreground
+---
+body:
+
+Set the foreground color attribute.
+
+These attributes set the none bright named colors. The white color is a grey brighter than the "bright black".
+
+<table class="visible-table">
+<tr><td>30</td><td>black</td></tr>
+<tr><td>31</td><td>red</td></tr>
+<tr><td>32</td><td>green</td></tr>
+<tr><td>33</td><td>yellow</td></tr>
+<tr><td>34</td><td>blue</td></tr>
+<tr><td>35</td><td>magenta</td></tr>
+<tr><td>36</td><td>cyan</td></tr>
+<tr><td>37</td><td>"white"</td></tr>
+</table>
+
+In practice these colors can be customized or selected from a theme in most terminals. The exact values can vary wildly.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: full
+----
+since: 
+----
+body: 
+---
+number: 30-37
+---
+resetnumber: 39

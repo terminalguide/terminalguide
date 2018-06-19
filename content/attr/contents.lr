@@ -1,0 +1,35 @@
+_model: sgr-list
+---
+title: Attributes
+---
+body:
+
+Attributes are set using {{seq_link('csi-m')}}.
+
+Generally there is a code to set and to unset specific attributes. 0 is used to unset all attributes.
+---
+body2:
+
+<br><br>
+<div id="carouselExampleControls" class="carousel carousel-fade" data-interval="false" style="background: #fafafa; width: 600px">
+  <div class="carousel-inner" style="min-height: 370px;">
+    <div class="carousel-item active" style="text-align: center">
+      <img src="xterm-333.png" alt="xterm"><br>
+      xterm 333
+    </div>
+    <div class="carousel-item" style="text-align: center">
+      <img src="konsole-18-07-70.png" alt="konsole"><br>
+      konsole 18.07.70
+    </div>
+  </div>
+  <a href="#carouselExampleControls" role="button" data-slide="prev" style="margin: 0 205px 0 30px">
+    <span aria-hidden="true">&lt;</span>
+    <span>Previous</span>
+  </a>
+  <a href="#carouselExampleControls" role="button" data-slide="next" style="margin: 0 30px 0 205px">
+    <span>Next</span>
+    <span aria-hidden="true">&gt;</span>
+  </a>
+</div>
+
+<br>

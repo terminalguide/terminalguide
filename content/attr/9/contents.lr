@@ -1,0 +1,26 @@
+title: Strikethrough
+---
+body: Show cell with strike through.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: full
+----
+since: 
+----
+body: 
+---
+number: 9
+---
+resetnumber: 29

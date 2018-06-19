@@ -1,0 +1,30 @@
+title: Faint
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: xterm multiplies each color component of the foreground color by 2/3. Thus this does not have an effect for black.
+#### impl ####
+impl: konsole
+----
+level: full
+----
+since: 
+----
+body: Faint is an third form of the named colors that is configurable.
+---
+number: 2
+---
+body:
+
+Named colors are displayed "faint".
+
+Exact interpretation differs from terminal to terminal.
+---
+resetnumber: 22

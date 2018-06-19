@@ -1,0 +1,49 @@
+title: 256 Color Foreground
+---
+body:
+
+Change foreground color to specific palette color.
+
+This has multiple possible forms.
+
+<table class='visible-table'>
+<tr><th></th><th>Attribute</th><th></th></tr>
+<tr><td>(1)</td><td>38:5:Ⓝ</td><td>additional subparameters are ignored</td></tr>
+<tr><td>(2)</td><td>38;5:Ⓝ</td><td>additional subparameters are ignored</td></tr>
+<tr><td>(3)</td><td>38;5;Ⓝ</td><td></td></tr>
+</table>
+
+The color palette can be modified by {{seq_link('osc-4')}}, {{seq_link('osc-5')}}, {{seq_link('osc-6')}}, {{seq_link('osc-106')}}, {{seq_link('osc-104')}} and {{seq_link('osc-105')}}.
+
+The default palette is the following:
+
+The color codes 0-7 alias the colors as set with {{sgr_link('fgcol8')}} and color codes 8-15 alias the colors as set with {{sgr_link('fgcol8bright')}}. The indexes 16-231 for a 6x6x6 rgb color cube. Indexes 232-255 form a grey ramp not touching black and white.
+
+<img src="colors.png">
+
+The color cube uses intensity levels of [0, 95, 135, 175, 215, 255] and calculates the components as red is (index-16) / 36, green is (index-16) / 6) % 6 and blue (index-16) % 6.
+
+The grey ramp uses the intensity levels of [18, 28, 38, 48, 58, 68, 78, 88, 98, 108, 118, 128, 138, 148, 158, 168, 178, 188, 198, 208, 218, 228, 238]
+---
+number: 38:5:...
+---
+resetnumber: 39
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: xterm supports forms 1, 2 and 3.
+#### impl ####
+impl: konsole
+----
+level: partial
+----
+since: 
+----
+body: konsole supports only form 3.

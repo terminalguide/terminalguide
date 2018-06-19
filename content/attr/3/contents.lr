@@ -1,0 +1,26 @@
+title: Italic
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: full
+----
+since: 
+----
+body: 
+---
+number: 3
+---
+resetnumber: 23
+---
+body: Selects italic rendering of characters.

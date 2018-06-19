@@ -63,6 +63,28 @@ def seq_link(seq):
         raise
 
 
+def sgr_link(seq):
+    try:
+        ctx = get_ctx()
+        if not ctx:
+            return 'DEVMODE?'
+
+        pad = ctx.pad
+
+        record = pad.get('/attr/' + seq)
+        if record:
+            title = record['title']
+            if title.endswith(')'):
+                title = title[:title.rindex('(')]
+            title = title.lower()
+        else:
+            title = "Attribute not found: " + seq
+        return '[{title}]({url})'.format(title=title, url='/attr/' + seq)
+    except Exception as ex:
+        print('failed:', ex)
+        raise
+
+
 def jinja_hex(s):
     r = []
     for ch in s:
@@ -78,3 +100,4 @@ class ToolsPlugin(Plugin):
         self.env.jinja_env.globals['snip'] = snip_resolver
         self.env.jinja_env.globals['mode_link'] = mode_link
         self.env.jinja_env.globals['seq_link'] = seq_link
+        self.env.jinja_env.globals['sgr_link'] = sgr_link
