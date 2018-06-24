@@ -4,7 +4,7 @@
 {% block body %}
   <div class="container">
   <h2>{{ this.title }}</h2>
-    <table>
+    <table class='list-table'>
     <tr>
     <td></td><td></td><td></td>
     {% for impl, params in bag('impls').items() %}
@@ -15,7 +15,7 @@
     <tr>
     <td>{{ s.number }}</td><td>&nbsp;&nbsp;</td><td><a href='{{ s|url }}'>{{ s.title }}</a></td>
     {% for impl, params in bag('impls').items() %}
-        <td>
+        <td class="impl-status">
         {% if s.implnotes %}
         {% for blk in s.implnotes.blocks %}
         {% if impl == blk.impl %}

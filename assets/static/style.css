@@ -66,6 +66,28 @@ table.invisible-table td, table.invisible-table th {
     padding: 3px 2px;
 }
 
+table.list-table td, table.list-table th {
+    padding: 3px 2px;
+}
+
+table.list-table tr:nth-child(even) {
+    background: #fcfcfc;
+}
+
+table.list-table tr:hover:not(:first-child) {
+    background: #eee;
+}
+
+table.list-table td.impl-status {
+    border-right: #eee solid 1px;
+    text-align: center;
+    padding: 3px 7px;
+}
+
+table.list-table td.impl-status:last-child {
+    border-right: none;
+}
+
 table.visible-table {
     text-align: left;
     border-collapse: collapse;

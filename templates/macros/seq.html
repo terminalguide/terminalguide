@@ -75,7 +75,7 @@
 {% endmacro %}
 
 {% macro seq_list(l) %}
-    <table class='invisible-table'>
+    <table class='list-table'>
     <tr>
     <td></td><td></td><td></td>
     {% for impl, params in bag('impls').items() %}
@@ -86,7 +86,7 @@
     <tr>
     <td>{{ seq_simple(s.seq) }}</td><td>&nbsp;&nbsp;</td><td><a href='{{ s|url }}'>{{ s.title }}</a></td>
     {% for impl, params in bag('impls').items() %}
-        <td>
+        <td class="impl-status">
         {% if s.implnotes %}
         {% for blk in s.implnotes.blocks %}
         {% if impl == blk.impl %}
