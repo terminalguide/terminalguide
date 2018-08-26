@@ -84,6 +84,31 @@ def sgr_link(seq):
         print('failed:', ex)
         raise
 
+def seq_param(name):
+    ret = "<span class='term-param'><ruby>Ⓝ"
+    ret += "<rt>" + name + "&nbsp;</rt>"
+    ret += "</ruby></span>"
+    return ret
+
+def seq(l):
+    ret = "<span class='term-literal'><ruby>"
+    for i in l:
+        v = i
+        if i == '\033':
+            v = 'ESC'
+        elif i == '\0':
+            v = 'NUL'
+        elif i == '\b':
+            v = 'BS'
+        elif i == '\n':
+            v = 'LF'
+        elif i == '\r':
+            v = 'CR'
+        elif i == '\177':
+            v = 'DEL'
+        ret += v + "<rt>" + hex(ord(i))[2:].rjust(2,'0') + "&nbsp;</rt>"
+    ret += "</ruby></span>"
+    return ret
 
 def jinja_hex(s):
     r = []
@@ -97,6 +122,8 @@ class ToolsPlugin(Plugin):
 
     def on_setup_env(self, **extra):
         self.env.jinja_env.filters['hex'] = jinja_hex
+        self.env.jinja_env.globals['seq'] = seq
+        self.env.jinja_env.globals['seq_param'] = seq_param
         self.env.jinja_env.globals['snip'] = snip_resolver
         self.env.jinja_env.globals['mode_link'] = mode_link
         self.env.jinja_env.globals['seq_link'] = seq_link
