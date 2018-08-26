@@ -1,7 +1,16 @@
+blockquote {
+    border-left: 3px solid blue;
+    padding-left: 6px;
+}
+
 .term-control {
     border: solid 1px #888;
     display: inline-block;
     padding: 2px;
+}
+
+.term-literal {
+    font-family: monospace;
 }
 
 .support-list {
