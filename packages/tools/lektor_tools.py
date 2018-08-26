@@ -35,7 +35,7 @@ def mode_link(mode):
             title = title.lower()
         else:
             title = "mode not found: " + mode
-        return '[{title}]({url})'.format(title=title, url='/mode/' + mode)
+        return '<a href="{url}">{title}</a>'.format(title=title, url='/mode/' + mode)
     except Exception as ex:
         print('failed:', ex)
         raise
@@ -57,7 +57,7 @@ def seq_link(seq):
             title = title.lower()
         else:
             title = "Sequence not found: " + seq
-        return '[{title}]({url})'.format(title=title, url='/seq/' + seq)
+        return '<a href="{url}">{title}</a>'.format(title=title, url='/seq/' + seq)
     except Exception as ex:
         print('failed:', ex)
         raise
@@ -79,7 +79,7 @@ def sgr_link(seq):
             title = title.lower()
         else:
             title = "Attribute not found: " + seq
-        return '[{title}]({url})'.format(title=title, url='/attr/' + seq)
+        return '<a href="{url}">{title}</a>'.format(title=title, url='/attr/' + seq)
     except Exception as ex:
         print('failed:', ex)
         raise
