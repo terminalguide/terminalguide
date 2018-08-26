@@ -1,0 +1,19 @@
+title: Alias: Change/Read Special Text Foreground Color
+---
+body: Alias deprecated for {{seq_link('osc-10')}}.
+---
+implnotes:
+
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### osc ####
+#### st ####

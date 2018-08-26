@@ -1,19 +1,53 @@
-title: Mode TODO ?3
+title: 132 Column Mode (DECCOLM)
 ---
-body: {{snip('placeholder-page')}}
+body:
+
+Change terminal wide between 80 and 132 column mode.
+
+This mode only is supported when {{mode_link('p40')}} is set.
+
+Modern terminals don't have a fixed width and users generally expect the terminal to keep the size they assigned to the terminal. This control violates that expectation.
+
+If set the terminal is resized to 132 columns wide. If unset the terminal is resized to 80 columns wide.
+
+If {{mode_link('p95')}} is not set, the screen is cleared.
+
+The cursor is moved as invoking {{seq_link('csi-H')}} with `column` and `row` set to 1.
+
+If the mode is set mode {{mode_link('p69')}} is reset.
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
 ----
 since: 
 ----
 body: 
 #### impl ####
 impl: konsole
+----
+level: partial
+----
+since: 
+----
+body: Unsets top and bottom margins.
+#### impl ####
+impl: urxvt
+----
+level: partial
+----
+since: 
+----
+body:
+
+* Acts as if {{mode_link('p95')}} is permanently set.
+* Does also set height to 24 rows.
+* resets tabstops to default.
+#### impl ####
+impl: vte
 ----
 level: todo
 ----

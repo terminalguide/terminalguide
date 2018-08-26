@@ -1,4 +1,4 @@
-title: Mode TODO ?5
+title: Reverse Display Colors (DECSCNM)
 ---
 body: {{snip('placeholder-page')}}
 ---
@@ -14,6 +14,22 @@ since:
 body: 
 #### impl ####
 impl: konsole
+----
+level: partial
+----
+since: 
+----
+body: Swaps background and foreground when rendering.
+#### impl ####
+impl: urxvt
+----
+level: partial
+----
+since: 
+----
+body: Swaps default (unnamed) background and foreground colors when rendering.
+#### impl ####
+impl: vte
 ----
 level: todo
 ----

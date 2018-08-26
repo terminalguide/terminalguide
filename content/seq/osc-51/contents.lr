@@ -1,0 +1,25 @@
+title: OSC TODO 51
+---
+body: {{snip('placeholder-page')}}
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: ignored
+----
+since: 
+----
+body: xterm source says: reserved for Emacs shell
+---
+seq:
+
+#### osc ####
+#### numeric_fixed ####
+val: 51
+#### numeric_parameter ####
+name: p1
+----
+default: 
+#### st ####

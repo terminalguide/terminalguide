@@ -1,6 +1,14 @@
-title: OSC TODO 10
+title: Change/Read Special Text Foreground Color
 ---
-body: {{snip('placeholder-page')}}
+body:
+
+Change/Read special text foreground color.
+
+Use `text` as color description to set the special text foreground color. (TODO: Is this reachable in other ways then unsetting the foreground attribute?)
+
+TODO document effect of {{mode_link('p5')}}
+
+TODO document color formats.
 ---
 implnotes:
 
@@ -11,9 +19,25 @@ level: todo
 ----
 since: 
 ----
-body: 
+body: xterm supports falling through into {{seq_link('osc-11')}} when given additional ';' separated colors.
 #### impl ####
 impl: konsole
+----
+level: todo
+----
+since: 
+----
+body: 
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
 ----
 level: todo
 ----
@@ -27,7 +51,7 @@ seq:
 #### numeric_fixed ####
 val: 10
 #### numeric_parameter ####
-name: p1
+name: text
 ----
 default: 
 #### st ####

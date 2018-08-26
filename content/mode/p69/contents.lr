@@ -1,4 +1,4 @@
-title: left and right margin (TODO)
+title: left and right margin (DECLRMM)
 ---
 body: {{snip('placeholder-page')}}
 ---
@@ -7,7 +7,7 @@ implnotes:
 #### impl ####
 impl: xterm
 ----
-level: full
+level: todo
 ----
 since: 
 ----

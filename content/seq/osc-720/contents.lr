@@ -1,0 +1,31 @@
+title: Move view port towards to top of the scroll back buffer (or clear scrollback)
+---
+body:
+
+Move view port towards to top of the scroll back buffer (or clear scrollback)
+
+if `amount´ is 0, clear the scrollback buffer.
+
+Otherwise, move the scrolling view port ` amount` lines toward the top of the scrollback buffer.
+---
+implnotes:
+
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### osc ####
+#### numeric_fixed ####
+val: 720
+#### numeric_parameter ####
+name: amount
+----
+default: 0
+#### st ####

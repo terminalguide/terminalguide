@@ -13,6 +13,25 @@ body:
 #### impl ####
 impl: konsole
 ----
+level: partial
+----
+since: 
+----
+body:
+
+* Does not reset pending wrap.
+* does not restrict movement to be on or above the bottom margin row, only restricts to keep the cursor in the terminal.
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
+----
 level: todo
 ----
 since: 
@@ -31,16 +50,16 @@ name: d
 ---
 body:
 
-TODO: ResetWrap
+Move the cursor to the row `row`. The cursor column is not changed, unless origin mode is set and the cursor is currently outside of the [current scroll region](/scrolling-region).
 
-Move the cursor to the row `row`. The cursor column is not changed, unless origin mode is set and the cursor is currently outside of the current scroll region.
+{{snip('unset-pending-wrap')}}
 
-If `row` is 0, it is adjusted to 1. If `row` is greater than the bottom-most row it is adjusted to the bottom-most row.
+If `row` is 0, it is adjusted to 1. If `row` is greater than the bottom-most row of the screen it is adjusted to the bottom-most row of the screen.
 
 `row` == 1 is the top-most row.
 
 If [origin mode][mode-p6] is set the cursor column will be forced inside the current scroll region.
 
-If [origin mode][mode-p6] is set the cursor will  be moved relative to the top margin row and adjusted to be on or above of the bottom  margin row.
+If [origin mode][mode-p6] is set the cursor will  be moved relative to the top margin row of the scrolling region and adjusted to be on or above of the bottom-most row of the scrolling region.
 
 [mode-p6]: /mode/p6/

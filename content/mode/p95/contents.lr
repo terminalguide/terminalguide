@@ -1,0 +1,16 @@
+title: Do not Clear Screen on Mode ?3 Change (DECNCSM)
+---
+body: Do not clear screen on change of mode {{mode_link('p3')}}.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: partial
+----
+since: 
+----
+body: only available in vt level 5 or above. (non default level)
+---
+number: ?95

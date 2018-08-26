@@ -1,0 +1,33 @@
+title: Reset Special Text Background Color
+---
+body:
+
+Reset the special color for text background.
+
+See {{seq_link('osc-11')}}
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
+----
+level: todo
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### osc ####
+#### numeric_fixed ####
+val: 111
+#### st ####

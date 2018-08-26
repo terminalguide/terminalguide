@@ -1,0 +1,16 @@
+title: Reserved (DECSDM)
+---
+body: Reserved for Sixel Emulation
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+number: ?80

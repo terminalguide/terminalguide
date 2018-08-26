@@ -1,0 +1,25 @@
+title: Reset Special Pointer Mask Color
+---
+body:
+
+Reset the special color for pointer mask..
+
+See {{seq_link('osc-14')}}
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### osc ####
+#### numeric_fixed ####
+val: 114
+#### st ####

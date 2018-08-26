@@ -1,0 +1,29 @@
+title: OSC TODO 777
+---
+body:
+
+{{snip('placeholder-page')}}
+
+TODO this is a generic channel for urxvt plugins.
+---
+implnotes:
+
+#### impl ####
+impl: urxvt
+----
+level: todo
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### osc ####
+#### numeric_fixed ####
+val: 777
+#### numeric_parameter ####
+name: command
+----
+default: 
+#### st ####

@@ -1,0 +1,33 @@
+title: OSC 46 (Reserved file logging)
+---
+body: Reserved
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: ignored
+----
+since: 
+----
+body: xterm used this sequence to set the log filename. Disabled by compile-time option nowadays because it allows overwriting arbitrary files accessible to the person running xterm.
+#### impl ####
+impl: urxvt
+----
+level: ignored
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### osc ####
+#### numeric_fixed ####
+val: 46
+#### numeric_parameter ####
+name: p1
+----
+default: 
+#### st ####

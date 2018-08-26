@@ -1,0 +1,25 @@
+title: OSC 115 (reserved for xterm TEK-Mode)
+---
+body: Reserved
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: used in TEK-Mode
+---
+seq:
+
+#### osc ####
+#### numeric_fixed ####
+val: 115
+#### numeric_parameter ####
+name: p1
+----
+default: 
+#### st ####

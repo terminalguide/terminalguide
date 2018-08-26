@@ -17,6 +17,33 @@ As of xterm 333 in [left and right margin mode][mode-p69] restoring of the curso
 #### impl ####
 impl: konsole
 ----
+level: partial
+----
+since: 
+----
+body:
+
+* Does not store G0 - G3. But stores current mapping of GL and GR.
+* Does not store state of mode {{mode_link('p6')}}
+* cursor position is stored absolute (not with regard to origin)
+* Does not store pending wrap state.
+#### impl ####
+impl: urxvt
+----
+level: partial
+----
+since: 
+----
+body:
+
+* the current cursor position is not saved relative to the origin set via {{mode_link('p6')}}.
+
+Not saved:
+* the state of mode {{mode_link('p6')}}
+* pending wrap state (always unset after restore)
+#### impl ####
+impl: vte
+----
 level: todo
 ----
 since: 
@@ -33,14 +60,16 @@ body:
 
 Save cursor position and further state.
 
-TODO: Fix this after fully documenting restore.
+The primary and alternate screen have distinct save state.
 
 The following state is saved:
-* current cursor position (row, column)
-* TODO: xw->flags
-* currently selected character set for gl and gr.
-* TODO do_wrap
-* currently selected color (TODO)
+* the state of mode {{mode_link('p6')}} (TODO but not it's mode save state??)
+* the current [attributes](../attr)
+* protected area indication (TODO)
+* the current cursor position, relative to the origin set via {{mode_link('p6')}}.
+* pending wrap state
+* GL and GR character sets.
+* G0, G1, G2, G3 character sets.
 
 One saved state is kept per screen (main / alternative). If for the current screen state was already saved it is overwritten.
 

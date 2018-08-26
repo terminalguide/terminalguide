@@ -1,0 +1,45 @@
+title: osc-50_konsole
+---
+body:
+
+[This sequence collides with {{seq_link('osc-50')}}]
+
+{{snip('placeholder-page')}}
+---
+implnotes:
+
+#### impl ####
+impl: konsole
+----
+level: todo
+----
+since: 
+----
+body: 
+#### impl ####
+impl: xterm
+----
+level: unparsable
+----
+since: 
+----
+body: 
+#### impl ####
+impl: urxvt
+----
+level: unparsable
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### osc ####
+#### numeric_fixed ####
+val: 50
+#### numeric_parameter ####
+name: text
+----
+default: 
+#### st ####

@@ -1,0 +1,22 @@
+title: Set Title to Terminal Name and Version.
+---
+body: Sets the title of the terminal to name and version of the terminal.
+---
+implnotes:
+
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: Sets the title of the terminal to "urxvt-" followed by the program version. (e.g. "urxvt-9.22")
+---
+seq:
+
+#### csi ####
+#### numeric_fixed ####
+val: 8
+#### final ####
+name: n

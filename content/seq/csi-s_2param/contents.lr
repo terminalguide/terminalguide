@@ -1,0 +1,46 @@
+title: Set Left and Right Margin (DECSLRM)
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body:
+
+xterm only interprets this control when [left and right margin mode][mode-p69] is set. In this case it completely replaces [ansi.sys' save cursor][csi-s_0param] which is not available in that mode.
+
+[mode-p69]: /mode/p69/
+[csi-s_0param]: /seq/csi-s_0param
+---
+seq:
+
+#### csi ####
+#### numeric_parameter ####
+name: left
+----
+default: 1
+#### numeric_parameter ####
+name: right
+----
+default: see description
+#### final ####
+name: s
+---
+body:
+
+\[This control collides with [ansi.sys' save cursor][csi-s_0param]\]
+
+Set Left and Right Margin
+
+If `right` is not specified, 0 or bigger than the number of the right-most column, it is adjusted to the number of the right-most column.
+
+if `left` is right of the right-most column, adjust it to the right-most column.
+
+If `left` < `right` set the left and right column of the scroll region according to `left` and `right` and move the cursor to the top-left cell of the display (when in [origin mode][mode-p6] is set to the top-left cell of the scroll region).
+
+[mode-p6]: /mode/p6/
+[csi-s_0param]: /seq/csi-s_0param

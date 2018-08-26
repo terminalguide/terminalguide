@@ -1,13 +1,13 @@
-title: Mode TODO ?1005
+title: Mouse Report Format multibyte
 ---
-body: {{snip('placeholder-page')}}
+body: See [Mouse](/mouse) for details.
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
 ----
 since: 
 ----
@@ -15,10 +15,25 @@ body:
 #### impl ####
 impl: konsole
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
-body: 
+body:
+
+* Does not send {{seq('\0')}} for out of range events, it just does not send anything.
+* Does not select encoding mode by last activated one, but by prioritizing ?1006 > ?1015 > ?1005
+* When not disabling the exact modes that have been activated partial state leaks into the next mouse mode activation.
+#### impl ####
+impl: urxvt
+----
+level: partial
+----
+since: 
+----
+body:
+
+* Does not select encoding mode by last activated one, but by prioritizing ?1015 > ?1005
+* produces longer than 2 byte sequences with coordinates over 2015. Can be decoded like utf-8
 ---
 number: ?1005

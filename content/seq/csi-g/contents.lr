@@ -30,6 +30,22 @@ body:
 If `cmd` is 0 and the cursor is in pending wrap state, this sequence does not have any effect.
 
 TODO: If `cmd` is 3 tab stops beyond the end of the screen might not be cleared? (might be observable after later resize)
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: `cmd` = 5 is an alias for `cmd` = 3.
+#### impl ####
+impl: vte
+----
+level: todo
+----
+since: 
+----
+body: 
 ---
 seq:
 

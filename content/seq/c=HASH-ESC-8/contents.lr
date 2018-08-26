@@ -24,6 +24,22 @@ level: partial
 since: 
 ----
 body: Does not set the cursor position.
+#### impl ####
+impl: urxvt
+----
+level: partial
+----
+since: 
+----
+body: Does not reset margins.
+#### impl ####
+impl: vte
+----
+level: todo
+----
+since: 
+----
+body: 
 ---
 seq:
 

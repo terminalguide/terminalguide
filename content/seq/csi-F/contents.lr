@@ -1,4 +1,4 @@
-title: Cursor Previous Line(CPL)
+title: Cursor Previous Line (CPL)
 ---
 implnotes:
 
@@ -18,6 +18,22 @@ level: ignored
 since: 
 ----
 body: https://bugs.kde.org/show_bug.cgi?id=331656
+#### impl ####
+impl: urxvt
+----
+level: partial
+----
+since: 
+----
+body: If `amount` is 0, does not adjust it to 1.
+#### impl ####
+impl: vte
+----
+level: todo
+----
+since: 
+----
+body: 
 ---
 seq:
 

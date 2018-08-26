@@ -1,0 +1,48 @@
+title: Set Title Mode
+---
+body:
+
+TODO: Takes n arguments each processed on the way described below
+
+Set title modes
+
+If no parameter is given resets all title modes.
+
+Title mode 0
+
+Title is set encoded in hex.
+
+Title mode 1
+
+Title is read-back encoded in hex.
+
+Title mode 2
+
+title is set in utf-8
+
+Title mode 3
+
+Title is read-back encoded in utf8
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### intermediate ####
+name: >
+#### numeric_parameter ####
+name: mode
+----
+default: see description
+#### final ####
+name: t

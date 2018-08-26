@@ -24,6 +24,22 @@ level: full
 since: 
 ----
 body: audible beep, visual bell, KNotify
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: audible beep, deiconify, urgency hint, visual bell
+#### impl ####
+impl: vte
+----
+level: todo
+----
+since: 
+----
+body: 
 ---
 seq:
 

@@ -29,6 +29,9 @@ If {{mode_link('p7')}} is set:
 * Else:
  * If the [width](/width) of the printed character is bigger than the space between the cursor (inclusive) and the right-most column of the screen, force a wrap as if the pending wrap state was set (don't force a second wrap if it was set)
 
+If {{mode_link('p7')}} is not set:
+* If the [width](/width) of the printed character is bigger than the space between the cursor (inclusive) and the right-most column of the screen, move the cursor left so that the printed character does fit into the remaining space (TODO only xterm doesn't do this?)
+
 If {{mode_link('4')}} is active the current content of the cell pointed to by the cursor is moved right as if by invoking {{seq_link('csi-__at__')}} with the [width](/width) of the printed character.
 
 If the current {SGR state} include 'invisible' the character is replaced by the same number of spaces as it's original width. 

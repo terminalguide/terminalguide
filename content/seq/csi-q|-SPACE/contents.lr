@@ -18,6 +18,22 @@ level: full
 since: 
 ----
 body: If `cmd ` == 0 uses blinking block
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: If `cmd ` == 0 uses blinking block
+#### impl ####
+impl: vte
+----
+level: todo
+----
+since: 
+----
+body: 
 ---
 seq:
 

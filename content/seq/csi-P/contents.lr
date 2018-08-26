@@ -13,6 +13,28 @@ body:
 #### impl ####
 impl: konsole
 ----
+level: partial
+----
+since: 
+----
+body:
+
+* does not reset pending wrap state
+* does not clear split multi cell characters.
+#### impl ####
+impl: urxvt
+----
+level: partial
+----
+since: 
+----
+body:
+
+* If pending wrap state is set, wraps and indexes.
+* cells belonging to split multi-cell characters are erased with the SGR state of the first cell of that character.
+#### impl ####
+impl: vte
+----
 level: todo
 ----
 since: 
@@ -31,13 +53,11 @@ name: P
 ---
 body:
 
-TODO ResetWrap
-
 Removes `amount` characters from the current cursor position to the right. The remaining characters are shifted to the left and space from the right margin is filled with spaces.
 
 If the current cursor column is not between the left and right margin it does nothing.
 
-If `amount` is greater than the remaining number of characters in the scrolling region, it is adjusted down.
+If `amount` is greater than the remaining number of characters in the [scrolling region](/scrolling-region), it is adjusted down.
 
 In [left and right margin mode][mode-p69] the margins are respected; lines are only scrolled in the scroll region.
 
@@ -46,6 +66,8 @@ If the cell movement splits a multi cell character that character cleared, by re
 All cleared space is colored according to the current {SGR state}.
 
 Does not change the cursor position.
+
+{{snip('unset-pending-wrap')}}
 
 TODO LineClrWrapped
 

@@ -1,13 +1,13 @@
-title: Mode TODO ?2
+title: Reserved for VT52 Emulators (DECANM)
 ---
-body: {{snip('placeholder-page')}}
+body: Reserved.
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
 ----
 since: 
 ----
@@ -15,7 +15,15 @@ body:
 #### impl ####
 impl: konsole
 ----
-level: todo
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: urxvt
+----
+level: full
 ----
 since: 
 ----

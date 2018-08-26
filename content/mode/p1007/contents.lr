@@ -1,0 +1,36 @@
+title: Send Cursor Keys on Mouse Wheel on Alternative Screen
+---
+body:
+
+When the alternate screen is active and the mouse wheel is used send arrow up and down.
+
+The number of arrow up or arrow down sequences that are transmitted is implementation defined.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: full
+----
+since: 
+----
+body: 
+---
+number: ?1007

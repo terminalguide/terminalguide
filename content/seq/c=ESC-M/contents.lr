@@ -13,6 +13,7 @@ If the cursor is inside the scrolling region:
 * If the cursor is not on the top-most line of the scrolling region:
  * move the cursor one line up
 
+{{snip('unset-pending-wrap')}}
 ---
 seq:
 
@@ -37,4 +38,23 @@ level: partial
 ----
 since: 
 ----
-body: If the cursor is outside the scroll region this sequence has no effect.
+body:
+
+* If the cursor is outside the scroll region this sequence has no effect.
+* Does not reset pending wrap state
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
+----
+level: todo
+----
+since: 
+----
+body: 

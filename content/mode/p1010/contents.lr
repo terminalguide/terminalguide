@@ -1,0 +1,24 @@
+title: Inhibit Scroll on Application Output
+---
+body: Disable automatic scroll to bottom when the application outputs a printable character.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: unparsable
+----
+since: 
+----
+body: implements inverted behavior.
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: 
+---
+number: ?1010

@@ -1,0 +1,25 @@
+title: OSC TODO 55
+---
+body: {{snip('placeholder-page')}}
+---
+implnotes:
+
+#### impl ####
+impl: urxvt
+----
+level: ignored
+----
+since: 
+----
+body: Commented source code claims this as dumpscreen
+---
+seq:
+
+#### osc ####
+#### numeric_fixed ####
+val: 55
+#### numeric_parameter ####
+name: p1
+----
+default: 
+#### st ####

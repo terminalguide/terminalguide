@@ -1,0 +1,29 @@
+title: Override Terminal Locale
+---
+body:
+
+{{snip('placeholder-page')}}
+
+TODO docuement what this exactly changes.
+---
+implnotes:
+
+#### impl ####
+impl: urxvt
+----
+level: todo
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### osc ####
+#### numeric_fixed ####
+val: 701
+#### numeric_parameter ####
+name: locale
+----
+default: 
+#### st ####

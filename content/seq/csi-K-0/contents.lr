@@ -1,0 +1,57 @@
+title: Erase Line Right
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: partial
+----
+since: 
+----
+body:
+
+* Does not erase split multi cell characters.
+* Does not  unset pending wrap state.
+#### impl ####
+impl: urxvt
+----
+level: partial
+----
+since: 
+----
+body: * Does not erase split multi cell characters.
+---
+seq:
+
+#### csi ####
+#### numeric_fixed ####
+val: 0
+#### final ####
+name: K
+---
+body:
+
+Erase the right side of the line where the cursor is currently placed starting from (including) the current cursor position, by replacing all cells with spaces.
+
+In it's basic variant it will also erase protected cells. When called as {{seq_link('csi-K|P')}} it will not erase protected cells.
+
+If the erase splits a multi cell character that character is erased by replacing it with spaces.
+<!--
+echo -ne "\033[2J\033[1;1H\033[42mあ23ぬ\033[1;2H\033[0m\033[0K\n"
+-->
+
+All erased space is colored according to the current [SGR state](../../attr).
+
+Does not change the cursor position.
+
+{{snip('unset-pending-wrap')}}
+

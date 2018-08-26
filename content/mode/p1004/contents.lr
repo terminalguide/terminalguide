@@ -1,13 +1,21 @@
-title: Mode TODO ?1004
+title: Report Focus Change
 ---
-body: {{snip('placeholder-page')}}
+body:
+
+When the terminal gains focus emit:
+
+{{seq('\033[I')}}
+
+When the terminal looses focus emit:
+
+{{seq('\033[O')}}
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
 ----
 since: 
 ----
@@ -15,10 +23,26 @@ body:
 #### impl ####
 impl: konsole
 ----
-level: todo
+level: full
 ----
 since: 
 ----
 body: 
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
+----
+level: full
+----
+since: 
+----
+body: Sends current focus state on mode activation.
 ---
 number: ?1004

@@ -1,0 +1,55 @@
+title: Vertical Position Relative (VPR)
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: urxvt
+----
+level: partial
+----
+since: 
+----
+body:
+
+* origin mode is ignored
+* If the cursor is above or on the bottom most line if the scroll region it will not be moved below the bottom-most line of the scroll region.
+#### impl ####
+impl: vte
+----
+level: ignored
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### numeric_parameter ####
+name: amount
+----
+default: 1
+#### final ####
+name: e
+---
+body:
+
+Move the cursor `amount` lines down. The cursor column is not changed, unless origin mode is set and the cursor is currently outside of the current scroll region.
+
+{{snip('unset-pending-wrap')}}
+
+If moving `amount` rows down would be below the bottom-most line of the screen it is adjusted so the cursor is moved to the bottom-most row of the screen.
+
+If [origin mode][mode-p6] is set the cursor column will be forced inside the current scroll region.
+
+If [origin mode][mode-p6] is set the cursor is adjusted to be on or above of the bottom margin row.
+
+[mode-p6]: /mode/p6/

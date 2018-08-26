@@ -1,19 +1,45 @@
-title: Mode TODO ?1049
+title: Alternate Screen Buffer, With Cursor Save and Clear on Enter.
 ---
-body: {{snip('placeholder-page')}}
+body:
+
+Like {{mode_link('p47')}} but saves the cursors and clears the alternate buffer on activation.
+
+The clear of the alternate buffer fills all cells in the alternate buffer with space and the current [SGR state](/attr).
+
+The cursor is saved before switching to alternate mode as if {{seq_link('c=ESC-7')}} was invoked. On reset the cursor is restored after switching to the primary screen buffer as if {{seq_link('c=ESC-8')}} was invoked. 
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
 ----
 since: 
 ----
-body: 
+body:
+
+The 'titeInhibit' resource allows disabling of support for this mode. This setting itself is switchable from the application via mode {{mode_link('p1046')}}.
+
+* On activation this unsets the pending wrap state without wrapping.
 #### impl ####
 impl: konsole
+----
+level: partial
+----
+since: 
+----
+body: See {{mode_link('p47')}} and {{seq_link('c=ESC-7')}} for differences.
+#### impl ####
+impl: urxvt
+----
+level: partial
+----
+since: 
+----
+body: See {{mode_link('p47')}} and {{seq_link('c=ESC-7')}} for differences.
+#### impl ####
+impl: vte
 ----
 level: todo
 ----

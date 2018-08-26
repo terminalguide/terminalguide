@@ -22,6 +22,28 @@ level: full
 since: 
 ----
 body: Sets bold font and also forces named colors into the bright variant.
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body:
+
+Sets bold font and if mode {{mode_link('p1021')}} is set also forces named foreground colors into the bright variant.
+
+Also disables bold with 21.
+
+For bold with default foreground the color can additionally be changed with {{seq_link('osc-706')}}.
+#### impl ####
+impl: vte
+----
+level: todo
+----
+since: 
+----
+body: 
 ---
 number: 1
 ---

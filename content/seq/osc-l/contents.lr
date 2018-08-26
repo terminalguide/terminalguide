@@ -1,0 +1,25 @@
+title: OSC l (Alias)
+---
+body: Alias for {{seq_link('osc-2')}}.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### osc ####
+#### numeric_fixed ####
+val: l
+#### numeric_parameter ####
+name: p1
+----
+default: 
+#### st ####

@@ -1,19 +1,35 @@
-title: Mode TODO ?25
+title: Cursor visible (DECTCEM)
 ---
-body: {{snip('placeholder-page')}}
+body: Set visibility of the cursor.
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
 ----
 since: 
 ----
 body: 
 #### impl ####
 impl: konsole
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
 ----
 level: todo
 ----

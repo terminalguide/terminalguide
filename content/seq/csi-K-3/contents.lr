@@ -1,0 +1,38 @@
+title: Erase Line Right Unless Pending Wrap
+---
+implnotes:
+
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: xterm
+----
+level: ignored
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: ignored
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### numeric_fixed ####
+val: 3
+#### final ####
+name: K
+---
+body: Like {{seq_link('csi-K-0')}}, but does nothing when the pending wrap state is set.

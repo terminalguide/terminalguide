@@ -3,10 +3,11 @@ title: Linefeed mode
 body:
 
 If unset:
-* {{seq_link('c0-J')}} is just a linefeed.
+* {{seq_link('c0-J')}} from the application to the terminal is just a linefeed.
 
 If set:
-* {{seq_link('c0-J')}} automatically adds a {{seq_link('c0-M')}}
+* {{seq_link('c0-J')}} from the application to the terminal automatically adds a {{seq_link('c0-M')}}
+* all communication from the terminal to the application automatically translates {{seq('\r')}} to {{seq('\r\n')}}
 
 Usually translation from Linefeed ('\n') is performed by the kernel tty layer not the terminal. Applications generally expect this mode to be unset.
 ---
@@ -23,10 +24,18 @@ body:
 #### impl ####
 impl: konsole
 ----
-level: todo
+level: full
 ----
 since: 
 ----
 body: 
+#### impl ####
+impl: urxvt
+----
+level: partial
+----
+since: 
+----
+body: Only translates communication from terminal to application. Application to terminal direction is unchanged.
 ---
 number: 20

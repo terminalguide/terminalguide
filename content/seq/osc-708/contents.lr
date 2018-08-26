@@ -1,0 +1,35 @@
+title: Set Terminal Border Color
+---
+body:
+
+Set Terminal Border Color.
+
+This sets the color of the space between the display of the cells and the decorations around the terminal view port.
+
+If `color` is {{seq('?')}} report the current color as {{seq('\033]708;')}}{{seq_param('color')}}{{seq('\033\\')}}.
+
+Otherwise `color` is the color to be set.
+
+TODO document color formats.
+---
+implnotes:
+
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: urxvt uses <span style='background-color: #ff69b4;'>&nbsp;&nbsp;</span>#ff69b4 (a pink) as indication that parsing the color failed.
+---
+seq:
+
+#### osc ####
+#### numeric_fixed ####
+val: 708
+#### numeric_parameter ####
+name: color
+----
+default: 
+#### st ####

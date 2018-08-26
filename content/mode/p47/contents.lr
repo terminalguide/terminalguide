@@ -1,24 +1,63 @@
-title: Mode TODO ?47
+title: Alternate Screen Buffer (ALTBUF)
 ---
-body: {{snip('placeholder-page')}}
+body:
+
+Switch to alternate screen buffer.
+
+This basic mode is used by the more recent modes {{mode_link('p1047')}}, {{mode_link('p1049')}} as building block.
+
+Terminals supporting this mode offer a alternate screen buffer in addition to the primary buffer. The primary buffer usually supports scroll-back. The alternate buffer is for full screen applications. It does not support scroll-back (or displays scroll-back from the primary screen). Switching to the alternate screen buffer for fullscreen applications allows visually switching back to the contents of the primary buffer after the application terminates. 
+
+Both buffers are partially independent. They have a separate:
+* cell matrix
+* cursor save state.
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
 ----
 since: 
 ----
-body: 
+body:
+
+The 'titeInhibit' resource allows disabling of support for this mode. This setting itself is switchable from the application via mode {{mode_link('p1046')}}.
+
+scrollback buffer is still reachable in the alternative screen buffer, but is not modified when scrolling out lines.
 #### impl ####
 impl: konsole
 ----
+level: partial
+----
+since: 
+----
+body:
+
+{{mode_link('p1007')}} is active by default.
+* invokes {{seq_link('csi-m')}} with parameter 0 after switching to alternate screen.
+* In konsole the cursor position, SGR state and tab stops of the screen buffers are independent.
+#### impl ####
+impl: urxvt
+----
+level: partial
+----
+since: 
+----
+body:
+
+* Screns have an independent version of the current mapping of GL. (Does this matter with the limited implementation of iso2022?)
+* Independent for each screen cursor position, {{mode_link('p6')}},  {{mode_link('p7')}},  {{mode_link('4')}} and the pending wrap state.
+* force enables cursor on both screens.
+* Scrollback buffer is shared between primary and secondary screen. Scrolling in alternative screen buffer still adds to scrollback buffer.
+#### impl ####
+impl: vte
+----
 level: todo
 ----
 since: 
 ----
-body: 
+body: {{mode_link('p1007')}} is active by default.
 ---
 number: ?47

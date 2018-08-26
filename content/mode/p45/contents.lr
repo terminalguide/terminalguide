@@ -1,4 +1,4 @@
-title: Reverse Wrap Mode
+title: Reverse Wrap Mode (REVERSEWRAP)
 ---
 body: {{snip('placeholder-page')}}
 ---
@@ -7,7 +7,7 @@ implnotes:
 #### impl ####
 impl: xterm
 ----
-level: full
+level: todo
 ----
 since: 
 ----

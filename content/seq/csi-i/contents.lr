@@ -17,7 +17,7 @@ implnotes:
 #### impl ####
 impl: xterm
 ----
-level: full
+level: todo
 ----
 since: 
 ----
@@ -26,6 +26,14 @@ body:
 impl: konsole
 ----
 level: ignored
+----
+since: 
+----
+body: 
+#### impl ####
+impl: urxvt
+----
+level: todo
 ----
 since: 
 ----

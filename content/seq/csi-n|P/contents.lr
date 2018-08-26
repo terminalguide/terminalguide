@@ -1,0 +1,32 @@
+title: Device Status Report (?) [Dispatch] (DSR)
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
+----
+level: todo
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### intermediate ####
+name: ?
+#### numeric_parameter ####
+name: cmd
+----
+default: none
+#### final ####
+name: n

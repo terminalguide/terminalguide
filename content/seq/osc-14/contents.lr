@@ -1,0 +1,45 @@
+title: Change/Read Special Pointer Mask Color
+---
+body:
+
+Change/Read special pointer mask color.
+
+Use `text` as color description to set the special pointer mask color.
+
+TODO document effect of {{mode_link('p5')}}
+
+TODO document color formats.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body:
+
+xterm supports falling through into {{seq_link('osc-15')}} when given additional ';' separated colors.
+
+This only works when themed cursors are deactivated (https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=466704#135)
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: This only works when themed cursors are deactivated (https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=466704#135)
+---
+seq:
+
+#### osc ####
+#### numeric_fixed ####
+val: 14
+#### numeric_parameter ####
+name: text
+----
+default: 
+#### st ####

@@ -1,0 +1,40 @@
+title: Forward Index (DECFI)
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: urxvt
+----
+level: unparsable
+----
+since: 
+----
+body: * If the cursor is in the right-most column of the screen it just scrolls the row that the cursor is on one cell to the left (clearing the right most cell). {{snip('unset-pending-wrap')}}
+---
+seq:
+
+#### esc ####
+#### final ####
+name: 9
+---
+body:
+
+If the cursor is not on the right-most column of the scroll region this is the same as [Cursor Right][csi-C] with `amount` = 1
+
+If the cursor is on the right-most column of the scroll region and on a row that is inside the [scroll region](/scrolling-region), the whole left-most column of the scroll region is deleted. The remaining characters are shifted to the left and space from the right margin is filled with spaces. If the cell movement splits a multi cell character that character is cleared, by replacing it by spaces.
+
+If the cursor is on the right-most column of the scroll region and on a row that is outside the scroll region, nothing is changed.
+
+All cleared space is colored according to the current [SGR state](/attr).
+
+Does not change the cursor position.
+
+[csi-C]: /seq/csi-C

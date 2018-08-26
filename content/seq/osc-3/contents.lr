@@ -1,0 +1,43 @@
+title: Change / Delete an X-Property
+---
+body:
+
+Change / Delete an X-property on the terminal window.
+
+If `text` is contains a '=' sets a x-property on the terminal window named by the part before the first  '=' with the contents of the part after the first '=' as value.
+
+Otherwise remove the property with the name `text`
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: disabled by default
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body:
+
+enabled.
+
+In insecure mode also supports readback with {{seq('\033]3;?')}}{{seq_param('var')}}{{seq('\033\\')}}.
+---
+seq:
+
+#### osc ####
+#### numeric_fixed ####
+val: 3
+#### numeric_parameter ####
+name: text
+----
+default: 
+#### st ####

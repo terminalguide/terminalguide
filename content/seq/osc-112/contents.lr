@@ -1,0 +1,33 @@
+title: Reset Special Cursor Color
+---
+body:
+
+Reset the special color for the cursor.
+
+See {{seq_link('osc-12')}}
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
+----
+level: todo
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### osc ####
+#### numeric_fixed ####
+val: 112
+#### st ####

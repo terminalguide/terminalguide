@@ -1,19 +1,69 @@
 title: Primary Device Attributes (DA1)
 ---
-body: {{snip('placeholder-page')}}
+body: See terminal implementation specific information below
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
 ----
 since: 
 ----
-body: 
+body:
+
+If `p1` is not zero no reply is sent, otherwise:
+
+The response depends von various runtime and compile-time parameters.
+
+For -ti / decTerminalID < 200:
+<table class='visible-table'>
+<tr><td>125</td><td>{{seq('\033[?12;3;0;')}}{{seq_param('version')}}{{seq('c')}}<br>or</br>{{seq('\033[?12;2;0;')}}{{seq_param('version')}}{{seq('c')}}<br>Where <code>version</code> is the xterm version number (patch level)</td></tr>
+<tr><td>102</td><td>{{seq('\033[?6c')}}</td></tr>
+<tr><td>101</td><td>{{seq('\033[?1;0c')}}</td></tr>
+<tr><td>&lt; 200</td><td>{{seq('\033[?1;2c')}}</td></tr>
+</table>
+Else:
+A sequence is returned to the application that combines the following parts depending if the condition in the right oclumn is true.
+<table class='visible-table'>
+<tr><td>{{seq('\033[?')}}{{seq_param('level')}}{{seq(';1;2')}}</td><td>with <code>level</code> = 60 + (decTerminalID / 100) (default 64)</td></tr>
+<tr><td>{{seq(';3')}}</td><td>if decTerminalID in (240, 241, 330, 340) and regis support is compiled in</td></tr>
+<tr><td>{{seq(';4')}}</td><td>if decTerminalID in (240, 241, 330, 340, 382) and sixel support is compiled in</td></tr>
+<tr><td>{{seq(';6')}}</td><td></td></tr>
+<tr><td>{{seq(';8')}}</td><td>vt220 keyboard type is active (mode {{mode_link('p1061')}})</td></tr>
+<tr><td>{{seq(';9;15')}}</td><td></td></tr>
+<tr><td>{{seq(';18;21')}}</td><td>if decTerminalID >= 400</td></tr>
+<tr><td>{{seq(';22')}}</td><td>if color support is compiled in</td></tr>
+<tr><td>{{seq(';29')}}</td><td>if OPT_DEC_LOCATOR support is compiled in</td></tr>
+<tr><td>{{seq('c')}}</td><td></td></tr>
+</table>
 #### impl ####
 impl: konsole
+----
+level: full
+----
+since: 
+----
+body:
+
+Always returns (`p1` is ignored):
+
+{{seq('\033[?1;2c')}}
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body:
+
+Always returns (`p1` is ignored):
+
+{{seq('\033[?1;2c')}}
+#### impl ####
+impl: vte
 ----
 level: todo
 ----
@@ -25,7 +75,7 @@ seq:
 
 #### csi ####
 #### numeric_parameter ####
-name: cmd
+name: p1
 ----
 default: 0
 #### final ####

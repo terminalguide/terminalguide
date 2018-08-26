@@ -1,21 +1,41 @@
-title: Mode TODO ?9
+title: Mouse Click-Only Tracking  (X10_MOUSE)
 ---
-body: {{snip('placeholder-page')}}
+body: See [Mouse](/mouse) for details.
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
+----
+since: 
+----
+body: Only mouse actions without held modifier keys are reported. When modifier keys are held xterm uses the events for it's own functions (shift: select text, ctrl: menus) or blocks them.
+#### impl ####
+impl: konsole
+----
+level: ignored
 ----
 since: 
 ----
 body: 
 #### impl ####
-impl: konsole
+impl: urxvt
 ----
-level: ignored
+level: partial
+----
+since: 
+----
+body:
+
+Only mouse actions without shift or alt held are reported. These two modifiers are used for internal functions in urxvt.
+* in default reporting format the coordinates just wrap over (including into the range 0-32) when out of the representable range.
+* reports mouse wheel events in addition to clicks
+#### impl ####
+impl: vte
+----
+level: todo
 ----
 since: 
 ----

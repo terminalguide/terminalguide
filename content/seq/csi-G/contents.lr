@@ -36,3 +36,19 @@ level: partial
 since: 
 ----
 body: Ignores {{mode_link('p6')}}
+#### impl ####
+impl: urxvt
+----
+level: partial
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
+----
+level: todo
+----
+since: 
+----
+body: 

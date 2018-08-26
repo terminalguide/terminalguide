@@ -20,6 +20,22 @@ level: partial
 since: 
 ----
 body: In konsole invisible text can be copied using the clipboard functions.
+#### impl ####
+impl: urxvt
+----
+level: ignored
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
+----
+level: todo
+----
+since: 
+----
+body: 
 ---
 number: 8
 ---

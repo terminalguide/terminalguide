@@ -18,6 +18,22 @@ level: full
 since: 
 ----
 body: 
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
+----
+level: todo
+----
+since: 
+----
+body: 
 ---
 seq:
 
@@ -31,11 +47,11 @@ name: C
 ---
 body:
 
-Move the cursor right `amount` lines.
+Move the cursor right `amount` columns.
 
 {{snip('unset-pending-wrap')}}
 
-If [left and right margin mode][mode-p69] is set and a right margin is set and the cursor is on or left of the right-most line of it then the cursor may move right only until it reaches the right-most column of current scroll region.
+If [left and right margin mode][mode-p69] is set and a right margin is set and the cursor is on or left of the right-most column of it then the cursor may move right only until it reaches the right-most column of [current scroll region](/scrolling-region).
 
 If left and right margin mode is not set or a right margin is not set or the cursor is right of right-most column of current scroll region it may move right until the right-most column of the screen.
 

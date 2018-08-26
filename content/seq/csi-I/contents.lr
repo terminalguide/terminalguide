@@ -9,11 +9,27 @@ level: full
 ----
 since: 
 ----
-body: 
+body: `amount` = 0 is adjusted to 1
 #### impl ####
 impl: konsole
 ----
 level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
+----
+level: todo
 ----
 since: 
 ----

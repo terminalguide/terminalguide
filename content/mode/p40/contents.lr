@@ -1,19 +1,35 @@
-title: Mode TODO ?40
+title: Enable Support for Mode ?3 (132COLS)
 ---
-body: {{snip('placeholder-page')}}
+body: Enables support for {{mode_link('p3')}}.
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
 ----
 since: 
 ----
 body: 
 #### impl ####
 impl: konsole
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
 ----
 level: todo
 ----

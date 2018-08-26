@@ -1,11 +1,34 @@
-title: OSC TODO 1
+title: Change Icon Name
 ---
-body: {{snip('placeholder-page')}}
+body:
+
+Set the icon name of the terminal
+
+The icon name is what is displayed in iconified form of the terminal window and in window choosers / taskbars.
+
+If title mode 0 (see {{seq_link('csi-t|GT')}}) is set text is expect to be hex encoded (i.e. utf 8 with each code unit further encoded with two hex digets)
+
+If title mode 2 (see {{seq_link('csi-t|GT')}}) is set utf-8 is not TODO.
+
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
+----
+level: full
+----
+since: 
+----
+body:
+
+Only works when AllowTitleOps is set (default)
+
+Maximum title length is 1024
+
+non printable characters are replaced with '?'
+#### impl ####
+impl: konsole
 ----
 level: todo
 ----
@@ -13,9 +36,9 @@ since:
 ----
 body: 
 #### impl ####
-impl: konsole
+impl: urxvt
 ----
-level: todo
+level: full
 ----
 since: 
 ----
@@ -27,7 +50,7 @@ seq:
 #### numeric_fixed ####
 val: 1
 #### numeric_parameter ####
-name: p1
+name: text
 ----
 default: 
 #### st ####

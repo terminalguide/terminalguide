@@ -1,6 +1,10 @@
 title: OSC TODO 50
 ---
-body: {{snip('placeholder-page')}}
+body:
+
+[This sequence collides with {{seq_link('osc-50_konsole')}}]
+
+{{snip('placeholder-page')}}
 ---
 implnotes:
 
@@ -15,11 +19,19 @@ body:
 #### impl ####
 impl: konsole
 ----
-level: todo
+level: unparsable
 ----
 since: 
 ----
 body: 
+#### impl ####
+impl: urxvt
+----
+level: unparsable
+----
+since: 
+----
+body: Syntax is different. Prefer using {{seq_link('osc-710')}}, {{seq_link('osc-711')}}, {{seq_link('osc-712')}} and {{seq_link('osc-713')}}.
 ---
 seq:
 

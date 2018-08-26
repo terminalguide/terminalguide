@@ -22,6 +22,14 @@ level: full
 since: 
 ----
 body: 
+#### impl ####
+impl: urxvt
+----
+level: partial
+----
+since: 
+----
+body: just enough to allow usage of the dec special graphics characters.
 ---
 seq:
 

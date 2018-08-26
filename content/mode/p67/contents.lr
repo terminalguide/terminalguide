@@ -1,13 +1,13 @@
-title: Mode TODO ?67
+title: Backspace Sends Delete (DECBKM)
 ---
-body: {{snip('placeholder-page')}}
+body: When set the backspace key sends {{seq('\177')}}, when reset it sends {{seq('\010')}}.
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
 ----
 since: 
 ----
@@ -16,6 +16,14 @@ body:
 impl: konsole
 ----
 level: ignored
+----
+since: 
+----
+body: 
+#### impl ####
+impl: urxvt
+----
+level: full
 ----
 since: 
 ----

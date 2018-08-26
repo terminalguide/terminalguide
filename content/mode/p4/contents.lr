@@ -1,13 +1,17 @@
-title: Mode TODO ?4
+title: Enable Slow Scrolling  (DECSCLM)
 ---
-body: {{snip('placeholder-page')}}
+body:
+
+When enabled scrolling is line by line.
+
+Apart from back pressure this makes no observable difference for the program.
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
 ----
 since: 
 ----
@@ -15,7 +19,15 @@ body:
 #### impl ####
 impl: konsole
 ----
-level: todo
+level: ignored
+----
+since: 
+----
+body: 
+#### impl ####
+impl: urxvt
+----
+level: full
 ----
 since: 
 ----

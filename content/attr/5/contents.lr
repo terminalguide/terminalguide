@@ -20,6 +20,25 @@ level: full
 since: 
 ----
 body: 
+#### impl ####
+impl: urxvt
+----
+level: partial
+----
+since: 
+----
+body:
+
+* only enables blinking when no background color is set.
+* if mode {{mode_link('p1021')}} is set also forces named background colors into the bright variant.
+#### impl ####
+impl: vte
+----
+level: todo
+----
+since: 
+----
+body: 
 ---
 number: 5
 ---

@@ -1,0 +1,33 @@
+title: Set Bold Font
+---
+body:
+
+Sets or queries the current bold font.
+
+This font is used for cells that have {{sgr_link('1')}} set and {{sgr_link('3')}} unset.
+
+If `font` is {{seq('?')}} report the current font as {{seq('\033]711;')}}{{seq_param('font')}}{{seq('\033\\')}}.
+
+Otherwise `font` is the font to be used. The font specification is implementation defined.
+---
+implnotes:
+
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: Font reporting only contains the font name if urxvt is started in insecure mode. Otherwise the reported font name is the empty string.
+---
+seq:
+
+#### osc ####
+#### numeric_fixed ####
+val: 711
+#### numeric_parameter ####
+name: font
+----
+default: 
+#### st ####

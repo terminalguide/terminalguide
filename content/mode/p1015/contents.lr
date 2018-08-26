@@ -1,19 +1,38 @@
-title: Mode TODO ?1015
+title: Mouse Reporting Format URXVT
 ---
-body: {{snip('placeholder-page')}}
+body: See [Mouse](/mouse) for details.
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
 ----
 since: 
 ----
 body: 
 #### impl ####
 impl: konsole
+----
+level: partial
+----
+since: 
+----
+body:
+
+* Does not select encoding mode by last activated one, but by prioritizing ?1006 > ?1015 > ?1005
+* When not disabling the exact modes that have been activated partial state leaks into the next mouse mode activation.
+#### impl ####
+impl: urxvt
+----
+level: partial
+----
+since: 
+----
+body: Does not select encoding mode by last activated one, but by prioritizing ?1015 > ?1005
+#### impl ####
+impl: vte
 ----
 level: todo
 ----

@@ -3,7 +3,7 @@ title: Insert Blanks (ICH)
 body:
 
 Inserts `amount` spaces at current cursor position moving existing cell contents to the right.
-Cell content that would be copied to the right of the {right margin} of the {current scroll region} is discarded. The cursor position is not changed.
+Cell content that would be copied to the right of the {right margin} of the [current scroll region](/scrolling-region) is discarded. The cursor position is not changed.
 
 {{snip('unset-pending-wrap')}}
 
@@ -16,7 +16,7 @@ margins:
 echo -ne "\033[2J\033[1;1H\033[?69h\033[1;3s\033[42mあ23ぬ\033[0m\033[1;1H\033[2@\033[?69l\n\n"
 -->
 
-All cleared space is colored according to the current {SGR state}.
+All cleared space is colored according to the current [SGR state](/attr).
 
 The cells erased will be copy-able to via selection.
 
@@ -62,3 +62,23 @@ If the cursor points inside a multi cell character  the behaviour differs from o
 <!-- reproducer 
 echo -en '\033cAあDE\nAあDE\033[1;3H\033[41m\033[1@\n\nx\n\033[0m'
 -->
+#### impl ####
+impl: urxvt
+----
+level: partial
+----
+since: 
+----
+body:
+
+* If pending wrap state is set, wraps and indexes.
+* cells belonging to split multi-cell characters are erased with the SGR state of the first cell of that character.
+* split characters are always erased not clipped.
+#### impl ####
+impl: vte
+----
+level: todo
+----
+since: 
+----
+body: 

@@ -1,0 +1,33 @@
+title: Reset Special Text Foreground Color
+---
+body:
+
+Reset the special color for text foreground.
+
+See {{seq_link('osc-10')}}
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
+----
+level: todo
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### osc ####
+#### numeric_fixed ####
+val: 110
+#### st ####

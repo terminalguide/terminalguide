@@ -1,19 +1,44 @@
-title: Mode TODO ?1
+title: Cursor Key Format (DECCKM)
 ---
-body: {{snip('placeholder-page')}}
+body:
+
+Switches reporting format for cursor type keys.
+
+This changes the reported sequence for:
+* up, down, right, left
+* numpad up, down, right, left (for terminals that use {{seq('\033[A')}} etc sequences for these keys)
+* home, end (for terminals that use {{seq('\033[H')}} etc sequences for these keys)
+
+With the mode active these report with sequences beginning with  {{seq('\033O')}}. With the mode reset these report with sequences beginning with  {{seq('\033[')}}
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
 ----
 since: 
 ----
 body: 
 #### impl ####
 impl: konsole
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
 ----
 level: todo
 ----

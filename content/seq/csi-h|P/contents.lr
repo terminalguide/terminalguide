@@ -31,15 +31,31 @@ level: full
 since: 
 ----
 body: 
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: Supports deactivating up to 31 modes in one sequence.
+#### impl ####
+impl: vte
+----
+level: todo
+----
+since: 
+----
+body: 
 ---
 seq:
 
 #### csi ####
+#### intermediate ####
+name: ?
 #### numeric_parameter ####
 name: mode
 ----
 default: 0
-#### intermediate ####
-name: ?
 #### final ####
 name: h

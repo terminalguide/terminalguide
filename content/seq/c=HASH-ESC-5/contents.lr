@@ -13,7 +13,7 @@ body:
 #### impl ####
 impl: konsole
 ----
-level: todo
+level: full
 ----
 since: 
 ----

@@ -18,6 +18,25 @@ level: partial
 since: 
 ----
 body: If `bottom` is bigger than the number of the bottom-most row, the sequence is ignored.
+#### impl ####
+impl: urxvt
+----
+level: partial
+----
+since: 
+----
+body:
+
+* `top` == `bottom`  sets the scroll region to the whole screen.
+* if `top` is below the bottom-most row, it is not adjusted.
+#### impl ####
+impl: vte
+----
+level: todo
+----
+since: 
+----
+body: 
 ---
 seq:
 
@@ -41,6 +60,6 @@ If `bottom` is not specified, 0 or bigger than the number of the bottom-most row
 
 if `top` is below the bottom-most row, adjust it to the bottom-most row.
 
-If `top` < `bottom` set the top and bottom row of the scroll region according to `top` and `bottom` and move the cursor to the top-left cell of the display (when in [origin mode][mode-p6] is set to the top-left cell of the scroll region).
+If `top` < `bottom` set the top and bottom row of the [scroll region](/scrolling-region) according to `top` and `bottom` and move the cursor to the top-left cell of the display (when in [origin mode][mode-p6] is set to the top-left cell of the scroll region).
 
 [mode-p6]: /mode/p6/

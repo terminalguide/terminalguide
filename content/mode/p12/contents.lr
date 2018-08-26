@@ -1,13 +1,17 @@
-title: Mode TODO ?12
+title: Cursor Blinking (ATT610_BLINK)
 ---
-body: {{snip('placeholder-page')}}
+body:
+
+If set, the cursor is blinking.
+
+See also {{seq_link('csi-q|-SPACE')}} for an more widely supported alternative.
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
 ----
 since: 
 ----
@@ -16,6 +20,14 @@ body:
 impl: konsole
 ----
 level: ignored
+----
+since: 
+----
+body: 
+#### impl ####
+impl: urxvt
+----
+level: full
 ----
 since: 
 ----

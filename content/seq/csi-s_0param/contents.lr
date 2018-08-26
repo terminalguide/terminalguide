@@ -18,7 +18,15 @@ xterm disables this whole control when [left and right margin mode][mode-p69] is
 #### impl ####
 impl: konsole
 ----
-level: todo
+level: partial
+----
+since: 
+----
+body: 
+#### impl ####
+impl: urxvt
+----
+level: partial
 ----
 since: 
 ----
@@ -34,6 +42,6 @@ body:
 
 \[This control collides with [Set Left and Right Margin][csi-s_2param]\]
 
-Like TODO: ESC 7
+This does the same as {{seq_link('c=ESC-7')}}
 
 [csi-s_2param]: /seq/csi-s_2param

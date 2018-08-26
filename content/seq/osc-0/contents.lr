@@ -1,11 +1,19 @@
-title: OSC TODO 0
+title: Set Window Title and Icon Name
 ---
-body: {{snip('placeholder-page')}}
+body: This is a combination of {{seq_link('osc-1')}} and {{seq_link('osc-2')}}.
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
 ----
 level: todo
 ----
@@ -13,7 +21,15 @@ since:
 ----
 body: 
 #### impl ####
-impl: konsole
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
 ----
 level: todo
 ----

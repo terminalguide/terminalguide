@@ -35,6 +35,22 @@ level: partial
 since: 
 ----
 body: konsole only supports form 3
+#### impl ####
+impl: urxvt
+----
+level: partial
+----
+since: 
+----
+body: urxvt only supports form 3
+#### impl ####
+impl: vte
+----
+level: todo
+----
+since: 
+----
+body: 
 ---
 number: 48:5:...
 ---

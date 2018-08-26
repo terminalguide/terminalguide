@@ -1,19 +1,39 @@
-title: Mode TODO ?2004
+title: Bracketed Paste Mode
 ---
-body: {{snip('placeholder-page')}}
+body:
+
+Bracket paste contents in delimiter sequences.
+
+When pasting from the (e.g. system) clipboard add {{seq('\033[200~')}} before the clipboard contents and {{seq('\033[201~')}} after the clipboard contents. This allows applications to distinguish clipboard contents from manually typed text.
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
 ----
 since: 
 ----
 body: 
 #### impl ####
 impl: konsole
+----
+level: full
+----
+since: 
+----
+body: In this mode konsole additionally removes any {{seq('\033')}}  from the pasted text.
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
 ----
 level: todo
 ----

@@ -1,0 +1,30 @@
+title: Unsupported Rxvt Graphics
+---
+body:
+
+No longer functional on urxvt.
+
+`cmd` consumes exactly one additional character after the 'G'.
+
+Either does nothing or returns {{seq('\033G0')}} depending on parameter and if insecure mode is enabled.
+---
+implnotes:
+
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### esc ####
+#### intermediate ####
+name: G
+#### numeric_parameter ####
+name: cmd
+----
+default: 

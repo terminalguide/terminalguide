@@ -1,0 +1,40 @@
+title: Application Keypad Mode (DECNKM)
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
+----
+level: todo
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: ignored
+----
+since: 
+----
+body: Directly use {{seq_link('c=ESC-=')}} instead.
+---
+number: ?66
+---
+body: This is a mirror of {{seq_link('c=ESC-=')}}

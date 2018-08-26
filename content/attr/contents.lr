@@ -21,6 +21,10 @@ body2:
       <img src="konsole-18-07-70.png" alt="konsole"><br>
       konsole 18.07.70
     </div>
+    <div class="carousel-item" style="text-align: center">
+      <img src="urxvt-9.22+cvs.png" alt="urxvt"><br>
+      urxvt 9.22 + unreleased cvs changes
+    </div>
   </div>
   <a href="#carouselExampleControls" role="button" data-slide="prev" style="margin: 0 205px 0 30px">
     <span aria-hidden="true">&lt;</span>

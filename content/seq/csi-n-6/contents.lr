@@ -2,15 +2,13 @@ title: Request Cursor Postion Report (CPR)
 ---
 body:
 
-{{snip('placeholder-page')}}
-
 Sends cursor position report.
 
-ESC [ row ; column R
+The terminal replies with:
 
-If [origin mode][mode-p6] is set the cursor position is reported relative to the top  left corner of the scroll area.
+{{seq('\033[')}}{{seq_param('row')}}{{seq(';')}}{{seq_param('column')}}{{seq('R')}}
 
-[mode-p6]: /mode/p6/
+If {{mode_link('p6')}} is set the cursor position is reported relative to the top  left corner of the scroll area.
 ---
 implnotes:
 
@@ -30,6 +28,14 @@ level: partial
 since: 
 ----
 body: Ignores {{mode_link('p6')}}.
+#### impl ####
+impl: urxvt
+----
+level: partial
+----
+since: 
+----
+body: Ignores {{mode_link('p6')}}, always reports relative to the top left corner of the screen.
 ---
 seq:
 

@@ -18,6 +18,22 @@ level: full
 since: 
 ----
 body: Faint is an third form of the named colors that is configurable.
+#### impl ####
+impl: vte
+----
+level: todo
+----
+since: 
+----
+body: 
+#### impl ####
+impl: urxvt
+----
+level: ignored
+----
+since: 
+----
+body: 
 ---
 number: 2
 ---

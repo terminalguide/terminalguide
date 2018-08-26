@@ -13,7 +13,15 @@ body:
 #### impl ####
 impl: konsole
 ----
-level: todo
+level: partial
+----
+since: 
+----
+body: 
+#### impl ####
+impl: urxvt
+----
+level: partial
 ----
 since: 
 ----
@@ -25,4 +33,4 @@ seq:
 #### final ####
 name: u
 ---
-body: Like TODO: ESC 8
+body: This does the same as {{seq_link('c=ESC-8')}}

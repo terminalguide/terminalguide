@@ -1,0 +1,22 @@
+title: ???
+---
+body: In insecure mode, outputs the display used by the terminal followed by a line feed to the program.
+---
+implnotes:
+
+#### impl ####
+impl: urxvt
+----
+level: partial
+----
+since: 
+----
+body: Insecure mode is off by default
+---
+seq:
+
+#### csi ####
+#### numeric_fixed ####
+val: 7
+#### final ####
+name: n

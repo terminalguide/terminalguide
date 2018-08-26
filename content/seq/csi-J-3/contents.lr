@@ -1,0 +1,42 @@
+title: ￼￼Erase Display Scroll-back
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: urxvt
+----
+level: ignored
+----
+since: 
+----
+body: See {{seq_link('osc-720')}} and {{seq_link('osc-721')}} for an alternative.
+---
+seq:
+
+#### csi ####
+#### numeric_fixed ####
+val: 3
+#### final ####
+name: J
+---
+body:
+
+Erases the scroll-back of the terminal, without changing the non scrollback area.
+
+Does not change the cursor position.

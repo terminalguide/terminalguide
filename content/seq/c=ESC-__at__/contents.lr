@@ -1,0 +1,28 @@
+title: ???
+---
+body:
+
+Does nothing.
+
+p1 consumes exactly one additional character after the '@'.
+---
+implnotes:
+
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### esc ####
+#### intermediate ####
+name: @
+#### numeric_parameter ####
+name: p1
+----
+default: 

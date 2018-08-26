@@ -1,0 +1,45 @@
+title: Selection Background Color
+---
+body:
+
+Sets the background color of selected text.
+
+TODO document color formats.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: todo
+----
+since: 
+----
+body: 
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
+----
+level: todo
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### osc ####
+#### numeric_fixed ####
+val: 17
+#### numeric_parameter ####
+name: p1
+----
+default: 
+#### st ####

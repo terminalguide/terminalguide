@@ -1,0 +1,32 @@
+title: Enable Some Terminal Keyboard Shortcuts
+---
+body:
+
+Enable some terminal keyboard shortcuts.
+
+See terminal specific info below for shortcuts that are affected.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body:
+
+Enables or Disables usage of larger-vt-font and smaller-vt-font (usually bound to shift + ctrl + KP-Add, shift + KP-Add, shift + KP_Substract.
+
+Does not allow applications to use these shortcuts even when terminal actions are disabled.
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: Enables or Disables usage of shift-ins to insert text from system clipboard.
+---
+number: ?35

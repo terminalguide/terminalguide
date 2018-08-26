@@ -1,0 +1,54 @@
+title: Change/Read palette color
+---
+body:
+
+Change/Read palette color
+
+Parses `text` as ';' separated list. For each pair of items (`color`, `str`):
+* Interpret `color` as index into the palette (with 5 special indexes following the proper palette). If `str` is '?' then this is a readback command, otherwise:  parse `str` as color (via XParseColor traditionally) and set the palette entry `color` to that color.
+
+If readback was requested resonds with a sequence of the same form that would set the current color.
+E.g. {{seq('\033]4;1;rgb:ffff/ffff/0000\033\\')}}
+
+TODO document color formats.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body:
+
+readback can be disabled by configuration.
+special indicies above normal palette TODO
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
+----
+level: todo
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### osc ####
+#### numeric_fixed ####
+val: 4
+#### numeric_parameter ####
+name: text
+----
+default: 
+#### st ####

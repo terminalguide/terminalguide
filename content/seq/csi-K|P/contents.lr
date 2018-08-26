@@ -18,6 +18,14 @@ level: full
 since: 
 ----
 body: 
+#### impl ####
+impl: vte
+----
+level: full
+----
+since: 
+----
+body: 
 ---
 seq:
 
@@ -30,3 +38,9 @@ name: cmd
 default: 0
 #### final ####
 name: K
+---
+body:
+
+Like {{seq_link('csi-K')}} but does not erase cells marked with protected state.
+
+See {{seq_link('c=ESC-V')}} and {{seq_link('c=ESC-W')}} for changing the protected state of cells.

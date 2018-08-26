@@ -1,0 +1,52 @@
+title: Tertiary Device Attributes (DA3)
+---
+body: See terminal implementation specific information below
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body:
+
+If `p1` is zero and emulation level is 4 or higher, reply is always:
+
+{{seq('\033P!|0\033\\')}}
+#### impl ####
+impl: vte
+----
+level: full
+----
+since: 0.53
+----
+body:
+
+If `p1` is zero reply is always:
+
+{{seq('\033P!|7E565445\033\\')}}
+
+Which is the hex encoding of the bytes {{seq('~VTE')}}
+#### impl ####
+impl: urxvt
+----
+level: ignored
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### intermediate ####
+name: =
+#### numeric_parameter ####
+name: p1
+----
+default: 0
+#### final ####
+name: c

@@ -1,19 +1,61 @@
 title: Request Terminal Parameters
 ---
-body: {{snip('placeholder-page')}}
+body: See terminal implementation specific information below
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
 ----
 since: 
 ----
-body: 
+body:
+
+If emulation level is 1:
+
+if `p1` is zero:
+
+{{seq('\033[2;1;1;128;128;1;0x')}}
+
+if `p1` is one:
+
+{{seq('\033[3;1;1;128;128;1;0x')}}
 #### impl ####
 impl: konsole
+----
+level: full
+----
+since: 
+----
+body:
+
+if `p1` is zero:
+
+{{seq('\033[2;1;1;112;112;1;0x')}}
+
+if `p1` is one:
+
+{{seq('\033[3;1;1;112;112;1;0x')}}
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body:
+
+if `p1` is zero:
+
+{{seq('\033[2;1;1;128;128;1;0x')}}
+
+if `p1` is one:
+
+{{seq('\033[[3;1;1;128;128;1;0x')}}
+#### impl ####
+impl: vte
 ----
 level: todo
 ----
@@ -25,7 +67,7 @@ seq:
 
 #### csi ####
 #### numeric_parameter ####
-name: cmd
+name: p1
 ----
 default: 0
 #### final ####

@@ -1,0 +1,24 @@
+title: Scroll on Keyboard Input
+---
+body: If set scrolls to the bottom on every keypress.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: 
+---
+number: ?1011

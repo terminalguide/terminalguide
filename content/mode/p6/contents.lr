@@ -1,19 +1,46 @@
-title: Cursor Origin
+title: Cursor Origin (DECOM)
 ---
-body: {{snip('placeholder-page')}}
+body:
+
+If set the origin of the coordinate system is relativ to the [current scroll region](/scrolling-region).
+
+The origin is used by:
+* {{seq_link('csi-n-6')}}, {{seq_link('csi-H')}}, {{seq_link('csi-d')}}, {{seq_link('csi-__backtick__')}}, {{seq_link('csi-f')}}, {{seq_link('c=ESC-8')}}, {{seq_link('csi-u')}}
+
+The following sequences will force the cursor to be in the scrolling region if this mode is set.
+* {{seq_link('c0-M')}}, {{seq_link('c=ESC-E')}}, {{seq_link('csi-E')}}, {{seq_link('csi-F')}}
+* if mode {{mode_link('20')}} is active: {{seq_link('c0-J')}}, {{seq_link('c0-K')}}, {{seq_link('c0-L')}}
+
+If set the cursor is moved to the top left of the [current scroll region](/scrolling-region).
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
 ----
 since: 
 ----
 body: TODO: Seems to be cleared on window resize
 #### impl ####
 impl: konsole
+----
+level: partial
+----
+since: 
+----
+body: See linked sequences for differences.
+#### impl ####
+impl: urxvt
+----
+level: partial
+----
+since: 
+----
+body: See linked sequences for differences.
+#### impl ####
+impl: vte
 ----
 level: todo
 ----

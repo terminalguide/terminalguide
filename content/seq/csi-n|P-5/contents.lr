@@ -1,0 +1,24 @@
+title: Request Operating Status (?)
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### intermediate ####
+name: ?
+#### numeric_fixed ####
+val: 5
+#### final ####
+name: n
+---
+body: Always replies with <ruby>ESC<rt>1B</rt></ruby> <ruby>[<rt>5B</rt></ruby> <ruby>?<rt>37</rt></ruby> <ruby>0<rt>30</rt></ruby> <ruby>n<rt>6E</rt></ruby>

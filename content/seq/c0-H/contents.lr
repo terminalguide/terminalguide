@@ -18,6 +18,22 @@ level: full
 since: 
 ----
 body: 
+#### impl ####
+impl: urxvt
+----
+level: partial
+----
+since: 
+----
+body: urxvt implements a wrap around where an {{seq('\010')}} on the left most column (of any line below the top-most line of the screen) results in wrapping back to the right-most column of the screen on the line above.
+#### impl ####
+impl: vte
+----
+level: todo
+----
+since: 
+----
+body: 
 ---
 seq:
 

@@ -1,0 +1,18 @@
+title: Alias: Blink
+---
+implnotes:
+
+#### impl ####
+impl: urxvt
+----
+level: partial
+----
+since: 
+----
+body: See {{sgr_link('5')}} for details.
+---
+body: Alias for {{sgr_link('5')}}
+---
+number: 6
+---
+resetnumber: 25,26

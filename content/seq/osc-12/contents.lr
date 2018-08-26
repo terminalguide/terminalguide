@@ -1,0 +1,49 @@
+title: Change/Read Special Cursor Color
+---
+body:
+
+Change/Read special cursor color.
+
+Use `text` as color description to set the special cursor color.
+
+TODO document effect of {{mode_link('p5')}}
+
+TODO document color formats.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: todo
+----
+since: 
+----
+body: xterm supports falling through into {{seq_link('osc-13')}} when given additional ';' separated colors.
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
+----
+level: todo
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### osc ####
+#### numeric_fixed ####
+val: 12
+#### numeric_parameter ####
+name: text
+----
+default: 
+#### st ####

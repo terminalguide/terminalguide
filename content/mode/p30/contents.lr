@@ -1,0 +1,24 @@
+title: Show scrollbar (RXVT_SCROLLBAR)
+---
+body: Show scrollbar.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: 
+---
+number: ?30

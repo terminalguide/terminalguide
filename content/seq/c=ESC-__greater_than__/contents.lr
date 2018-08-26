@@ -1,4 +1,4 @@
-title: xxx (DECKPNM)
+title: Reset Application Keypad Mode (DECKPNM)
 ---
 implnotes:
 
@@ -12,6 +12,22 @@ since:
 body: 
 #### impl ####
 impl: konsole
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
 ----
 level: todo
 ----
@@ -27,5 +43,6 @@ name: >
 ---
 body:
 
-TODO
-Same as reset mode ?66
+This unsets {{seq_link('c=ESC-=')}}.
+
+This is also mirrored to the state of mode {{mode_link('p66')}}

@@ -13,6 +13,14 @@ body:
 #### impl ####
 impl: konsole
 ----
+level: full
+----
+since: 
+----
+body: also works with codepoints >= 256
+#### impl ####
+impl: vte
+----
 level: todo
 ----
 since: 

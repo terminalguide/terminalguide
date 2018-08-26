@@ -1,4 +1,4 @@
-title: Mode TODO ?8
+title: Mode TODO ?8 (DECARM)
 ---
 body: {{snip('placeholder-page')}}
 ---
@@ -7,7 +7,7 @@ implnotes:
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: ignored
 ----
 since: 
 ----

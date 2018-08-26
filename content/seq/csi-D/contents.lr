@@ -18,6 +18,22 @@ level: full
 since: 
 ----
 body: 
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
+----
+level: todo
+----
+since: 
+----
+body: 
 ---
 seq:
 
@@ -35,9 +51,14 @@ Move the cursor to the left `amount` cells.
 
 {{snip('unset-pending-wrap')}}
 
-If {{mode_link('p45')}} is not set:
-* Move the cursor `amount` cells left. If it would cross the left-most column of the scrolling region, stop at the left-most column of the scrolling region. If the cursor would move left of the left-most column of the screen, move to the left most column of the screen.
+If not both of {{mode_link('p45')}} and {{mode_link('p7')}} are set:
+* Move the cursor `amount` cells left. If it would cross the left-most column of the [scrolling region](/scrolling-region), stop at the left-most column of the scrolling region. If the cursor would move left of the left-most column of the screen, move to the left most column of the screen.
 
 Else:
 * If the pending wrap state is set, reduce `amount` by one.
-* TODO
+* If the cursor is left of the left-most column of the scrolling region:
+ * Move the cursor left `amount` of cells with the following rules:
+  *  Each time the cursor is advanced past the left screen edge set continue on the right-most column of the scrolling region on the line above. If that would be before the top-most line of the screen resume on the bottom most line of the screen (ignoring the top and bottom margins of the scrolling region).
+* If the cursor is on or right of the left-most column of the scrolling region:
+ * Move the cursor left `amount` of cells with the following rules:
+  *  Each time the cursor is advanced past the left-most column of the scrolling region, set continue on the right-most column of the scrolling region on the line above. If that would be before the top-most line of the screen resume on the bottom most line of the screen (ignoring the top and bottom margins of the scrolling region).

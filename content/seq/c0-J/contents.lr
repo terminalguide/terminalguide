@@ -27,6 +27,22 @@ level: full
 since: 
 ----
 body: 
+#### impl ####
+impl: urxvt
+----
+level: partial
+----
+since: 
+----
+body: Ignores {{mode_link('20')}} (as if mode is reset).
+#### impl ####
+impl: vte
+----
+level: todo
+----
+since: 
+----
+body: 
 ---
 seq:
 

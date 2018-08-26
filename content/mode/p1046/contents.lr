@@ -1,0 +1,20 @@
+title: Allow Alternate Screen Buffer
+---
+body:
+
+This mode allows overriding the user configuration selecting if {{mode_link('p47')}} is allowed.
+
+If this mode is set then switching to the alternate screen buffer is permitted.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+number: ?1046

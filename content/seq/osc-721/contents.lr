@@ -1,0 +1,31 @@
+title: Move view port towards the currently active buffer (or clear scrollback)
+---
+body:
+
+Move view port towards the currently active buffer (or clear scrollback)
+
+If `amount´ is 0, clear the scrollback buffer.
+
+Otherwise, move the scrolling view port ` amount` lines toward the currently active buffer..
+---
+implnotes:
+
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### osc ####
+#### numeric_fixed ####
+val: 721
+#### numeric_parameter ####
+name: amount
+----
+default: 0
+#### st ####

@@ -1,11 +1,31 @@
-title: OSC TODO 2
+title: Change Window title
 ---
-body: {{snip('placeholder-page')}}
+body:
+
+Set the window title of the terminal
+
+If title mode 0 (see {{seq_link('csi-t|GT')}}) is set text is expect to be hex encoded (i.e. utf 8 with each code unit further encoded with two hex digets)
+
+If title mode 2 (see {{seq_link('csi-t|GT')}}) is set utf-8 is not TODO.
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
+----
+level: full
+----
+since: 
+----
+body:
+
+Only works when AllowTitleOps is set (default)
+
+Maximum title length is 1024
+
+non printable characters are replaced with '?'
+#### impl ####
+impl: konsole
 ----
 level: todo
 ----
@@ -13,7 +33,15 @@ since:
 ----
 body: 
 #### impl ####
-impl: konsole
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
 ----
 level: todo
 ----
@@ -27,7 +55,7 @@ seq:
 #### numeric_fixed ####
 val: 2
 #### numeric_parameter ####
-name: p1
+name: text
 ----
 default: 
 #### st ####

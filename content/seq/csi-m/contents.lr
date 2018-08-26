@@ -2,6 +2,8 @@ title: Select Graphic Rendition (SGR)
 ---
 body:
 
+TODO: This sequence takes multiple parameters each with the same interpretation
+
 Set rendering attributes.
 
 See [attributes](/attr) for details about the attributes.
@@ -20,6 +22,22 @@ body:
 impl: konsole
 ----
 level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
+----
+level: todo
 ----
 since: 
 ----

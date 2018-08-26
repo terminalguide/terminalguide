@@ -5,13 +5,29 @@ implnotes:
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
 ----
 since: 
 ----
-body: TODO scroll-lock
+body: 
 #### impl ####
 impl: konsole
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
 ----
 level: todo
 ----
@@ -31,10 +47,10 @@ name: S
 ---
 body:
 
-Removes `amount` lines from the top of the scroll region
+Removes `amount` lines from the top of the [scroll region](/scrolling-region)
 
-{{snip('placeholder-page')}}
+Inserts `amount` lines at the bottom of the [scroll region](/scrolling-region). Lines at the top of the scrolling region are lost.
 
-If scrolling clears whole screen, then TODO
+The new lines are created according to the current [SGR state](/attr/)
 
 Does not change the (absolute) cursor position.

@@ -1,0 +1,38 @@
+title: Cursor Tabulation Control
+---
+body:
+
+If `cmd` = 0: invoke {{seq_link('c=ESC-H')}}
+
+if `cmd` = 2: invoke {{seq_link('csi-g')}} with `cmd` = 0
+
+if `cmd` = 5: invoke {{seq_link('csi-g')}} with `cmd` = 3
+---
+implnotes:
+
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
+----
+level: full
+----
+since: 
+----
+body: accepts `cmd` = 4 as alias for `cmd` = 5
+---
+seq:
+
+#### csi ####
+#### numeric_parameter ####
+name: cmd
+----
+default: 
+#### final ####
+name: W

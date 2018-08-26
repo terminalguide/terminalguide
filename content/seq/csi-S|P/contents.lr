@@ -1,0 +1,34 @@
+title: [Sixel/ReGIS] Graphics Attributes
+---
+body: RESERVED
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### intermediate ####
+name: ?
+#### numeric_parameter ####
+name: p1
+----
+default: 
+#### numeric_parameter ####
+name: p2
+----
+default: 
+#### numeric_parameter ####
+name: p3
+----
+default: 
+#### final ####
+name: S

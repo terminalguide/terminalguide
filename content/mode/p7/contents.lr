@@ -28,6 +28,22 @@ body:
 #### impl ####
 impl: konsole
 ----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
+----
 level: todo
 ----
 since: 

@@ -1,0 +1,85 @@
+_model: page
+---
+title: Mouse
+---
+body:
+
+#### markdown ####
+body:
+
+Mouse tracking modes enable the application to react to mouse input.
+
+Configuration is for 2 independent aspects:
+* What events are sent
+* Which reporting format is used
+
+Additionally there are some special modes.
+
+Events
+-----------
+These modes are mutually exclusive. The last activated mode wins.
+
+<table class='visible-table'>
+<tr><td>{{mode_link('p9')}}</td><td>Send mouse button press.</td></tr>
+<tr><td>{{mode_link('p1000')}}</td><td>Send mouse button press and release.<br>Also send scroll wheel events.</td></tr>
+<tr><td>{{mode_link('p1001')}}</td><td>special case</td></tr>
+<tr><td>{{mode_link('p1002')}}</td><td>Send mouse button press and release. Send mouse move events while a button is pressed.<br>Also send scroll wheel events.</td></tr>
+<tr><td>{{mode_link('p1003')}}</td><td>Send mouse button press and release. Always send mouse move events.<br>Also send scroll wheel events.</td></tr>
+</table>
+
+{{mode_link('p1001')}} is a special case, TODO.
+
+Reporting format
+-------------------------
+
+<table class='visible-table'>
+<tr><td>default</td><td>Mouse information is reported as<br>
+{{seq('\033[M')}}{{seq_param('btn')}}{{seq_param('column')}}{{seq_param('row')}}<br>
+with <code>btn</code>, <code>column</code> and <code>row</code> encoded as bytes with code 32 + value. This mode has a range from 1 to 223. If the value exceeds the range a {{seq('\0')}} is used as out of range marker. These are not encoded in utf-8 but output as raw bytes. There is no separator between the bytes.<br>(TODO: sometimes starts with {{seq('\033>M')}})</td></tr>
+<tr><td>{{mode_link('p1005')}}</td><td>Mouse information is reported as<br>
+{{seq('\033[M')}}{{seq_param('btn')}}{{seq_param('column')}}{{seq_param('row')}}<br>
+with <code>btn</code>, <code>column</code> and <code>row</code> encoded as variable length byte sequences. For values < 96 the format is identical to the default mode. Values above that boundary are encoded as 2 bytes as if encoding codepoint value + 32 as utf-8. This mode has a range from 1 to 2015. If the value exceeds the range a {{seq('\0')}} is used as out of range marker. The output is decodable with an standard utf-8 decoder. There is no separator between the bytes.<br>(TODO: sometimes starts with {{seq('\033>M')}})</td></tr>
+<tr><td>{{mode_link('p1006')}}</td><td>Mouse information is reported as<br>
+{{seq('\033[<')}}{{seq_param('btn')}}{{seq(';')}}{{seq_param('column')}}{{seq(';')}}{{seq_param('row')}}{{seq('M')}} for button press or movement, and<br>
+{{seq('\033[<')}}{{seq_param('btn')}}{{seq(';')}}{{seq_param('column')}}{{seq(';')}}{{seq_param('row')}}{{seq('m')}} for button release<br>
+with <code>btn</code>, <code>column</code> and <code>row</code> encoded as variable length digit sequences in base 10. This mode does not have an arbitrary range limit. The output is decodable with an standard utf-8 decoder, because it only contains ascii characters.</td></tr>
+<tr><td>{{mode_link('p1015')}}</td><td>Mouse information is reported as<br>
+{{seq('\033[')}}{{seq_param('btn')}}{{seq(';')}}{{seq_param('column')}}{{seq(';')}}{{seq_param('row')}}{{seq('M')}}<br>
+with <code>btn</code>, <code>column</code> and <code>row</code> encoded as variable length digit sequences in base 10. For `btn` the encoded value is offset by the value 32(i.e. the right button is encoded as {{seq('34')}}). This mode does not have an arbitrary range limit. The output is decodable with an standard utf-8 decoder, because it only contains ascii characters.</td></tr>
+</table>
+
+Mouse button ids:
+<table class='visible-table'>
+<tr><td>left</td><td>0</td></tr>
+<tr><td>middle</td><td>1</td></tr>
+<tr><td>right</td><td>2</td></tr>
+<tr><td>some button was released</td><td>3</td></tr>
+<tr><td>wheel up</td><td>64+0</td></tr>
+<tr><td>wheel down</td><td>64+1</td></tr>
+</table>
+
+The `btn` parameter also contains additional information encoded but special bits (not used in {{mode_link('p9')}}):
+<table class='visible-table'>
+<tr><td>mouse move</td><td>32</td></tr>
+<tr><td>shift</td><td>4</td></tr>
+<tr><td>alt</td><td>8</td></tr>
+<tr><td>ctrl</td><td>16</td></tr>
+</table>
+
+`column`  and `row` always are coordinates of a cell in the terminal (never < 1 and never bigger than the size in their dimension of the terminal)
+
+### Reporting buttons (unless in {{mode_link('p1006')}})
+
+When a button is pressed it's id is used in the report. When a button is released the generic id '3' is used, it is impossible to deduce which button was released.
+
+When multiple buttons are held down while moving the mouse the report contains the held button with the lowest id.
+
+When no buttons are held down while moving the mouse the reported button id is 3 (button released).
+
+### Reporting buttons  in {{mode_link('p1006')}}
+
+When a button is pressed it's id is used in the report with a final character {{seq('M')}}. When a button is released the same id is used but with a final character {{seq('m')}}. By using different final characters the application can track which buttons are held down even after multiple buttons where held at the same time.
+
+When multiple buttons are held down while moving the mouse the report contains the held button with the lowest id.
+
+When no buttons are held down while moving the mouse the reported button id is 3 (button released).

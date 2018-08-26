@@ -1,0 +1,46 @@
+title: Cursor Save/Restore for use with Alternate Screen Buffer
+---
+body:
+
+This is an alias for cursor save and restore to be used with switching to the alternate screen buffer.
+
+In terminals that support disabling support for the alternate screen buffer support for this mode follows that setting. So using this mode together with {{mode_link('p47')}} or {{mode_link('p1047')}} ensures that either both are done or neither.
+
+Activating this mode invokes {{seq_link('c=ESC-7')}}. Deactivating this mode invokes {{seq_link('c=ESC-8')}} .
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: partial
+----
+since: 
+----
+body: See the save/restore sequences for details that differ.
+#### impl ####
+impl: urxvt
+----
+level: partial
+----
+since: 
+----
+body: See the save/restore sequences for details that differ.
+#### impl ####
+impl: vte
+----
+level: todo
+----
+since: 
+----
+body: 
+---
+number: ?1048

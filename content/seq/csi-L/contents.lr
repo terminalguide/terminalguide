@@ -17,6 +17,31 @@ xterm as of 333 has the follwing glitches:
 #### impl ####
 impl: konsole
 ----
+level: partial
+----
+since: 
+----
+body:
+
+* does not unset the pending wrap state.
+* if the cursor is above the current scrolling region: scrolls remaining lines until bottom most line of scroll region.
+* when scrolling the full scrolling region size the last line is not scrolled out.
+* Does not move the cursor to the left margin
+#### impl ####
+impl: urxvt
+----
+level: partial
+----
+since: 
+----
+body:
+
+* if the cursor is above the current scroll region it acts as if the top of the scrolling region was set to the top-most row of the screen.
+* If pending wrap state is set, wraps and indexes.
+* Does not move the cursor to the left margin (unless pending wrap was set)
+#### impl ####
+impl: vte
+----
 level: todo
 ----
 since: 
@@ -35,19 +60,19 @@ name: L
 ---
 body:
 
-TODO ResetWrap
+Insert `amount` lines at the current cursor row. The contents of the line at the current cursor row and below (to the bottom-most line in the scrolling region) are shifted down by `amount` lines. The contents of the `amount` bottom-most lines in the [scroll region](/scrolling-region) are lost.
 
-Insert `amount` lines at the current cursor row. The contents of the line at the current cursor row and below (to the bottom-most line in the scrolling region) are shifted down by `amount` lines. The contents of the `amount` bottom-most lines in the scroll region are lost.
+{{snip('unset-pending-wrap')}}
 
-If the current cursor position is outside of the {current scroll region} it does nothing.
+If the current cursor position is outside of the [current scroll region](/scrolling-region) it does nothing.
 
-If `amount` is greater than the remaining number of lines in the scrolling region it is adjusted down. 
+If `amount` is greater than the remaining number of lines in the scrolling region it is adjusted down (still allowing for scrolling out every remaining line in the scrolling region)
 
 In [left and right margin mode][mode-p69] the margins are respected; lines are only scrolled in the scroll region.
 
 If the cell movement splits a multi cell character that character cleared, by replacing it by spaces.
 
-All cleared space is colored according to the current {SGR state}.
+All cleared space is colored according to the current [SGR state](/attr).
 
 Moves the cursor to the left margin.
 

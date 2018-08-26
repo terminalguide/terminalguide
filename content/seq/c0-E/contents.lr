@@ -23,6 +23,18 @@ level: full
 since: 
 ----
 body: Fixed to an empty string.
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body:
+
+Defaults to {{seq('\033[?1;2c')}}.
+
+Configurable via "answerbackString" resource.
 ---
 seq:
 

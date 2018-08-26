@@ -1,0 +1,53 @@
+title: Cursor Horizontal Position Relative (HPR)
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: urxvt
+----
+level: partial
+----
+since: 
+----
+body: * With origin mode, does not force the cursor row to be inside the scrolling region.
+#### impl ####
+impl: vte
+----
+level: ignored
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### numeric_parameter ####
+name: amount
+----
+default: 1
+#### final ####
+name: a
+---
+body:
+
+Move the cursor `amount` columns to the right. The cursor row is not changed, unless origin mode is set and the cursor is currently outside of the current scroll region.
+
+{{snip('unset-pending-wrap')}}
+
+If `amount` is 0, it is adjusted to 1. If moving `amount` columns to the right would be past the right-most column of the screen it is adjusted so the cursor is moved to the right-most column of the screen.
+
+If [origin mode][mode-p6] is set the cursor row will be forced inside the current scroll region.
+
+If [origin mode][mode-p6] is set and  [left and right margin mode][mode-p69] is set the cursor adjusted to be on or left of the right-most column of the scrolling region.
+
+[mode-p6]: /mode/p6/
+[mode-p69]: /mode/p69/

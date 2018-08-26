@@ -34,6 +34,26 @@ level: partial
 since: 
 ----
 body: konsole supports only form 4.
+#### impl ####
+impl: urxvt
+----
+level: partial
+----
+since: 
+----
+body:
+
+urxvt supports only form 4.
+
+urxvt uses a set of dynamic color slots and overwrites the least recently used in the proximity of the target color. Real usage should yield much better result than the demonstration color ramps.
+#### impl ####
+impl: vte
+----
+level: todo
+----
+since: 
+----
+body: 
 ---
 number: 48:2:...
 ---

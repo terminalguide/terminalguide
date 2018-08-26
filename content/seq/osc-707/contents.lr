@@ -1,0 +1,33 @@
+title: Set Replacement Color for Underlined Text
+---
+body:
+
+Override color of underlined text with default foreground color.
+
+If `color` is {{seq('?')}} report the current color as {{seq('\033]708;')}}{{seq_param('color')}}{{seq('\033\\')}}.
+
+Otherwise `color` is the color to be set.
+
+TODO document color formats.
+---
+implnotes:
+
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: urxvt uses <span style='background-color: #ff69b4;'>&nbsp;&nbsp;</span>#ff69b4 (a pink) as indication that parsing the color failed.
+---
+seq:
+
+#### osc ####
+#### numeric_fixed ####
+val: 707
+#### numeric_parameter ####
+name: color
+----
+default: 
+#### st ####
