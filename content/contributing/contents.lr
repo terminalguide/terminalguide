@@ -1,0 +1,20 @@
+title: Contributing
+---
+body:
+
+#### markdown ####
+body:
+
+This website will likely always be a work in progress, as terminals evolve.
+
+Contributions are welcome.
+
+Keep in mind this project documents actual terminal behavior, even if that behavior seems contra intuitive or wrong.
+
+Please open an [issue](https:/github.com/terminalguide/terminalguide/issues) or [pull request](https:/github.com/terminalguide/terminalguide/pulls) for:
+* anything that does not match the actual behavior a documented terminal 
+* Unclear or incorrect wording.
+
+Also help with the usability and style are highly appreciated.
+
+In case you want to add an additional terminal, please get in touch before hand, because this is a major project both for writing and reviewing. 
