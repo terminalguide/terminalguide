@@ -1,6 +1,6 @@
 body:
 
-Invokes G3 into GL.
+Invokes G3 into GR.
 
 {{snip('iso2022')}}
 ---
@@ -14,19 +14,11 @@ level: full
 since: 
 ----
 body: 
-#### impl ####
-impl: konsole
-----
-level: full
-----
-since: 
-----
-body: 
 ---
 seq:
 
 #### esc ####
 #### final ####
-name: o
+name: |
 ---
-title: Locking Shift 3 (LS3)
+title: Locking Shift 3 Right (LS3R)

@@ -2,9 +2,9 @@ title: Shift Out (SO)
 ---
 body:
 
-{{snip('placeholder-page')}}
+Invokes G1 into GL
 
-SO invokes G1 into GL
+{{snip('iso2022')}}
 ---
 implnotes:
 

@@ -27,6 +27,6 @@ name: n
 ---
 body:
 
-Printable characters with value < 128 are using G2.
+Invokes G2 into GL
 
-See ECMA-043 for background
+{{snip('iso2022')}}

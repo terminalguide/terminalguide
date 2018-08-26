@@ -1,0 +1,2 @@
+These sequences are not used in UTF-8 mode but only in traditional 7 or 8 bit ISO-2022 mode.
+See ECMA-043 for background.

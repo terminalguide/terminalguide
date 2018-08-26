@@ -1,6 +1,8 @@
+title: ANSI Charset Level 3 (ANSI_LEVEL_3)
+---
 body:
 
-Invokes G3 into GL.
+Designate ASCII as G0 and invoke G0 as GL.
 
 {{snip('iso2022')}}
 ---
@@ -14,19 +16,11 @@ level: full
 since: 
 ----
 body: 
-#### impl ####
-impl: konsole
-----
-level: full
-----
-since: 
-----
-body: 
 ---
 seq:
 
 #### esc ####
+#### intermediate ####
+name: SPACE
 #### final ####
-name: o
----
-title: Locking Shift 3 (LS3)
+name: N

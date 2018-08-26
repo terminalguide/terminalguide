@@ -2,9 +2,9 @@ title: Shift In (SI)
 ---
 body:
 
-{{snip('placeholder-page')}}
+Invokes G0 into to GL
 
-SI invokes G0 into to GL
+{{snip('iso2022')}}
 ---
 implnotes:
 

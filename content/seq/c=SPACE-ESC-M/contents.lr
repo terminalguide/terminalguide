@@ -1,0 +1,26 @@
+title: ANSI Charset Level 2 (ANSI_LEVEL_2)
+---
+body:
+
+Designate ASCII as G0, Latin1 as G1 and invoke G0 as GL and G1 as GR.
+
+{{snip('iso2022')}}
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### esc ####
+#### intermediate ####
+name: SPACE
+#### final ####
+name: M

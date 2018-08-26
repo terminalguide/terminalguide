@@ -1,6 +1,8 @@
+title: Single Shift 2 (SS2)
+---
 body:
 
-Invokes G3 into GL.
+Invokes G2 into GL only for the next printable character.
 
 {{snip('iso2022')}}
 ---
@@ -14,19 +16,9 @@ level: full
 since: 
 ----
 body: 
-#### impl ####
-impl: konsole
-----
-level: full
-----
-since: 
-----
-body: 
 ---
 seq:
 
 #### esc ####
 #### final ####
-name: o
----
-title: Locking Shift 3 (LS3)
+name: N
