@@ -1,3 +1,22 @@
-title: Terminal Guide
+title: 
 ---
-body: 
+body:
+
+#### markdown ####
+body:
+
+How do modern terminals actually work in detail?
+
+Still incomplete and likely to have some parts incorrectly reverse engineered.
+
+Pages:
+* [Basics](/basics)
+<!-- TODO * [Parsing](/parsing) -->
+* [Printing](/printing)
+* [Scrolling Region](/scrolling-region)
+* [Control Characters and Escape Sequences](/seq)
+* [Modes](/mode)
+* [Attributes](/attr)
+* [Mouse](/mouse)
+
+This project is still a work in progress. Please consider [contributing](/contributing)
