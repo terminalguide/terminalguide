@@ -78,6 +78,10 @@ table.list-table tr:hover:not(:first-child) {
     background: #eee;
 }
 
+table.list-table td.impl-status.highlight {
+    background-color: #ffffab;
+}
+
 table.list-table td.impl-status {
     border-right: #eee solid 1px;
     text-align: center;

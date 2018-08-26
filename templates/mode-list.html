@@ -8,14 +8,14 @@
     <tr>
     <td></td><td></td><td></td>
     {% for impl, params in bag('impls').items() %}
-    <td>{{impl}}</td>
+    <th data-impl="{{impl}}">{{impl}}</th>
     {% endfor %}
     </tr>
     {% for s in this.children %}
     <tr>
     <td>{{ s.number }}</td><td>&nbsp;&nbsp;</td><td><a href='{{ s|url }}'>{{ s.title }}</a></td>
     {% for impl, params in bag('impls').items() %}
-        <td class="impl-status">
+        <td data-impl="{{impl}}" class="impl-status">
         {% if s.implnotes %}
         {% for blk in s.implnotes.blocks %}
         {% if impl == blk.impl %}
