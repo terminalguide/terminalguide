@@ -41,7 +41,7 @@ Erase the entire line where the cursor is currently placed, by replacing all cel
 
 In it's basic variant it will also erase protected cells. When called as {{seq_link('csi_ck__p')}} it will not erase protected cells.
 
-All erased space is colored according to the current [SGR state](../../attr).
+All erased space is colored according to the current [SGR state](/attr).
 
 Does not change the cursor position.
 

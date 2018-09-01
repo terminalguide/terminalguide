@@ -12,12 +12,9 @@ If `row` is 0, it is adjusted to 1. If `row` is greater than the bottom-most row
 
 {{ snip('unset-pending-wrap') }}
 
-If [origin mode][mode-p6] is set the cursor row will be moved relative to the top  margin row and adjusted to be above or at bottom-most row in the [current scroll region](/scrolling-region).
+If {{mode_link('p6')}} mode is set the cursor row will be moved relative to the top  margin row and adjusted to be above or at bottom-most row in the [current scroll region](/scrolling-region).
 
-If origin mode is set and  [left and right margin mode][mode-p69] is set the cursor will  be moved relative to the left margin column and adjusted to be on or left of the right margin column.
-
-[mode-p6]: /mode/p6/
-[mode-p69]: /mode/p69/
+If origin mode is set and  {{mode_link('p69')}} mode is set the cursor will  be moved relative to the left margin column and adjusted to be on or left of the right margin column.
 ---
 implnotes:
 

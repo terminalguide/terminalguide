@@ -51,7 +51,4 @@ Move `amount` lines up and to the beginning of the line.
 
 If `amount` is 0, it is adjusted to 1.
 
-This is a composition of [Cursor Up][csi_ca] with the given `amount` parameter and [Carriage Return][a_c0-m].
-
-[a_c0-m]: /seq/a_c0-m
-[csi_ca]: /seq/csi_ca
+This is a composition of {{seq_link('csi_ca')}} with the given `amount` parameter and {{seq_link('a_c0-m')}}.

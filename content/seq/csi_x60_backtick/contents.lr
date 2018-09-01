@@ -59,9 +59,6 @@ If `column` is 0, it is adjusted to 1. If `column` is greater than the right-mos
 
 `column` == 1 is the left-most column.
 
-If [origin mode][mode-p6] is set the cursor row will be forced inside the current scroll region.
+If {{mode_link('p6')}} mode is set the cursor row will be forced inside the current scroll region.
 
-If [origin mode][mode-p6] is set and  [left and right margin mode][mode-p69] is set the cursor will  be moved relative to the left-most column of the scroll region and adjusted to be on or left of the right-most column of the scroll region.
-
-[mode-p6]: /mode/p6/
-[mode-p69]: /mode/p69/
+If {{mode_link('p6')}} mode is set and {{mode_link('p69')}} mode is set the cursor will  be moved relative to the left-most column of the scroll region and adjusted to be on or left of the right-most column of the scroll region.

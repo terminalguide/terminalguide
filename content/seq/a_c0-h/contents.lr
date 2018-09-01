@@ -44,6 +44,5 @@ hex: 08
 ---
 body:
 
-Same as [Cursor Left][csi_cd] with `amount` = 1
+Same as {{seq_link('csi_cd')}} with `amount` = 1
 
-[csi_cd]: /seq/csi_cd

@@ -39,8 +39,6 @@ name: T
 ---
 body:
 
-See also [Scroll Down][csi_ct_1param] which shares this code and is distingished by having only one parameter and having the first parameter != 0
+See also {{seq_link('csi_ct_1param')}} which shares this code and is distingished by having only one parameter and having the first parameter != 0
 
 {{snip('placeholder-page')}}
-
-[csi_ct_1param]: /seq/csi_ct_1param

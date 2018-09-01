@@ -9,12 +9,7 @@ level: full
 ----
 since: 
 ----
-body:
-
-xterm only interprets this control when [left and right margin mode][mode-p69] is set. In this case it completely replaces [ansi.sys' save cursor][csi_ss_0param] which is not available in that mode.
-
-[mode-p69]: /mode/p69/
-[csi_ss_0param]: /seq/csi_ss_0param
+body: xterm only interprets this control when {{mode_link('p69')}} is set. In this case it completely replaces {{seq_link('csi_ss_0param')}} which is not available in that mode.
 ---
 seq:
 
@@ -32,7 +27,7 @@ name: s
 ---
 body:
 
-\[This control collides with [ansi.sys' save cursor][csi_ss_0param]\]
+\[This control collides with {{seq_link('csi_ss_0param')}}\]
 
 Set Left and Right Margin
 
@@ -40,7 +35,4 @@ If `right` is not specified, 0 or bigger than the number of the right-most colum
 
 if `left` is right of the right-most column, adjust it to the right-most column.
 
-If `left` < `right` set the left and right column of the scroll region according to `left` and `right` and move the cursor to the top-left cell of the display (when in [origin mode][mode-p6] is set to the top-left cell of the scroll region).
-
-[mode-p6]: /mode/p6/
-[csi_ss_0param]: /seq/csi_ss_0param
+If `left` < `right` set the left and right column of the scroll region according to `left` and `right` and move the cursor to the top-left cell of the display (when in {{mode_link('p6')}} mode is set to the top-left cell of the scroll region).

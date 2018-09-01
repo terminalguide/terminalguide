@@ -55,7 +55,6 @@ Set mode to active.
 
 See [the modes prefixed with '?'][mode] for possible modes to use with this sequence.
 
-Modes can be activated using [Set Mode (?)][csi_sh__p].
+Modes can be activated using {{seq_link('csi_sh__p')}}.
 
 [mode]: /mode
-[csi_sh__p]: /seq/csi_sh__p

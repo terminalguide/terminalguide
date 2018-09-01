@@ -47,12 +47,10 @@ name: T
 ---
 body:
 
-See also [Track Mouse][csi_ct_5param] which shares this code. This command is distingished by having only one parameter and having the first parameter != 0
+See also {{seq_link('csi_ct_5param')}} which shares this code. This command is distingished by having only one parameter and having the first parameter != 0
 
 Inserts `amount` lines at the top of the [scroll region](/scrolling-region). Lines at the bottom of the scrolling region are lost.
 
-The new lines are created according to the current [SGR state](../../attr/)
+The new lines are created according to the current [SGR state](/attr/)
 
 Does not change the (absolute) cursor position.
-
-[csi_ct_5param]: /seq/csi_ct_5param

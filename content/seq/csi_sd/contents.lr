@@ -58,6 +58,4 @@ If `row` is 0, it is adjusted to 1. If `row` is greater than the bottom-most row
 
 `row` == 1 is the top-most row.
 
-If [origin mode][mode-p6] is set the cursor will  be moved relative to the top margin row of the scrolling region and adjusted to be on or above of the bottom-most row of the scrolling region.
-
-[mode-p6]: /mode/p6/
+If {{mode_link('p6')}} mode is set the cursor will  be moved relative to the top margin row of the scrolling region and adjusted to be on or above of the bottom-most row of the scrolling region.

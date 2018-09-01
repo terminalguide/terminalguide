@@ -49,8 +49,4 @@ default: 1
 #### final ####
 name: f
 ---
-body:
-
-Alias for [Set Cursor Position][csi_ch]
-
-[csi_ch]: /seq/csi_ch
+body: Alias for {{seq_link('csi_ch')}}

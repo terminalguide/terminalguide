@@ -11,11 +11,9 @@ since:
 ----
 body:
 
-As of xterm 333 in [left and right margin mode][mode-p69] restoring of the cursor position is broken.
+As of xterm 333 in {{mode_link('p69')}} restoring of the cursor position is broken.
 
 TODO investigate if not restoring sgr_background has detectable consequences. Also if not using setExtended{BG,FG} has.
-
-[mode-p69]: /mode/p69/
 #### impl ####
 impl: konsole
 ----
@@ -68,7 +66,7 @@ The primary and alternate screen have distinct save state.
 
 The following state is restored:
 * the state of mode {{mode_link('p6')}} (TODO but not it's mode save state??)
-* the current [attributes](../attr)
+* the current [attributes](/attr)
 * protected area indication (TODO)
 * the saved cursor position is relative to the origin set via {{mode_link('p6')}}.
 * pending wrap state
@@ -76,5 +74,3 @@ The following state is restored:
 * G0, G1, G2, G3 character sets.
 
 If not save was done before values are reset to their hard reset values.
-
-[a_esc_a7]: /seq/a_esc_a7

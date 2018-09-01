@@ -8,10 +8,9 @@ Set mode to active.
 
 See [the modes prefixed with '?'][mode] for possible modes to use with this sequence.
 
-Modes can be deactivated using [Reset Mode (?)][csi_sl__p].
+Modes can be deactivated using {{seq_link('csi_sl__p')}}.
 
 [mode]: /mode
-[csi_sl__p]: /seq/csi_sl__p
 ---
 implnotes:
 

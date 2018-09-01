@@ -59,7 +59,7 @@ If the current cursor column is not between the left and right margin it does no
 
 If `amount` is greater than the remaining number of characters in the [scrolling region](/scrolling-region), it is adjusted down.
 
-In [left and right margin mode][mode-p69] the margins are respected; lines are only scrolled in the scroll region.
+In {{mode_link('p69')}} mode the margins are respected; lines are only scrolled in the scroll region.
 
 If the cell movement splits a multi cell character that character cleared, by replacing it by spaces.
 
@@ -70,5 +70,3 @@ Does not change the cursor position.
 {{snip('unset-pending-wrap')}}
 
 TODO LineClrWrapped
-
-[mode-p69]: /mode/p69/

@@ -49,7 +49,7 @@ If the erase splits a multi cell character that character is erased by replacing
 echo -ne "\033[2J\033[1;1H\033[42mあ23ぬ\033[1;2H\033[0m\033[0K\n"
 -->
 
-All erased space is colored according to the current [SGR state](../../attr).
+All erased space is colored according to the current [SGR state](/attr).
 
 Does not change the cursor position.
 

@@ -59,7 +59,7 @@ If the erase splits a multi cell character that character is erased by replacing
 
 {{snip('unset-pending-wrap')}}
 
-All erased space is colored according to the current [SGR state](../../attr).
+All erased space is colored according to the current [SGR state](/attr).
 
 Does not change the cursor position.
 

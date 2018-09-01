@@ -12,8 +12,6 @@ If enabled:
 * printing  while the pending wrap state of the cursor is set will wrap back to the left-most column in the scroll region, unset the pending wrap state and invoke {{seq_link('a_esc_cd')}}. In some terminals it also saves the information that the line was wrapped for resize and clipboard heuristics.
 
 See [printing](/printing) for a detailed discussion of the wrapping process.
-
-[a_esc_cd]: /seq/a_esc_cd
 ---
 implnotes:
 

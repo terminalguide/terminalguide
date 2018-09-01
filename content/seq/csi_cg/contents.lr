@@ -2,11 +2,9 @@ title: Alias: Cursor Horizontal Position Absolute
 ---
 body:
 
-Alias for [Cursor Horizontal Position Absolute][csi_x60_backtick]
+Alias for {{seq_link('csi_x60_backtick')}}
 
 From ECMA-64: CHA - CURSOR CHARACTER ABSOLUTE
-
-[csi_x60_backtick]: /seq/csi_x60_backtick
 ---
 seq:
 

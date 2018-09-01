@@ -60,6 +60,4 @@ If `bottom` is not specified, 0 or bigger than the number of the bottom-most row
 
 if `top` is below the bottom-most row, adjust it to the bottom-most row.
 
-If `top` < `bottom` set the top and bottom row of the [scroll region](/scrolling-region) according to `top` and `bottom` and move the cursor to the top-left cell of the display (when in [origin mode][mode-p6] is set to the top-left cell of the scroll region).
-
-[mode-p6]: /mode/p6/
+If `top` < `bottom` set the top and bottom row of the [scroll region](/scrolling-region) according to `top` and `bottom` and move the cursor to the top-left cell of the display (when in {{mode_link('p6')}} mode is set to the top-left cell of the scroll region).

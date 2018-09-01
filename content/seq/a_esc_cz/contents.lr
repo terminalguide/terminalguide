@@ -41,8 +41,4 @@ seq:
 #### final ####
 name: Z
 ---
-body:
-
-Same as [Primary Device Attributes][csi_sc] without parameters
-
-[csi_sc]: /seq/csi_sc
+body: Same as {{seq_link('csi_sc')}} without parameters

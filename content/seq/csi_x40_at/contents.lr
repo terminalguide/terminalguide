@@ -20,9 +20,7 @@ All cleared space is colored according to the current [SGR state](/attr).
 
 The cells erased will be copy-able to via selection.
 
-In [left and right margin mode][mode-p69] the margins are respected. If the current cursor position is outside of the current scroll region nothing is changed.
-
-[mode-p69]: /mode/p69/
+In {{mode_link('p69')}} the margins are respected. If the current cursor position is outside of the current scroll region nothing is changed.
 
 
 
