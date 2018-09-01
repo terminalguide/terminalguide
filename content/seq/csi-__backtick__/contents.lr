@@ -33,11 +33,11 @@ body: * With origin mode, does not force the cursor row to be inside the scrolli
 #### impl ####
 impl: vte
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
-body: 
+body: * With origin mode, does not force the cursor row to be inside the scrolling region
 ---
 seq:
 

@@ -57,11 +57,19 @@ if `p1` is one:
 #### impl ####
 impl: vte
 ----
-level: todo
+level: full
 ----
 since: 
 ----
-body: 
+body:
+
+if `p1` is zero:
+
+{{seq('\033[2;1;1;120;120;1;0x')}}
+
+if `p1` is one:
+
+{{seq('\033[[3;1;1;120;120;1;0x')}}
 ---
 seq:
 

@@ -29,11 +29,11 @@ body: If `cmd ` == 0 uses blinking block
 #### impl ####
 impl: vte
 ----
-level: todo
+level: full
 ----
 since: 
 ----
-body: 
+body: If `cmd ` == 0 uses blinking block
 ---
 seq:
 

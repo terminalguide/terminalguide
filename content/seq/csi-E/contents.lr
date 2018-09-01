@@ -29,7 +29,7 @@ body: If `amount` is 0, does not adjust it to 1.
 #### impl ####
 impl: vte
 ----
-level: todo
+level: full
 ----
 since: 
 ----

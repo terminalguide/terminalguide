@@ -1,0 +1,26 @@
+title: Unset Tab Stop
+---
+body: Unsets a tabstop at column `column`.
+---
+implnotes:
+
+#### impl ####
+impl: vte
+----
+level: full
+----
+since: 0.54
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### numeric_parameter ####
+name: column
+----
+default: 0
+#### intermediate ####
+name: SPACE
+#### final ####
+name: d

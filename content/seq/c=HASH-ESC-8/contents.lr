@@ -35,11 +35,14 @@ body: Does not reset margins.
 #### impl ####
 impl: vte
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
-body: 
+body:
+
+* Does not set the cursor position.
+* Does not reset margins.
 ---
 seq:
 

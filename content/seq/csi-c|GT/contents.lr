@@ -70,7 +70,15 @@ level: full
 ----
 since: 
 ----
-body: 
+body:
+
+If `p1` is not zero no reply is sent, otherwise:
+
+Otherwies returns:
+
+{{seq('\033[>65;')}}{{seq_param('version')}}{{seq(';1c')}}
+
+where `version` is major \* 10000 + minor \* 100 + micro.
 ---
 seq:
 

@@ -35,11 +35,11 @@ body: audible beep, deiconify, urgency hint, visual bell
 #### impl ####
 impl: vte
 ----
-level: todo
+level: full
 ----
 since: 
 ----
-body: 
+body: audible beep, terminals that use vte can add additional behavior.
 ---
 seq:
 

@@ -21,15 +21,15 @@ body:
 #### impl ####
 impl: urxvt
 ----
-level: full
+level: partial
 ----
 since: 
 ----
-body: 
+body: * `amount` = 0, is not adjusted to 1.
 #### impl ####
 impl: vte
 ----
-level: todo
+level: full
 ----
 since: 
 ----
@@ -39,13 +39,13 @@ body:
 
 Move the cursor up `amount` lines.
 
+If `amount` is greater than the maximum move distance then it is internally adjusted to the maximum. If `amount` is 0, adjust it to 1.
+
 {{snip('unset-pending-wrap')}}
 
 If the [current scroll region](/scrolling-region) is set and the cursor is on or below top-most line of it then the cursor may move up only until it reaches the top-most line of [current scroll region](/scrolling-region).
 
 If the [current scroll region](/scrolling-region) is not set or the cursor is above top-most line of current scroll region it may move up until the top of the screen (excluding scroll-back buffer).
-
-If `amount` is greater than the maximum move distance then it is internally adjusted to the maximum.
 
 ---
 seq:

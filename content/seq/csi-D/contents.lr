@@ -29,7 +29,7 @@ body:
 #### impl ####
 impl: vte
 ----
-level: todo
+level: full
 ----
 since: 
 ----
@@ -48,6 +48,8 @@ name: D
 body:
 
 Move the cursor to the left `amount` cells.
+
+If `amount` is 0, adjust it to 1.
 
 {{snip('unset-pending-wrap')}}
 

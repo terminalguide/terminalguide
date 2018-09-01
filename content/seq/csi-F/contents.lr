@@ -29,7 +29,7 @@ body: If `amount` is 0, does not adjust it to 1.
 #### impl ####
 impl: vte
 ----
-level: todo
+level: full
 ----
 since: 
 ----
@@ -47,7 +47,7 @@ name: F
 ---
 body:
 
-Move ´amount` lines up and to the beginning of the line.
+Move `amount` lines up and to the beginning of the line.
 
 If `amount` is 0, it is adjusted to 1.
 

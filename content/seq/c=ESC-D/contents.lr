@@ -33,7 +33,7 @@ level: todo
 ----
 since: 
 ----
-body: 
+body: When invoked from auto wrap it does not set the background of the newly added line to thr current SGR state. See https://bugzilla.gnome.org/show_bug.cgi?id=754596 fot discussion.
 ---
 seq:
 
