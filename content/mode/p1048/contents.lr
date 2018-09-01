@@ -6,7 +6,7 @@ This is an alias for cursor save and restore to be used with switching to the al
 
 In terminals that support disabling support for the alternate screen buffer support for this mode follows that setting. So using this mode together with {{mode_link('p47')}} or {{mode_link('p1047')}} ensures that either both are done or neither.
 
-Activating this mode invokes {{seq_link('c=ESC-7')}}. Deactivating this mode invokes {{seq_link('c=ESC-8')}} .
+Activating this mode invokes {{seq_link('a_esc_a7')}}. Deactivating this mode invokes {{seq_link('a_esc_a8')}} .
 ---
 implnotes:
 

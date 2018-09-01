@@ -4,9 +4,9 @@ body:
 
 Set the window title of the terminal
 
-If title mode 0 (see {{seq_link('csi-t|GT')}}) is set text is expect to be hex encoded (i.e. utf 8 with each code unit further encoded with two hex digets)
+If title mode 0 (see {{seq_link('csi_st__q')}}) is set text is expect to be hex encoded (i.e. utf 8 with each code unit further encoded with two hex digets)
 
-If title mode 2 (see {{seq_link('csi-t|GT')}}) is set utf-8 is not TODO.
+If title mode 2 (see {{seq_link('csi_st__q')}}) is set utf-8 is not TODO.
 ---
 implnotes:
 

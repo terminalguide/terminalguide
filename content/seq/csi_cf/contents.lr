@@ -1,0 +1,57 @@
+title: Cursor Previous Line (CPL)
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: ignored
+----
+since: 
+----
+body: https://bugs.kde.org/show_bug.cgi?id=331656
+#### impl ####
+impl: urxvt
+----
+level: partial
+----
+since: 
+----
+body: If `amount` is 0, does not adjust it to 1.
+#### impl ####
+impl: vte
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### numeric_parameter ####
+name: amount
+----
+default: 1
+#### final ####
+name: F
+---
+body:
+
+Move `amount` lines up and to the beginning of the line.
+
+If `amount` is 0, it is adjusted to 1.
+
+This is a composition of [Cursor Up][csi_ca] with the given `amount` parameter and [Carriage Return][a_c0-m].
+
+[a_c0-m]: /seq/a_c0-m
+[csi_ca]: /seq/csi_ca

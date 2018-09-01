@@ -1,0 +1,58 @@
+title: Cursor Horizontal Backward Tabulation (CBT)
+---
+body:
+
+Move cursor to the `amount`-th previous tab stop.
+
+Repeat the following procedure `amount` times:
+
+Moves the cursor left until it reaches a column marked as tab stop (that is not the column the cursor started on) or the left-most column of the screen.
+
+If {{mode_link('p6')}} is set and after this move the cursor is left of the left-most column of the [scrolling region](/scrolling-region), move the cursor to the left-most column of the scrolling region.
+
+See also {{seq_link('a_c0-i')}} for information about tab stop setup.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
+----
+level: todo
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### numeric_parameter ####
+name: amount
+----
+default: 1
+#### final ####
+name: Z

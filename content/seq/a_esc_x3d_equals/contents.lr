@@ -1,0 +1,54 @@
+title: Set Application Keypad Mode (DECKPAM)
+---
+body:
+
+Use sequences for num pad keys instead of ascii numbers and / * - + , and enter.
+
+Unset this with {{seq_link('a_esc_x3c_greater_than')}}.
+
+This is also mirrored to the state of mode {{mode_link('p66')}}
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body:
+
+Only seem to work when mode {{mode_link('p1035')}} is set.
+
+The sequences are emitted when numlock is enabled
+#### impl ####
+impl: konsole
+----
+level: ignored
+----
+since: 
+----
+body: Can be used in user defined key tables but default tables do ignore this.
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: The sequences are emitted when numlock is disabled.
+#### impl ####
+impl: vte
+----
+level: todo
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### esc ####
+#### final ####
+name: =

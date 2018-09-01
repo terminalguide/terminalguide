@@ -1,0 +1,48 @@
+title: Next Line (NEL)
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
+----
+level: todo
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### esc ####
+#### final ####
+name: E
+---
+body:
+
+Next Line
+
+Invoke {{seq_link('a_c0-m')}} and {{seq_link('a_esc_cd')}}

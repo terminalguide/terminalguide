@@ -1,0 +1,54 @@
+title: Alias: Cursor Horizontal Position Absolute
+---
+body:
+
+Alias for [Cursor Horizontal Position Absolute][csi_x60_backtick]
+
+From ECMA-64: CHA - CURSOR CHARACTER ABSOLUTE
+
+[csi_x60_backtick]: /seq/csi_x60_backtick
+---
+seq:
+
+#### csi ####
+#### numeric_parameter ####
+name: column
+----
+default: 1
+#### final ####
+name: G
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: partial
+----
+since: 
+----
+body: Ignores {{mode_link('p6')}}
+#### impl ####
+impl: urxvt
+----
+level: partial
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
+----
+level: partial
+----
+since: 
+----
+body: * With origin mode, does not force the cursor row to be inside the scrolling region

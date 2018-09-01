@@ -1,0 +1,67 @@
+title: Cursor Horizontal Position Absolute (HPA)
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: ignored
+----
+since: 
+----
+body:
+
+Only available via {{seq_link('csi_cg')}}
+
+Ignores {{mode_link('p6')}}
+#### impl ####
+impl: urxvt
+----
+level: partial
+----
+since: 
+----
+body: * With origin mode, does not force the cursor row to be inside the scrolling region
+#### impl ####
+impl: vte
+----
+level: partial
+----
+since: 
+----
+body: * With origin mode, does not force the cursor row to be inside the scrolling region
+---
+seq:
+
+#### csi ####
+#### numeric_parameter ####
+name: column
+----
+default: 1
+#### final ####
+name: `
+---
+body:
+
+Move the cursor to the column `column`. The cursor row is not changed, unless origin mode is set and the cursor is currently outside of the [current scroll region](/scrolling-region).
+
+{{snip('unset-pending-wrap')}}
+
+If `column` is 0, it is adjusted to 1. If `column` is greater than the right-most column of the screen it is adjusted to the right-most column of the screen.
+
+`column` == 1 is the left-most column.
+
+If [origin mode][mode-p6] is set the cursor row will be forced inside the current scroll region.
+
+If [origin mode][mode-p6] is set and  [left and right margin mode][mode-p69] is set the cursor will  be moved relative to the left-most column of the scroll region and adjusted to be on or left of the right-most column of the scroll region.
+
+[mode-p6]: /mode/p6/
+[mode-p69]: /mode/p69/

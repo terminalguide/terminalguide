@@ -1,0 +1,46 @@
+title: Selective Erase Display [DISPATCH] (DECSED)
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
+----
+level: todo
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### intermediate ####
+name: ?
+#### numeric_parameter ####
+name: cmd
+----
+default: 0
+#### final ####
+name: J
+---
+body:
+
+Like {{seq_link('csi_cj')}} but does not erase cells marked with protected state.
+
+See {{seq_link('a_esc_cv')}} and {{seq_link('a_esc_cw')}} for changing the protected state of cells.

@@ -1,0 +1,40 @@
+title: Back Index (DECBI)
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: urxvt
+----
+level: unparsable
+----
+since: 
+----
+body: * If the cursor is in the left-most column of the screen it just scrolls the row that the cursor is on one cell to the right (clearing the left most cell).
+---
+seq:
+
+#### esc ####
+#### final ####
+name: 6
+---
+body:
+
+If the cursor is not on the left-most column of the scroll region this is the same as [Cursor Left][csi_cd] with `amount` = 1
+
+If the cursor is on the left-most column of the scroll region and on a row that is inside the [scroll region](/scrolling-region), a new blank left-most column of the scroll region is inserted. The previous content of the scroll region are shifted to the right. The right-most column of the scroll region is discarded. If the cell movement splits a multi cell character that character cleared, by replacing it by spaces.
+
+If the cursor is on the left-most column of the scroll region and on a row that is outside the scroll region, nothing is changed.
+
+All cleared space is colored according to the current [SGR state](/attr).
+
+Does not change the cursor position.
+
+[csi_cd]: /seq/csi_cd

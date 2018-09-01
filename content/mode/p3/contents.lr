@@ -12,7 +12,7 @@ If set the terminal is resized to 132 columns wide. If unset the terminal is res
 
 If {{mode_link('p95')}} is not set, the screen is cleared.
 
-The cursor is moved as invoking {{seq_link('csi-H')}} with `column` and `row` set to 1.
+The cursor is moved as invoking {{seq_link('csi_ch')}} with `column` and `row` set to 1.
 
 If the mode is set mode {{mode_link('p69')}} is reset.
 ---

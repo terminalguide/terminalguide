@@ -5,11 +5,11 @@ body:
 If set the origin of the coordinate system is relativ to the [current scroll region](/scrolling-region).
 
 The origin is used by:
-* {{seq_link('csi-n-6')}}, {{seq_link('csi-H')}}, {{seq_link('csi-d')}}, {{seq_link('csi-__backtick__')}}, {{seq_link('csi-f')}}, {{seq_link('c=ESC-8')}}, {{seq_link('csi-u')}}
+* {{seq_link('csi_sn-6')}}, {{seq_link('csi_ch')}}, {{seq_link('csi_sd')}}, {{seq_link('csi_x60_backtick')}}, {{seq_link('csi_sf')}}, {{seq_link('a_esc_a8')}}, {{seq_link('csi_su')}}
 
 The following sequences will force the cursor to be in the scrolling region if this mode is set.
-* {{seq_link('c0-M')}}, {{seq_link('c=ESC-E')}}, {{seq_link('csi-E')}}, {{seq_link('csi-F')}}
-* if mode {{mode_link('20')}} is active: {{seq_link('c0-J')}}, {{seq_link('c0-K')}}, {{seq_link('c0-L')}}
+* {{seq_link('a_c0-m')}}, {{seq_link('a_esc_ce')}}, {{seq_link('csi_ce')}}, {{seq_link('csi_cf')}}
+* if mode {{mode_link('20')}} is active: {{seq_link('a_c0-j')}}, {{seq_link('a_c0-k')}}, {{seq_link('a_c0-l')}}
 
 If set the cursor is moved to the top left of the [current scroll region](/scrolling-region).
 ---

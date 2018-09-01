@@ -1,0 +1,52 @@
+title: Line Feed (LF)
+---
+body:
+
+Invoke {{seq_link('a_esc_cd')}}
+
+If {{mode_link('20')}} is set:
+* Invoke {{seq_link('a_c0-m')}}
+
+TODO auto printing state
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: urxvt
+----
+level: partial
+----
+since: 
+----
+body: Ignores {{mode_link('20')}} (as if mode is reset).
+#### impl ####
+impl: vte
+----
+level: todo
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### c0 ####
+name: LF
+----
+hex: A0

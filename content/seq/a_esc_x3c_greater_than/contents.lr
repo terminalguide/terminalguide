@@ -1,0 +1,48 @@
+title: Reset Application Keypad Mode (DECKPNM)
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
+----
+level: todo
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### esc ####
+#### final ####
+name: >
+---
+body:
+
+This unsets {{seq_link('a_esc_x3d_equals')}}.
+
+This is also mirrored to the state of mode {{mode_link('p66')}}

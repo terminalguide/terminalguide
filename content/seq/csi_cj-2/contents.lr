@@ -1,0 +1,53 @@
+title: Erase Display Complete
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: partial
+----
+since: 
+----
+body:
+
+* Does not reset pending wrap state.
+* Adds screen content to scrollback before erasing the contents.
+#### impl ####
+impl: urxvt
+----
+level: partial
+----
+since: 
+----
+body: * Does not reset pending wrap state.
+---
+seq:
+
+#### csi ####
+#### numeric_fixed ####
+val: 2
+#### final ####
+name: J
+---
+body:
+
+Erases the complete display, by replacing all cell contents with space.
+
+In it's basic variant it will also erase protected cells. When called as {{seq_link('csi_cj__p')}} it will not erase protected cells.
+
+The [current scroll region](/scrolling-region) is ignored by this command.
+
+All erased space is colored according to the current [SGR state](/attr).
+
+All lines are reset to normal size(i.e. not double height or width).
+
+{{snip('unset-pending-wrap')}}

@@ -1,0 +1,58 @@
+title: Scroll Down (SD)
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: partial
+----
+since: 
+----
+body: * when scrolling the full scrolling region size the last line is not scrolled out.
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
+----
+level: todo
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### numeric_parameter ####
+name: amount
+----
+default: 1
+#### final ####
+name: T
+---
+body:
+
+See also [Track Mouse][csi_ct_5param] which shares this code. This command is distingished by having only one parameter and having the first parameter != 0
+
+Inserts `amount` lines at the top of the [scroll region](/scrolling-region). Lines at the bottom of the scrolling region are lost.
+
+The new lines are created according to the current [SGR state](../../attr/)
+
+Does not change the (absolute) cursor position.
+
+[csi_ct_5param]: /seq/csi_ct_5param

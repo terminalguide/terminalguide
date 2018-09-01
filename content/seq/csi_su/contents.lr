@@ -1,0 +1,36 @@
+title: Restore cursor (ansi.sys)
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: partial
+----
+since: 
+----
+body: 
+#### impl ####
+impl: urxvt
+----
+level: partial
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### final ####
+name: u
+---
+body: This does the same as {{seq_link('a_esc_a8')}}

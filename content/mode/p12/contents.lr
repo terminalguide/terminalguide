@@ -4,7 +4,7 @@ body:
 
 If set, the cursor is blinking.
 
-See also {{seq_link('csi-q|-SPACE')}} for an more widely supported alternative.
+See also {{seq_link('csi_sq_t_space')}} for an more widely supported alternative.
 ---
 implnotes:
 

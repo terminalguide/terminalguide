@@ -1,0 +1,55 @@
+title: Horizontal Tab (TAB)
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: partial
+----
+since: 
+----
+body: Xterm only allows columns 1-1024 to contain tab stops.
+#### impl ####
+impl: konsole
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
+----
+level: todo
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### c0 ####
+name: TAB
+----
+hex: 09
+---
+body:
+
+Move cursor to next tab stop.
+
+Moves the cursor right until it reaches a column marked as tab stop (that is not the column the cursor started on) or the right-most column of the screen.
+
+If after this move the cursor is right of the right-most column of the scrolling region, move the cursor to the right-most column of the scrolling region.
+
+In the reset state of the terminal tab stops are set on each 8th column, starting in column 1.
+
+Tab stops can be reconfigured using {{seq_link('a_esc_ch')}} and {{seq_link('csi_sg')}}

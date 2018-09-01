@@ -4,7 +4,7 @@ title: Attributes
 ---
 body:
 
-Attributes are set using {{seq_link('csi-m')}}.
+Attributes are set using {{seq_link('csi_sm')}}.
 
 Generally there is a code to set and to unset specific attributes. 0 is used to unset all attributes.
 ---

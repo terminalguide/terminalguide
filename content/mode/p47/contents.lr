@@ -36,7 +36,7 @@ since:
 body:
 
 {{mode_link('p1007')}} is active by default.
-* invokes {{seq_link('csi-m')}} with parameter 0 after switching to alternate screen.
+* invokes {{seq_link('csi_sm')}} with parameter 0 after switching to alternate screen.
 * In konsole the cursor position, SGR state and tab stops of the screen buffers are independent.
 #### impl ####
 impl: urxvt

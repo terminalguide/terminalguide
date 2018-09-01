@@ -1,0 +1,45 @@
+title: Form Feed (FF)
+---
+body: Same effect as {{seq_link('a_c0-j')}}
+---
+seq:
+
+#### c0 ####
+name: FF
+----
+hex: 0C
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: urxvt
+----
+level: partial
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
+----
+level: todo
+----
+since: 
+----
+body: 

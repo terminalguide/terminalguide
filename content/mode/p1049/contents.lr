@@ -6,7 +6,7 @@ Like {{mode_link('p47')}} but saves the cursors and clears the alternate buffer 
 
 The clear of the alternate buffer fills all cells in the alternate buffer with space and the current [SGR state](/attr).
 
-The cursor is saved before switching to alternate mode as if {{seq_link('c=ESC-7')}} was invoked. On reset the cursor is restored after switching to the primary screen buffer as if {{seq_link('c=ESC-8')}} was invoked. 
+The cursor is saved before switching to alternate mode as if {{seq_link('a_esc_a7')}} was invoked. On reset the cursor is restored after switching to the primary screen buffer as if {{seq_link('a_esc_a8')}} was invoked. 
 ---
 implnotes:
 
@@ -29,7 +29,7 @@ level: partial
 ----
 since: 
 ----
-body: See {{mode_link('p47')}} and {{seq_link('c=ESC-7')}} for differences.
+body: See {{mode_link('p47')}} and {{seq_link('a_esc_a7')}} for differences.
 #### impl ####
 impl: urxvt
 ----
@@ -37,7 +37,7 @@ level: partial
 ----
 since: 
 ----
-body: See {{mode_link('p47')}} and {{seq_link('c=ESC-7')}} for differences.
+body: See {{mode_link('p47')}} and {{seq_link('a_esc_a7')}} for differences.
 #### impl ####
 impl: vte
 ----
