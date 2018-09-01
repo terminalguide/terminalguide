@@ -58,8 +58,8 @@ body: urxvt supports only form 3.
 #### impl ####
 impl: vte
 ----
-level: todo
+level: full
 ----
 since: 
 ----
-body: 
+body: xterm supports forms 1 and 3.

@@ -49,11 +49,14 @@ urxvt uses a set of dynamic color slots and overwrites the least recently used i
 #### impl ####
 impl: vte
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
-body: 
+body:
+
+vte supports forms 1 and 4.
+Form 2 is supported when the color space id is empty (defaulted). Any digit in the color space id prevents this form from working (subparameters are still consumed)
 ---
 number: 38:2:...
 ---

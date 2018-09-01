@@ -1,0 +1,22 @@
+title: Curly Underline
+---
+body:
+
+Show cell with curly underline.
+
+If {{sgr_link('decocol256')}} or {{sgr_link('decodirectcolor')}} are supported and set this will use the decoration color. Otherwise it will use the foreground color.
+---
+implnotes:
+
+#### impl ####
+impl: vte
+----
+level: full
+----
+since: 
+----
+body: 
+---
+number: 4:3
+---
+resetnumber: 24

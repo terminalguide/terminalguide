@@ -22,6 +22,10 @@ body2:
       konsole 18.07.70
     </div>
     <div class="carousel-item" style="text-align: center">
+      <img src="vte-0-53-1.png" alt="vte"><br>
+      vte 0.53.1
+    </div>
+    <div class="carousel-item" style="text-align: center">
       <img src="urxvt-9.22+cvs.png" alt="urxvt"><br>
       urxvt 9.22 + unreleased cvs changes
     </div>

@@ -29,7 +29,7 @@ body:
 #### impl ####
 impl: vte
 ----
-level: todo
+level: full
 ----
 since: 
 ----
@@ -37,6 +37,10 @@ body:
 ---
 number: 4
 ---
-body: Show cell with underline.
+body:
+
+Show cell with underline.
+
+If {{sgr_link('decocol256')}} or {{sgr_link('decodirectcolor')}} are supported and set this will use the decoration color. Otherwise it will use the foreground color.
 ---
 resetnumber: 24

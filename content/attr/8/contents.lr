@@ -31,11 +31,11 @@ body:
 #### impl ####
 impl: vte
 ----
-level: todo
+level: full
 ----
 since: 
 ----
-body: 
+body: In vte invisible text can be copied using the clipboard functions.
 ---
 number: 8
 ---

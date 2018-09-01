@@ -31,11 +31,11 @@ body: inverted text with foreground color == background color is forced to displ
 #### impl ####
 impl: vte
 ----
-level: todo
+level: full
 ----
 since: 
 ----
-body: 
+body: interacts with dim by using a dim background when enabled.
 ---
 number: 7
 ---

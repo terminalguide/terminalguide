@@ -1,0 +1,16 @@
+title: Alias: Underline Reset
+---
+body: Alias for {{sgr_link('24')}}
+---
+implnotes:
+
+#### impl ####
+impl: vte
+----
+level: full
+----
+since: 
+----
+body: 
+---
+number: 4:0

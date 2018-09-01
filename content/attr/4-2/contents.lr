@@ -1,0 +1,18 @@
+title: Alias: Underline Double
+---
+body: Alias for [{{sgr_link('21')}}
+---
+implnotes:
+
+#### impl ####
+impl: vte
+----
+level: full
+----
+since: 
+----
+body: 
+---
+number: 4:2
+---
+resetnumber: 24

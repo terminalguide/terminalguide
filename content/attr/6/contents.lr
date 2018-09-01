@@ -10,6 +10,14 @@ level: partial
 since: 
 ----
 body: See {{sgr_link('5')}} for details.
+#### impl ####
+impl: vte
+----
+level: ignored
+----
+since: 
+----
+body: 
 ---
 body: Alias for {{sgr_link('5')}}
 ---

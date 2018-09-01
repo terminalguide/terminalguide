@@ -1,6 +1,10 @@
 title: Strikethrough
 ---
-body: Show cell with strike through.
+body:
+
+Show cell with strike through.
+
+The strike through will be drawn in the foreground color.
 ---
 implnotes:
 
@@ -23,7 +27,7 @@ body:
 #### impl ####
 impl: vte
 ----
-level: todo
+level: full
 ----
 since: 
 ----

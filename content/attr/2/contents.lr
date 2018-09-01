@@ -21,11 +21,11 @@ body: Faint is an third form of the named colors that is configurable.
 #### impl ####
 impl: vte
 ----
-level: todo
+level: full
 ----
 since: 
 ----
-body: 
+body: vte multiplies each color component of the foreground color by 2/3. Thus this does not have an effect for black.
 #### impl ####
 impl: urxvt
 ----

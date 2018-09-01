@@ -1,0 +1,37 @@
+title: Direct Color Decoration
+---
+implnotes:
+
+#### impl ####
+impl: vte
+----
+level: partial
+----
+since: 
+----
+body:
+
+vte supports forms 1 and 4.
+Form 2 is supported when the color space id is empty (defaulted). Any digit in the color space id prevents this form from working (subparameters are still consumed)
+
+vte uses a reduced color resolution of (r4,g5,b4) internally.
+---
+number: 58:2:...
+---
+resetnumber: 59
+---
+body:
+
+Set decoration color as RGB values.
+
+The color is specified as separate values for each color component. Values are in the range 0 to 255 (inclusive). The order is red, green, blue.
+
+This has multiple possible forms.
+
+<table class='visible-table'>
+<tr><th></th><th>Attribute</th><th></th></tr>
+<tr><td>(1)</td><td>48:2:Ⓝ:Ⓝ:Ⓝ</td><td></td></tr>
+<tr><td>(2)</td><td>48:2:Ⓝ:Ⓝ:Ⓝ:Ⓝ</td><td>the first Ⓝ is supposed to be a color space indication, but is just ignored in practice; additional subparameters are ignored</td></tr>
+<tr><td>(3)</td><td>48;2:Ⓝ:Ⓝ:Ⓝ</td><td>additional subparameters are ignored</td></tr>
+<tr><td>(4)</td><td>48;2;Ⓝ;Ⓝ;Ⓝ</td><td></td></tr>
+</table>
