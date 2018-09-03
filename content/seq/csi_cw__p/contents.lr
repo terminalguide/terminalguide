@@ -1,0 +1,22 @@
+title: Set Tab At Every 8 Columns
+---
+body: Clears existing tab stops and sets tabs as in the reset state.
+---
+implnotes:
+
+#### impl ####
+impl: vte
+----
+level: full
+----
+since: 
+----
+body: No tab stop is set on column 1, that should not be detectable though.
+---
+seq:
+
+#### csi ####
+#### intermediate ####
+name: ?
+#### final ####
+name: W

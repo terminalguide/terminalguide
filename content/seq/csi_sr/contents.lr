@@ -21,7 +21,7 @@ body: If `bottom` is bigger than the number of the bottom-most row, the sequence
 #### impl ####
 impl: urxvt
 ----
-level: partial
+level: todo
 ----
 since: 
 ----
@@ -32,11 +32,14 @@ body:
 #### impl ####
 impl: vte
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
-body: 
+body:
+
+* If `bottom` is 0, it is not adjusted to the number of the bottom most row.
+* if `top` is below the bottom-most row, it is not adjusted.
 ---
 seq:
 
@@ -61,3 +64,5 @@ If `bottom` is not specified, 0 or bigger than the number of the bottom-most row
 if `top` is below the bottom-most row, adjust it to the bottom-most row.
 
 If `top` < `bottom` set the top and bottom row of the [scroll region](/scrolling-region) according to `top` and `bottom` and move the cursor to the top-left cell of the display (when in {{mode_link('p6')}} mode is set to the top-left cell of the scroll region).
+
+Otherwise: Set the top and bottom row of the [scroll region](/scrolling-region) to the top-most and bottom-most line of the screen.

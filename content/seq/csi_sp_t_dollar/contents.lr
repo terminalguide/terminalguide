@@ -1,0 +1,54 @@
+title: Request Mode (RQM)
+---
+body:
+
+Query current state of a given [mode](/mode) (not prefixed with {{seq('?')}}).
+
+This only allows querying one mode per invocation.
+
+For modes that are switchable the following replies are sent to the application:
+* If mode is set: {{seq('\033[')}}{{seq_param('mode')}}{{seq(';1$y')}}
+* If mode is not set: {{seq('\033[')}}{{seq_param('mode')}}{{seq(';2$y')}}
+
+For other modes the terminal responds with one of the following:
+
+* {{seq('\033[')}}{{seq_param('mode')}}{{seq(';0$y')}} for unknown modes.
+* {{seq('\033[')}}{{seq_param('mode')}}{{seq(';3$y')}} for modes where the terminal behavior matches that of the mode in set state.
+* {{seq('\033[')}}{{seq_param('mode')}}{{seq(';4$y')}} for modes where the terminal behavior matches that of the mode in reset state.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body:
+
+{{info}} xterm reports modes 1, 5, 7, 10, 11, 13, 14, 15, 16, 17, 18, 19 as `3`
+{{info}} xterm reports mode 3 as `2`.
+#### impl ####
+impl: vte
+----
+level: full
+----
+since: 
+----
+body:
+
+{{info}} vte reports modes 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17, 18, 19, 20, 22, 30, 31, 32, 33, 34, 36, 37, 38 as `3`
+{{info}} vte reports modes 21, 35, 40, 42 as `4`
+---
+seq:
+
+#### csi ####
+#### numeric_parameter ####
+name: mode
+----
+default: none
+#### intermediate ####
+name: $
+#### final ####
+name: p

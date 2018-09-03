@@ -41,11 +41,11 @@ body: The sequences are emitted when numlock is disabled.
 #### impl ####
 impl: vte
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
-body: 
+body: Only changes num pad divide, multiply, minus, plus and enter.
 ---
 seq:
 

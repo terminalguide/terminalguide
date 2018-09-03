@@ -26,6 +26,14 @@ level: ignored
 since: 
 ----
 body: See {{seq_link('osc-720')}} and {{seq_link('osc-721')}} for an alternative.
+#### impl ####
+impl: vte
+----
+level: full
+----
+since: 
+----
+body: {{info}} if alternate screen buffer is selected erases scroll-back of primary screen buffer.
 ---
 seq:
 

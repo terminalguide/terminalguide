@@ -1,0 +1,23 @@
+title: OSC TODO 8 (hyperlink)
+---
+body:
+
+{{snip('placeholder-page')}}
+
+URL marking see (https://gist.github.com/egmontkob/eb114294efbcd5adb1944c9f3cb5feda == http://archive.is/9qtMI)
+---
+implnotes:
+
+#### impl ####
+impl: vte
+----
+level: todo
+----
+since: 
+----
+body: {{info}} TODO document effect on alternate screen switching.
+---
+seq:
+
+#### osc ####
+#### st ####

@@ -19,9 +19,8 @@ since:
 ----
 body:
 
-The 'titeInhibit' resource allows disabling of support for this mode. This setting itself is switchable from the application via mode {{mode_link('p1046')}}.
-
-* on deactivation this unsets the pending wrap state without wrapping.
+{{info}} The 'titeInhibit' resource allows disabling of support for this mode. This setting itself is switchable from the application via mode {{mode_link('p1046')}}.
+{{miss}} on deactivation this unsets the pending wrap state without wrapping.
 #### impl ####
 impl: konsole
 ----
@@ -29,7 +28,7 @@ level: partial
 ----
 since: 
 ----
-body: See {{mode_link('p47')}} for differences.
+body: {{miss}} See {{mode_link('p47')}} for differences.
 #### impl ####
 impl: urxvt
 ----
@@ -37,11 +36,11 @@ level: partial
 ----
 since: 
 ----
-body: See {{mode_link('p47')}} for differences.
+body: {{miss}} See {{mode_link('p47')}} for differences.
 #### impl ####
 impl: vte
 ----
-level: todo
+level: full
 ----
 since: 
 ----

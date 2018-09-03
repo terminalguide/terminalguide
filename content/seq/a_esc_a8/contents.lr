@@ -23,10 +23,10 @@ since:
 ----
 body:
 
-* Does not restore G0 - G3. But stores current mapping of GL and GR.
-* Does not restore state of mode {{mode_link('p6')}}
-* cursor position is stored absolute (not with regard to origin)
-* Does not restore pending wrap state.
+{{miss}} Does not restore G0 - G3. But stores current mapping of GL and GR.
+{{miss}} Does not restore state of mode {{mode_link('p6')}}
+{{miss}} cursor position is stored absolute (not with regard to origin)
+{{miss}} Does not restore pending wrap state.
 #### impl ####
 impl: urxvt
 ----
@@ -36,19 +36,22 @@ since:
 ----
 body:
 
-* the current cursor position is not restored relative to the origin set via {{mode_link('p6')}}.
-
-Not restored:
+{{miss}} the current cursor position is not restored relative to the origin set via {{mode_link('p6')}}.
+{{miss}} Not restored:
 * the state of mode {{mode_link('p6')}}
 * pending wrap state (always unset after restore)
 #### impl ####
 impl: vte
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
-body: 
+body:
+
+{{miss}} cursor position is stored absolute (not with regard to origin)
+{{miss}} always unsets pending the wrap state.
+{{miss}} restores modes {{mode_link('4')}}, {{mode_link('12')}} and {{mode_link('p5')}}
 ---
 seq:
 

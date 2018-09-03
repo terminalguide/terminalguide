@@ -1,0 +1,33 @@
+title: Reset attribute replacement colors
+---
+body: {{snip('placeholder-page')}}
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: todo
+----
+since: 
+----
+body: Like {{seq_link('osc-104')}} but allows resetting the attribute replacement colors without need to know the palette size.
+#### impl ####
+impl: vte
+----
+level: todo
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### osc ####
+#### numeric_fixed ####
+val: 105
+#### numeric_parameter ####
+name: text
+----
+default: 
+#### st ####

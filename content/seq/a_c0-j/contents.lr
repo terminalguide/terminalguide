@@ -38,7 +38,7 @@ body: Ignores {{mode_link('20')}} (as if mode is reset).
 #### impl ####
 impl: vte
 ----
-level: todo
+level: full
 ----
 since: 
 ----

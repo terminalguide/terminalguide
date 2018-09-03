@@ -75,8 +75,8 @@ body:
 #### impl ####
 impl: vte
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
-body: 
+body: * cells belonging to split multi-cell characters are erased with the SGR state of the first cell of that character.

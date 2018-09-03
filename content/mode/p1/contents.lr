@@ -40,7 +40,7 @@ body:
 #### impl ####
 impl: vte
 ----
-level: todo
+level: full
 ----
 since: 
 ----

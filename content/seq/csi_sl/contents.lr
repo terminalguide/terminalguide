@@ -29,11 +29,11 @@ body:
 #### impl ####
 impl: vte
 ----
-level: todo
+level: full
 ----
 since: 
 ----
-body: 
+body: Supports deactivating up to 32 modes in one sequence.
 ---
 seq:
 

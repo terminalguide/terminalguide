@@ -21,7 +21,7 @@ level: full
 ----
 since: 
 ----
-body: Supports activating up to 30 modes in one sequence.
+body: {{info}} Supports activating up to 30 modes in one sequence.
 #### impl ####
 impl: konsole
 ----
@@ -41,11 +41,11 @@ body:
 #### impl ####
 impl: vte
 ----
-level: todo
+level: full
 ----
 since: 
 ----
-body: 
+body: {{info}} Supports activating up to 32 modes in one sequence.
 ---
 seq:
 

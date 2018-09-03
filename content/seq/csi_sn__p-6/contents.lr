@@ -1,0 +1,42 @@
+title: Request Cursor Postion Report (?) (DECXCPR)
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: If emulation level is below 4 the last ';1' is not included in the report.
+#### impl ####
+impl: vte
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### intermediate ####
+name: ?
+#### numeric_fixed ####
+val: 6
+#### final ####
+name: n
+---
+body:
+
+Sends cursor position report.
+
+The terminal replies with:
+
+{{seq('\033[?')}}{{seq_param('row')}}{{seq(';')}}{{seq_param('column')}}{{seq(';1R')}}
+
+If {{mode_link('p6')}} mode is set the cursor position is reported relative to the top  left corner of the scroll area.
+
+See {{seq_link('csi_sn-6')}} for a more widely supported variant of the command.

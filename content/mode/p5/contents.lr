@@ -31,10 +31,10 @@ body: Swaps default (unnamed) background and foreground colors when rendering.
 #### impl ####
 impl: vte
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
-body: 
+body: Swaps default (unnamed) background and foreground colors when rendering.
 ---
 number: ?5

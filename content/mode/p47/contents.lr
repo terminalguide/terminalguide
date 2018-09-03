@@ -23,9 +23,8 @@ since:
 ----
 body:
 
-The 'titeInhibit' resource allows disabling of support for this mode. This setting itself is switchable from the application via mode {{mode_link('p1046')}}.
-
-scrollback buffer is still reachable in the alternative screen buffer, but is not modified when scrolling out lines.
+{{info}} The 'titeInhibit' resource allows disabling of support for this mode. This setting itself is switchable from the application via mode {{mode_link('p1046')}}.
+{{info}} scrollback buffer is still reachable in the alternative screen buffer, but is not modified when scrolling out lines.
 #### impl ####
 impl: konsole
 ----
@@ -35,9 +34,9 @@ since:
 ----
 body:
 
-{{mode_link('p1007')}} is active by default.
-* invokes {{seq_link('csi_sm')}} with parameter 0 after switching to alternate screen.
-* In konsole the cursor position, SGR state and tab stops of the screen buffers are independent.
+{{info}} {{mode_link('p1007')}} is active by default.
+{{miss}} invokes {{seq_link('csi_sm')}} with parameter 0 after switching to alternate screen.
+{{miss}} In konsole the cursor position, SGR state and tab stops of the screen buffers are independent.
 #### impl ####
 impl: urxvt
 ----
@@ -47,17 +46,20 @@ since:
 ----
 body:
 
-* Screns have an independent version of the current mapping of GL. (Does this matter with the limited implementation of iso2022?)
-* Independent for each screen cursor position, {{mode_link('p6')}},  {{mode_link('p7')}},  {{mode_link('4')}} and the pending wrap state.
-* force enables cursor on both screens.
-* Scrollback buffer is shared between primary and secondary screen. Scrolling in alternative screen buffer still adds to scrollback buffer.
+{{miss}} Screens have an independent version of the current mapping of GL. (Does this matter with the limited implementation of iso2022?)
+{{miss}} Independent for each screen cursor position, {{mode_link('p6')}},  {{mode_link('p7')}},  {{mode_link('4')}} and the pending wrap state.
+{{miss}} force enables cursor on both screens.
+{{miss}} Scrollback buffer is shared between primary and secondary screen. Scrolling in alternative screen buffer still adds to scrollback buffer.
 #### impl ####
 impl: vte
 ----
-level: todo
+level: full
 ----
 since: 
 ----
-body: {{mode_link('p1007')}} is active by default.
+body:
+
+{{info}} {{mode_link('p1007')}} is active by default.
+{{info}} TODO document effect on {{seq_link('osc-8')}}
 ---
 number: ?47

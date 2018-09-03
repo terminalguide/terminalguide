@@ -21,15 +21,15 @@ body:
 #### impl ####
 impl: urxvt
 ----
-level: full
+level: partial
 ----
 since: 
 ----
-body: 
+body: * If `amount` = 0 does not adjust it to 1.
 #### impl ####
 impl: vte
 ----
-level: todo
+level: full
 ----
 since: 
 ----
@@ -48,6 +48,8 @@ name: S
 body:
 
 Removes `amount` lines from the top of the [scroll region](/scrolling-region)
+
+If `amount` = 0 adjust it to 1.
 
 Inserts `amount` lines at the bottom of the [scroll region](/scrolling-region). Lines at the top of the scrolling region are lost.
 

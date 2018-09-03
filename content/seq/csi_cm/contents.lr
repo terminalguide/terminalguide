@@ -25,9 +25,9 @@ since:
 ----
 body:
 
-* Does not unset pending wrap state.
-* konsole ignores the top margin of the scrolling region.
-* does not move the cursor to the left margin
+{{miss}} Does not unset pending wrap state.
+{{miss}} konsole ignores the top margin of the scrolling region.
+{{miss}} does not move the cursor to the left margin
 #### impl ####
 impl: urxvt
 ----
@@ -37,18 +37,21 @@ since:
 ----
 body:
 
-* if the cursor is above the current scroll region it acts as if the top of the scrolling region was set to the top-most row of the screen.
-* If `amount` is greater than the remaining number of lines in the scrolling region it does nothing.
-* If pending wrap state is set, wraps and indexes.
-* Does not move the cursor to the left margin (unless pending wrap was set)
+{{miss}} if the cursor is above the current scroll region it acts as if the top of the scrolling region was set to the top-most row of the screen.
+{{miss}} If `amount` is greater than the remaining number of lines in the scrolling region it does nothing.
+{{miss}} If pending wrap state is set, wraps and indexes.
+{{miss}} Does not move the cursor to the left margin (unless pending wrap was set)
 #### impl ####
 impl: vte
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
-body: 
+body:
+
+{{miss}} vte ignores the top margin of the scrolling region.
+{{miss}} {{snipi('split-keep-bg')}}
 ---
 seq:
 

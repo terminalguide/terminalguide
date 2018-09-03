@@ -23,10 +23,10 @@ body:
 #### impl ####
 impl: vte
 ----
-level: todo
+level: unparsable
 ----
 since: 
 ----
-body: 
+body: vte aliases this to {{mode_link('p1000')}} ignoring this modes special behavior.
 ---
 number: ?1001

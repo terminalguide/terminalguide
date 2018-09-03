@@ -21,11 +21,11 @@ body:
 #### impl ####
 impl: vte
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
-body: 
+body: See {{seq_link('a_esc_x3d_equals')}} for details.
 #### impl ####
 impl: konsole
 ----

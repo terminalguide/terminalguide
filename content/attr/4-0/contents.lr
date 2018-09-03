@@ -1,6 +1,6 @@
 title: Alias: Underline Reset
 ---
-body: Alias for {{sgr_link('24')}}
+body: Alias for reset of underline attributes ({{seq('\033[24m')}}).
 ---
 implnotes:
 

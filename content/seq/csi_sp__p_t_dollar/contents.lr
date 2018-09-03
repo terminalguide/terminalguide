@@ -1,0 +1,53 @@
+title: Request Mode (?) (DECRQM)
+---
+body:
+
+Query current state of a given [mode](/mode) (prefixed with {{seq('?')}}).
+
+This only allows querying one mode per invocation.
+
+For modes that are switchable the following replies are sent to the application:
+* If mode is set: {{seq('\033[?')}}{{seq_param('mode')}}{{seq(';1$y')}}
+* If mode is not set: {{seq('\033[?')}}{{seq_param('mode')}}{{seq(';2$y')}}
+
+For other modes the terminal responds with one of the following:
+
+* {{seq('\033[?')}}{{seq_param('mode')}}{{seq(';0$y')}} for unknown modes.
+* {{seq('\033[?')}}{{seq_param('mode')}}{{seq(';3$y')}} for modes where the terminal behavior matches that of the mode in set state.
+* {{seq('\033[?')}}{{seq_param('mode')}}{{seq(';4$y')}} for modes where the terminal behavior matches that of the mode in reset state.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: {{info}} vte reports mode 8  as `3`
+#### impl ####
+impl: vte
+----
+level: full
+----
+since: 
+----
+body:
+
+{{info}} vte reports modes 4, 10, 11, 12, 13, 14, 16, 18, 19, 30, 34, 35, 36, 38, 41, 42, 43, 44, 45, 46, 53, 57, 58, 60, 67, 68, 69,73, 80, 81, 83, 84, 85, 90, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 106, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 1005, 1010, 1011, 1034, 1035, 1037, 1039, 1040, 1041, 1042, 1043, 1044, 1050, 1051, 1052, 1053, 1060, 1061, 2001, 2002, 2003, 2005, 2006, 2017, 7700, 7711, 7727, 7728, 7730, 7766, 7767, 7783, 7786, 7787, 7796, 8452, 8428  as `3`
+{{info}} vte reports modes 2, 8, 61, 64, 112, 1021, 1046, 1070, 2016 as `4`
+---
+seq:
+
+#### csi ####
+#### intermediate ####
+name: ?
+#### numeric_parameter ####
+name: mode
+----
+default: none
+#### intermediate ####
+name: $
+#### final ####
+name: p

@@ -25,7 +25,7 @@ level: partial
 ----
 since: 
 ----
-body: Only modes p1, p6, p7, p25, p47, p1000, p1002, p1003, p1006, p1007, p1015, p1047, p2004 support restore/save.
+body: {{miss}} Only modes p1, p6, p7, p25, p47, p1000, p1002, p1003, p1006, p1007, p1015, p1047, p2004 support restore/save.
 #### impl ####
 impl: urxvt
 ----
@@ -33,11 +33,11 @@ level: partial
 ----
 since: 
 ----
-body: * After saving the state of mode {{mode_link('p1021')}} while the mode keeps its state as observed by later save operations otherwise urxvt acts as if the mode was also set by this operation.
+body: {{miss}} After saving the state of mode {{mode_link('p1021')}} while the mode keeps its state as observed by later save operations otherwise urxvt acts as if the mode was also set by this operation.
 #### impl ####
 impl: vte
 ----
-level: todo
+level: partial
 ----
 since: 
 ----

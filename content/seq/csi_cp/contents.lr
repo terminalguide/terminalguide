@@ -19,8 +19,8 @@ since:
 ----
 body:
 
-* does not reset pending wrap state
-* does not clear split multi cell characters.
+{{miss}} does not reset pending wrap state
+{{miss}} does not clear split multi cell characters.
 #### impl ####
 impl: urxvt
 ----
@@ -30,16 +30,16 @@ since:
 ----
 body:
 
-* If pending wrap state is set, wraps and indexes.
-* cells belonging to split multi-cell characters are erased with the SGR state of the first cell of that character.
+{{miss}} If pending wrap state is set, wraps and indexes.
+{{miss}} cells belonging to split multi-cell characters are erased with the SGR state of the first cell of that character.
 #### impl ####
 impl: vte
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
-body: 
+body: {{miss}} {{snipi('split-keep-bg')}}
 ---
 seq:
 

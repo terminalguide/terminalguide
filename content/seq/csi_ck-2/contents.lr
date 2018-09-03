@@ -33,7 +33,15 @@ level: partial
 ----
 since: 
 ----
-body: * Does not reset pending wrap state.
+body: {{miss}} Does not reset pending wrap state.
+#### impl ####
+impl: vte
+----
+level: partial
+----
+since: 
+----
+body: {{miss}} Does not reset pending wrap state.
 ---
 body:
 

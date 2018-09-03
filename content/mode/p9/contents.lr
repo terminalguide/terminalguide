@@ -11,7 +11,7 @@ level: full
 ----
 since: 
 ----
-body: Only mouse actions without held modifier keys are reported. When modifier keys are held xterm uses the events for it's own functions (shift: select text, ctrl: menus) or blocks them.
+body: {{info}} Only mouse actions without held modifier keys are reported. When modifier keys are held xterm uses the events for it's own functions (shift: select text, ctrl: menus) or blocks them.
 #### impl ####
 impl: konsole
 ----
@@ -29,16 +29,21 @@ since:
 ----
 body:
 
-Only mouse actions without shift or alt held are reported. These two modifiers are used for internal functions in urxvt.
-* in default reporting format the coordinates just wrap over (including into the range 0-32) when out of the representable range.
-* reports mouse wheel events in addition to clicks
+{{info}} Only mouse actions without shift or alt held are reported. These two modifiers are used for internal functions in urxvt.
+{{miss}} in default reporting format the coordinates just wrap over (including into the range 0-32) when out of the representable range.
+{{miss}} reports mouse wheel events in addition to clicks
 #### impl ####
 impl: vte
 ----
-level: todo
+level: full
 ----
 since: 
 ----
-body: 
+body:
+
+{{info}} Mouse actions with shift key held are not reported.
+{{info}} Further mouse buttons are not reported.
+{{info}} In versions before [0.52.3 / 0.54.1](https://gitlab.gnome.org/GNOME/vte/issues/36): in default reporting format the coordinates wrapped over when between 223 and 231 into the range 0-7.
+{{info}} Does not use {{seq('\0')}} for out of range in default reporting format.
 ---
 number: ?9

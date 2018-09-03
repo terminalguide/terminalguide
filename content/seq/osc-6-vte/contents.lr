@@ -1,0 +1,31 @@
+title: OSC TODO 6 (VTE)
+---
+body:
+
+{{snip('placeholder-page')}}
+
+conflicts with {{seq_link('osc-6')}}
+---
+implnotes:
+
+#### impl ####
+impl: vte
+----
+level: todo
+----
+since: 
+----
+body: 
+#### impl ####
+impl: xterm
+----
+level: unparsable
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### osc ####
+#### st ####

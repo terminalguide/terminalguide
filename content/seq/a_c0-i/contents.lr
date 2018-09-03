@@ -29,11 +29,11 @@ body:
 #### impl ####
 impl: vte
 ----
-level: todo
+level: full
 ----
 since: 
 ----
-body: 
+body: vte tries to recreate tabs on copy to clipboard. The primary case when this works is when the tab only covers cell that have previously not been written to at all.
 ---
 seq:
 

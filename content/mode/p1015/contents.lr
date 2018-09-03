@@ -34,10 +34,10 @@ body: Does not select encoding mode by last activated one, but by prioritizing ?
 #### impl ####
 impl: vte
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
-body: 
+body: * Does not select encoding mode by last activated one, but by prioritizing ?1006 > ?1015
 ---
 number: ?1015

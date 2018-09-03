@@ -1,0 +1,33 @@
+title: OSC TODO 119
+---
+body: {{snip('placeholder-page')}}
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: todo
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
+----
+level: todo
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### osc ####
+#### numeric_fixed ####
+val: 119
+#### numeric_parameter ####
+name: p1
+----
+default: 
+#### st ####

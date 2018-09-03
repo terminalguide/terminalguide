@@ -42,10 +42,10 @@ body: See linked sequences for differences.
 #### impl ####
 impl: vte
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
-body: 
+body: Vte moves the cursor to the top left of the [current scroll region](/scrolling-region) on mode reset too.
 ---
 number: ?6

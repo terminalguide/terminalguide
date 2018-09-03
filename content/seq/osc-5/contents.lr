@@ -1,0 +1,34 @@
+title: Set attribute replacement colors
+---
+body:
+
+Like {{seq_link('osc-4')}} but allows setting attribute replacement colors without need to know the palette size.
+
+Readback mode still used special indcies as would be need with {{seq_link('osc-4')}}
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: todo
+----
+#### impl ####
+impl: vte
+----
+level: todo
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### osc ####
+#### numeric_fixed ####
+val: 5
+#### numeric_parameter ####
+name: p1
+----
+default: 
+#### st ####

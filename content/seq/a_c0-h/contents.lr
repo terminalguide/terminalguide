@@ -29,7 +29,7 @@ body: urxvt implements a wrap around where an {{seq('\010')}} on the left most c
 #### impl ####
 impl: vte
 ----
-level: todo
+level: full
 ----
 since: 
 ----

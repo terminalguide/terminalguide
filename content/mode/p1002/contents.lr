@@ -11,7 +11,7 @@ level: full
 ----
 since: 
 ----
-body: Only mouse actions without held modifier keys are reported. When modifier keys are held xterm uses the events for it's own functions (shift: select text, ctrl: menus) or blocks them.
+body: {{info}} Only mouse actions without held modifier keys are reported. When modifier keys are held xterm uses the events for it's own functions (shift: select text, ctrl: menus) or blocks them.
 #### impl ####
 impl: konsole
 ----
@@ -21,10 +21,10 @@ since:
 ----
 body:
 
-Mouse actions with shift key held are not reported.
-* Held modifier keys are not reported.
-* When multiple buttons are held down while moving the mouse the report contains the held button with the highest id.
-* Mouse mode can be disabled by resetting any of the mouse tracking modes. When activating all mouse tracking modes are handled the same, except that ?1000 alone produces non standard behaviour while dragging the mouse. When not disabling the exact modes that have been activated partial state leaks into the next mouse mode activation.
+{{info}} Mouse actions with shift key held are not reported.
+{{miss}} Held modifier keys are not reported.
+{{miss}} When multiple buttons are held down while moving the mouse the report contains the held button with the highest id.
+{{miss}} Mouse mode can be disabled by resetting any of the mouse tracking modes. When activating all mouse tracking modes are handled the same, except that ?1000 alone produces non standard behaviour while dragging the mouse. When not disabling the exact modes that have been activated partial state leaks into the next mouse mode activation.
 #### impl ####
 impl: urxvt
 ----
@@ -34,16 +34,20 @@ since:
 ----
 body:
 
-Only mouse actions without shift or alt held are reported. These two modifiers are used for internal functions in urxvt.
-* in default reporting format the coordinates just wrap over (including into the range 0-32) when out of the representable range.
-* When multiple buttons are held down while moving the mouse the report contains the id of the last pressed button. When a button is released while others are still held the movement reports will contain the id 3 (button released)
+{{info}} Only mouse actions without shift or alt held are reported. These two modifiers are used for internal functions in urxvt.
+{{miss}} in default reporting format the coordinates just wrap over (including into the range 0-32) when out of the representable range.
+{{miss}} When multiple buttons are held down while moving the mouse the report contains the id of the last pressed button. When a button is released while others are still held the movement reports will contain the id 3 (button released)
 #### impl ####
 impl: vte
 ----
-level: todo
+level: full
 ----
 since: 
 ----
-body: 
+body:
+
+{{info}} Mouse actions with shift key held are not reported.
+{{info}} Further mouse buttons are not reported.
+{{info}} In versions before [0.52.3 / 0.54.1](https://gitlab.gnome.org/GNOME/vte/issues/36): in default reporting format the coordinates wrapped over when between 223 and 231 into the range 0-7.
 ---
 number: ?1002

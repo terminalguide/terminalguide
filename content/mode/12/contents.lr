@@ -1,0 +1,32 @@
+title: Send-Receive Mode
+---
+body:
+
+{{snip('placeholder-page')}}
+
+If *unset* loops terminal responses back to the terminal as if echoed by the application.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: todo
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
+----
+level: todo
+----
+since: 
+----
+body:
+
+Processes keyboard input also as terminal input, but without special handling for control characters.
+
+Paste operation are not included in this. Neither are replies from the terminal to the application.
+---
+number: 12

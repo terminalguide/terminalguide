@@ -1,0 +1,36 @@
+title: DSR TODO
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: todo
+----
+since: 
+----
+body: Always replies {{seq('\033P')}}{{seq_param('id')}}{{seq('!~0000\033\\')}}
+#### impl ####
+impl: vte
+----
+level: full
+----
+since: 
+----
+body: Always replies {{seq('\033P')}}{{seq_param('id')}}{{seq('!~0000\033\\')}}
+---
+seq:
+
+#### csi ####
+#### intermediate ####
+name: ?
+#### numeric_fixed ####
+val: 63
+#### numeric_parameter ####
+name: id
+----
+default: 
+#### final ####
+name: n
+---
+body: {{snip('placeholder-page')}}

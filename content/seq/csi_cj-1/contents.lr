@@ -19,8 +19,8 @@ since:
 ----
 body:
 
-* Does not unset the pending wrap state.
-* Does not erase split multi cell characters. (sometimes?)
+{{miss}} Does not unset the pending wrap state.
+{{miss}} Does not erase split multi cell characters. (sometimes?)
 #### impl ####
 impl: urxvt
 ----
@@ -28,7 +28,15 @@ level: partial
 ----
 since: 
 ----
-body: * Does not unset pending wrap state.
+body: {{miss}} Does not unset pending wrap state.
+#### impl ####
+impl: vte
+----
+level: partial
+----
+since: 
+----
+body: {{miss}} {{snip('split-keep-bg')}}
 ---
 seq:
 

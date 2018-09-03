@@ -41,11 +41,14 @@ body: `cmd` = 5 is an alias for `cmd` = 3.
 #### impl ####
 impl: vte
 ----
-level: todo
+level: full
 ----
 since: 
 ----
-body: 
+body:
+
+* `cmd` = 5 is an alias for `cmd` = 3.
+* `cmd` = 2 is an alias for `cmd` = 3.
 ---
 seq:
 

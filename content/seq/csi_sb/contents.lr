@@ -21,11 +21,14 @@ body: also works with codepoints >= 256
 #### impl ####
 impl: vte
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
-body: 
+body:
+
+* also works with codepoints >= 256
+* Limits `amount` to the number of columns between the cursor (inclusive) and the right edge of the screen.  (allows wrap with multi cell characters only)
 ---
 seq:
 

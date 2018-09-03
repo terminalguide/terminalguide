@@ -35,10 +35,10 @@ body:
 #### impl ####
 impl: vte
 ----
-level: todo
+level: full
 ----
 since: 
 ----
-body: 
+body: Always filters control character from pasted text.
 ---
 number: ?2004

@@ -9,6 +9,8 @@ The terminal replies with:
 {{seq('\033[')}}{{seq_param('row')}}{{seq(';')}}{{seq_param('column')}}{{seq('R')}}
 
 If {{mode_link('p6')}} is set the cursor position is reported relative to the top  left corner of the scroll area.
+
+See {{seq_link('csi_sn__p-6')}} for a variant of the command that does result in a report that does not conflict with keyboard arrow left reporting.
 ---
 implnotes:
 
@@ -39,7 +41,7 @@ body: Ignores {{mode_link('p6')}}, always reports relative to the top left corne
 #### impl ####
 impl: vte
 ----
-level: todo
+level: full
 ----
 since: 
 ----

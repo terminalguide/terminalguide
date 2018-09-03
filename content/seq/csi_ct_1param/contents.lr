@@ -17,7 +17,10 @@ level: partial
 ----
 since: 
 ----
-body: * when scrolling the full scrolling region size the last line is not scrolled out.
+body:
+
+* when scrolling the full scrolling region size the last line is not scrolled out.
+* if `amount` is 0 adjusts it to 1.
 #### impl ####
 impl: urxvt
 ----
@@ -29,11 +32,11 @@ body:
 #### impl ####
 impl: vte
 ----
-level: todo
+level: full
 ----
 since: 
 ----
-body: 
+body: * if `amount` is 0 adjusts it to 1.
 ---
 seq:
 

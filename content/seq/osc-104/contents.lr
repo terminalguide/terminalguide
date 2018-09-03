@@ -1,0 +1,39 @@
+title: Reset palette colors
+---
+body:
+
+Reset palette colors
+
+If `text` is empty reset all palette colors.
+
+Otherwise reset the colors specified in `text` as ';' separated list.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: todo
+----
+since: 
+----
+body: Also resets special colors TODO
+#### impl ####
+impl: vte
+----
+level: todo
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### osc ####
+#### numeric_fixed ####
+val: 104
+#### numeric_parameter ####
+name: text
+----
+default: 
+#### st ####

@@ -1,0 +1,32 @@
+title: DSR TODO
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: todo
+----
+since: 
+----
+body: Always replies {{seq('\033[?20n')}}
+#### impl ####
+impl: vte
+----
+level: full
+----
+since: 
+----
+body: Always replies {{seq('\033[?21n')}}
+---
+seq:
+
+#### csi ####
+#### intermediate ####
+name: ?
+#### numeric_fixed ####
+val: 25
+#### final ####
+name: n
+---
+body: See below for details:

@@ -1,0 +1,40 @@
+title: Alt + Key Sends Esc as Prefix.
+---
+body: When this mode is active Alt + Key sends {{seq('\033')}} + the key for printable inputs instead of forcing the 8th bit of the character to high.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
+----
+level: partial
+----
+since: 
+----
+body: If this mode is unset alt does nothing to printable characters. It's completely ignored.
+#### impl ####
+impl: urxvt
+----
+level: partial
+----
+since: 
+----
+body: urxvt acts as if this mode is permanently set. The mode itself is not supported.
+#### impl ####
+impl: konsole
+----
+level: partial
+----
+since: 
+----
+body: urxvt acts as if this mode is permanently set. The mode itself is not supported.
+---
+number: ?1036

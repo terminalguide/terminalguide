@@ -19,8 +19,8 @@ since:
 ----
 body:
 
-* Does not reset pending wrap state.
-* Adds screen content to scrollback before erasing the contents.
+{{miss}} Does not reset pending wrap state.
+{{miss}} Adds screen content to scrollback before erasing the contents.
 #### impl ####
 impl: urxvt
 ----
@@ -28,7 +28,15 @@ level: partial
 ----
 since: 
 ----
-body: * Does not reset pending wrap state.
+body: {{miss}} Does not reset pending wrap state.
+#### impl ####
+impl: vte
+----
+level: partial
+----
+since: 
+----
+body: {{miss}} Does not reset pending wrap state.
 ---
 seq:
 

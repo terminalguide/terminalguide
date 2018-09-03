@@ -1,0 +1,45 @@
+title: Change Mouse Pointer Auto Hide
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
+----
+level: unparsable
+----
+since: 
+----
+body:
+
+vte interprets this as alias for {{seq_link('csi_ss__p')}}
+
+https://gitlab.gnome.org/GNOME/vte/issues/35
+---
+seq:
+
+#### csi ####
+#### intermediate ####
+name: >
+#### numeric_parameter ####
+name: cmd
+----
+default: reset to implementation default
+#### final ####
+name: p
+---
+body:
+
+Setup when to hide mouse pointer while typing
+
+* 0 = never hide mouse pointer
+* 1 = hide mouse pointer when not in a mouse tracking mode
+* 2 = always hide mouse pointer
+* 3 = hide mouse pointer when focused.

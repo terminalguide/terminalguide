@@ -26,6 +26,16 @@ level: partial
 since: 
 ----
 body: * Does not unset pending wrap state.
+#### impl ####
+impl: vte
+----
+level: partial
+----
+since: 
+----
+body:
+
+{{miss}} {{snip('split-keep-bg')}}
 ---
 seq:
 

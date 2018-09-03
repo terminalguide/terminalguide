@@ -19,8 +19,8 @@ since:
 ----
 body:
 
-* Does not erase split multi cell characters.
-* Does not  unset pending wrap state.
+{{miss}} Does not erase split multi cell characters.
+{{miss}} When the pending wrap state is set, konsole does not clear anything nor reset the pending wrap state. So this is effectively {{seq_link('csi_ck-3')}}.
 #### impl ####
 impl: urxvt
 ----
@@ -28,7 +28,21 @@ level: partial
 ----
 since: 
 ----
-body: * Does not erase split multi cell characters.
+body: {{miss}} Does not erase split multi cell characters.
+#### impl ####
+impl: vte
+----
+level: partial
+----
+since: 
+----
+body:
+
+{{miss}} {{snip('split-keep-bg')}}
+
+
+{{miss}} When the pending wrap state is set, vte does not clear anything nor reset the pending wrap state. So this is effectively {{seq_link('csi_ck-3')}}.
+{{info}} See https://bugzilla.gnome.org/show_bug.cgi?id=740789 for background.
 ---
 seq:
 
