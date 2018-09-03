@@ -116,6 +116,10 @@ def jinja_hex(s):
         r.append(hex(ord(ch))[2:].rjust(2,'0'))
     return " ".join(r)
 
+force_new_line = '<span style="display:block"></span>'
+
+jinja_miss = force_new_line + 'ð '
+jinja_info = force_new_line + 'ð '
 class ToolsPlugin(Plugin):
     name = 'tools'
     description = u'Internal tools.'
@@ -128,3 +132,5 @@ class ToolsPlugin(Plugin):
         self.env.jinja_env.globals['mode_link'] = mode_link
         self.env.jinja_env.globals['seq_link'] = seq_link
         self.env.jinja_env.globals['sgr_link'] = sgr_link
+        self.env.jinja_env.globals['info'] = jinja_info
+        self.env.jinja_env.globals['miss'] = jinja_miss
