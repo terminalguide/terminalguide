@@ -19,6 +19,10 @@ def snip_resolver(name):
         val = 'SNIPPET missing: ' + name
     return val
 
+def snipi_resolver(name):
+    val = snip_resolver(name)
+    return val.strip()
+
 def mode_link(mode):
     try:
         ctx = get_ctx()
@@ -129,6 +133,7 @@ class ToolsPlugin(Plugin):
         self.env.jinja_env.globals['seq'] = seq
         self.env.jinja_env.globals['seq_param'] = seq_param
         self.env.jinja_env.globals['snip'] = snip_resolver
+        self.env.jinja_env.globals['snipi'] = snipi_resolver
         self.env.jinja_env.globals['mode_link'] = mode_link
         self.env.jinja_env.globals['seq_link'] = seq_link
         self.env.jinja_env.globals['sgr_link'] = sgr_link
