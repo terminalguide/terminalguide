@@ -36,5 +36,13 @@ level: partial
 since: 
 ----
 body: Swaps default (unnamed) background and foreground colors when rendering.
+#### impl ####
+impl: linuxvc
+----
+level: todo
+----
+since: 
+----
+body: 
 ---
 number: ?5

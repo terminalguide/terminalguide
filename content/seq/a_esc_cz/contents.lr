@@ -34,6 +34,14 @@ level: unparsable
 since: 
 ----
 body: Consumes one additional character while parsing. Something about SCI
+#### impl ####
+impl: linuxvc
+----
+level: todo
+----
+since: 
+----
+body: 
 ---
 seq:
 

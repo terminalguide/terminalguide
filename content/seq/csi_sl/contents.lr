@@ -34,6 +34,14 @@ level: full
 since: 
 ----
 body: Supports deactivating up to 32 modes in one sequence.
+#### impl ####
+impl: linuxvc
+----
+level: todo
+----
+since: 
+----
+body: 
 ---
 seq:
 

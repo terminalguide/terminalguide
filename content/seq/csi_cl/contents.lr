@@ -47,6 +47,14 @@ level: partial
 since: 
 ----
 body: {{miss}} if the cursor is above the current scrolling region: scrolls remaining lines until bottom most line of scroll region.
+#### impl ####
+impl: linuxvc
+----
+level: todo
+----
+since: 
+----
+body: 
 ---
 seq:
 

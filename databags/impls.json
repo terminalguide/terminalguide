@@ -2,5 +2,6 @@
     "urxvt": {},
     "xterm": {},
     "vte": {},
-    "konsole": {}
+    "konsole": {},
+    "linuxvc": {}
 }

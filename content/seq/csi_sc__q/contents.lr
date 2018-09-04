@@ -79,6 +79,14 @@ Otherwies returns:
 {{seq('\033[>65;')}}{{seq_param('version')}}{{seq(';1c')}}
 
 where `version` is major \* 10000 + minor \* 100 + micro.
+#### impl ####
+impl: linuxvc
+----
+level: unparsable
+----
+since: 
+----
+body: 
 ---
 seq:
 

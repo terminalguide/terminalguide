@@ -18,6 +18,14 @@ level: todo
 since: 
 ----
 body: _currentScreen->displayCharacter     (    0x2592)
+#### impl ####
+impl: linuxvc
+----
+level: todo
+----
+since: 
+----
+body: 
 ---
 seq:
 

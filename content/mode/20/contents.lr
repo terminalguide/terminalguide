@@ -37,5 +37,13 @@ level: partial
 since: 
 ----
 body: Only translates communication from terminal to application. Application to terminal direction is unchanged.
+#### impl ####
+impl: linuxvc
+----
+level: todo
+----
+since: 
+----
+body: 
 ---
 number: 20

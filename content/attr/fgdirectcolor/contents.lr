@@ -57,6 +57,14 @@ body:
 
 vte supports forms 1 and 4.
 Form 2 is supported when the color space id is empty (defaulted). Any digit in the color space id prevents this form from working (subparameters are still consumed)
+#### impl ####
+impl: linuxvc
+----
+level: todo
+----
+since: 
+----
+body: 
 ---
 number: 38:2:...
 ---

@@ -46,6 +46,14 @@ level: partial
 since: 
 ----
 body: If the cursor is below bottom-most line of current scroll region it is moved to the bottom-most line of the scroll region.
+#### impl ####
+impl: linuxvc
+----
+level: todo
+----
+since: 
+----
+body: 
 ---
 seq:
 

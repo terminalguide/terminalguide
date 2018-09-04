@@ -43,6 +43,14 @@ body:
 
 * Does not set the cursor position.
 * Does not reset margins.
+#### impl ####
+impl: linuxvc
+----
+level: todo
+----
+since: 
+----
+body: 
 ---
 seq:
 

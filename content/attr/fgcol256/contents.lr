@@ -63,3 +63,11 @@ level: full
 since: 
 ----
 body: xterm supports forms 1 and 3.
+#### impl ####
+impl: linuxvc
+----
+level: todo
+----
+since: 
+----
+body: 

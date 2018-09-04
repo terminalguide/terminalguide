@@ -40,6 +40,14 @@ body:
 
 * If `bottom` is 0, it is not adjusted to the number of the bottom most row.
 * if `top` is below the bottom-most row, it is not adjusted.
+#### impl ####
+impl: linuxvc
+----
+level: todo
+----
+since: 
+----
+body: 
 ---
 seq:
 

@@ -44,6 +44,14 @@ body:
 
 {{miss}} {{snipi('split-keep-bg')}}
 {{info}} The value of `amount` is limited to 65535.
+#### impl ####
+impl: linuxvc
+----
+level: todo
+----
+since: 
+----
+body: 
 ---
 seq:
 

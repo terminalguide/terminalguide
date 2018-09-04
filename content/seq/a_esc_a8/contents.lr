@@ -52,6 +52,14 @@ body:
 {{miss}} cursor position is stored absolute (not with regard to origin)
 {{miss}} always unsets pending the wrap state.
 {{miss}} restores modes {{mode_link('4')}}, {{mode_link('12')}} and {{mode_link('p5')}}
+#### impl ####
+impl: linuxvc
+----
+level: todo
+----
+since: 
+----
+body: 
 ---
 seq:
 

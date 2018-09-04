@@ -49,6 +49,14 @@ body:
 
 * `cmd` = 5 is an alias for `cmd` = 3.
 * `cmd` = 2 is an alias for `cmd` = 3.
+#### impl ####
+impl: linuxvc
+----
+level: todo
+----
+since: 
+----
+body: 
 ---
 seq:
 

@@ -46,6 +46,14 @@ level: full
 since: 
 ----
 body: {{info}} Supports activating up to 32 modes in one sequence.
+#### impl ####
+impl: linuxvc
+----
+level: todo
+----
+since: 
+----
+body: 
 ---
 seq:
 

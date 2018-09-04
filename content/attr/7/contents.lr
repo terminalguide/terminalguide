@@ -36,6 +36,14 @@ level: full
 since: 
 ----
 body: interacts with dim by using a dim background when enabled.
+#### impl ####
+impl: linuxvc
+----
+level: todo
+----
+since: 
+----
+body: 
 ---
 number: 7
 ---

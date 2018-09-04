@@ -50,3 +50,11 @@ level: partial
 since: 
 ----
 body: * With origin mode, does not force the cursor row to be inside the scrolling region
+#### impl ####
+impl: linuxvc
+----
+level: todo
+----
+since: 
+----
+body: 

@@ -43,6 +43,14 @@ body:
 
 {{miss}} When the pending wrap state is set, vte does not clear anything nor reset the pending wrap state. So this is effectively {{seq_link('csi_ck-3')}}.
 {{info}} See https://bugzilla.gnome.org/show_bug.cgi?id=740789 for background.
+#### impl ####
+impl: linuxvc
+----
+level: todo
+----
+since: 
+----
+body: 
 ---
 seq:
 

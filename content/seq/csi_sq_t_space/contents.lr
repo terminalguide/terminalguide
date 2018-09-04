@@ -34,6 +34,14 @@ level: full
 since: 
 ----
 body: If `cmd ` == 0 uses blinking block
+#### impl ####
+impl: linuxvc
+----
+level: unparsable
+----
+since: 
+----
+body: 
 ---
 seq:
 

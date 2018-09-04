@@ -80,3 +80,11 @@ level: partial
 since: 
 ----
 body: * cells belonging to split multi-cell characters are erased with the SGR state of the first cell of that character.
+#### impl ####
+impl: linuxvc
+----
+level: todo
+----
+since: 
+----
+body: 

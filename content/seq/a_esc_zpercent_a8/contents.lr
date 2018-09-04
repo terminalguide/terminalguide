@@ -1,0 +1,22 @@
+title: Alias: Enable UTF-8 mode
+---
+body: {{snip('placeholder-page')}}
+---
+implnotes:
+
+#### impl ####
+impl: linuxvc
+----
+level: todo
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### esc ####
+#### intermediate ####
+name: %
+#### final ####
+name: 8

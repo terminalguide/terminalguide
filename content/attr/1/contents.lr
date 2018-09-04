@@ -48,6 +48,14 @@ body:
 Sets bold font and also forces named colors into the bright variant. Color change can be disabled with vte api options.
 
 Line drawing characters do not support bold font.
+#### impl ####
+impl: linuxvc
+----
+level: todo
+----
+since: 
+----
+body: 
 ---
 number: 1
 ---

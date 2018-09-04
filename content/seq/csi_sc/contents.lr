@@ -76,6 +76,14 @@ If `p1` is not zero no reply is sent, otherwise:
 Otherwies returns:
 
 {{seq('\033[?65;1;9c')}}
+#### impl ####
+impl: linuxvc
+----
+level: todo
+----
+since: 
+----
+body: 
 ---
 seq:
 

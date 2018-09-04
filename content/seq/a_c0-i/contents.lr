@@ -34,6 +34,14 @@ level: full
 since: 
 ----
 body: vte tries to recreate tabs on copy to clipboard. The primary case when this works is when the tab only covers cell that have previously not been written to at all.
+#### impl ####
+impl: linuxvc
+----
+level: todo
+----
+since: 
+----
+body: 
 ---
 seq:
 
