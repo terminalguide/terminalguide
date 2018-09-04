@@ -35,7 +35,7 @@ ESC > Ⓝ A              csi_ca__q
 
 ESC = Ⓝ A              csi_ca__r
 
-ESC ! Ⓝ A              csi_ca__s
+ESC Ⓝ ! A              csi_ca_t_bang
 
 ESC [ Ⓝ $ A            csi_ca_t_dollar
 
