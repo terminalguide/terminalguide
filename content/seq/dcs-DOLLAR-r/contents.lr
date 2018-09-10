@@ -11,7 +11,7 @@ level: todo
 ----
 since: 
 ----
-body: 
+body: vte as of 0.54 aliases this to the sequences that begin with {{seq('\033P$q')}}.
 ---
 seq:
 

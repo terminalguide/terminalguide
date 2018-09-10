@@ -1,0 +1,41 @@
+title: Query Current Top and Bottom Margins
+---
+body:
+
+Query current top and bottom scrolling margins.
+
+This query the state set via {{seq_link('csi-sr')}}.
+
+The terminal replies with {{seq('\033P1$r')}}{{seq_param('top')}}{{seq(';')}}{{seq_param('bottom')}}{{seq('r\033\\')}}.
+
+Where `top` and `bottom` represent the current top-most and bottom-most line of the scrolling region.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
+----
+level: partial
+----
+since: 
+----
+body: {miss}} Replies with {{seq('\033P1$rr\033\\')}} when scrolling region is the whole screen.
+---
+seq:
+
+#### dcs ####
+#### intermediate ####
+name: $
+#### intermediate ####
+name: q
+#### numeric_fixed ####
+val: r
+#### st ####

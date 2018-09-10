@@ -1,0 +1,43 @@
+title: Query cursor style
+---
+body:
+
+Query the current cursor style.
+
+This query the state set via {{seq_link('csi_sq_t_space')}}.
+
+The terminal replies with {{seq('\033P1$r')}}{{seq_param('cmd')}}{{seq(' q\033\\')}}.
+
+Where `cmd` describes the cursor style. 0 is mapped to the actual style that is default.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
+----
+level: partial
+----
+since: 
+----
+body: {{mis}} Does not translate 0 to the actual default style.
+---
+seq:
+
+#### dcs ####
+#### intermediate ####
+name: $
+#### intermediate ####
+name: q
+#### intermediate ####
+name: SPACE
+#### numeric_fixed ####
+val: q
+#### st ####
