@@ -1,17 +1,17 @@
 title: DCS TODO
 ---
-body: {{snip('placeholder-page')}}
+body: 
 ---
 implnotes:
 
 #### impl ####
 impl: vte
 ----
-level: todo
+level: ignored
 ----
 since: 
 ----
-body: vte as of 0.54 aliases this to the sequences that begin with {{seq('\033P$q')}}.
+body: {{info}} vte before 0.54.1 aliases this to the sequences that begin with {{seq('\033P$q')}}.
 ---
 seq:
 
