@@ -37,7 +37,7 @@ body: Consumes one additional character while parsing. Something about SCI
 #### impl ####
 impl: linuxvc
 ----
-level: todo
+level: full
 ----
 since: 
 ----

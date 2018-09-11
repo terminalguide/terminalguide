@@ -5,6 +5,8 @@ body:
 When the alternate screen is active and the mouse wheel is used send arrow up and down.
 
 The number of arrow up or arrow down sequences that are transmitted is implementation defined.
+
+TODO: Add which modes inhibit this mode. (9/1000/1002/1003?)
 ---
 implnotes:
 

@@ -5,7 +5,9 @@ title: Control Characters and Escape Sequences
 body:
 
 Additionally there are character set definition sequences that follow a distinct pattern.
-These sequences are not used in UTF-8 mode but only in traditional 7 or 8 bit ISO-2022 mode.
+These sequences should not used in UTF-8 mode by applications but only in traditional 7 or 8 bit ISO-2022 mode.
+
+Many applications still use DEC_Spec_Graphic ('0') instead of the corresponding unicode codepoints for line drawing characters.
 
 <table class='visible-table'>
 <tr><th>Sequence shape</th><th>Select Characterset Result</th></tr>

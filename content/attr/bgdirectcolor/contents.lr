@@ -21,11 +21,11 @@ implnotes:
 #### impl ####
 impl: xterm
 ----
-level: partial
+level: full
 ----
 since: 
 ----
-body: xterm supports forms 1, 3 and 4.
+body: xterm supports forms 1, 2, 3 and 4.
 #### impl ####
 impl: konsole
 ----

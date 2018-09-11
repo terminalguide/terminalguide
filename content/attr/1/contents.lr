@@ -11,9 +11,9 @@ since:
 ----
 body:
 
-Sets bold font and also forces named colors into the bright variant.
+{{info}} Sets bold font and also forces named colors into the bright variant.
 
-The bright variant is applied in a way that makes the background bright when combined with {{sgr_link('7')}}
+{{info}} The bright variant is applied in a way that makes the background bright when combined with {{sgr_link('7')}}
 #### impl ####
 impl: konsole
 ----
@@ -21,7 +21,7 @@ level: full
 ----
 since: 
 ----
-body: Sets bold font and also forces named colors into the bright variant.
+body: {{info}} Sets bold font and also forces named colors into the bright variant.
 #### impl ####
 impl: urxvt
 ----
@@ -31,11 +31,11 @@ since:
 ----
 body:
 
-Sets bold font and if mode {{mode_link('p1021')}} is set also forces named foreground colors into the bright variant.
+{{info}} Sets bold font and if mode {{mode_link('p1021')}} is set also forces named foreground colors into the bright variant.
 
-Also disables bold with 21.
+{{info}} Also disables bold with 21.
 
-For bold with default foreground the color can additionally be changed with {{seq_link('osc-706')}}.
+{{info}} For bold with default foreground the color can additionally be changed with {{seq_link('osc-706')}}.
 #### impl ####
 impl: vte
 ----
@@ -45,9 +45,9 @@ since:
 ----
 body:
 
-Sets bold font and also forces named colors into the bright variant. Color change can be disabled with vte api options.
+{{info}} Sets bold font and also forces named colors into the bright variant. Color change can be disabled with vte api options.
 
-Line drawing characters do not support bold font.
+{{info}} Line drawing characters do not support bold font.
 #### impl ####
 impl: linuxvc
 ----

@@ -17,11 +17,7 @@ level: unparsable
 ----
 since: 
 ----
-body:
-
-vte interprets this as alias for {{seq_link('csi_ss__p')}}
-
-https://gitlab.gnome.org/GNOME/vte/issues/35
+body: {{miss}} vte versions before [0.54.1](https://gitlab.gnome.org/GNOME/vte/issues/35) interprets this as alias for {{seq_link('csi_ss__p')}}
 ---
 seq:
 

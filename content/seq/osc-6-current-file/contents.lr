@@ -1,10 +1,10 @@
-title: OSC TODO 6 (VTE)
+title: OSC TODO 6 Current File
 ---
 body:
 
 {{snip('placeholder-page')}}
 
-conflicts with {{seq_link('osc-6')}}
+conflicts with {{seq_link('osc-6-color')}}
 ---
 implnotes:
 
@@ -28,4 +28,10 @@ body:
 seq:
 
 #### osc ####
+#### numeric_fixed ####
+val: 6
+#### numeric_parameter ####
+name: uri
+----
+default: 
 #### st ####

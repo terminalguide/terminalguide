@@ -9,7 +9,11 @@ level: todo
 ----
 since: 
 ----
-body: Always replies {{seq('\033P')}}{{seq_param('id')}}{{seq('!~0000\033\\')}}
+body:
+
+Before version 334 replied {{seq('\033P')}}{{seq_param('id')}}{{seq('!~0000\033\\')}}.
+
+Since version 334 replies {{seq('\033P63!~0000\033\\')}}.
 #### impl ####
 impl: vte
 ----

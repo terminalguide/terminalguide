@@ -33,7 +33,7 @@ level: full
 ----
 since: 
 ----
-body: 
+body: {{info}} Line drawing characters do not support italic font.
 #### impl ####
 impl: linuxvc
 ----

@@ -108,6 +108,8 @@ def seq(l):
             v = 'LF'
         elif i == '\r':
             v = 'CR'
+        elif i == ' ':
+            v = '␣'
         elif i == '\177':
             v = 'DEL'
         ret += v + "<rt>" + hex(ord(i))[2:].rjust(2,'0') + "&nbsp;</rt>"

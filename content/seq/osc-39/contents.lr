@@ -16,4 +16,6 @@ body:
 seq:
 
 #### osc ####
+#### numeric_fixed ####
+val: 39
 #### st ####

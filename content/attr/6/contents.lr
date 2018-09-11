@@ -9,7 +9,11 @@ level: partial
 ----
 since: 
 ----
-body: See {{sgr_link('5')}} for details.
+body:
+
+See {{sgr_link('5')}} for details.
+
+{{info}} allows reset using 26
 #### impl ####
 impl: vte
 ----
@@ -18,9 +22,17 @@ level: ignored
 since: 
 ----
 body: 
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 334
+----
+body: 
 ---
 body: Alias for {{sgr_link('5')}}
 ---
 number: 6
 ---
-resetnumber: 25,26
+resetnumber: 25

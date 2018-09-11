@@ -20,4 +20,10 @@ body: {{info}} TODO document effect on alternate screen switching.
 seq:
 
 #### osc ####
+#### numeric_fixed ####
+val: 8
+#### numeric_parameter ####
+name: p1
+----
+default: 
 #### st ####

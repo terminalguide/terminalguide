@@ -1,10 +1,10 @@
-title: OSC TODO 6
+title: OSC TODO 6 Color Alias
 ---
 body:
 
 {{snip('placeholder-page')}}
 
-conflicts with {{seq_link('osc-6-vte')}}
+conflicts with {{seq_link('osc-6-current-file')}}
 ---
 implnotes:
 
