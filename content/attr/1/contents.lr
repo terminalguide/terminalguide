@@ -45,7 +45,9 @@ since:
 ----
 body:
 
-{{info}} Sets bold font and also forces named colors into the bright variant. Color change can be disabled with vte api options.
+{{info}} VTE sets bold font. It does not emulate a bold variant if the font does not supply one.
+
+{{info}} Since [0.56](https://bugzilla.gnome.org/show_bug.cgi?id=762247) VTE no longer forces named colors into the bright variant. Color change can be still be enabled with vte api options.
 
 {{info}} Line drawing characters do not support bold font.
 #### impl ####
