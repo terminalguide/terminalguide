@@ -124,8 +124,9 @@ def jinja_hex(s):
 
 force_new_line = '<span style="display:block"></span>'
 
-jinja_miss = force_new_line + 'ð '
-jinja_info = force_new_line + 'ð '
+jinja_miss = force_new_line + '🛆 '
+jinja_info = force_new_line + '🛈 '
+
 class ToolsPlugin(Plugin):
     name = 'tools'
     description = u'Internal tools.'
