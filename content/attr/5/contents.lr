@@ -7,11 +7,11 @@ implnotes:
 #### impl ####
 impl: xterm
 ----
-level: full
+level: unparsable
 ----
 since: 
 ----
-body: 
+body: {{miss}} There is a chance that the text is displayed invisible when the timing is unfortunate, the terminal is not focused, hovered and no new text or commands are output to the terminal. So using this risks the text to be invisible.
 #### impl ####
 impl: konsole
 ----
