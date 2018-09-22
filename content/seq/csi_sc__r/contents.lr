@@ -15,7 +15,12 @@ body:
 
 If `p1` is zero and emulation level is 4 or higher, reply is always:
 
+Until version 335:
 {{seq('\033P!|0\033\\')}}
+
+Starting with version 336:
+
+{{seq('\033P!|00000000\033\\')}}
 #### impl ####
 impl: vte
 ----

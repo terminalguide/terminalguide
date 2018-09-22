@@ -26,7 +26,7 @@ Many applications still use DEC_Spec_Graphic ('0') instead of the corresponding 
 <tr><th>rest</th><th>Character set</th></tr>
 <tr><td>B</td><td>ASCII</td></tr>
 <tr><td>A</td><td>British</td></tr>
-<tr><td>0</td><td>DEC_Spec_Graphic</td></tr>
+<tr><td>0</td><td>DEC Special Character and Line Drawing Set</td></tr>
 <tr><td>1</td><td>DEC_Alt_Chars</td></tr>
 <tr><td>2</td><td>DEC_Alt_Graphics</td></tr>
 <tr><td>&lt;</td><td>DEC_Supp</td></tr>
@@ -50,16 +50,24 @@ Many applications still use DEC_Spec_Graphic ('0') instead of the corresponding 
 <tr><td>`</td><td>Norwegian_Danish</td></tr>
 <tr><td> %5</td><td>DEC_Supp_Graphic</td></tr>
 <tr><td>% 6</td><td>Portugese</td></tr>
-<tr><td>% 0</td><td>no change?</td></tr>
-<tr><td>% 2</td><td>no change?</td></tr>
+<tr><td>% 0</td><td>Turkish</td></tr>
+<tr><td>% 2</td><td>Turkish Supplement</td></tr>
 <tr><td>% 3</td><td>no change?</td></tr>
-<tr><td>% =</td><td>no change?</td></tr>
+<tr><td>% =</td><td>Hebrew</td></tr>
+<tr><td>"4</td><td>DEC Hebrew Supplement</td></tr>
+<tr><td>"></td><td>Greek</td></tr>
+<tr><td>"?</td><td>DEC Greek Supplement</td></tr>
 </table>
 
 <p>Where rest96 is:</p>
 <table class='visible-table'>
 <tr><th>rest96</th><th>Character set</th></tr>
 <tr><td>A</td><td>Latin-1 Supplemental</td></tr>
+<tr><td>F</td><td>Greek (Bottom part of ISO-8859-7)</td></tr>
+<tr><td>H</td><td>Hebrew (Bottom part of ISO-8859-8)</td></tr>
+<tr><td>L</td><td>Latin-Cyrillic (Bottom part of ISO-8859-5)</td></tr>
+<tr><td>M</td><td>Latin-5 (Bottom part of ISO-8859-9)</td></tr>
 </table>
 
-See https://github.com/ThomasDickey/xterm-snapshots/blob/master/charsets.c for detailed character mapping tables.
+See https://github.com/ThomasDickey/xterm-snapshots/blob/master/charsets.c and "Digital ANSI-Compliant Printing Protocol Level 2 Programming Reference Manual EK–PPLV2–PM. B01" for detailed character mapping tables.
+￼

@@ -11,7 +11,7 @@ level: full
 ----
 since: 
 ----
-body: {{info}} Only mouse actions without held modifier keys are reported. When modifier keys are held xterm uses the events for it's own functions (shift: select text, ctrl: menus) or blocks them.
+body: {{info}} Mouse actions with shift held are used for text selection. By default mouse actions with exactly ctrl held are used for xterms internal menu.
 #### impl ####
 impl: konsole
 ----

@@ -5,11 +5,11 @@ implnotes:
 #### impl ####
 impl: xterm
 ----
-level: partial
+level: full
 ----
 since: 
 ----
-body: As of xterm 333 in {{mode_link('p69')}} mode restoring of the cursor position is broken.
+body: {{info}} Until xterm 335 in {{mode_link('p69')}} mode restoring of the cursor position was broken.
 #### impl ####
 impl: konsole
 ----
