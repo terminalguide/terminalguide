@@ -9,7 +9,7 @@ level: partial
 ----
 since: 
 ----
-body: Xterm only allows columns 1-1024 to contain tab stops.
+body: {{miss}} Xterm only allows columns 1-1024 to contain tab stops.
 #### impl ####
 impl: konsole
 ----
@@ -25,7 +25,7 @@ level: full
 ----
 since: 
 ----
-body: 
+body: {{info}} urxvt tries to recreate tabs on copy to clipboard. <!-- TODO investigate exact procedure -->
 #### impl ####
 impl: vte
 ----
@@ -33,7 +33,7 @@ level: full
 ----
 since: 
 ----
-body: vte tries to recreate tabs on copy to clipboard. The primary case when this works is when the tab only covers cell that have previously not been written to at all.
+body: {{info}} vte tries to recreate tabs on copy to clipboard. The primary case when this works is when the tab only covers cells that have previously not been written to at all.
 #### impl ####
 impl: linuxvc
 ----

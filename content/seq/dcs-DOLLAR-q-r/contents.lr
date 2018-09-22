@@ -4,7 +4,7 @@ body:
 
 Query current top and bottom scrolling margins.
 
-This query the state set via {{seq_link('csi-sr')}}.
+This queries the state set via {{seq_link('csi_sr')}}.
 
 The terminal replies with {{seq('\033P1$r')}}{{seq_param('top')}}{{seq(';')}}{{seq_param('bottom')}}{{seq('r\033\\')}}.
 
@@ -27,7 +27,7 @@ level: partial
 ----
 since: 
 ----
-body: {miss}} Replies with {{seq('\033P1$rr\033\\')}} when scrolling region is the whole screen.
+body: {{miss}} Replies with {{seq('\033P1$rr\033\\')}} when scrolling region is the whole screen.
 ---
 seq:
 

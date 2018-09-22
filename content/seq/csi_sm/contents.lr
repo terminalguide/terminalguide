@@ -13,11 +13,11 @@ implnotes:
 #### impl ####
 impl: xterm
 ----
-level: full
+level: partial
 ----
 since: 
 ----
-body: 
+body: {{miss}} does not gracefully ignore parameters that have sub-parameters. It stops interpreting at that point.
 #### impl ####
 impl: konsole
 ----
