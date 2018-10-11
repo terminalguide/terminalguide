@@ -21,11 +21,11 @@ body:
 #### impl ####
 impl: urxvt
 ----
-level: full
+level: partial
 ----
 since: 
 ----
-body: 
+body: {{miss}} If not both of reverse wrap mode and wraparound mode are set: If the pending wrap flag is set ´amount´ is reduced by one.
 #### impl ####
 impl: vte
 ----
