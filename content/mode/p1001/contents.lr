@@ -30,3 +30,5 @@ since:
 body: vte aliases this to {{mode_link('p1000')}} ignoring this modes special behavior.
 ---
 number: ?1001
+---
+sort: 1001

@@ -46,3 +46,5 @@ since:
 body: Sends current focus state on mode activation.
 ---
 number: ?1004
+---
+sort: 1004

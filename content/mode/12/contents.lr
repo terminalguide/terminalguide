@@ -30,3 +30,5 @@ Processes keyboard input also as terminal input, but without special handling fo
 Paste operation are not included in this. Neither are replies from the terminal to the application.
 ---
 number: 12
+---
+sort: -989

@@ -63,3 +63,5 @@ body:
 {{info}} TODO document effect on {{seq_link('osc-8')}}
 ---
 number: ?47
+---
+sort: 47

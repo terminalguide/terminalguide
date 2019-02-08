@@ -30,3 +30,5 @@ since:
 body: Enables or Disables usage of shift-ins to insert text from system clipboard.
 ---
 number: ?35
+---
+sort: 35

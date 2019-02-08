@@ -48,3 +48,5 @@ since:
 body: See {{mode_link('p47')}} and {{seq_link('a_esc_a7')}} for differences.
 ---
 number: ?1049
+---
+sort: 1049

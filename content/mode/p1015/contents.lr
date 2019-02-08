@@ -41,3 +41,5 @@ since:
 body: * Does not select encoding mode by last activated one, but by prioritizing ?1006 > ?1015
 ---
 number: ?1015
+---
+sort: 1015

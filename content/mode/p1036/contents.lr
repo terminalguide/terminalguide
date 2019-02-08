@@ -38,3 +38,5 @@ since:
 body: urxvt acts as if this mode is permanently set. The mode itself is not supported.
 ---
 number: ?1036
+---
+sort: 1036

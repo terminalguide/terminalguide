@@ -42,3 +42,5 @@ since:
 body: Always filters control character from pasted text.
 ---
 number: ?2004
+---
+sort: 2004
