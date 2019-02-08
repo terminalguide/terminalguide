@@ -25,7 +25,10 @@ level: full
 ----
 since: 
 ----
-body: {{info}} vte reports mode 8  as `3`
+body:
+
+{{info}} xterm reports mode 8  as `3`
+{{info}} xterm does not allow switching modes `13` and `14`, but uses response `1` and `2` to report configuration.
 #### impl ####
 impl: vte
 ----

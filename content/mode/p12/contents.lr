@@ -15,7 +15,11 @@ level: full
 ----
 since: 
 ----
-body: 
+body:
+
+{{info}} This mode is synchronized to the blinking part of the {{seq_link('csi_sq_t_space')}} setting.
+
+{{info}} xterm has user preferences to override/modify the effect of this mode, see {{mode_link('p13')}} and {{mode_link('p14')}}.
 #### impl ####
 impl: konsole
 ----
@@ -31,7 +35,7 @@ level: full
 ----
 since: 
 ----
-body: 
+body: {{info}} This mode is additive to blinking part of the {{seq_link('csi_sq_t_space')}} setting.
 ---
 number: ?12
 ---

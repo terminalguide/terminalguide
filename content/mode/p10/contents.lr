@@ -1,6 +1,6 @@
-title: Reserved for Sixel Emulation
+title: Show Toolbar
 ---
-body: Reserved for Sixel Emulation
+body: If compiled in, show the toolbar.
 ---
 implnotes:
 
@@ -13,6 +13,6 @@ since:
 ----
 body: 
 ---
-number: ?80
+number: ?10
 ---
-sort: 80
+sort: 10

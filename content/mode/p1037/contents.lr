@@ -1,0 +1,22 @@
+title: Delete Key sends DEL
+---
+body:
+
+Delete Key sends DEL instead of sending an escape sequence.
+
+If set use legacy {{seq('\x7f')}} for the delete key instead of an escape sequence.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+number: ?1037
+---
+sort: 1037

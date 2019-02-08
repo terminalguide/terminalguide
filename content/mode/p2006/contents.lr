@@ -1,0 +1,18 @@
+title: experimental: On Paste do not Translate LF to CR
+---
+body: On paste do not translate LF to CR.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: {{info}} Only available when compiled with OPT_READLINE
+---
+number: ?2006
+---
+sort: 2006

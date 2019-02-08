@@ -1,0 +1,26 @@
+title: Use "VT220" Keyboard Mapping
+---
+body:
+
+* disable key codes extended with modifier (alt,shift,ctrl) according to the flags set via {{seq_link('csi_sm__q-0')}} and {{seq_link('csi_sm__q-4')}}.
+* delete by default sends an escape sequence
+* remaps numpad '+' to numpad ','
+* remaps ctrl - numpad ',' to numpad '-' (including from ctrl - numpad '+')
+* remaps editing keys in the numpad to their numeric meanings (even with numlock off)
+* Ctrl + f-keys transposes the number of the f-key up by 10.
+* Shift + f-keys (and a few others) is used for user defined keys (see {{seq_link('dcs_7c_pipe')}}).
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+number: ?1061
+---
+sort: 1061

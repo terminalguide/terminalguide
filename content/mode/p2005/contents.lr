@@ -1,0 +1,22 @@
+title: experimental: On Paste Prefix Each Byte with Ctrl-V
+---
+body:
+
+On paste prefix each byte with ctrl-v.
+
+Prefixes each byte of the pasted content with {{seq('\026')}} (thus doubling the amount of pasted data)
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: {{info}} Only available when compiled with OPT_READLINE
+---
+number: ?2005
+---
+sort: 2005

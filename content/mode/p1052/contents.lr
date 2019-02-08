@@ -1,0 +1,47 @@
+title: Use "HP" Keyboard Mapping
+---
+body:
+
+* delete always sends an escape sequence (regardless of {{mode_link('p1037')}})
+
+overrides key encoding:
+<table class="visible-table"><tr><th>key</th><th>sequence</th></tr>
+<tr><td>F1</td><td>{{seq('\033p')}}</td></tr>
+<tr><td>F2</td><td>{{seq('\033q')}}</td></tr>
+<tr><td>F3</td><td>{{seq('\033r')}}</td></tr>
+<tr><td>F4</td><td>{{seq('\033s')}}</td></tr>
+<tr><td>F5</td><td>{{seq('\033t')}}</td></tr>
+<tr><td>F6</td><td>{{seq('\033u')}}</td></tr>
+<tr><td>F7</td><td>{{seq('\033v')}}</td></tr>
+<tr><td>F8</td><td>{{seq('\033w')}}</td></tr>
+<tr><td>up</td><td>{{seq('\033A')}}</td></tr>
+<tr><td>down</td><td>{{seq('\033B')}}</td></tr>
+<tr><td>right</td><td>{{seq('\033C')}}</td></tr>
+<tr><td>left</td><td>{{seq('\033D')}}</td></tr>
+<tr><td>end</td><td>{{seq('\033F')}}</td></tr>
+<tr><td>clear</td><td>{{seq('\033J')}}</td></tr>
+<tr><td>delete</td><td>{{seq('\033P')}}</td></tr>
+<tr><td>insert</td><td>{{seq('\033Q')}}</td></tr>
+<tr><td>page down</td><td>{{seq('\033S')}}</td></tr>
+<tr><td>page up</td><td>{{seq('\033T')}}</td></tr>
+<tr><td>home</td><td>{{seq('\033h')}}</td></tr>
+<tr><td>keypad delete</td><td>{{seq('\033P')}}</td></tr>
+<tr><td>keypad insert</td><td>{{seq('\033Q')}}</td></tr>
+<tr><td>select</td><td>{{seq('\033F')}}</td></tr>
+<tr><td>find</td><td>{{seq('\033h')}}</td></tr>
+</table>
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: partial
+----
+since: 
+----
+body: {{miss}} Only available with the non default compile time option `--enable-hp-fkeys`
+---
+number: ?1052
+---
+sort: 1052

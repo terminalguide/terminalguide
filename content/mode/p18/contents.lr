@@ -1,0 +1,18 @@
+title: End Print Screen with Form Feed (DECPFF)
+---
+body: If set send a form feed to the printer after printing the complete screen.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+number: ?18
+---
+sort: 18

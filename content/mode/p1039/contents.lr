@@ -1,0 +1,18 @@
+title: Additional Modifier + Key Sends Esc as Prefix.
+---
+body: This is similar to {{mode_link('p1036')}} but for an additionally configured modifier.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+number: ?1039
+---
+sort: 1039

@@ -1,0 +1,22 @@
+title: Keep Clipboard Contents
+---
+body:
+
+Keep clipboard contents after the cells from which it was created was overwritten by further output.
+
+If unset remove selection from clipboard (or similar) when further output overrides the selected text. If set keep selection until another selection supersedes it.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+number: ?1040
+---
+sort: 1040

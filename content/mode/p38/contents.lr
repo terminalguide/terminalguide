@@ -1,6 +1,6 @@
-title: Reserved for Sixel Emulation
+title: Reserved (DECTEK)
 ---
-body: Reserved for Sixel Emulation
+body: Reserved for TEK Mode
 ---
 implnotes:
 
@@ -13,6 +13,6 @@ since:
 ----
 body: 
 ---
-number: ?80
+number: ?38
 ---
-sort: 80
+sort: 38

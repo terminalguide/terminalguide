@@ -1,0 +1,30 @@
+title: Use "Legacy" Keyboard Mapping
+---
+body:
+
+* disable key codes extended with modifier (alt,shift,ctrl) according to the flags set via {{seq_link('csi_sm__q-0')}} and {{seq_link('csi_sm__q-4')}}.
+* delete by default sends {{seq('\177')}}
+* Ctrl + f-keys transposes the number of the f-key up by 10.
+
+overrides key encoding:
+<table class="visible-table"><tr><th>key</th><th>sequence</th></tr>
+<tr><td>F1</td><td>{{seq('\033[11~')}}</td></tr>
+<tr><td>F2</td><td>{{seq('\033[12~')}}</td></tr>
+<tr><td>F3</td><td>{{seq('\033[13~')}}</td></tr>
+<tr><td>F4</td><td>{{seq('\033[14~')}}</td></tr>
+</table>
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+number: ?1060
+---
+sort: 1060

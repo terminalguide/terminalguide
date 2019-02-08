@@ -1,0 +1,78 @@
+title: Use "Sun" Keyboard Mapping
+---
+body:
+
+* delete always sends an escape sequence (regardless of {{mode_link('p1037')}})
+
+overrides key encoding:
+<table class="visible-table"><tr><th>key</th><th>sequence</th></tr>
+<tr><td>F1</td><td>{{seq('\033[224z')}}</td></tr>
+<tr><td>F2</td><td>{{seq('\033[225z')}}</td></tr>
+<tr><td>F3</td><td>{{seq('\033[226z')}}</td></tr>
+<tr><td>F4</td><td>{{seq('\033[227z')}}</td></tr>
+<tr><td>F5</td><td>{{seq('\033[228z')}}</td></tr>
+<tr><td>F6</td><td>{{seq('\033[229z')}}</td></tr>
+<tr><td>F7</td><td>{{seq('\033[230z')}}</td></tr>
+<tr><td>F8</td><td>{{seq('\033[231z')}}</td></tr>
+<tr><td>F9</td><td>{{seq('\033[232z')}}</td></tr>
+<tr><td>F10</td><td>{{seq('\033[233z')}}</td></tr>
+<tr><td>F11</td><td>{{seq('\033[192z')}}</td></tr>
+<tr><td>F12</td><td>{{seq('\033[193z')}}</td></tr>
+<tr><td>F13</td><td>{{seq('\033[194z')}}</td></tr>
+<tr><td>F14</td><td>{{seq('\033[195z')}}</td></tr>
+<tr><td>F15</td><td>{{seq('\033[196z')}}</td></tr>
+<tr><td>F16</td><td>{{seq('\033[197z')}}</td></tr>
+<tr><td>F17</td><td>{{seq('\033[198z')}}</td></tr>
+<tr><td>F18</td><td>{{seq('\033[199z')}}</td></tr>
+<tr><td>F19</td><td>{{seq('\033[200z')}}</td></tr>
+<tr><td>F20</td><td>{{seq('\033[201z')}}</td></tr>
+<tr><td>F21</td><td>{{seq('\033[208z')}}</td></tr>
+<tr><td>F22</td><td>{{seq('\033[209z')}}</td></tr>
+<tr><td>F23</td><td>{{seq('\033[210z')}}</td></tr>
+<tr><td>F24</td><td>{{seq('\033[211z')}}</td></tr>
+<tr><td>F25</td><td>{{seq('\033[212z')}}</td></tr>
+<tr><td>F26</td><td>{{seq('\033[213z')}}</td></tr>
+<tr><td>F27</td><td>{{seq('\033[214z')}}</td></tr>
+<tr><td>F28</td><td>{{seq('\033[215z')}}</td></tr>
+<tr><td>F29</td><td>{{seq('\033[216z')}}</td></tr>
+<tr><td>F30</td><td>{{seq('\033[217z')}}</td></tr>
+<tr><td>F31</td><td>{{seq('\033[218z')}}</td></tr>
+<tr><td>F32</td><td>{{seq('\033[219z')}}</td></tr>
+<tr><td>F33</td><td>{{seq('\033[220z')}}</td></tr>
+<tr><td>F34</td><td>{{seq('\033[221z')}}</td></tr>
+<tr><td>F35</td><td>{{seq('\033[222z')}}</td></tr>
+<tr><td>F36</td><td>{{seq('\033[234z')}}</td></tr>
+<tr><td>F37</td><td>{{seq('\033[235z')}}</td></tr>
+<tr><td>help</td><td>{{seq('\033[196z')}}</td></tr>
+<tr><td>menu</td><td>{{seq('\033[197z')}}</td></tr>
+<tr><td>find</td><td>{{seq('\033[1z')}}</td></tr>
+<tr><td>insert</td><td>{{seq('\033[2z')}}</td></tr>
+<tr><td>delete</td><td>{{seq('\033[3z')}}</td></tr>
+<tr><td>keypad insert</td><td>{{seq('\033[2z')}}</td></tr>
+<tr><td>keypad delete</td><td>{{seq('\033[3z')}}</td></tr>
+<tr><td>select</td><td>{{seq('\033[4z')}}</td></tr>
+<tr><td>page up</td><td>{{seq('\033[216z')}}</td></tr>
+<tr><td>page down</td><td>{{seq('\033[222z')}}</td></tr>
+<tr><td>home</td><td>{{seq('\033[214z')}}</td></tr>
+<tr><td>end</td><td>{{seq('\033[220z')}}</td></tr>
+<tr><td>begin</td><td>{{seq('\033[218z')}}</td></tr>
+<tr><td>left</td><td>{{seq('\033OD')}}</td></tr>
+<tr><td>up</td><td>{{seq('\033OA')}}</td></tr>
+<tr><td>right</td><td>{{seq('\033OC')}}</td></tr>
+<tr><td>down</td><td>{{seq('\033OB')}}</td></tr>
+</table>
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+number: ?1051
+---
+sort: 1051

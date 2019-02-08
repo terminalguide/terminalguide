@@ -1,0 +1,21 @@
+title: Terminal Bell Raises/Activates Window
+---
+body:
+
+If set, the terminal bell will raise and/or activate the terminal window.
+
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+number: ?1043
+---
+sort: 1043

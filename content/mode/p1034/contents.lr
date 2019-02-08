@@ -1,13 +1,17 @@
-title: Mode TODO ?1034
+title: Alt + Key Sends Character with High Bit Set
 ---
-body: {{snip('placeholder-page')}}
+body:
+
+Use high bit to signal keypresses with alt modifier held.
+
+When reporting key presses  use the high (eighth) bit to indicate alt modifier. (This will collide with non ASCII characters)
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
 ----
 since: 
 ----

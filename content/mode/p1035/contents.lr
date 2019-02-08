@@ -1,0 +1,29 @@
+title: Ignore Keypad Application Mode When Numlock is Active
+---
+body:
+
+Ignore Keypad Application Mode When Numlock is Active
+
+If {{mode_link('p66')}} is active:
+* The mathematical operations keys (/, *, -, +) are sent to the application as escape sequence regardless of num lock state if mode is off. If mode is on, the keys send their printable character when num lock is active.
+* With num lock active, the number / edit keys  send escape sequences if this mode is off if shift is not pressed. When this mode is on they send the printable character for their number.<br>
+(In both settings the keys send the same escape sequences when shift is held)
+* With num lock active, the enter key on the num pad  sends escape sequences if this mode is off. When this mode is on it sends {{seq('\r')}}.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+number: ?1035
+---
+sort:
+
+1035
+

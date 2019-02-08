@@ -1,13 +1,17 @@
 title: Reverse Wrap Mode (REVERSEWRAP)
 ---
-body: {{snip('placeholder-page')}}
+body:
+
+Enable {{seq_link('a_c0-h')}} and {{seq_link('csi_cd')}} to wrap from left margin to right margin.
+
+See {{seq_link('csi_cd')}} for details.
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
 ----
 since: 
 ----
@@ -20,6 +24,14 @@ level: ignored
 since: 
 ----
 body: 
+#### impl ####
+impl: urxvt
+----
+level: ignored
+----
+since: 
+----
+body: {{info}} urxvt acts as if the mode is permanently on for {{seq_link('a_c0-h')}} only. {{seq_link('csi_cd')}} does not wrap around.
 ---
 number: ?45
 ---

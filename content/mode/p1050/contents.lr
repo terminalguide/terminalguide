@@ -1,0 +1,74 @@
+title: Use "tcap" Keyboard Mapping
+---
+body:
+
+* delete always sends an escape sequence
+
+overrides key encoding with data from the local terminfo dataset:
+<table class="visible-table">
+<tr><th>key</th><th colspan=2>terminfo name</th></tr>
+<tr><th></th><th>without modifiers</th><th>modifiers == shift</th></tr>
+<tr><td>help</td><td>khlp</td><td>kHLP</td></tr>
+<tr><td>find</td><td>kfnd</td><td>kFND</td></tr>
+<tr><td>select</td><td>kslt</td><td>kSLT</td></tr>
+<tr><td>home</td><td>khome</td><td>kHOM</td></tr>
+<tr><td>end</td><td>kend</td><td>kEND</td></tr>
+<tr><td>left</td><td>kcub1</td><td>kLFT</td></tr>
+<tr><td>right</td><td>kcuf1</td><td>kRIT</td></tr>
+<tr><td>up</td><td>kcuu1</td><td>kind or kUP or kDN</td></tr>
+<tr><td>down</td><td>kcud1</td><td>kri</td></tr>
+<tr><td>Fx with x from 1 to 35</td><td>kfx</td><td>n/a</td></tr>
+<tr><td>keypad home</td><td>ka1</td><td>n/a</td></tr>
+<tr><td>keypad end</td><td>kc1</td><td>n/a</td></tr>
+<tr><td>keypad  page up</td><td>ka3</td><td>n/a</td></tr>
+<tr><td>keypad  page down</td><td>kc3</td><td>n/a</td></tr>
+<tr><td>left tab (aka shift-tab)</td><td>kcbt</td><td>n/a</td></tr>
+<tr><td>clear</td><td>kclr</td><td>n/a</td></tr>
+<tr><td>delete</td><td>kdch1</td><td>n/a</td></tr>
+<tr><td>insert</td><td>kich1</td><td>n/a</td></tr>
+<tr><td>page down</td><td>knp</td><td>kNXT</td></tr>
+<tr><td>page up</td><td>kpp</td><td>kPRV</td></tr>
+<tr><td>undo</td><td>kund</td><td>n/a</td></tr>
+<tr><td>backspace</td><td>kbs</td><td>n/a</td></tr>
+</table>
+
+Further if the first table does not match, override with the following from the local terminfo dataset:
+<table class="visible-table">
+<tr><th>key</th><th>terminfo name</th><th></th></tr>
+<tr><td>down</td><td>kDNx</td><td rowspan=10>with x from the following table
+<table><tr><th>modifiers</th><th>x</th></tr>
+<tr><td>shift</td><td></td></tr>
+<tr><td>alt</td><td>3</td></tr>
+<tr><td>alt + shift</td><td>4</td></tr>
+<tr><td>ctrl</td><td>5</td></tr>
+<tr><td>ctrl + shift</td><td>6</td></tr>
+<tr><td>ctrl + alt</td><td>7</td></tr>
+<tr><td>ctrl + alt + shift</td><td>8</td></tr>
+</table></td></tr>
+<tr><td>left</td><td>kLFTx</td></tr>
+<tr><td>right</td><td>kRITx</td></tr>
+<tr><td>up</td><td>kUPx</td></tr>
+<tr><td>delete</td><td>kDCx</td></tr>
+<tr><td>end</td><td>kENDx</td></tr>
+<tr><td>home</td><td>kHOMx</td></tr>
+<tr><td>insert</td><td>kICx</td></tr>
+<tr><td>page down</td><td>kNXTx</td></tr>
+<tr><td>page up</td><td>kPRVx</td></tr>
+</table>
+
+The sequences send to the application are the same as those returned by {{seq_link('dcs-PLUS-q')}} with the terminfo name.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+number: ?1050
+---
+sort: 1050

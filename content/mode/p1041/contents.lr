@@ -1,0 +1,24 @@
+title: Select Clipboard or Middle Click Paste
+---
+body:
+
+Select clipboard or middle click paste.
+
+Selects which clipboard facility is used for copy and paste.
+
+If set the clipboard is used (commonly accessed from menus or ctrl-v). If unset the middle click paste buffer is used.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+number: ?1041
+---
+sort: 1041

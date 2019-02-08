@@ -1,0 +1,26 @@
+title: Terminal Bell Sets Window 'Needs Attention'
+---
+body:
+
+If set, the terminal bell will set the terminal window's 'needs attention' flag.
+
+The flag is only set when the window does not have window focus and it unset as soon as the window is activated.
+
+In some environments the window will pulse or bounce if the flag is set. 
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+number: ?1042
+---
+sort:
+
+1042

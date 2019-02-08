@@ -1,0 +1,22 @@
+title: Read-Only: User Cursor Blink Combintation Setting
+---
+body:
+
+When queried by {{seq_link('csi_sp__p_t_dollar')}} reveals the user preference for combining the blinking the cursor settings.
+
+If this mode is set then {{mode_link('p12')}} and {{seq_link('csi_sq_t_space')}} invert the user preference for blinking the cursor instead of directly controling if the cursor blinks.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: partial
+----
+since: 
+----
+body: {{miss}} usage of a mode as read only indicator.
+---
+number: ?14
+---
+sort: 14

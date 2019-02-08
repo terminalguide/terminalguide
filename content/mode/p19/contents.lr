@@ -1,0 +1,22 @@
+title: Limit Print Screen to Scrolling Region (DECPEX)
+---
+body:
+
+When set the print screen functions will only print lines in the scrolling region set via {{seq_link('csi_sr')}}.
+
+Note: The left and right margins set via {{seq_link('csi_ss_2param/')}} are ignored.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+number: ?19
+---
+sort: 19

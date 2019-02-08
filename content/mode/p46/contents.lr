@@ -1,0 +1,22 @@
+title: Enable Logging to File
+---
+body:
+
+Control logging of output from application to a file.
+
+{{info}} Supporting this feature might pose security problems.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: ignored
+----
+since: 
+----
+body: {{info}} This can be enabled with a non default compile time option `ALLOWLOGFILEONOFF`.
+---
+number: ?46
+---
+sort: 46

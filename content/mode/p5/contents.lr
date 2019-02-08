@@ -1,17 +1,28 @@
 title: Reverse Display Colors (DECSCNM)
 ---
-body: {{snip('placeholder-page')}}
+body:
+
+Reverses the foreground and background colors of some cells.
+
+Exact behavior is implementation specific.
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
-body: 
+body:
+
+{{info}} Swaps default (unnamed) background and foreground colors when rendering. <!-- easier to document that was. as if rule applies -->
+{{info}} If the cursor color matches the foreground color, it is changed to what is about to be used as the rendered foreground color. This change is observable via {{seq_link('osc-12')}}.
+{{info}} Swaps mouse pointer inlet and mask colors when rendering.
+{{info}} Swaps selection background and foreground colors. This change is observable via {{seq_link('osc-17')}} and {{seq_link('osc-19')}}. Then also Swaps selection background and foreground colors when rendering. (so the rendered colors stay the same, but the sequences swap their meaning)
+{{info}} Swaps scrollbar background and foreground colors when rendering.
+{{info}} Swaps colors with indices 0 and 7 as well as 8 and 15. The palette color swaps are observable via {{seq_link('osc-4')}}.
 #### impl ####
 impl: konsole
 ----
@@ -19,7 +30,7 @@ level: partial
 ----
 since: 
 ----
-body: Swaps background and foreground when rendering.
+body: {{info}} Swaps background and foreground when rendering.
 #### impl ####
 impl: urxvt
 ----
@@ -27,7 +38,7 @@ level: partial
 ----
 since: 
 ----
-body: Swaps default (unnamed) background and foreground colors when rendering.
+body: {{info}} Swaps default (unnamed) background and foreground colors when rendering.
 #### impl ####
 impl: vte
 ----
@@ -35,7 +46,7 @@ level: partial
 ----
 since: 
 ----
-body: Swaps default (unnamed) background and foreground colors when rendering.
+body: {{info}} Swaps default (unnamed) background and foreground colors when rendering.
 #### impl ####
 impl: linuxvc
 ----

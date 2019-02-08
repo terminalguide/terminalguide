@@ -1,0 +1,22 @@
+title: Activate DEC National Character Set Mode (DECNRCM)
+---
+body:
+
+Activate DEC National Character Set Mode.
+
+Temporarily disables UTF-8 mode and allows usage of DEC National Character Set encoding.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+number: ?42
+---
+sort: 42

@@ -1,13 +1,17 @@
-title: Mode TODO ?41
+title: XTerm more(1) workaround
 ---
-body: {{snip('placeholder-page')}}
+body:
+
+Enables a workaround in tab behavior.
+
+Tabs received ({{seq_link('a_c0-k')}}, {{seq_link('csi_ci')}}) in pending-wrap state and with enabled {{mode_link('p7')}} force a wrap around before interpreting the tab command.
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
 ----
 since: 
 ----

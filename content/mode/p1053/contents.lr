@@ -1,0 +1,83 @@
+title: Use "SCO" Keyboard Mapping
+---
+body:
+
+* delete always sends an escape sequence (regardless of {{mode_link('p1037')}})
+
+overrides key encoding:
+<table class="visible-table"><tr><th>key</th><th>sequence</th></tr>
+<tr><td>F1</td><td>{{seq('\033[M')}}</td></tr>
+<tr><td>F2</td><td>{{seq('\033[N')}}</td></tr>
+<tr><td>F3</td><td>{{seq('\033[O')}}</td></tr>
+<tr><td>F4</td><td>{{seq('\033[P')}}</td></tr>
+<tr><td>F5</td><td>{{seq('\033[Q')}}</td></tr>
+<tr><td>F6</td><td>{{seq('\033[R')}}</td></tr>
+<tr><td>F7</td><td>{{seq('\033[S')}}</td></tr>
+<tr><td>F8</td><td>{{seq('\033[T')}}</td></tr>
+<tr><td>F9</td><td>{{seq('\033[U')}}</td></tr>
+<tr><td>F10</td><td>{{seq('\033[V')}}</td></tr>
+<tr><td>F11</td><td>{{seq('\033[W')}}</td></tr>
+<tr><td>F12</td><td>{{seq('\033[X')}}</td></tr>
+<tr><td>F13</td><td>{{seq('\033[Y')}}</td></tr>
+<tr><td>F14</td><td>{{seq('\033[Z')}}</td></tr>
+<tr><td>F15</td><td>{{seq('\033[a')}}</td></tr>
+<tr><td>F16</td><td>{{seq('\033[b')}}</td></tr>
+<tr><td>F17</td><td>{{seq('\033[c')}}</td></tr>
+<tr><td>F18</td><td>{{seq('\033[d')}}</td></tr>
+<tr><td>F19</td><td>{{seq('\033[e')}}</td></tr>
+<tr><td>F20</td><td>{{seq('\033[f')}}</td></tr>
+<tr><td>F21</td><td>{{seq('\033[g')}}</td></tr>
+<tr><td>F22</td><td>{{seq('\033[h')}}</td></tr>
+<tr><td>F23</td><td>{{seq('\033[i')}}</td></tr>
+<tr><td>F24</td><td>{{seq('\033[j')}}</td></tr>
+<tr><td>F25</td><td>{{seq('\033[k')}}</td></tr>
+<tr><td>F26</td><td>{{seq('\033[l')}}</td></tr>
+<tr><td>F27</td><td>{{seq('\033[m')}}</td></tr>
+<tr><td>F28</td><td>{{seq('\033[n')}}</td></tr>
+<tr><td>F29</td><td>{{seq('\033[o')}}</td></tr>
+<tr><td>F30</td><td>{{seq('\033[p')}}</td></tr>
+<tr><td>F31</td><td>{{seq('\033[q')}}</td></tr>
+<tr><td>F32</td><td>{{seq('\033[r')}}</td></tr>
+<tr><td>F33</td><td>{{seq('\033[s')}}</td></tr>
+<tr><td>F34</td><td>{{seq('\033[t')}}</td></tr>
+<tr><td>F35</td><td>{{seq('\033[u')}}</td></tr>
+<tr><td>F36</td><td>{{seq('\033[v')}}</td></tr>
+<tr><td>F37</td><td>{{seq('\033[w')}}</td></tr>
+<tr><td>F38</td><td>{{seq('\033[x')}}</td></tr>
+<tr><td>F39</td><td>{{seq('\033[y')}}</td></tr>
+<tr><td>F40</td><td>{{seq('\033[z')}}</td></tr>
+<tr><td>F41</td><td>{{seq('\033[@')}}</td></tr>
+<tr><td>F42</td><td>{{seq('\033[[')}}</td></tr>
+<tr><td>F43</td><td>{{seq('\033[\\')}}</td></tr>
+<tr><td>F44</td><td>{{seq('\033[]')}}</td></tr>
+<tr><td>F45</td><td>{{seq('\033[^')}}</td></tr>
+<tr><td>F46</td><td>{{seq('\033[_')}}</td></tr>
+<tr><td>F47</td><td>{{seq('\033[`')}}</td></tr>
+<tr><td>F48</td><td>{{seq('\033[{')}}</td></tr>
+<tr><td>up</td><td>{{seq('\033[A')}}</td></tr>
+<tr><td>down</td><td>{{seq('\033[B')}}</td></tr>
+<tr><td>right</td><td>{{seq('\033[C')}}</td></tr>
+<tr><td>left</td><td>{{seq('\033[D')}}</td></tr>
+<tr><td>begin</td><td>{{seq('\033[E')}}</td></tr>
+<tr><td>end</td><td>{{seq('\033[F')}}</td></tr>
+<tr><td>insert</td><td>{{seq('\033[L')}}</td></tr>
+<tr><td>page down</td><td>{{seq('\033[G')}}</td></tr>
+<tr><td>page up</td><td>{{seq('\033[I')}}</td></tr>
+<tr><td>home</td><td>{{seq('\033[H')}}</td></tr>
+<tr><td>keypad insert</td><td>{{seq('\033[L')}}</td></tr>
+</table>
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: partial
+----
+since: 
+----
+body: {{miss}} Only available with the non default compile time option `--enable-sco-fkeys`
+---
+number: ?1053
+---
+sort: 1053

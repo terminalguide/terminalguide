@@ -1,0 +1,22 @@
+title: Enable Margin Bell (MARGIN_BELL)
+---
+body:
+
+Enables a indicator when the cursor moves near the right margin.
+
+When enabled the terminal will sounds its bell (or do a similar notification) when the cursor crosses from not near the right margin to near the right margin.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: In the default configuration, the right most 10 columns of the screen are considered near the right margin.
+---
+number: ?44
+---
+sort: 44

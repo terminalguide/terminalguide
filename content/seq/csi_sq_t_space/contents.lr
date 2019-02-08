@@ -9,7 +9,13 @@ level: full
 ----
 since: 
 ----
-body: If `cmd ` == 0 uses blinking block
+body:
+
+{{info}} If `cmd ` == 0 uses blinking block
+
+{{info}} The cursor blinking property is synchronized to the mode {{mode_link('p12')}} setting.
+
+{{info}} xterm has user preferences to override/modify the effect of the blinking setting, see {{mode_link('p13')}} and {{mode_link('p14')}}.
 #### impl ####
 impl: konsole
 ----
@@ -17,7 +23,7 @@ level: full
 ----
 since: 
 ----
-body: If `cmd ` == 0 uses blinking block
+body: {{info}} If `cmd ` == 0 uses blinking block
 #### impl ####
 impl: urxvt
 ----
@@ -25,7 +31,11 @@ level: full
 ----
 since: 
 ----
-body: If `cmd ` == 0 uses blinking block
+body:
+
+{{info}} If `cmd ` == 0 uses blinking block
+
+{{info}} The cursor blinking property is additive to {{mode_link('p12')}}.
 #### impl ####
 impl: vte
 ----
@@ -33,7 +43,7 @@ level: full
 ----
 since: 
 ----
-body: If `cmd ` == 0 uses blinking block
+body: {{info}} If `cmd ` == 0 uses blinking block
 #### impl ####
 impl: linuxvc
 ----

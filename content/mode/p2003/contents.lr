@@ -1,0 +1,31 @@
+title: experimental: Right Double Click Removes Word
+---
+body:
+
+Right double click emulates cursor left or right keystrokes and {{seq('\177')}} to move the cursor to the selected text and remove it.
+
+This protocol is fragile in all but the most trivial line editor scenarios.
+
+Only active when clicking on cells that are in the same paragraph (same line or connected by lines that have the wrapped flag set) as the current cursor position.
+
+Sends repeated cursor left or right key strokes to the application that should move the cursor to the end of the selection and then sends repeated {{seq('\177')}} to delete the selected text.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: partial
+----
+since: 
+----
+body:
+
+{{info}} Only available when compiled with OPT_READLINE
+{{info}} this is not documented in ctlseqs
+{{miss}} Does not adjust the movement count when wide characters are on the edited line.
+{{miss}} Sends additional garbage in 8-bit control mode.
+---
+number: ?2003
+---
+sort: 2003
