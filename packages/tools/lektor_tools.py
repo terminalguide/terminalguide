@@ -111,6 +111,8 @@ def seq(l):
             v = 'LF'
         elif i == '\r':
             v = 'CR'
+        elif i == '\026':
+            v = 'SYN'
         elif i == ' ':
             v = '␣'
         elif i == '\177':
