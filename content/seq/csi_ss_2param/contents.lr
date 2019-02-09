@@ -9,7 +9,7 @@ level: full
 ----
 since: 
 ----
-body: xterm only interprets this control when {{mode_link('p69')}} is set. In this case it completely replaces {{seq_link('csi_ss_0param')}} which is not available in that mode.
+body: {{info}} xterm only interprets this control when {{mode_link('p69')}} is set. In this case it completely replaces {{seq_link('csi_ss_0param')}} which is not available in that mode.
 ---
 seq:
 

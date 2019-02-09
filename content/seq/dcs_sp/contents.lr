@@ -1,0 +1,29 @@
+title: (reserved for regis graphics)
+---
+body: Reserved for regis graphics.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### dcs ####
+#### numeric_parameter ####
+name: cmd
+----
+default: 
+#### final ####
+name: p
+#### numeric_parameter ####
+name: str
+----
+default: 
+#### st ####

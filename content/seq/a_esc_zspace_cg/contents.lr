@@ -1,0 +1,28 @@
+title: Use 8-bit controls (S8C1T)
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### esc ####
+#### intermediate ####
+name:
+
+ SPACE
+#### final ####
+name: G
+---
+body:
+
+Enable C1 control sequences in terminal to application communication.
+
+See {{seq_link('a_esc_zspace_cf')}} for disabling C1 control sequences in terminal to application communication.

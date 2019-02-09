@@ -1,0 +1,37 @@
+title: (reserved for sixel graphics)
+---
+body: Reserved for sixel graphics.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### dcs ####
+#### numeric_parameter ####
+name: a
+----
+default: 
+#### numeric_parameter ####
+name: b
+----
+default: 
+#### numeric_parameter ####
+name: h
+----
+default: 
+#### final ####
+name: q
+#### numeric_parameter ####
+name: str
+----
+default: 
+#### st ####

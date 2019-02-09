@@ -17,7 +17,7 @@ level: partial
 ----
 since: 
 ----
-body: {{miss}} does not gracefully ignore parameters that have sub-parameters. It stops interpreting at that point.
+body: {{info}} since version 328 xterm gracefully ignores parameters that have sub-parameters.
 #### impl ####
 impl: konsole
 ----
