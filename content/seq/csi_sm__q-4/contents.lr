@@ -1,0 +1,32 @@
+title: TODO modify other
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: todo
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### intermediate ####
+name: >
+#### numeric_fixed ####
+val: 4
+#### numeric_parameter ####
+name: mode
+----
+default: n/a
+#### final ####
+name: m
+---
+body:
+
+{{snip('placeholder-page')}}
+
+If `mode` is not given, reset this setting to it's initial state.

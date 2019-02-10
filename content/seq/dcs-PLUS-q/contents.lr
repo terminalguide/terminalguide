@@ -1,0 +1,27 @@
+title: Request-Termcap/Terminfo-String
+---
+body: {{snip('placeholder-page')}}
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: todo
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### dcs ####
+#### intermediate ####
+name: +
+#### intermediate ####
+name: q
+#### numeric_parameter ####
+name: p1
+----
+default: 
+#### st ####

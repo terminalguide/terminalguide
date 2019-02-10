@@ -4,7 +4,7 @@ body:
 
 When queried by {{seq_link('csi_sp__p_t_dollar')}} reveals the user preference for blinking the cursor.
 
-If reported as always or never {{mode_link('p12')}} and {{seq_link('csi_sq_t_space')}} are disabled.
+If reported as always or never, {{mode_link('p12')}} and {{seq_link('csi_sq_t_space')}} are disabled.
 
 If reported as set or reset, reveals the default which is combined with the terminal setting as reported by {{mode_link('p14')}}.
 

@@ -2,7 +2,7 @@ title: Cursor Origin (DECOM)
 ---
 body:
 
-If set the origin of the coordinate system is relativ to the [current scroll region](/scrolling-region).
+If set, the origin of the coordinate system is relativ to the [current scroll region](/scrolling-region).
 
 The origin is used by:
 * {{seq_link('csi_sn-6')}}, {{seq_link('csi_ch')}}, {{seq_link('csi_sd')}}, {{seq_link('csi_x60_backtick')}}, {{seq_link('csi_sf')}}, {{seq_link('a_esc_a8')}}, {{seq_link('csi_su')}}

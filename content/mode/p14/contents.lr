@@ -4,7 +4,7 @@ body:
 
 When queried by {{seq_link('csi_sp__p_t_dollar')}} reveals the user preference for combining the blinking the cursor settings.
 
-If this mode is set then {{mode_link('p12')}} and {{seq_link('csi_sq_t_space')}} invert the user preference for blinking the cursor instead of directly controling if the cursor blinks.
+If this mode is set then {{mode_link('p12')}} and {{seq_link('csi_sq_t_space')}} invert (XOR) the user preference for blinking the cursor instead of turning on the blinking (OR).
 ---
 implnotes:
 

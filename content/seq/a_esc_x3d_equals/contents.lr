@@ -17,11 +17,7 @@ level: full
 ----
 since: 
 ----
-body:
-
-Only seem to work when mode {{mode_link('p1035')}} is set.
-
-The sequences are emitted when numlock is enabled
+body: {{info}} See mode {{mode_link('p1035')}} for additional details about interaction with num-lock state.
 #### impl ####
 impl: konsole
 ----
@@ -29,7 +25,7 @@ level: ignored
 ----
 since: 
 ----
-body: Can be used in user defined key tables but default tables do ignore this.
+body: {{miss}} Can be used in user defined key tables but default tables do ignore this.
 #### impl ####
 impl: urxvt
 ----
@@ -37,7 +33,7 @@ level: full
 ----
 since: 
 ----
-body: The sequences are emitted when numlock is disabled.
+body: {{info}} The sequences are emitted when numlock is disabled.
 #### impl ####
 impl: vte
 ----
@@ -45,7 +41,7 @@ level: partial
 ----
 since: 
 ----
-body: Only changes num pad divide, multiply, minus, plus and enter.
+body: {{miss}} Only changes num pad divide, multiply, minus, plus and enter.
 #### impl ####
 impl: linuxvc
 ----
