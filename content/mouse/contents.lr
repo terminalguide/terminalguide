@@ -22,7 +22,7 @@ These modes are mutually exclusive. The last activated mode wins.
 <table class='visible-table'>
 <tr><td>{{mode_link('p9')}}</td><td>Send mouse button press.</td></tr>
 <tr><td>{{mode_link('p1000')}}</td><td>Send mouse button press and release.<br>Also send scroll wheel events.</td></tr>
-<tr><td>{{mode_link('p1001')}}</td><td>special case</td></tr>
+<tr><td>{{mode_link('p1001')}}</td><td>Like {{mode_link('p1000')}}, but shows a text selection. Needs a cooperating application to avoid rendering the terminal non operative</td></tr>
 <tr><td>{{mode_link('p1002')}}</td><td>Send mouse button press and release. Send mouse move events while a button is pressed.<br>Also send scroll wheel events.</td></tr>
 <tr><td>{{mode_link('p1003')}}</td><td>Send mouse button press and release. Always send mouse move events.<br>Also send scroll wheel events.</td></tr>
 </table>
@@ -83,3 +83,19 @@ When a button is pressed it's id is used in the report with a final character {{
 When multiple buttons are held down while moving the mouse the report contains the held button with the lowest id.
 
 When no buttons are held down while moving the mouse the reported button id is 3 (button released).
+
+Highlight tracking
+---------------------------
+{{mode_link('p1001')}} is a special case.
+
+For left button clicks the terminal will render a text selection highlight starting at an application specified point and restricted to a application specified range of lines. After ending the selection it's not automatically transferred to the clipboard. After release of the mouse button the highlighting is automatically removed.
+
+For other mouse button clicks the reporting is as in mode {{mode_link('p1000')}}.
+
+**Protocol Details**
+
+When the user presses the left mouse button the terminal sends a mouse down according to the currently selected encoding. Next it waits for the application to reply with further instructions using  {{seq_link('csi_ct_5param')}}. The only known implementation (xterm) freezes until it receives an answer (no repaint handling, no input processing). If the application replies with an abort mouse tracking sequence the terminal proceeds like in mode {{mode_link('p1000')}}.
+
+Otherwise the terminal has received a start position and a line range from the application. On following mouse moves of the user it paints a selection from that start position to the position of the mouse pointer. The selection is clamped to the given range of lines (all columns are allowed). When the user releases the mouse button the terminal reports the end position of the selection using the currently selected encoding but replacing the `M` sequence identifier by `T` or 't'.
+
+If the user did not move the mouse pointer the reply uses `t` and contains two parameters which are the same position (reported as row and column) as the mouse down event. If the selection is empty the terminal does not reply at all. If the selection only contains one character it replies with `t` and the position following the start position. If the mouse was moved otherwise the reply uses ´T` and has 6 parameters: startx, starty, endx, endy, mousex and mousey. The start and end parameters contain the selected range (between the start position given by the application and the clamped mouse position) normalized so start is before end. start is inclusive and end is exclusive. If the last line in the range is fully selected the reported position will be the first column on the first unreachable line. The mouse parameters contain the un-clamped mouse pointer position.

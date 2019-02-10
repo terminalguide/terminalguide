@@ -1,17 +1,25 @@
-title: Mode TODO ?1001
+title: Mouse Highlight Mode
 ---
-body: {{snip('placeholder-page')}}
+body:
+
+See [Mouse](/mouse) for details.
+
+Note: This mode will make the terminal unresponsive if not used correctly.
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
 ----
 since: 
 ----
-body: 
+body:
+
+{{info}} Mouse actions with shift held are used for text selection. By default mouse actions with exactly ctrl held are used for xterms internal menu. Alt and ctrl-alt are passed to the application.
+{{info}} Mouse wheel left and right are reported as codes 68 and 69 since version 338.
+{{info}} Additional mouse buttons are reported since version 342.
 #### impl ####
 impl: konsole
 ----
@@ -27,7 +35,7 @@ level: unparsable
 ----
 since: 
 ----
-body: vte aliases this to {{mode_link('p1000')}} ignoring this modes special behavior.
+body: vte aliases this to {{mode_link('p1000')}} ignoring this mode's special behavior.
 ---
 number: ?1001
 ---

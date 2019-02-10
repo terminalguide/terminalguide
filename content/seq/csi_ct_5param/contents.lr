@@ -5,7 +5,7 @@ implnotes:
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
 ----
 since: 
 ----
@@ -31,7 +31,7 @@ name: first-row
 ----
 default: ?
 #### numeric_parameter ####
-name: last_row
+name: last-row
 ----
 default: ?
 #### final ####
@@ -39,6 +39,10 @@ name: T
 ---
 body:
 
-See also {{seq_link('csi_ct_1param')}} which shares this code and is distingished by having only one parameter and having the first parameter != 0
+\[See also {{seq_link('csi_ct_1param')}} which shares this code and is distingished by having only one parameter and having the first parameter != 0\]
 
-{{snip('placeholder-page')}}
+This sequence is used with {{mode_link('p1001')}} to communicate the selection start and allowed rows.
+
+If `cmd` is 0 then the highlighting is aborted and the terminal uses non highlighting mouse handling as in {{mode_link('p1000')}}.
+
+If `cmd` is non-zero then `start-column` and `start-row` specify the selection start and `first-row` specifies the first allowed row for the selection and `last-row` specifies the first row that the selection may not enter into.
