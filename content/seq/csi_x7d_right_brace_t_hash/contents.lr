@@ -1,0 +1,36 @@
+title: Restore Rendition Attributes
+---
+body:
+
+Restore previously saved graphic rendition attributes.
+
+If the stack is empty does nothing. Else it removes one entry from the top of the stack and restores the current graphics rendition attributes to the saved values.
+
+See {{seq_link('csi_x7b_left_brace_t_hash')}} for details.
+---
+seq:
+
+#### csi ####
+#### intermediate ####
+name: #
+#### final ####
+name: }
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
+----
+level: ignored
+----
+since: 
+----
+body: {{info}} https://gitlab.gnome.org/GNOME/vte/issues/23

@@ -1,0 +1,63 @@
+title: Save Rendition Attributes
+---
+body:
+
+Save the current graphic rendition [attributes](/attr/).
+
+TODO: This sequence takes multiple parameters each with the same interpretation
+
+Takes a list of codes to save. If no parameters are specified all attributes are saved.
+
+The current setting for each selected attribute is saved to a stack of implementation defined size. The topmost entry of the stack can be restored using {{seq_link('csi_x7d_right_brace_t_hash')}}.
+
+<table>
+<tr><th>code</th><th>attribute</th><tr>
+<tr><td>1</td><td>bold</td><tr>
+<tr><td>2</td><td>faint</td><tr>
+<tr><td>3</td><td>italic</td><tr>
+<tr><td>4</td><td>underline</td><tr>
+<tr><td>5</td><td>blink</td><tr>
+<tr><td>7</td><td>inverse</td><tr>
+<tr><td>8</td><td>invisible</td><tr>
+<tr><td>9</td><td>strikethrough</td><tr>
+<tr><td>10</td><td>foreground color</td><tr>
+<tr><td>11</td><td>background color</td><tr>
+<tr><td>12</td><td>direct color foreground</td><tr>
+<tr><td>13</td><td>direct color background</td><tr>
+<tr><td>21</td><td>double underline</td><tr>
+</table>
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: partial
+----
+since: 
+----
+body:
+
+{{info}} The stack has a maximum size of 10 entries.
+{{miss}} Using 'direct color foreground' without 'foreground color' can lead to glitches.
+{{miss}} Using 'direct color background' without 'background color' can lead to glitches.
+#### impl ####
+impl: vte
+----
+level: ignored
+----
+since: 
+----
+body: {{info}} https://gitlab.gnome.org/GNOME/vte/issues/23
+---
+seq:
+
+#### csi ####
+#### numeric_parameter ####
+name: code
+----
+default: 0
+#### intermediate ####
+name: #
+#### final ####
+name: {
