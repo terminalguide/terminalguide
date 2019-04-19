@@ -10,8 +10,8 @@ body:
 Mouse tracking modes enable the application to react to mouse input.
 
 Configuration is for 2 independent aspects:
-* What events are sent
-* Which reporting format is used
+* What events are sent and their button encoding.
+* Which reporting encoding is used
 
 Additionally there are some special modes.
 
@@ -20,12 +20,14 @@ Events
 These modes are mutually exclusive. The last activated mode wins.
 
 <table class='visible-table'>
-<tr><td>{{mode_link('p9')}}</td><td>Send mouse button press. Button encoding `btn` does not contain bits for modifiers etc, but is the button number without moved bits.</td></tr>
+<tr><td>{{mode_link('p9')}}</td><td>Send mouse button press.<br>Button encoding <code>btn</code> does not contain bits for modifiers etc, but is the button number without moved bits.</td></tr>
 <tr><td>{{mode_link('p1000')}}</td><td>Send mouse button press and release.<br>Also send scroll wheel events.</td></tr>
-<tr><td>{{mode_link('p1001')}}</td><td>Like {{mode_link('p1000')}}, but shows a text selection. Needs a cooperating application to avoid rendering the terminal non operative</td></tr>
+<tr><td>{{mode_link('p1001')}}</td><td>Like {{mode_link('p1000')}}, but shows a text selection. <br><b>Needs a cooperating application to avoid rendering the terminal non operative</b></td></tr>
 <tr><td>{{mode_link('p1002')}}</td><td>Send mouse button press and release. Send mouse move events while a button is pressed.<br>Also send scroll wheel events.</td></tr>
 <tr><td>{{mode_link('p1003')}}</td><td>Send mouse button press and release. Always send mouse move events.<br>Also send scroll wheel events.</td></tr>
 </table>
+
+&nbsp;
 
 Reporting format
 -------------------------
@@ -52,16 +54,17 @@ Mouse button ids:
 <tr><td>middle</td><td>1</td></tr>
 <tr><td>right</td><td>2</td></tr>
 <tr><td>some button was released</td><td>3</td></tr>
-<tr><td>wheel up</td><td>64+0</td></tr>
-<tr><td>wheel down</td><td>64+1</td></tr>
-<tr><td>wheel left</td><td>64+2 (only xterm since version 338)</td></tr>
-<tr><td>wheel right</td><td>64+3 (only xterm since version 338)</td></tr>
+<tr><td>wheel up</td><td>4</td></tr>
+<tr><td>wheel down</td><td>5</td></tr>
+<tr><td>wheel left</td><td>6 (only xterm since version 338)</td></tr>
+<tr><td>wheel right</td><td>7 (only xterm since version 338)</td></tr>
 <tr><td>additional buttons</td><td>see below (only xterm since version 341)</td></tr>
 </table>
 
-This can also be described as a mouse button number `mousebtn` with valid ids of 0 to 2 and 4 to 15 that is encoded by using the two lower bits of `mousebtn` as is and translating the next bits to 64 and 128.
+The mouse button number `mousebtn` has valid ids of 0 to 2 and 4 to 15.
+In all modes except for {{mode_link('p9')}} `mousebtn` is encoded by using the two lower bits of `mousebtn` as is and translating the next bits to 64 and 128.
 <table class='visible-table'>
-<tr><th>bit value in `mousebtn`</th><th>encoded value</th></tr>
+<tr><th>bit value in <code>mousebtn</code></th><th>encoded value in <code>btn</code></th></tr>
 <tr><td>1</td><td>1</td></tr>
 <tr><td>2</td><td>2</td></tr>
 <tr><td>4</td><td>64</td></tr>
