@@ -1,0 +1,29 @@
+title: (used by other terminals)
+---
+implnotes:
+
+#### impl ####
+impl: other
+----
+level: 
+----
+since: 
+----
+body:
+
+iterm2: "Post a Growl notification" https://iterm2.com/documentation-escape-codes.html
+
+espterm:
+"Show a notification with text t."
+https://espterm.github.io/help.html
+---
+seq:
+
+#### osc ####
+#### intermediate ####
+name: 9
+#### numeric_parameter ####
+name: rest
+----
+default: 
+#### st ####

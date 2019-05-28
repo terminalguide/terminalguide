@@ -1,0 +1,27 @@
+title: (used by other terminals)
+---
+implnotes:
+
+#### impl ####
+impl: other
+----
+level: 
+----
+since: 
+----
+body:
+
+espterm:
+"Set background image to URL" and "Set number of visible buttons"
+https://espterm.github.io/help.html
+---
+seq:
+
+#### osc ####
+#### intermediate ####
+name: 27;
+#### numeric_parameter ####
+name: rest
+----
+default: 
+#### st ####
