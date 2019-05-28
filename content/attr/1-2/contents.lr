@@ -11,10 +11,10 @@ since:
 ----
 body:
 
-espterm: 
-"Fraktur"
-https://espterm.github.io/help.html
+mintty: 
+"Shadowed"
+https://github.com/mintty/mintty/wiki/Tips#text-attributes-and-rendering
 ---
-number: 20
+number: 1:2
 ---
-resetnumber: 23
+resetnumber: 22

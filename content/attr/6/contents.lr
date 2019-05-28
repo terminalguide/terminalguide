@@ -30,6 +30,18 @@ level: full
 since: 334
 ----
 body: 
+#### impl ####
+impl: other
+----
+level: 
+----
+since: 
+----
+body:
+
+mintty: 
+"Rapidly blink"
+https://github.com/mintty/mintty/wiki/Tips#text-attributes-and-rendering
 ---
 body: Alias for {{sgr_link('5')}}
 ---

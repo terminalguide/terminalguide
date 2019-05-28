@@ -1,0 +1,20 @@
+title: (used by other terminals)
+---
+implnotes:
+
+#### impl ####
+impl: other
+----
+level: 
+----
+since: 
+----
+body:
+
+mintty: 
+"CMY Color Background"
+https://github.com/mintty/mintty/wiki/Tips#text-attributes-and-rendering
+---
+number: 48:3:...
+---
+resetnumber: 49
