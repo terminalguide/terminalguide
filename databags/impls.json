@@ -3,5 +3,6 @@
     "xterm": {},
     "vte": {},
     "konsole": {},
-    "linuxvc": {}
+    "linuxvc": {},
+    "other": {}
 }
