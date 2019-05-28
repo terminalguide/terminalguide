@@ -1,0 +1,20 @@
+title: (used by other terminals)
+---
+implnotes:
+
+#### impl ####
+impl: other
+----
+level: 
+----
+since: 
+----
+body:
+
+kitty:
+"full mode keyboard"
+https://sw.kovidgoyal.net/kitty/protocol-extensions.html#keyboard-handling
+---
+number: ?2017
+---
+sort: 2017
