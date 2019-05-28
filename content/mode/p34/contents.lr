@@ -1,0 +1,20 @@
+title: (used by other terminals)
+---
+implnotes:
+
+#### impl ####
+impl: other
+----
+level: 
+----
+since: 
+----
+body:
+
+mintty:
+"RTL cursor motion"
+https://github.com/mintty/mintty/wiki/CtrlSeqs#bidirectional-rendering
+---
+number: ?34
+---
+sort: 34

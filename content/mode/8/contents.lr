@@ -1,0 +1,20 @@
+title: (used by other terminals)
+---
+implnotes:
+
+#### impl ####
+impl: other
+----
+level: 
+----
+since: 
+----
+body:
+
+mintty:
+"Implicit (i.e. terminal-managed) bidi mode"
+https://github.com/mintty/mintty/wiki/CtrlSeqs#bidirectional-rendering
+---
+number: 8
+---
+sort: -993
