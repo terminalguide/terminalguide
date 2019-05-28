@@ -1,0 +1,30 @@
+title: (used by other terminals)
+---
+implnotes:
+
+#### impl ####
+impl: other
+----
+level: 
+----
+since: 
+----
+body:
+
+mintty:
+"LTR/RTL set character path"
+https://github.com/mintty/mintty/wiki/CtrlSeqs#bidirectional-rendering
+---
+seq:
+
+#### csi ####
+#### numeric_parameter ####
+name: cmd
+----
+default: 
+----
+placeholder: Ⓝ
+#### intermediate ####
+name: SPACE
+#### final ####
+name: k
