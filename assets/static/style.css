@@ -120,3 +120,6 @@ table.visible-table tr:nth-child(even) {
 table.visible-table thead th {
     font-weight: bold;
 }
+table.visible-table.rowspan tr:nth-child(even) {
+    background: #FFFFFF;
+}
