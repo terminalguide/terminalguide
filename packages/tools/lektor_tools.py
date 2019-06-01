@@ -111,12 +111,22 @@ def seq(l):
             v = 'LF'
         elif i == '\r':
             v = 'CR'
+        elif i == '\021':
+            v = 'XON'
+        elif i == '\023':
+            v = 'XOFF'
         elif i == '\026':
             v = 'SYN'
+        elif i == '\030':
+            v = 'CAN'
+        elif i == '\032':
+            v = 'SUB'
         elif i == ' ':
             v = '␣'
         elif i == '\177':
             v = 'DEL'
+        elif i == '\x9c':
+            v = 'ST'
         ret += v + "<rt>" + hex(ord(i))[2:].rjust(2,'0') + "&nbsp;</rt>"
     ret += "</ruby></span>"
     return ret
