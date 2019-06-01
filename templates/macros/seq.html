@@ -3,6 +3,13 @@
     {% for blk in l.blocks %}
     {% if blk._flowblock == 'csi' %}
         <span class='term-literal'><ruby>ESC<rt>1B</rt>[<rt>5B</rt></ruby></span>
+    {% elif blk._flowblock == 'group_start' %}
+        {% if loop.previtem._flowblock == 'numeric_parameter' or loop.previtem._flowblock == 'numeric_fixed' %}
+        <span class='term-literal'><ruby>;<rt>3b</rt></ruby></span>
+        {% endif %}
+        <span class='term-param'><ruby>[<rt></rt></ruby></span>
+    {% elif blk._flowblock == 'group_end' %}
+        <span class='term-param'><ruby>]<rt>{%if blk.optional %}0+{%else%}1+{%endif%}</rt></ruby></span>
     {% elif blk._flowblock == 'numeric_parameter' %}
         {% if loop.previtem._flowblock == 'numeric_parameter' or loop.previtem._flowblock == 'numeric_fixed' %}
         <span class='term-literal'><ruby>;<rt>3b</rt></ruby></span>
@@ -41,6 +48,13 @@
     {% for blk in l.blocks %}
     {% if blk._flowblock == 'csi' %}
         <span class='term-literal'>ESC [</span>
+    {% elif blk._flowblock == 'group_start' %}
+        {% if loop.previtem._flowblock == 'numeric_parameter' or loop.previtem._flowblock == 'numeric_fixed' %}
+        <span class='term-literal'>;</span>
+        {% endif %}
+        <span class='term-param'>[</span>
+    {% elif blk._flowblock == 'group_end' %}
+        <span class='term-param'>]</span>
     {% elif blk._flowblock == 'numeric_parameter' %}
         {% if loop.previtem._flowblock == 'numeric_parameter' or loop.previtem._flowblock == 'numeric_fixed' %}
         <span class='term-literal'>;</span>

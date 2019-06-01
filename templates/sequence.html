@@ -34,6 +34,17 @@
   </div>
   <div>
     {% for blk in this.seq.blocks %}
+    {% if blk._flowblock == 'group_start' %}
+        {% for blk2 in this.seq.blocks %}
+            {% if blk2._flowblock == 'group_end' %}
+                {% if blk2.optional %}
+                    repeated (zero or more times): <br>
+                {% else %}
+                    repeated (one or more times): <br>
+                {% endif %}
+            {% endif %}
+        {% endfor %}
+    {% endif %}
     {% if blk._flowblock == 'numeric_parameter' and blk.default %}
         {{ blk.name }} = {{ blk.default }} <br>
     {% endif %}
