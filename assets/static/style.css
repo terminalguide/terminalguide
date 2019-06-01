@@ -51,6 +51,11 @@ blockquote {
     background-color: #ff0000;
 }
 
+.support-cell.support-disabled {
+    background-color: #ffffff;
+    color: #000000;
+}
+
 .support-cell.support-ignored {
     background-color: #c44230;
 }

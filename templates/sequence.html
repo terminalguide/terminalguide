@@ -21,6 +21,8 @@
         ∅
         {% elif blk.level == "unparsable" %}
         ☹
+        {% elif blk.level == "disabled" %}
+        🔧
         {% elif blk.level == "todo" %}
         TODO
         {% endif %}
@@ -62,6 +64,8 @@
         ∅
         {% elif blk.level == "unparsable" %}
         ☹
+        {% elif blk.level == "disabled" %}
+        🔧
         {% endif %}
         )</h4>
         {% if blk.since %}
