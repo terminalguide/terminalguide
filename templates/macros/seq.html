@@ -7,7 +7,7 @@
         {% if loop.previtem._flowblock == 'numeric_parameter' or loop.previtem._flowblock == 'numeric_fixed' %}
         <span class='term-literal'><ruby>;<rt>3b</rt></ruby></span>
         {% endif %}
-        <span class='term-param'><ruby>Ⓝ<rt>{{blk.name}}</rt></ruby></span>
+        <span class='term-param'><ruby>{{blk.placeholder|default('Ⓝ')}}<rt>{{blk.name}}</rt></ruby></span>
     {% elif blk._flowblock == 'numeric_fixed' %}
         {% if loop.previtem._flowblock == 'numeric_parameter' or loop.previtem._flowblock == 'numeric_fixed' %}
         <span class='term-literal'><ruby>;<rt>3b</rt></ruby></span>
@@ -45,7 +45,7 @@
         {% if loop.previtem._flowblock == 'numeric_parameter' or loop.previtem._flowblock == 'numeric_fixed' %}
         <span class='term-literal'>;</span>
         {% endif %}
-        <span class='term-param'>Ⓝ</span>
+        <span class='term-param'>{{blk.placeholder|default('Ⓝ')}}</span>
     {% elif blk._flowblock == 'numeric_fixed' %}
         {% if loop.previtem._flowblock == 'numeric_parameter' or loop.previtem._flowblock == 'numeric_fixed' %}
         <span class='term-literal'>;</span>

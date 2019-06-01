@@ -91,8 +91,8 @@ def sgr_link(seq):
         print('failed:', ex)
         raise
 
-def seq_param(name):
-    ret = "<span class='term-param'><ruby>Ⓝ"
+def seq_param(name, placeholder='Ⓝ'):
+    ret = "<span class='term-param'><ruby>" + placeholder
     ret += "<rt>" + name + "&nbsp;</rt>"
     ret += "</ruby></span>"
     return ret
