@@ -61,7 +61,7 @@ body:
 
 Erase the screen from the current cursor position down. The side left of current cursor position on the line of the current cursor position is not erased.
 
-In it's basic variant it will also erase protected cells. When called as {{seq_link('csi_cj__p')}} it will not eraseprotected cells.
+In it's basic variant it will erase protected cells only when the semantics of {{seq_link('csi_sq_t_quote')}} are active. When called as {{seq_link('csi_cj__p')}} it will not erase protected cells in either protection semantics.
 
 The [current scroll region](/scrolling-region) is ignored by this command.
 

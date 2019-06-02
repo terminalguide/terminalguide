@@ -1,0 +1,62 @@
+title: Selective erase rectangular area (DECSERA)
+---
+body:
+
+Clears all non protected cells in an rectangular area with the space character. 
+
+This sequence only considers cells protected when in {{seq_link('csi_sq_t_quote')}} semantics.
+
+If {{mode_link('p6')}} mode is set the rectangle is interpreted relative to the top left of the [current scroll region](/scrolling-region). Otherwise it's relative to the top left of the terminal.
+
+`bottomrow` and `rightcolumn` default to their bottom-most/right-most valid values.
+
+If {{mode_link('p6')}} mode is set and the rectangle exceeds the [current scroll region](/scrolling-region) it's clipped to the [current scroll region](/scrolling-region). Otherwise the rectangle is clipped to the full terminal.
+
+If `toprow` > `bottomrow` or `leftcolumn` > `rightcolumn` this sequence does nothing.
+
+The attributes of the cleared cells are not changed.
+
+If filling the cells splits a multi cell character that character cleared, by replacing it by spaces.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### numeric_parameter ####
+name: toprow
+----
+default: 0
+----
+placeholder: Ⓝ
+#### numeric_parameter ####
+name: leftcolumn
+----
+default: 0
+----
+placeholder: Ⓝ
+#### numeric_parameter ####
+name: bottomrow
+----
+default: see description
+----
+placeholder: Ⓝ
+#### numeric_parameter ####
+name: rightcolumn
+----
+default: see description
+----
+placeholder: Ⓝ
+#### intermediate ####
+name: $
+#### final ####
+name: {

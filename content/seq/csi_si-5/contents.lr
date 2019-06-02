@@ -1,0 +1,45 @@
+title: Media Control: Redirect Stream to Printer
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: disabled
+----
+since: 
+----
+body: {{miss}} xterm buffers at least one character that is only transmitted after the next character is received.
+#### impl ####
+impl: urxvt
+----
+level: unparsable
+----
+since: 
+----
+body:
+
+{{miss}} If the terminating sequence of the redirect is not received in one go with the start sequence urxvt leaks operating system resources (file descriptors, running printing process) and possibly sends duplicated data to the printing process.
+{{info}} print command defaults to `lpr`.
+{{miss}} urxvt does not interpret {{seq_link('csi_si-5')}} but passes it along to the printer.
+{{info}} urxvt does not understand sequences in this mode that are encoded with the C1 variant of CSI.
+---
+seq:
+
+#### csi ####
+#### numeric_fixed ####
+val: 5
+#### final ####
+name: i
+---
+body:
+
+Redirect all further output to the printer.
+
+This redirection is terminated by {{seq_link('csi_si-4')}}.
+
+The following characters are not forwarded to the printer but just discarded: {{seq('\0')}}, {{seq('\021')}} and {{seq('\023')}}.
+
+The only sequences interpreted by the terminal in this mode is are {{seq_link('csi_si-4')}} and {{seq_link('csi_si-5')}} which have their normal functions, all other sequences are not interpreted by the terminal.
+
+

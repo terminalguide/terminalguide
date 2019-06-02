@@ -43,7 +43,9 @@ seq:
 #### numeric_fixed ####
 val: 0
 #### numeric_parameter ####
-name: p1
+name: text
 ----
 default: 
+----
+placeholder: Ⓢ
 #### st ####

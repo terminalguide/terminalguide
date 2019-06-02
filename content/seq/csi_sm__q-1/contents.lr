@@ -1,0 +1,49 @@
+title: Select Format for Modifier Keys in Cursor Key Press Reports
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: {{info}} defaults to mode 2.
+---
+seq:
+
+#### csi ####
+#### intermediate ####
+name: >
+#### numeric_fixed ####
+val: 1
+#### numeric_parameter ####
+name: mode
+----
+default: reset
+----
+placeholder: Ⓝ
+#### final ####
+name: m
+---
+body:
+
+Select format for modifier keys in cursor key press reports.
+
+This changes the reported sequence for:
+* up, down, right, left
+* numpad up, down, right, left
+* home, end (also on the numpad)
+
+<table class="visible-table">
+<tr><th><code>mode</code></th><th>example</th></tr>
+<tr><td>0</td><td>{{seq('\033[5A')}} or {{seq('\033O5A')}} depending on {{mode_link('p1')}}</td></tr>
+<tr><td>1</td><td>{{seq('\033[5A')}}</td></tr>
+<tr><td>2</td><td>{{seq('\033[1;5A')}}</td></tr>
+<tr><td>3</td><td>{{seq('\033[>1;5A')}}</td></tr>
+</table>
+
+If `mode` is not given, reset this setting to it's initial state.
+
+{{snip('incomplete')}}

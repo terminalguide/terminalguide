@@ -1,0 +1,49 @@
+title: Request Cursor Information Report (DECCIR)
+---
+body:
+
+Request Cursor Information Report.
+
+The terminal replies with the following:
+
+{{seq('\033P1$u')}}{{seq_param('row')}}{{seq(';')}}{{seq_param('column')}}{{seq(';1;')}}{{seq_param('attributes', 'Ⓒ')}}{{seq(';')}}{{seq_param('protection', 'Ⓒ')}}{{seq(';')}}{{seq_param('flags', 'Ⓒ')}}{{seq(';')}}{{seq_param('gl')}}{{seq(';')}}{{seq_param('gr')}}{{seq(';O;')}}{{seq_param('gsets', 'Ⓢ')}}{{seq('\033\\')}}
+
+Where:
+* `row` and `column` are the cursor position. (not considering origin mode)
+* `attributes` encodes the currently selected attributes as a byte as sum of 0x40 and
+  * 1 for bold
+  * 2 for underline
+  * 4 for blink
+  * 8 for inverse
+* `protection` encodes if protected text is selected {{seq('@')}} for not protected and {{seq('A')}} for protected. See {{seq_link('csi_sq_t_quote')}}
+* `flags` encodes as bytes as sum of 0x40 and
+  * 1 if {{mode_link('p6')}} mode is set
+  * 2 if single shift for G2 is active (see {{seq_link('a_esc_cn')}})
+  * 4 if single shift for G3 is active (see {{seq_link('a_esc_co')}})
+  * 8 if pending wrap is set.
+* `gl` specifies which of G0 (0), G1 (1), G2 (2) or G3 (3) is invoked into GL
+* `gr` specifies which of G1 (1), G2 (2) or G3 (3) is invoked into GL
+* `gsets` is a string containing the codes of the currently selected character sets for G0, G1, G2 and G3. e.g. 'AAAA' means all character sets have 'British' selected. See the tables at the bottom of [the sequences listing](/seq). Some character sets have codes consisting of more than one character.
+
+See {{seq_link('dcs-st_t_dollar-1')}} for a sequence to restore this information into the terminal.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 334
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### numeric_fixed ####
+val: 1
+#### intermediate ####
+name: $
+#### final ####
+name: w

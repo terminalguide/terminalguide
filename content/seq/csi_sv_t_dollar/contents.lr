@@ -1,0 +1,70 @@
+title: Copy rectangular area (DECCRA)
+---
+body: {{snip('placeholder-page')}}
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: todo
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### numeric_parameter ####
+name: toprow
+----
+default: 
+----
+placeholder: Ⓝ
+#### numeric_parameter ####
+name: leftcolumn
+----
+default: 
+----
+placeholder: Ⓝ
+#### numeric_parameter ####
+name: bottomrow
+----
+default: 
+----
+placeholder: Ⓝ
+#### numeric_parameter ####
+name: rightcolumn
+----
+default: 
+----
+placeholder: Ⓝ
+#### numeric_parameter ####
+name: page
+----
+default: 
+----
+placeholder: Ⓝ
+#### numeric_parameter ####
+name: destinationtoprow
+----
+default: 
+----
+placeholder: Ⓝ
+#### numeric_parameter ####
+name: destinationleftcolumn
+----
+default: 
+----
+placeholder: Ⓝ
+#### numeric_parameter ####
+name: destinationpage
+----
+default: 
+----
+placeholder: Ⓝ
+#### intermediate ####
+name: $
+#### final ####
+name: v

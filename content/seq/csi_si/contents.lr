@@ -1,6 +1,6 @@
 title: Media Control (MC)
 ---
-body: {{snip('placeholder-page')}}
+body: Printer/Screenshot control.
 ---
 seq:
 
@@ -9,6 +9,8 @@ seq:
 name: cmd
 ----
 default: 0
+----
+placeholder: Ⓝ
 #### final ####
 name: i
 ---
@@ -17,7 +19,7 @@ implnotes:
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
 ----
 since: 
 ----
@@ -33,7 +35,7 @@ body:
 #### impl ####
 impl: urxvt
 ----
-level: todo
+level: full
 ----
 since: 
 ----

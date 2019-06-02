@@ -1,0 +1,50 @@
+title: Raise Terminal Window
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: disabled
+----
+since: 
+----
+body: 
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
+----
+level: disabled
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: ignored
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### numeric_fixed ####
+val: 5
+#### final ####
+name: t
+---
+body:
+
+Raise the terminal window to the top of the window stack.
+
+See also {{seq_link('cst_st-6')}}.

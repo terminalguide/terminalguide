@@ -1,0 +1,38 @@
+title: DEC Set Columns per Page (DECSCPP)
+---
+body:
+
+DEC set columns per page.
+
+Modern terminals don't have a fixed width and users generally expect the terminal to keep the size they assigned to the terminal. This control violates that expectation.
+
+If `columns` = 0 or `columns` = 80, resize the terminal to width 80. If `columns` = 132, resize the terminal to width 132. 
+
+If the cursor would right of the right-most column after the resize move it to the right-most column.
+
+Also updates the state of {{mode_link('p3')}}.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### numeric_parameter ####
+name: columns
+----
+default: 0
+----
+placeholder: Ⓝ
+#### intermediate ####
+name: $
+#### final ####
+name: |

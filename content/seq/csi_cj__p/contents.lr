@@ -43,4 +43,4 @@ body:
 
 Like {{seq_link('csi_cj')}} but does not erase cells marked with protected state.
 
-See {{seq_link('a_esc_cv')}} and {{seq_link('a_esc_cw')}} for changing the protected state of cells.
+See {{seq_link('csi_sq_t_quote')}} for changing the protected state of cells.

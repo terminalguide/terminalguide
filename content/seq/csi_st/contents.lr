@@ -1,13 +1,19 @@
-title: Window operations
+title: Window operations [DISPATCH]
 ---
-body: {{snip('placeholder-page')}}
+body:
+
+Various operations acting mostly on the window of the terminal.
+
+Most of these are from more innocent times and since have proven to be either dangerous or otherwise problematic. A lot of the sub-commands are now disabled in the default or distribution configurations of many terminals.
+
+As a special case values for `cmd` >= 24 resize the window similar to {{seq_link('csi_st-8')}} but using the current width and `cmd` as height.
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
@@ -23,7 +29,7 @@ body:
 #### impl ####
 impl: urxvt
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
@@ -31,7 +37,7 @@ body:
 #### impl ####
 impl: vte
 ----
-level: todo
+level: partial
 ----
 since: 
 ----

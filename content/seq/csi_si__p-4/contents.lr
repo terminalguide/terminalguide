@@ -1,0 +1,24 @@
+title: Media Control: Alias Disable Printer Redirection and Auto Print
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### intermediate ####
+name: ?
+#### numeric_fixed ####
+val: 4
+#### final ####
+name: i
+---
+body: Alias for {{seq_link('csi_si-4')}}.

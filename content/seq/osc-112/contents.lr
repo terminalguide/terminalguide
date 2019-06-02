@@ -1,10 +1,10 @@
-title: Reset Special Cursor Color
+title: Reset Cursor Color
 ---
 body:
 
-Reset the special color for the cursor.
+Reset the color for the cursor.
 
-See {{seq_link('osc-12')}}
+This reverts changes made with {{seq_link('osc-12')}}.
 ---
 implnotes:
 

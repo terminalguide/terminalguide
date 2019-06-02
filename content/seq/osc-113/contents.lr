@@ -1,0 +1,25 @@
+title: Reset Pointer Inlet Color
+---
+body:
+
+Reset the color for pointer inlet.
+
+This reverts changes made with {{seq_link('osc-13')}}.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### osc ####
+#### numeric_fixed ####
+val: 113
+#### st ####

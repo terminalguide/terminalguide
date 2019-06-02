@@ -1,13 +1,17 @@
-title: Cancel (CAN)
+title: Cancel Parsing (CAN)
 ---
-body: Cancel  current unfinished sequence.
+body:
+
+Cancel  current unfinished sequence.
+
+This character moves the terminals parser back into the base state and thus aborts any unfinished sequence without executing it.
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
 ----
 since: 
 ----

@@ -1,0 +1,26 @@
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: disabled
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### intermediate ####
+name: ?
+#### numeric_parameter ####
+name: cmd
+----
+default: 
+#### final ####
+name: i
+---
+title: Media Control (?) (MC)
+---
+body: 

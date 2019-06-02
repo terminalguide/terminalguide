@@ -1,0 +1,29 @@
+title: Query Character Protection Attribute
+---
+body:
+
+Query protection state as set by {{seq_link('csi_sq_t_quote')}}.
+
+The terminal replies with {{seq('\033P1$r1"q\033\\')}} if protection is selected and the selected protection semantics are {{seq_link('csi_sq_t_quote')}} or {{seq('\033P1$r0"q\033\\')}} otherwise.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### dcs ####
+#### intermediate ####
+name: $
+#### intermediate ####
+name: q
+#### numeric_fixed ####
+val: "q
+#### st ####

@@ -1,0 +1,32 @@
+title: Media Control: Auto Print Finished Lines
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: disabled
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### intermediate ####
+name: ?
+#### numeric_fixed ####
+val: 5
+#### final ####
+name: i
+---
+body:
+
+Auto print finished lines.
+
+Prints the line when the cursor leaves that line by:
+* Wrapping into the next line
+* form feed, line feed, vertical tab
+
+Auto printing can be disabled again using {{seq_link('csi_si-4')}} or {{seq_link('csi_si__p-4')}}.

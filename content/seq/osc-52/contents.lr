@@ -1,0 +1,55 @@
+title: Set/Get Clipboard Contents
+---
+body:
+
+Set/Get Clipboard Contents.
+
+This sequence is disabled in many default configurations, because it can be dangerous.
+
+If `data` is '?' gets the current clipboard contents. Otherwise `data` must contain the contents to be set in base64 encoding.
+
+The `kinds` parameter selects which clipboards to act on. Each character designates one clipboard to act on. When reading from the clipboard the first clipboard which contains data is used. When writing to the clipboard all clipboards in `kinds` are written to.
+
+The characters in `kinds` have the following meanings (these are X11 clipboard types except for 's'):
+```
+s: configured default clipboard
+p: Primary
+c: Clipboard
+0-7: Cut buffers
+```
+
+Reading from the clipboard results in a reply from the terminal of the form:
+
+{{seq('\033]52;')}}{{seq_param('kind', 'Ⓢ')}}{{seq(';')}}{{seq_param('data', 'Ⓑ')}}{{seq('\033\\')}}
+
+Where `kind` is similar to the value in the request with all unsupported types removed. And `data` contains the data read from the clipboard in base64 encoding.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: disabled
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### osc ####
+#### numeric_fixed ####
+val: 52
+#### numeric_parameter ####
+name: kinds
+----
+default: s0
+----
+placeholder: Ⓢ
+#### numeric_parameter ####
+name: data
+----
+default: 
+----
+placeholder: Ⓑ
+#### st ####

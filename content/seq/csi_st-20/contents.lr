@@ -1,0 +1,59 @@
+title: Get Icon Title
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: disabled
+----
+since: 
+----
+body: 
+#### impl ####
+impl: urxvt
+----
+level: disabled
+----
+since: 
+----
+body: {{miss}} urxvt always uses {{seq('\x9c')}} as terminator instead of {{seq('\033\\')}}.
+#### impl ####
+impl: konsole
+----
+level: ignored
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
+----
+level: partial
+----
+since: 
+----
+body:
+
+Source explains:
+> Report a static window title, since the real window title should NEVER be reported, as it creates a security vulnerability.  See http://marc.info/?l=bugtraq&m=104612710031920&w=2 and CVE-2003-0070.
+---
+seq:
+
+#### csi ####
+#### numeric_fixed ####
+val: 20
+#### final ####
+name: t
+---
+body:
+
+Report the terminal icon name.
+
+The terminal replies:
+
+{{seq('\033]L')}}{{seq_param('data', 'Ⓢ')}}{{seq('\033\\')}}
+
+Where `data` usually is the empty string, because this control sequence turned out to be a security hazard.
+
+If explicitly enabled by the user of the terminal some implementations report the icon name in `data`. If enabled with {{seq_link('csi_st__q')}} the string is hex encoded.

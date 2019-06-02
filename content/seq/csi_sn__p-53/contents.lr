@@ -1,11 +1,11 @@
-title: DSR TODO
+title: Alias: Request DEC Locator Status
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
 ----
 since: 
 ----

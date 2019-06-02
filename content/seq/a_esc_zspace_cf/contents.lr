@@ -23,6 +23,6 @@ name: F
 ---
 body:
 
-Disable C1 control sequences in terminal to application communication. Instead the terminal will use sequences with <ruby>ESC<rt>1B</rt></ruby> and a byte in the range 40-5F corrosponding to the C1 control.
+Disable C1 control sequences in terminal to application communication. Instead the terminal will use sequences with {{seq('\033')}} and a byte in the range 40-5F corresponding to the C1 control.
 
 See {{seq_link('a_esc_zspace_cg')}} for enabeling  C1 control sequences in terminal to application communication.

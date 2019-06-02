@@ -1,17 +1,26 @@
-title: Reset attribute replacement colors
+title: Reset Attribute Replacement Colors
 ---
-body: {{snip('placeholder-page')}}
+body:
+
+Reset attribute replacement colors.
+
+If `text` is empty reset all attribute replacement colors.
+
+Otherwise reset the colors specified in `text` as {{seq(';')}} separated list.
+
+This reverts changes made with {{seq_link('osc-4')}} or {{seq_link('osc-5')}}
+
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
-body: Like {{seq_link('osc-104')}} but allows resetting the attribute replacement colors without need to know the palette size.
+body: {{info}} If `text` is empty xterm also resets all palette colors.
 #### impl ####
 impl: vte
 ----
@@ -30,4 +39,6 @@ val: 105
 name: text
 ----
 default: 
+----
+placeholder: Ⓢ
 #### st ####

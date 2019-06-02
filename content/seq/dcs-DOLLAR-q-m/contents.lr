@@ -1,0 +1,37 @@
+title: Query SGR state
+---
+body:
+
+Queries currently active [SGR attributes](/attr).
+
+The terminal replies with 
+
+{{seq('\033P1$r0')}}{{seq_param('cmds')}}{{seq('m\033\\')}}
+
+Where `cmds` is a {{seq(';')}} separated list of SGR attributes currently set.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body:
+
+{{info}} The {{sgr_link('5')}} attribute is normalized to `cmd` = 5 even if originally set with {{sgr_link('6')}}.
+{{info}} Direct colors are output like this {{seq('38:2::255:255:255')}}.
+{{info}} 256 colors are output like this {{seq('38:5::123')}}.
+---
+seq:
+
+#### dcs ####
+#### intermediate ####
+name: $
+#### intermediate ####
+name: q
+#### numeric_fixed ####
+val: m
+#### st ####

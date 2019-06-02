@@ -1,29 +1,27 @@
-title: Change/Read Special Pointer Inlet Color
+title: Change/Read Pointer Inlet Color
 ---
 body:
 
-Change/Read special pointer inlet color.
+Change/Read pointer inlet color.
 
-Use `text` as color description to set the special pointer inlet color.
+Use `text` as color description to set the pointer inlet color. This color is used for the inner part of the mouse pointer.
 
-TODO document effect of {{mode_link('p5')}}
-
-TODO document color formats.
+For supported color formats see {{seq_link('osc-4')}}.
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
 ----
 since: 
 ----
 body:
 
-This only works when themed cursors are deactivated (https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=466704#135)
-
-xterm supports falling through into {{seq_link('osc-14')}} when given additional ';' separated colors.
+{{info}} If mode {{mode_link('p5')}} is active this sequence and {{seq_link('osc-14')}} switch their meaning. The cursor colors are visually switched when changing {{mode_link('p5')}}, while the values readable via sequences stays the same.
+{{info}} xterm supports falling through into {{seq_link('osc-14')}} when given additional {{seq(';')}} separated colors.
+{{info}} This only works when themed cursors are deactivated (https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=466704#135)
 #### impl ####
 impl: urxvt
 ----
@@ -42,4 +40,6 @@ val: 13
 name: text
 ----
 default: 
+----
+placeholder: Ⓢ
 #### st ####

@@ -1,0 +1,36 @@
+title: Select Character Protection Attribute (DECSCA)
+---
+body:
+
+Select Character Protection Attribute.
+
+if `cmd` = 1 the following printed characters are protected from selective erase. Otherwise the following printed characters are not protected from selective erase.
+
+This is like an additional [SGR State](/attr) in that it modifies cells changed after this sequence until deactivated again with `cmd` != 1.
+
+The semantics of protection from this sequence differs from {{seq_link('a_esc_cv')}} in that this protection only applies when using {{seq_link('csi_ck__p')}}, {{seq_link('csi_cj__p')}} and {{seq_link('csi_cx')}}. While the protection attribute is saved per cell the chosen semantic is global and the last seen sequence wins.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### numeric_parameter ####
+name: cmd
+----
+default: 0
+----
+placeholder: Ⓝ
+#### intermediate ####
+name: "
+#### final ####
+name: q

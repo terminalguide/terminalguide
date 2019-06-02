@@ -2,7 +2,7 @@ title: osc-50_konsole
 ---
 body:
 
-[This sequence collides with {{seq_link('osc-50')}}]
+[This sequence collides with {{seq_link('osc-50_xterm')}}]
 
 {{snip('placeholder-page')}}
 ---

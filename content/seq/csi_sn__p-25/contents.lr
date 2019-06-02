@@ -1,15 +1,19 @@
-title: DSR TODO
+title: DSR 25 (historically: User Defined Key Status)
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
 ----
 since: 
 ----
-body: Always replies {{seq('\033[?20n')}}
+body:
+
+Always replies {{seq('\033[?20n')}}
+
+historically: unlocked
 #### impl ####
 impl: vte
 ----
@@ -17,7 +21,11 @@ level: full
 ----
 since: 
 ----
-body: Always replies {{seq('\033[?21n')}}
+body:
+
+Always replies {{seq('\033[?21n')}}
+
+historically: locked
 ---
 seq:
 

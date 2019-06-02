@@ -57,6 +57,8 @@ Further if the first table does not match, override with the following from the 
 </table>
 
 The sequences send to the application are the same as those returned by {{seq_link('dcs-PLUS-q')}} with the terminfo name.
+
+See also {{seq_link('dcs-PLUS-p')}}.
 ---
 implnotes:
 

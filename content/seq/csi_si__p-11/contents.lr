@@ -1,0 +1,24 @@
+title: Media Control: Print terminal Contents including Scrollback
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: disabled
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### intermediate ####
+name: ?
+#### numeric_fixed ####
+val: 11
+#### final ####
+name: i
+---
+body: Like {{seq_link('csi_si__p-10')}} but also prints the scrollback buffer.

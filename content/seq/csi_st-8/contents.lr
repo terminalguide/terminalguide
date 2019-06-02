@@ -1,0 +1,62 @@
+title: Set Terminal Window Size
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: disabled
+----
+since: 
+----
+body: 
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: todo
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
+----
+level: disabled
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### numeric_fixed ####
+val: 8
+#### numeric_parameter ####
+name: height
+----
+default: 0
+----
+placeholder: Ⓝ
+#### numeric_parameter ####
+name: width
+----
+default: 0
+----
+placeholder: Ⓝ
+#### final ####
+name: t
+---
+body:
+
+Set terminal window size.
+
+Resizes the terminal to `width` columns by `height` rows.

@@ -1,0 +1,38 @@
+title: TODO REPORT SGR RECT
+---
+body: {{snip('placeholder-page')}}
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: todo
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### numeric_parameter ####
+name: 
+----
+default: 
+#### numeric_parameter ####
+name: 
+----
+default: 
+#### numeric_parameter ####
+name: 
+----
+default: 
+#### numeric_parameter ####
+name: 
+----
+default: 
+#### intermediate ####
+name: #
+#### final ####
+name: |

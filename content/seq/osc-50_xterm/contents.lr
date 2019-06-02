@@ -1,0 +1,55 @@
+title: Change/Query Font (xterm)
+---
+body:
+
+[This sequence collides with {{seq_link('osc-50_konsole')}}]
+
+Set or query fonts.
+
+If `font` starts with {{seq('?')}} this is a query. Without further characters in `font` the terminal replies with the currently selected font as {{seq('\033];')}}{{seq_param('font', 'Ⓢ')}}{{seq('\033\\')}}. Otherwise the reply contains the slot number and the slot to query can be specified as a number optionally with +/- as described below (ommit the '#' in the query form). The response has the format {{seq('\033];#')}}{{seq_param('slot')}}{{seq(' ')}}{{seq_param('font', 'Ⓢ')}}{{seq('\033\\')}}.
+
+If `font` starts with {{seq('#')}} followed by a number optionally prefixed with {{seq('-')}} or {{seq('+')}} then it selects one of xterms font slots. Without +/- this selects the font slot to act on. With +1 it selects the next bigger font from the font slots and with -1 it selects the next smaller font. Higher relative numbers are also supported. The relative selection does not wrap. The font slots are numbered 0 to 6.
+
+If `font` does not start with #, acts on the currently selected font slot.
+
+The rest of `font` is interpreted as name of the font to set for the specified slot. The specified slot is also set as active slot. The font name if depending on configuration either a X11 font (XLFD) or a Xft font name.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: disabled
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: unparsable
+----
+since: 
+----
+body: 
+#### impl ####
+impl: urxvt
+----
+level: unparsable
+----
+since: 
+----
+body: Syntax is different. Prefer using {{seq_link('osc-710')}}, {{seq_link('osc-711')}}, {{seq_link('osc-712')}} and {{seq_link('osc-713')}}.
+---
+seq:
+
+#### osc ####
+#### numeric_fixed ####
+val: 50
+#### numeric_parameter ####
+name: font
+----
+default: 
+----
+placeholder: Ⓢ
+#### st ####

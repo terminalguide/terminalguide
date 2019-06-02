@@ -5,11 +5,11 @@ implnotes:
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
-body: 
+body: {{miss}} Selective erase protection might be left in an inconsistent state as protection bits are still set for cells but are not actually used.
 #### impl ####
 impl: konsole
 ----
@@ -43,4 +43,27 @@ name: !
 #### final ####
 name: p
 ---
-body: {{snip('placeholder-page')}}
+body:
+
+Soft Reset.
+
+Changes:
+* Resets palette colors to initial state (like {{seq_link('osc-104')}} without parameter)
+* Reset {{sgr_link('1')}}, {{sgr_link('4')}}, {{sgr_link('5')}}, {{sgr_link('7')}} and {{sgr_link('8')}}
+* Reset foreground, background and decoration colors
+* Make cursor visible (set {{mode_link('p25')}})
+* Reset cursor shape to initial state
+* Reset cursor blinking to initial state
+* Reset {{mode_link('p6')}} mode
+* Set scrolling region to full size (resets {{seq_link('csi_sr')}} and {{seq_link('csi_ss_2param')}}, does not change {{mode_link('p69')}} mode)
+* Set G0-G4 = ASCII, select G0 into GL, select G2 into GR, reset single shift
+* Resets key press modifier reporting format (like {{seq_link('csi_sm__q')}} without parameters)
+* Disables {{mode_link('p1')}} mode
+* Unsets {{seq_link('a_esc_x3d_equals')}} (like {{seq_link('a_esc_x3c_greater_than')}})
+* Enable keyboard input (resets {{mode_link('2')}})
+* Revert changes to modes {{mode_link('p7')}} and {{mode_link('p45')}}
+* Reset mode {{mode_link('4')}}
+* Reinitializes the saved cursor state (like {{seq_link('a_esc_a7')}} just after the reset), but forces cursor position in the saved cursor state to (1, 1)
+* Disable selective erase protection for printed characters. (like {{seq_link('csi_sq_t_quote')}} without parameters)
+* Resets check sum settings to initial configuration (see {{seq_link('csi_sy_t_hash')}})
+

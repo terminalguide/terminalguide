@@ -1,0 +1,34 @@
+title: Request Tab Stop Report (DECTABSR)
+---
+body:
+
+Request Tab Stop Report.
+
+The terminal sends a reply with the currently set tab stops as following:
+
+{{seq('\033P2$u')}}{{seq_param('data','Ⓢ')}}{{seq('\033\\')}}
+
+Where `data` is a string consisting of decimal tab stop column numbers separated by {{seq('/')}}. All set (explicitly or as default) tab stops that fit into the current terminal width are reported.
+
+See {{seq_link('dcs-st_t_dollar-2')}} for a sequence to restore this information into the terminal.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 334
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### numeric_fixed ####
+val: 2
+#### intermediate ####
+name: $
+#### final ####
+name: w

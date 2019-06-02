@@ -1,0 +1,30 @@
+title: Media Control: Disable Printer Redirection and Auto Print
+---
+implnotes:
+
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### numeric_fixed ####
+val: 4
+#### final ####
+name: i
+---
+body: Disables the effect of {{seq_link('csi_si-5')}} and {{seq_link('csi_si__p-5')}}.

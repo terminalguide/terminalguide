@@ -13,7 +13,7 @@ This has multiple possible forms.
 <tr><td>(3)</td><td>48;5;Ⓝ</td><td></td></tr>
 </table>
 
-The color palette can be modified by {{seq_link('osc-4')}}, {{seq_link('osc-5')}}, {{seq_link('osc-6')}}, {{seq_link('osc-106')}}, {{seq_link('osc-104')}} and {{seq_link('osc-105')}}.
+The color palette can be modified by {{seq_link('osc-4')}}, {{seq_link('osc-5')}}, {{seq_link('osc-6-color')}}, {{seq_link('osc-106')}}, {{seq_link('osc-104')}} and {{seq_link('osc-105')}}.
 
 See {{sgr_link('fgcol256')}} for the default palette.
 ---

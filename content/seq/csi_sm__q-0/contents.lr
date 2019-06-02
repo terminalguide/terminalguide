@@ -1,15 +1,15 @@
-title: Allow Extended Key Codes in Legacy and VT220 Mode
+title: Allow Systematic Modifier Reporting in Legacy and VT220 Mode
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
 ----
 since: 
 ----
-body: 
+body: {{info}} defaults to 0.
 ---
 seq:
 
@@ -27,7 +27,7 @@ name: m
 ---
 body:
 
-Specifies which key groups will get extended key codes in mode {{mode_link('p1060')}} or {{mode_link('p1061')}}.
+Specifies which key groups will report modifier keys held in systematic way in mode {{mode_link('p1060')}} or {{mode_link('p1061')}}.
 
 For other key modes this control is ignored and extended key codes are only controlled by the key group specific setting.
 

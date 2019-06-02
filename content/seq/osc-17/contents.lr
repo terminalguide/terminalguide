@@ -4,18 +4,25 @@ body:
 
 Sets the background color of selected text.
 
-TODO document color formats.
+For supported color formats see {{seq_link('osc-4')}}.
+
+TODO this color can not reliably restored to original state by reading this and later setting this to the read value. (at least vte; it has a special unset internal flag)
+
+{{snip('incomplete')}}
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
 ----
 since: 
 ----
-body: 
+body:
+
+{{info}} if the effective selection foreground and background colors exactly match xterm reverts to default colors.
+{{info}} This sequence does not change according to mode {{mode_link('p5')}}. Selection colors keep the same regardless of reverse setting and sequences for background/foreground don't switch.
 #### impl ####
 impl: urxvt
 ----
@@ -39,7 +46,9 @@ seq:
 #### numeric_fixed ####
 val: 17
 #### numeric_parameter ####
-name: p1
+name: color
 ----
 default: 
+----
+placeholder: Ⓢ
 #### st ####

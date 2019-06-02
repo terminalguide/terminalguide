@@ -5,12 +5,24 @@ body:
 Change/Read palette color
 
 Parses `text` as ';' separated list. For each pair of items (`color`, `str`):
-* Interpret `color` as index into the palette (with 5 special indexes following the proper palette). If `str` is '?' then this is a readback command, otherwise:  parse `str` as color (via XParseColor traditionally) and set the palette entry `color` to that color.
+* Interpret `color` as index into the palette (possibly with special indexes following the proper palette). If `str` is '?' then this is a readback command, otherwise:  parse `str` as color (via XParseColor traditionally) and set the palette entry `color` to that color.
 
 If readback was requested resonds with a sequence of the same form that would set the current color.
 E.g. {{seq('\033]4;1;rgb:ffff/ffff/0000\033\\')}}
 
-TODO document color formats.
+Some terminals implement further colors after the proper palette that are reachable with this sequence. See {{seq_link('osc-5')}} for details.
+
+color formats of XParseColor:
+* #rgb, #rrggbb, #rrrbbbggg, #rrrrbbbbgggg with each letter a hex-digit. Each group of letters specifies red, green and blue components. The components are shifted to full 16bit for shorter formats. (i.e. #fff is #f000f000f000)
+* rgb:r/g/b where each of r, g and b specifies one primary color using 1, 2, 3 or 4 hex digits. The length of each part can be different. It is scaled to full value according to the number of digits used (leading zeros are thus significant, f is ffff, 0f is 0f0f)
+* rgbi:r/g/b with r, g and b decimal floating point numbers. (format is case insensitive). This format uses a linear color intensity.
+* CIEXYZ:X/Y/Z with X, Y and Z decimal floating point numbers. (format is case insensitive)
+* CIEuvY:u/v/Y with u, v and Y decimal floating point numbers. (format is case insensitive)
+* CIExyY:x/y/Y with x, y and Y decimal floating point numbers. (format is case insensitive)
+* CIELab:L/a/b with L, a and b decimal floating point numbers. (format is case insensitive)
+* CIELuv:L/u/v with L, u and v decimal floating point numbers. (format is case insensitive)
+* TekHVC:H/V/C with H, V and C decimal floating point numbers. (format is case insensitive)
+* named colors from https://gitlab.freedesktop.org/xorg/app/rgb/blob/master/rgb.txt
 ---
 implnotes:
 
@@ -23,8 +35,10 @@ since:
 ----
 body:
 
-readback can be disabled by configuration.
-special indicies above normal palette TODO
+{{info}} Uses XParseColor for color formats.
+{{info}} readback can be disabled by configuration.
+{{info}} readback uses `rgb:%04x/%04x/%04x`
+{{info}} Additional color values 'XtDefaultForeground' and 'XtDefaultBackground' are available.
 #### impl ####
 impl: urxvt
 ----
@@ -32,7 +46,12 @@ level: full
 ----
 since: 
 ----
-body: 
+body:
+
+{{info}} Accepts a `[a]` prefix to color names where `a` is the alpha of the color (0=fully transparent, 100=fully opaque)
+{{info}} Accepts `rgba:r/g/b/a` color format. Each component uses exactly 4 hex digits. a = ffff is fully opaque.
+{{info}} Uses XParseColor for other formats.
+{{info}} readback uses `rgb:%04x/%04x/%04x` or when transparent `rgba:%04x/%04x/%04x/%04x`
 #### impl ####
 impl: vte
 ----
@@ -40,7 +59,12 @@ level: todo
 ----
 since: 
 ----
-body: 
+body:
+
+{{info}} only supports color names and rgb colors.
+{{miss}} #rgb style sequences are scaled instead of shifted when not using full 4 hex digits per color.
+{{miss}} rgb:r/g/b format only supports using the same number of digits for all components.
+{{info}} readback uses `rgb:%04x/%04x/%04x`
 ---
 seq:
 
@@ -51,4 +75,6 @@ val: 4
 name: text
 ----
 default: 
+----
+placeholder: Ⓢ
 #### st ####

@@ -5,11 +5,11 @@ implnotes:
 #### impl ####
 impl: xterm
 ----
-level: full
+level: partial
 ----
 since: 
 ----
-body: 
+body: {{miss}} as of xterm 345 this sequence has a bug where when the screen does not contain protected cells but cell protection is still active for newly written cells the newly written cells only are protected when the current protection mode is activated again.
 #### impl ####
 impl: konsole
 ----
@@ -58,7 +58,7 @@ body:
 
 Erases the complete display, by replacing all cell contents with space.
 
-In it's basic variant it will also erase protected cells. When called as {{seq_link('csi_cj__p')}} it will not erase protected cells.
+In it's basic variant it will erase protected cells only when the semantics of {{seq_link('csi_sq_t_quote')}} are active. When called as {{seq_link('csi_cj__p')}} it will not erase protected cells in either protection semantics.
 
 The [current scroll region](/scrolling-region) is ignored by this command.
 

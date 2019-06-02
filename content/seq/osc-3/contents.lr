@@ -4,7 +4,7 @@ body:
 
 Change / Delete an X-property on the terminal window.
 
-If `text` is contains a '=' sets a x-property on the terminal window named by the part before the first  '=' with the contents of the part after the first '=' as value.
+If `text` contains a '=' sets a x-property on the terminal window named by the part before the first  '=' with the contents of the part after the first '=' as value.
 
 Otherwise remove the property with the name `text`
 ---
@@ -13,11 +13,11 @@ implnotes:
 #### impl ####
 impl: xterm
 ----
-level: full
+level: disabled
 ----
 since: 
 ----
-body: disabled by default
+body: 
 #### impl ####
 impl: urxvt
 ----
@@ -27,9 +27,8 @@ since:
 ----
 body:
 
-enabled.
-
-In insecure mode also supports readback with {{seq('\033]3;?')}}{{seq_param('var')}}{{seq('\033\\')}}.
+{{info}} enabled by default.
+{{info}} In insecure mode also supports readback with {{seq('\033]3;?')}}{{seq_param('name', 'Ⓢ')}}{{seq('\033\\')}}.
 ---
 seq:
 
@@ -40,4 +39,6 @@ val: 3
 name: text
 ----
 default: 
+----
+placeholder: Ⓢ
 #### st ####

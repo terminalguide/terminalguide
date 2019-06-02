@@ -1,17 +1,51 @@
-title: Request-Termcap/Terminfo-String
+title: Query Keyboard Mapping or Miscellaneous Information
 ---
-body: {{snip('placeholder-page')}}
+body:
+
+Query keyboard mapping or miscellaneous information.
+
+`query` is a hex encoded string. It can be the encoded form of either a terminfo/termcap key names (e.g. 'kf1') or a string for one of the following additional informations:
+
+<table class="visible-table rowspan">
+<tr><th><code>query</code> pre hex encoding</th><th>meaning</th></tr>
+<tr><td>colors</td><td rowspan=2>query number of palette colors supported.<br>Return is either '256', '88' or '16' (after hex decoding)<br>See <a href="/attr/fgcol256/">256 colors palette</a>.</td></tr>
+<tr><td>Co</td></tr>
+<tr><td>RGB</td><td>Report significant bits for direct color display. <br>Format is either a number (e.g. '8') or <code>r</code>/<code>g</code>/<code>b</code> (e.g. '5/6/5') where the number or each of <code>r</code>, <code>g</code>, <code>b</code> signifies how many significant bits of the direct color the terminal will be able to reproduce.<br>If direct color is not supported the result contains '-1'.<br>See <a href="/attr/fgdirectcolor/">direct color</a>.</td></tr>
+<tr><td>name</td><td rowspan=2>query name of initial terminal description (e.g. 'xterm')</td></tr>
+<tr><td>TN</td></tr>
+</table>
+
+See {{mode_link('p1050')}} for key names.
+
+The terminal replies with:
+
+{{seq('\033P0+r\033\\')}}
+
+in case the query was invalid or did not return a result.
+
+or
+
+{{seq('\033P1+r')}}{{seq_param('query', 'Ⓢ')}}{{seq('=')}}{{seq_param('result', 'Ⓢ')}}{{seq('\033\\')}}
+
+Where `query` is the original query string (also hex encoded) and `result` is the result in hex encoding.
+
+If the `query` parameter is valid but no data is available `result` and the preceding {{seq('=')}} are omitted from the reply.
+
+The sequence may contain more than one query, in that case the hex encoded query strings are separated by {{seq(';')}} and the replies will contain a part {{seq_param('query', 'Ⓢ')}}{{seq('=')}}{{seq_param('result', 'Ⓢ')}} separated by {{seq(';')}} for each query the terminal reports a result for.
+
+
+{{snip('incomplete')}}
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: disabled
 ----
 since: 
 ----
-body: 
+body: {{info}} xterm aborts processing with the first query that is not successful, all further query parts are ignored.
 ---
 seq:
 
@@ -20,8 +54,13 @@ seq:
 name: +
 #### intermediate ####
 name: q
+#### group_start ####
 #### numeric_parameter ####
-name: p1
+name: query
 ----
 default: 
+----
+placeholder: Ⓢ
+#### group_end ####
+optional: 
 #### st ####

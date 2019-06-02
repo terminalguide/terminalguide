@@ -26,9 +26,14 @@ seq:
 #### csi ####
 #### intermediate ####
 name: >
+#### group_start ####
 #### numeric_parameter ####
 name: mode
 ----
 default: see description
+----
+placeholder: Ⓝ
+#### group_end ####
+optional: yes
 #### final ####
 name: T

@@ -1,0 +1,32 @@
+title: Select Attribute Change Extent (DECSACE)
+---
+body:
+
+Select area type for {{seq_link('csi_st_t_dollar')}} and {{seq_link('csi_sr_t_dollar')}}.
+
+If `cmd` is 2 the affected sequences act on rectangles. Otherwise they act on all cells between 2 points in left-to-right and top-to-down reading order.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### numeric_parameter ####
+name: cmd
+----
+default: 0
+----
+placeholder: Ⓝ
+#### intermediate ####
+name: *
+#### final ####
+name: x

@@ -1,0 +1,22 @@
+title: Save Screenshot in HTML Format
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: {{info}} xterm saves the screenshot in a file named like `xterm.YYYY.MM.DD.hh.mm.ss.xhtml` in the working directory of the terminal process.
+---
+seq:
+
+#### csi ####
+#### numeric_fixed ####
+val: 10
+#### final ####
+name: i
+---
+body: Save a screenshot of the current terminal contents in HTML format.

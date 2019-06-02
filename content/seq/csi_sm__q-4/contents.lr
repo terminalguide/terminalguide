@@ -1,15 +1,15 @@
-title: TODO modify other
+title: Select Format for Modifier Keys in Other Key Press Reports (modify other)
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
 ----
 since: 
 ----
-body: 
+body: {{info}} defaults to mode 0.
 ---
 seq:
 
@@ -27,6 +27,23 @@ name: m
 ---
 body:
 
-{{snip('placeholder-page')}}
+Select format for modifier keys in other key press reports.
+
+This sequence configures how modifier keys are reported for key presses that are **not** from:
+* the numeric keypad
+* edit function keys (insert, page up, etc)
+* cursor keys
+* function keys (e.g. F1)
+* the menu key
+
+<table class="visible-table">
+<tr><th><code>mode</code></th><th>example</th></tr>
+<tr><td>0</td><td>Do not report modifiers in a systematic way</td></tr>
+<tr><td>1</td><td>report modifier as numeric code but not for letters, backspace or delete</td></tr>
+<tr><td>2</td><td>report modifier as numeric code</td></tr>
+</table>
+
 
 If `mode` is not given, reset this setting to it's initial state.
+
+{{snip('incomplete')}}

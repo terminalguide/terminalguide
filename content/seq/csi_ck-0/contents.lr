@@ -64,7 +64,7 @@ body:
 
 Erase the right side of the line where the cursor is currently placed starting from (including) the current cursor position, by replacing all cells with spaces.
 
-In it's basic variant it will also erase protected cells. When called as {{seq_link('csi_ck__p')}} it will not erase protected cells.
+In it's basic variant it will erase protected cells only when the semantics of {{seq_link('csi_sq_t_quote')}} are active. When called as {{seq_link('csi_ck__p')}} it will not erase protected cells in either protection semantics.
 
 If the erase splits a multi cell character that character is erased by replacing it with spaces.
 <!--

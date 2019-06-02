@@ -1,11 +1,11 @@
-title: DSR TODO
+title: DSR 63 (historically: memory checksum)
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
 ----
 since: 
 ----
@@ -21,7 +21,10 @@ level: full
 ----
 since: 
 ----
-body: {{info}} Always replies {{seq('\033P')}}{{seq_param('id')}}{{seq('!~0000\033\\')}}
+body:
+
+{{info}} Always replies {{seq('\033P')}}{{seq_param('id')}}{{seq('!~0000\033\\')}}
+{{info}} if `id` is omitted in the request it's also omitted in the reply.
 ---
 seq:
 
@@ -37,4 +40,4 @@ default:
 #### final ####
 name: n
 ---
-body: {{snip('placeholder-page')}}
+body: See below for details:

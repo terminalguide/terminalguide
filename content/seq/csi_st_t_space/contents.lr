@@ -1,0 +1,30 @@
+title: Set Warning Bell Volume (SWBV)
+---
+body:
+
+Sets warning bell volume.
+
+If 2 <= `volume` <= 4 the terminal uses low volume. If If 5 <= `volume` <= 8 or `volume` = 0 the terminal used high volume.  Otherwise it's off.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: {{info}} This bell volume is used for the bell caused by {{seq_link('a_c0-g')}}, various warnings (parsing errors, etc) and also when the terminal is reset by {{seq_link('a_esc_sc')}}, {{seq_link('csi_sp_t_bang')}} or otherwise.
+---
+seq:
+
+#### csi ####
+#### numeric_parameter ####
+name: volume
+----
+default: 0
+#### intermediate ####
+name: SPACE
+#### final ####
+name: t

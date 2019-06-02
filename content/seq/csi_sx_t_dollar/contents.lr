@@ -1,0 +1,70 @@
+title: Fill Rectangular Area (DECFRA)
+---
+body:
+
+Fills an rectangular area with the character `char`.
+
+If {{mode_link('p6')}} mode is set the rectangle is interpreted relative to the top left of the [current scroll region](/scrolling-region). Otherwise it's relative to the top left of the terminal.
+
+`bottomrow` and `rightcolumn` default to their bottom-most/right-most valid values.
+
+If {{mode_link('p6')}} mode is set and the rectangle exceeds the [current scroll region](/scrolling-region) it's clipped to the [current scroll region](/scrolling-region). Otherwise the rectangle is clipped to the full terminal.
+
+If `toprow` > `bottomrow` or `leftcolumn` > `rightcolumn` this sequence does nothing.
+
+If `char` is a not a printable latin1 character code (32 <= `char` < 127 or 160 <= `char` <= 255) this sequence does nothing. Otherwise it fills all cells in the given rectangle with the char `char`.
+
+If the [current SGR](/attr) attributes have default background and foreground colors selected it keeps the colors of the filled cells. Else it replaces the colors with the colors from the current [SGR state](/attr).
+
+The other attributes of the cells are replaced by the current [SGR state](/attr).
+
+If filling the cells splits a multi cell character that character cleared, by replacing it by spaces.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### numeric_parameter ####
+name: char
+----
+default: see description
+----
+placeholder: Ⓝ
+#### numeric_parameter ####
+name: toprow
+----
+default: 0
+----
+placeholder: Ⓝ
+#### numeric_parameter ####
+name: leftcolumn
+----
+default: 0
+----
+placeholder: Ⓝ
+#### numeric_parameter ####
+name: bottomrow
+----
+default: see description
+----
+placeholder: Ⓝ
+#### numeric_parameter ####
+name: rightcolumn
+----
+default: see description
+----
+placeholder: Ⓝ
+#### intermediate ####
+name: $
+#### final ####
+name: x

@@ -1,10 +1,10 @@
-title: Reset Special Text Foreground Color
+title: Reset Special Text Default Foreground Color
 ---
 body:
 
-Reset the special color for text foreground.
+Reset the special color for text default foreground.
 
-See {{seq_link('osc-10')}}
+This reverts changes made with {{seq_link('osc-10')}}.
 ---
 implnotes:
 

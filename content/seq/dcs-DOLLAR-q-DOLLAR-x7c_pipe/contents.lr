@@ -1,0 +1,33 @@
+body:
+
+Query 132 column mode.
+
+The terminal replies:
+
+{{seq('\033P1$r')}}{{seq_param('width')}}{{seq('$|\033\\')}}
+
+Where `width` = 80 if {{mode_link('p3')}} is unset. Otherwise `width` = 132.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### dcs ####
+#### intermediate ####
+name: $
+#### intermediate ####
+name: q
+#### numeric_fixed ####
+val: $|
+#### st ####
+---
+title: Query 132 Column Mode (DECSCPP)

@@ -1,0 +1,24 @@
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: disabled
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### intermediate ####
+name: ?
+#### numeric_fixed ####
+val: 1
+#### final ####
+name: i
+---
+title: Media Control: Print Current Line
+---
+body: Prints the line that currently contains the cursor.

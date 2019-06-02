@@ -1,15 +1,15 @@
-title: DSR TODO
+title: DSR 85 (historically: Multiple Session Status)
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
 ----
 since: 
 ----
-body: Always replies {{seq('\033[?83n')}}
+body: 
 #### impl ####
 impl: vte
 ----
@@ -17,7 +17,7 @@ level: full
 ----
 since: 
 ----
-body: Always replies {{seq('\033[?83n')}}
+body: 
 ---
 seq:
 
@@ -29,4 +29,8 @@ val: 85
 #### final ####
 name: n
 ---
-body: {{snip('placeholder-page')}}
+body:
+
+Always replies {{seq('\033[?83n')}}
+
+historically: sessions not ready

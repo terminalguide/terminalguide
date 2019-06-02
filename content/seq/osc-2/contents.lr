@@ -6,7 +6,8 @@ Set the window title of the terminal
 
 If title mode 0 (see {{seq_link('csi_st__q')}}) is set text is expect to be hex encoded (i.e. utf 8 with each code unit further encoded with two hex digets)
 
-If title mode 2 (see {{seq_link('csi_st__q')}}) is set utf-8 is not TODO.
+If title mode 2 (see {{seq_link('csi_st__q')}}) is set or the terminal is setup for unconditional utf-8 titles `text` is interpreted as utf-8. Else `text` is interpreted as latin1.
+
 ---
 implnotes:
 
@@ -39,7 +40,7 @@ level: full
 ----
 since: 
 ----
-body: 
+body: {{info}} urxvt interprets `text` in the current input encoding.
 #### impl ####
 impl: vte
 ----
@@ -47,7 +48,7 @@ level: todo
 ----
 since: 
 ----
-body: 
+body: {{info}} vte unconditionally accepts utf8.
 ---
 seq:
 
@@ -58,4 +59,6 @@ val: 2
 name: text
 ----
 default: 
+----
+placeholder: Ⓢ
 #### st ####

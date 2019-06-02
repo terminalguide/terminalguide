@@ -1,0 +1,62 @@
+title: Pop Terminal Title
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: urxvt
+----
+level: ignored
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: ignored
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
+----
+level: partial
+----
+since: 
+----
+body: {{miss}} vte does not support the icon title and just ignores the sequence if `cmd` = 1.
+---
+seq:
+
+#### csi ####
+#### numeric_fixed ####
+val: 23
+#### numeric_parameter ####
+name: cmd
+----
+default: 
+----
+placeholder: Ⓝ
+#### final ####
+name: t
+---
+body:
+
+Restore saved terminal title (or icon name) from the stack.
+
+See {{seq_link('csi_st-22')}} for the corresponding push operation.
+
+Does nothing if the stack is empty.
+
+If `cmd` = 0 or `cmd` = 2 restores and removes the terminal title from the stack, otherwise removes the saved terminal title from the stack without restoring it.
+
+If `cmd` = 0 or `cmd` = 1 restores and removes the terminal icon name from the stack, otherwise removes the saved icon name from the stack without restoring it.

@@ -1,0 +1,24 @@
+title: Media Control: Alias: Print Terminal Contents
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: disabled
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### intermediate ####
+name: ?
+#### numeric_fixed ####
+val: 10
+#### final ####
+name: i
+---
+body: Same as {{seq_link('csi_si-0')}} except that {{mode_link('p19')}} is ignored (always prints the whole terminal).

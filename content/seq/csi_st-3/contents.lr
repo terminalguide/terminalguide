@@ -1,0 +1,62 @@
+title: Set Terminal Window Position
+---
+seq:
+
+#### csi ####
+#### numeric_fixed ####
+val: 3
+#### numeric_parameter ####
+name: posx
+----
+default: 0
+----
+placeholder: Ⓝ
+#### numeric_parameter ####
+name: posy
+----
+default: 0
+----
+placeholder: Ⓝ
+#### final ####
+name: t
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: disabled
+----
+since: 
+----
+body: 
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
+----
+level: disabled
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: ignored
+----
+since: 
+----
+body: 
+---
+body:
+
+Set terminal window position.
+
+Move terminal window to position `posx`, `posy`.

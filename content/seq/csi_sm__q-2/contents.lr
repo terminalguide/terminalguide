@@ -1,0 +1,44 @@
+title: Select Format for Modifier Keys in Function-Key Key Press Reports
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: {{info}} mode defaults to 2.
+---
+seq:
+
+#### csi ####
+#### intermediate ####
+name: >
+#### numeric_fixed ####
+val: 2
+#### numeric_parameter ####
+name: mode
+----
+default: n/a
+#### final ####
+name: m
+---
+body:
+
+Select format for modifier keys in function-key key press reports.
+
+<table class="visible-table">
+<tr><th><code>mode</code></th><th>example</th></tr>
+<tr><td>0</td><td>{{seq('\033[15~')}} or {{seq('\033O5P')}}</td></tr>
+<tr><td>1</td><td>{{seq('\033[5P')}}</td></tr>
+<tr><td>2</td><td>{{seq('\033[1;5P')}}</td></tr>
+<tr><td>3</td><td>{{seq('\033[>1;5P')}}</td></tr>
+</table>
+
+If `mode` is not given, reset this setting to it's initial state.
+
+This also disables mapping F-keys with held shift or control modifier to other F-key numbers if neither {{mode_link('p1060')}} nor {{mode_link('p1061')}} is active.
+
+{{snip('incomplete')}}

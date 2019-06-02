@@ -1,0 +1,30 @@
+title: Set Margin Bell Volume (SMBV)
+---
+body:
+
+Set the volume of the margin bell (see {{mode_link('p44')}}).
+
+If 2 <= `volume` <= 4 the terminal uses low volume. If 5 <= `volume` <= 8 or `volume` = 0 the terminal used high volume.  Otherwise it's off.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### numeric_parameter ####
+name: volume
+----
+default: 0
+#### intermediate ####
+name: SPACE
+#### final ####
+name: u

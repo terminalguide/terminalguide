@@ -1,25 +1,26 @@
-title: Change/Read Special Text Foreground Color
+title: Change/Read Special Text Default Foreground Color
 ---
 body:
 
-Change/Read special text foreground color.
+Change/Read special text default foreground color.
 
-Use `text` as color description to set the special text foreground color. (TODO: Is this reachable in other ways then unsetting the foreground attribute?)
+Use `text` as color description to set the special text default foreground color. This is a color in addition to the palette and direct colors which applies to all text that has not otherwise been assigned a foreground color.
 
-TODO document effect of {{mode_link('p5')}}
-
-TODO document color formats.
+For supported color formats see {{seq_link('osc-4')}}.
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
 ----
 since: 
 ----
-body: xterm supports falling through into {{seq_link('osc-11')}} when given additional ';' separated colors.
+body:
+
+{{info}} If mode {{mode_link('p5')}} is active this sequence and {{seq_link('osc-11')}} keep their meaning. The cursor colors are visually switched when changing {{mode_link('p5')}} and the values readable via sequences are switched as well.
+{{info}} xterm supports falling through into {{seq_link('osc-11')}} when given additional ';' separated colors.
 #### impl ####
 impl: konsole
 ----
@@ -54,4 +55,6 @@ val: 10
 name: text
 ----
 default: 
+----
+placeholder: Ⓢ
 #### st ####

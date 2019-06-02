@@ -1,0 +1,28 @@
+title: ???
+---
+body:
+
+Same as {{seq_link('csi_ct_1param')}}
+
+Note: xterm says this variant originated in a typographical error in ECMA-48
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: todo
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### numeric_parameter ####
+name: amount
+----
+default: 1
+#### final ####
+name: ^

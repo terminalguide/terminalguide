@@ -1,0 +1,34 @@
+title: DEC Select Number of Lines per Screen (DECSNLS)
+---
+body:
+
+DEC Select Number of Lines per Screen.
+
+If `rows` >= and `rows` <= 255 resizes the terminal to `rows` rows.
+
+Modern terminals don't have a fixed height and users generally expect the terminal to keep the size they assigned to the terminal. This control violates that expectation.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: disabled
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### numeric_parameter ####
+name: rows
+----
+default: 0
+----
+placeholder: Ⓝ
+#### intermediate ####
+name: *
+#### final ####
+name: |

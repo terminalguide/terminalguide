@@ -1,0 +1,20 @@
+title: ??? (HP_MEM_LOCK)
+---
+body: Same as {{seq_link('a_esc_sm')}}
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: todo
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### esc ####
+#### final ####
+name: l

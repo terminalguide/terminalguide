@@ -1,4 +1,4 @@
-title: Reset palette colors
+title: Reset Palette Colors
 ---
 body:
 
@@ -6,18 +6,20 @@ Reset palette colors
 
 If `text` is empty reset all palette colors.
 
-Otherwise reset the colors specified in `text` as ';' separated list.
+Otherwise reset the colors specified in `text` as {{seq(';')}} separated list.
+
+This reverts changes made with {{seq_link('osc-4')}} or {{seq_link('osc-5')}}.
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
-body: Also resets special colors TODO
+body: {{info}} If `text` is empty xterm also resets all attribute replacement colors.
 #### impl ####
 impl: vte
 ----
@@ -36,4 +38,6 @@ val: 104
 name: text
 ----
 default: 
+----
+placeholder: Ⓢ
 #### st ####

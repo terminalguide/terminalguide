@@ -1,0 +1,68 @@
+title: Report Terminal Window Size in Pixels
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: disabled
+----
+since: 
+----
+body: 
+#### impl ####
+impl: urxvt
+----
+level: partial
+----
+since: 
+----
+body:
+
+{{info}} the reported width includes the scrollbar but not window decorations.
+{{info}} The value of `cmd` is ignored.
+#### impl ####
+impl: konsole
+----
+level: ignored
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
+----
+level: partial
+----
+since: 
+----
+body:
+
+{{info}} The reported height and width are the area of the cell grid.
+{{info}} The value of `cmd` is ignored.
+---
+seq:
+
+#### csi ####
+#### numeric_fixed ####
+val: 14
+#### numeric_parameter ####
+name: cmd
+----
+default: 0
+----
+placeholder: Ⓝ
+#### final ####
+name: t
+---
+body:
+
+Report terminal window size in pixels.
+
+The terminal replies:
+
+{{seq('\033[4;')}}{{seq_param('heightpx')}}{{seq(';')}}{{seq_param('widthpx')}}{{seq('t')}}
+
+Where `heightpx` and `widthpx` are the size of the terminal window in pixels.
+
+If `cmd` = 2 then the size including window decorations and scrollbar/toolbar is reported.

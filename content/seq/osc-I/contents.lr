@@ -1,0 +1,37 @@
+title: Set Terminal Icon
+---
+body:
+
+Set icon.
+
+Sets the terminals icon to `icon`. If `icon` is 'none' the request is ignored.
+
+Valid icon names are implementation specific.
+
+If the icon is not found a default icon is used.
+
+
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: {{info}} xterm searches for an xpm format image using the following search patterns '%s', '%s.xpm', '%s_48x48', '%s_48x48.xpm'. And then all patterns again with the xpm directory prefixed (default: '/usr/share/pixmaps/').
+---
+seq:
+
+#### osc ####
+#### intermediate ####
+name: I
+#### numeric_parameter ####
+name: icon
+----
+default: 
+----
+placeholder: Ⓢ
+#### st ####

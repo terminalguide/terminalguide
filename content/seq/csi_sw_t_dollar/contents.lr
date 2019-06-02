@@ -1,0 +1,26 @@
+title: Request Presentation State Report (DECRQPSR)
+---
+body: 
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 334
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### numeric_parameter ####
+name: cmd
+----
+default: 0
+#### intermediate ####
+name: $
+#### final ####
+name: w

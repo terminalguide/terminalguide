@@ -1,0 +1,50 @@
+title: Lower Terminal Window
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: disabled
+----
+since: 
+----
+body: 
+#### impl ####
+impl: urxvt
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: ignored
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
+----
+level: disabled
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### numeric_fixed ####
+val: 6
+#### final ####
+name: t
+---
+body:
+
+Lower the terminal window to the bottom of the window stack.
+
+See also {{seq_link('csi_st-5')}}.

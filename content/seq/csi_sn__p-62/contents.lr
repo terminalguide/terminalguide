@@ -1,15 +1,19 @@
-title: DSR TODO
+title: DSR 62 (historically: macro space)
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
 ----
 since: 
 ----
-body: Always replies {{seq('\033[0000*{')}}
+body:
+
+Always replies {{seq('\033[0000*{')}}
+
+historically: no macro space
 #### impl ####
 impl: vte
 ----
@@ -17,7 +21,11 @@ level: full
 ----
 since: 
 ----
-body: Always replies {{seq('\033[0*{')}}
+body:
+
+Always replies {{seq('\033[0*{')}}
+
+historically: no macro space
 ---
 seq:
 
@@ -29,4 +37,4 @@ val: 62
 #### final ####
 name: n
 ---
-body: {{snip('placeholder-page')}}
+body: See below for details:

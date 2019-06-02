@@ -1,26 +1,46 @@
-title: Set attribute replacement colors
+title: Set Attribute Replacement Colors
 ---
 body:
 
 Like {{seq_link('osc-4')}} but allows setting attribute replacement colors without need to know the palette size.
 
-Readback mode still used special indcies as would be need with {{seq_link('osc-4')}}
+Readback mode may still use special indices as would be needed with {{seq_link('osc-4')}}
+
+Attributes replacement colors are used instead of some attributes under certain conditions. Conditons are terminal specific.
+
+<table class="visible-table">
+<tr><th>number osc 5</th><th>number osc 4</th><th>replaces</th></tr>
+<tr><td> 0                            </td><td> 256                       </td><td> bold             </td></tr>
+<tr><td> 1                            </td><td> 257                       </td><td> underline </td></tr>
+<tr><td> 2                            </td><td> 258                       </td><td> blink           </td></tr>
+<tr><td> 3                            </td><td> 259                       </td><td> inverse      </td></tr>
+<tr><td> 4                            </td><td> 260                       </td><td> italic           </td></tr>
+</table>
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
-----
-#### impl ####
-impl: vte
-----
-level: todo
+level: partial
 ----
 since: 
 ----
-body: 
+body:
+
+{{info}} each attribute has a separate setting that needs to be enabled for the replacement colors to be used. These settings default to off
+{{info}} readback results in an osc 4 reply sequence.
+#### impl ####
+impl: vte
+----
+level: partial
+----
+since: 
+----
+body:
+
+{{info}} only bold is supported. The replacement color is always used.
+{{info}} readback results in an osc 5 reply sequence.
 ---
 seq:
 
@@ -28,7 +48,9 @@ seq:
 #### numeric_fixed ####
 val: 5
 #### numeric_parameter ####
-name: p1
+name: text
 ----
 default: 
+----
+placeholder: Ⓢ
 #### st ####

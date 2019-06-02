@@ -1,0 +1,36 @@
+title: Restore Tab Stop Report
+---
+body:
+
+Restore Tab Stop Report.
+
+Restores the Information reported by {{seq_link('csi_sw_t_dollar-2')}}. The format is the same but using a {{seq('t')}} instead of a {{seq('u')}} as the 5th character.
+
+`data` is a string consisting of decimal tab stop column numbers separated by {{seq('/')}}. All tab stops that have been set previously are cleared. If `data` deviates from the needed format the processing stops at that point leaving only the tab stop set before the parsing error set.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 334
+----
+body: 
+---
+seq:
+
+#### dcs ####
+#### numeric_fixed ####
+val: 2
+#### intermediate ####
+name: $
+#### final ####
+name: t
+#### numeric_parameter ####
+name: tabs
+----
+default: 
+----
+placeholder: Ⓢ

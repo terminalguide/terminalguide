@@ -1,10 +1,10 @@
-title: Reset Special Pointer Mask Color
+title: Reset Pointer Mask Color
 ---
 body:
 
-Reset the special color for pointer mask..
+Reset the color for pointer mask.
 
-See {{seq_link('osc-14')}}
+This reverts changes made with {{seq_link('osc-14')}}.
 ---
 implnotes:
 

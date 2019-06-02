@@ -1,0 +1,35 @@
+title: Set Terminal Description for 'tcap' Keyboard Mapping
+---
+body:
+
+Set terminal description to use for {{mode_link('p1050')}} key press reporting.
+
+`term` is a hex encoded terminal description name, like it would be used in the 'TERM' environment variable. (e.g. '787465726d' would load the terminal description 'xterm').
+
+
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: disabled
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### dcs ####
+#### intermediate ####
+name: +
+#### intermediate ####
+name: p
+#### numeric_parameter ####
+name: term
+----
+default: 
+----
+placeholder: Ⓢ
+#### st ####

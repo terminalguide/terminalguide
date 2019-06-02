@@ -2,27 +2,22 @@ title: Set Title Mode
 ---
 body:
 
-TODO: Takes n arguments each processed on the way described below
+Set title modes.
 
-Set title modes
+The title modes are used when setting or retrieving the terminal title via {{seq_link('osc-0')}}, {{seq_link('osc-1')}}, {{seq_link('osc-2')}}, {{seq_link('csi_st-20')}} and  {{seq_link('csi_st-21')}}.
 
 If no parameter is given resets all title modes.
 
-Title mode 0
+<table class="visible-table">
+<tr><th>mode number</th><th>Description</th></tr>
+<tr><td>0</td><td>Title is set encoded in hex.</td></tr>
+<tr><td>1</td><td>Title is read-back encoded in hex.</td></tr>
+<tr><td>2</td><td>title is set in utf-8</td></tr>
+<tr><td>3</td><td>Title is read-back encoded in utf8</td></tr>
+</table>
 
-Title is set encoded in hex.
 
-Title mode 1
-
-Title is read-back encoded in hex.
-
-Title mode 2
-
-title is set in utf-8
-
-Title mode 3
-
-Title is read-back encoded in utf8
+See {{seq_link('csi_ct__q')}} to unset a mode.
 ---
 implnotes:
 
@@ -40,9 +35,14 @@ seq:
 #### csi ####
 #### intermediate ####
 name: >
+#### group_start ####
 #### numeric_parameter ####
 name: mode
 ----
 default: see description
+----
+placeholder: Ⓝ
+#### group_end ####
+optional: yes
 #### final ####
 name: t

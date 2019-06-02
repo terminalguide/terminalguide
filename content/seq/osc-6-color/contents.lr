@@ -1,21 +1,22 @@
-title: OSC TODO 6 Color Alias
+title: Alias: Activate/Deactivate attribute replacement colors.
 ---
 body:
 
-{{snip('placeholder-page')}}
+[ conflicts with {{seq_link('osc-6-current-file')}} ]
 
-conflicts with {{seq_link('osc-6-current-file')}}
+This is an alias for {{seq_link('osc-106')}}.
+
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
 ----
 since: 
 ----
-body: 
+body: {{info}} xterm before 315 only supports this sequence, not {{seq_link('osc-106')}}.
 #### impl ####
 impl: vte
 ----
@@ -31,7 +32,9 @@ seq:
 #### numeric_fixed ####
 val: 6
 #### numeric_parameter ####
-name: p1
+name: text
 ----
 default: 
+----
+placeholder: Ⓢ
 #### st ####

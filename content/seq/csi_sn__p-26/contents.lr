@@ -1,15 +1,19 @@
-title: DSR TODO
+title: DSR 26 (historically: Keyboard Status)
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
 ----
 since: 
 ----
-body: 
+body:
+
+Always replies {{seq('\033[?27;1;0;0n')}}
+
+historically: North American layout, ?, LK201 (VT style keyboard)
 #### impl ####
 impl: vte
 ----
@@ -17,7 +21,11 @@ level: full
 ----
 since: 
 ----
-body: Always replies {{seq('\033[?27;0;0;5n')}}
+body:
+
+Always replies {{seq('\033[?27;0;0;5n')}}
+
+historically: unknown layout, keyboard ready, pcxal (PC style keyboard)
 ---
 seq:
 
@@ -29,4 +37,4 @@ val: 26
 #### final ####
 name: n
 ---
-body: {{snip('placeholder-page')}}
+body: See below for details:

@@ -1,0 +1,26 @@
+title: Select Checksum Extension (XTCHECKSUM)
+---
+body: {{snip('placeholder-page')}}
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: todo
+----
+since: 336
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### numeric_parameter ####
+name: flags
+----
+default: 
+#### intermediate ####
+name: #
+#### final ####
+name: y

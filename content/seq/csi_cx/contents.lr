@@ -69,6 +69,8 @@ Erase `amount` cells to the right starting from (including) the current cursor p
 
 If `amount` is 0, adjust it to 1.
 
+Protected cells (see {{seq_link('a_esc_cv')}} and {{seq_link('csi_sq_t_quote')}}) are not erased by this sequence.
+
 If the erase splits a multi cell character that character is erased by replacing it with spaces.
 
 {{snip('unset-pending-wrap')}}
@@ -76,5 +78,3 @@ If the erase splits a multi cell character that character is erased by replacing
 All erased space is colored according to the current [SGR state](/attr).
 
 Does not change the cursor position.
-
-The erased space is protected with regard to selective erase.

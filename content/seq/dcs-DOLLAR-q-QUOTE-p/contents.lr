@@ -1,0 +1,33 @@
+title: Query VT-xxx Conformance Level and C1 Encoding
+---
+body:
+
+Query state settable with {{seq_link('csi_sp_t_quote')}}.
+
+The terminal replies with 
+
+{{seq('\033P1$r')}}{{seq_param('level')}}{{seq(';')}}{{seq_param('7bit')}}{{seq('\033\\')}}
+
+Where `level` is the vt level plus 60 (i.e. 64 for vt level 4) and `7bit` is set to 1 if 7bit encoding of C1 controls is selected.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### dcs ####
+#### intermediate ####
+name: $
+#### intermediate ####
+name: q
+#### numeric_fixed ####
+val: "p
+#### st ####

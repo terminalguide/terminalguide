@@ -1,13 +1,17 @@
-title: OSC TODO 117
+title: Reset Selection Background Color
 ---
-body: {{snip('placeholder-page')}}
+body:
+
+Reset selection background color
+
+This reverts changes made with {{seq_link('osc-17')}}.
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
 ----
 since: 
 ----
@@ -26,8 +30,4 @@ seq:
 #### osc ####
 #### numeric_fixed ####
 val: 117
-#### numeric_parameter ####
-name: p1
-----
-default: 
 #### st ####

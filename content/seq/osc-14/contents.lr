@@ -1,14 +1,12 @@
-title: Change/Read Special Pointer Mask Color
+title: Change/Read Pointer Mask Color
 ---
 body:
 
-Change/Read special pointer mask color.
+Change/Read pointer mask color.
 
-Use `text` as color description to set the special pointer mask color.
+Use `text` as color description to set the pointer mask color. This color is used for the contour of the mouse pointer.
 
-TODO document effect of {{mode_link('p5')}}
-
-TODO document color formats.
+For supported color formats see {{seq_link('osc-4')}}.
 ---
 implnotes:
 
@@ -21,9 +19,9 @@ since:
 ----
 body:
 
-xterm supports falling through into {{seq_link('osc-15')}} when given additional ';' separated colors.
-
-This only works when themed cursors are deactivated (https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=466704#135)
+{{info}} If mode {{mode_link('p5')}} is active this sequence and {{seq_link('osc-13')}} switch their meaning. The cursor colors are visually switched when changing {{mode_link('p5')}}, while the values readable via sequences stays the same.
+{{info}} xterm supports falling through into {{seq_link('osc-15')}} when given additional ';' separated colors.
+{{info}} This only works when themed cursors are deactivated (https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=466704#135)
 #### impl ####
 impl: urxvt
 ----
@@ -42,4 +40,6 @@ val: 14
 name: text
 ----
 default: 
+----
+placeholder: Ⓢ
 #### st ####

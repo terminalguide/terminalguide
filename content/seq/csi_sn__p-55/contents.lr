@@ -1,15 +1,15 @@
-title: DSR TODO
+title: Request DEC Locator Status
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
 ----
 since: 
 ----
-body: 
+body: Replies with {{seq('\033[?50n')}} when compiled with DEC Locator support, otherwise replies with {{seq('\033[?53n')}}
 #### impl ####
 impl: vte
 ----
@@ -17,7 +17,11 @@ level: full
 ----
 since: 
 ----
-body: Always replies {{seq('\033[?53n')}}
+body:
+
+Always replies {{seq('\033[?53n')}}
+
+No DEC Locator support.
 ---
 seq:
 
@@ -29,4 +33,8 @@ val: 55
 #### final ####
 name: n
 ---
-body: {{snip('placeholder-page')}}
+body:
+
+Request Locator Status
+
+See below for details:

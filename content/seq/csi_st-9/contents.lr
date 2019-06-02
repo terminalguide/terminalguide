@@ -1,0 +1,62 @@
+title: Maximize Terminal Window
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: disabled
+----
+since: 
+----
+body: 
+#### impl ####
+impl: urxvt
+----
+level: ignored
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: ignored
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
+----
+level: disabled
+----
+since: 
+----
+body: {{miss}} `cmd` = 2 and `cmd` = 3 are not supported.
+---
+seq:
+
+#### csi ####
+#### numeric_fixed ####
+val: 9
+#### numeric_parameter ####
+name: cmd
+----
+default: 0
+----
+placeholder: Ⓝ
+#### final ####
+name: t
+---
+body:
+
+Maximize terminal window.
+
+<table class="visible-table">
+<tr><th>cmd</th><th>action</th></tr>
+<tr><td>0</td><td>restore window to previous size</td></tr>
+<tr><td>1</td><td>maximize</td></tr>
+<tr><td>2</td><td>maximize vertically only</td></tr>
+<tr><td>3</td><td>maximize horizontally only</td></tr>
+</table>

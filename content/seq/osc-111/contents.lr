@@ -1,10 +1,10 @@
-title: Reset Special Text Background Color
+title: Reset Special Text Default Background Color
 ---
 body:
 
-Reset the special color for text background.
+Reset the special color for text default background.
 
-See {{seq_link('osc-11')}}
+This reverts changes made with {{seq_link('osc-11')}}.
 ---
 implnotes:
 

@@ -1,0 +1,37 @@
+title: Query Left and Right Margins
+---
+body:
+
+Query left and right margins.
+
+The terminal replies with 
+
+{{seq('\033P1$r')}}{{seq_param('left')}}{{seq(';')}}{{seq_param('right')}}{{seq('\033\\')}}
+
+Where `left` is the left-most column of the [current scroll region](/scrolling-region)  and `right` is the right-most column of the [current scroll region](/scrolling-region) .
+
+This sequence replies with the complete terminal size when {{mode_link('p69')}} mode is not set.
+
+See also {{seq_link('csi_ss_2param')}}.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### dcs ####
+#### intermediate ####
+name: $
+#### intermediate ####
+name: q
+#### numeric_fixed ####
+val: s
+#### st ####

@@ -1,11 +1,11 @@
-title: DSR TODO
+title: DSR 13 (historically: Printer Status)
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
 ----
 since: 
 ----

@@ -1,0 +1,65 @@
+title: Push Terminal Title
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: {{info}} xterm has no limit for the stack size.
+#### impl ####
+impl: urxvt
+----
+level: ignored
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: ignored
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
+----
+level: partial
+----
+since: 
+----
+body:
+
+{{info}} The stack has a size limit of 8 items.
+{{miss}} vte does not support the icon title and just ignores the sequence if `cmd` = 1.
+---
+seq:
+
+#### csi ####
+#### numeric_fixed ####
+val: 22
+#### numeric_parameter ####
+name: cmd
+----
+default: 0
+----
+placeholder: Ⓝ
+#### final ####
+name: t
+---
+body:
+
+Push terminal title (or icon name) to an internal stack for later restore.
+
+See {{seq_link('csi_st-23')}} for the corresponding pop operation.
+
+If `cmd` = 0, `cmd` = 2 or the stack is empty saves the terminal title to the stack, otherwise duplicates the title of the top-most stack entry.
+
+If `cmd` = 0, `cmd` = 1 or the stack is empty saves the terminal icon name to the stack, otherwise duplicates the icon title of the top-most stack entry.
+
+See also {{seq_link('osc-0')}}, {{seq_link('osc-1')}} and {{seq_link('osc-2')}} for details of the titles.

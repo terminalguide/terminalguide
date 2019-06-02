@@ -1,0 +1,83 @@
+title: Restore Cursor Information Report
+---
+body:
+
+Restore Cursor Information Report.
+
+Restores the Information reported by {{seq_link('csi_sw_t_dollar-1')}}. The format is the same but using a {{seq('t')}} instead of a {{seq('u')}} as the 5th character.
+
+Setting the pending wrap bit when positioning the cursor to a column other than the right most is possible.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 334
+----
+body: 
+---
+seq:
+
+#### dcs ####
+#### numeric_fixed ####
+val: 1
+#### intermediate ####
+name: $
+#### final ####
+name: t
+#### numeric_parameter ####
+name: row
+----
+default: 
+----
+placeholder: Ⓝ
+#### numeric_parameter ####
+name: column
+----
+default: 
+----
+placeholder: Ⓝ
+#### numeric_fixed ####
+val: 1
+#### numeric_parameter ####
+name: attributes
+----
+default: 
+----
+placeholder: Ⓒ
+#### numeric_parameter ####
+name: protection
+----
+default: 
+----
+placeholder: Ⓒ
+#### numeric_parameter ####
+name: flags
+----
+default: 
+----
+placeholder: Ⓒ
+#### numeric_parameter ####
+name: gl
+----
+default: 
+----
+placeholder: Ⓝ
+#### numeric_parameter ####
+name: gr
+----
+default: 
+----
+placeholder: Ⓝ
+#### numeric_fixed ####
+val: O
+#### numeric_parameter ####
+name: gsets
+----
+default: 
+----
+placeholder: Ⓢ
+#### st ####

@@ -1,0 +1,82 @@
+title: Reverse Attributes in Area (DECRARA)
+---
+body:
+
+Toggle given attributes for each cell of the specified area.
+
+If {{mode_link('p6')}} mode is set the points are interpreted relative to the top left of the [current scroll region](/scrolling-region). Otherwise it's relative to the top left of the terminal.
+
+`bottomrow` and `rightcolumn` default to their bottom-most/right-most valid values.
+
+If {{mode_link('p6')}} mode is set and the bottom-right point exceeds the [current scroll region](/scrolling-region) it's clipped to the [current scroll region](/scrolling-region). Otherwise the point is clipped to be within the full terminal.
+
+If `toprow` > `bottomrow` or `leftcolumn` > `rightcolumn` this sequence does nothing.
+
+If {{seq_link('csi_sx_t_star')}} is set to rectangle (non default) the two points are interpreted as a rectangle. Otherwise:
+* If `toprow` = `bottomrow`:
+ * the specified area is `leftcolumn` (included) to `rightcolum` (included) on line `toprow`
+* Otherwise:
+ * the specified area is on `toprow` from `leftcolumn` (included) to the right-most column of [current scroll region](/scrolling-region). All lines between `toprow` (excluded) and `bottomrow` (excluded). And on `bottomrow` the left-most column of the [current scroll region](/scrolling-region) to `rightcolumn` (included).
+
+For each cell in the specified area and each value of `cmd` the attribute corresponding to `cmd` is toggled:
+
+<table class="visible-table">
+<tr><th>`cmd`</th><th>attribute</th></tr>
+<tr><td>1</td><td>bold</td></tr>
+<tr><td>4</td><td>underline</td></tr>
+<tr><td>5</td><td>blink</td></tr>
+<tr><td>7</td><td>inverse</td></tr>
+<tr><td>8</td><td>invisible</td></tr>
+</table>
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### numeric_parameter ####
+name: toprow
+----
+default: 0
+----
+placeholder: Ⓝ
+#### numeric_parameter ####
+name: leftcolumn
+----
+default: 0
+----
+placeholder: Ⓝ
+#### numeric_parameter ####
+name: bottomrow
+----
+default: see description
+----
+placeholder: Ⓝ
+#### numeric_parameter ####
+name: rightcolumn
+----
+default: see description
+----
+placeholder: Ⓝ
+#### group_start ####
+#### numeric_parameter ####
+name: cmd
+----
+default: 
+----
+placeholder: Ⓝ
+#### group_end ####
+optional: 
+#### intermediate ####
+name: $
+#### final ####
+name: t

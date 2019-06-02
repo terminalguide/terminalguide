@@ -1,0 +1,33 @@
+body:
+
+Reports the height of the terminal, if it's not smaller than 25 lines.
+
+The terminal responds with:
+
+{{seq('\033P1$r')}}{{seq_param('size')}}{{seq('t\033\\')}}
+
+where `size` is max(25, the size in lines of the terminal) - 1.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### dcs ####
+#### intermediate ####
+name: $
+#### intermediate ####
+name: q
+#### numeric_fixed ####
+val: t
+#### st ####
+---
+title: Report Lines (if not smaller than 25)

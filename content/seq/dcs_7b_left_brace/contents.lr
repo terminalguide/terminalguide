@@ -1,0 +1,33 @@
+title: DEC Font Download (DECDLD)
+---
+body: Not supported by modern terminals.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: ignored
+----
+since: 
+----
+body: {{info}} The xterm source contains disabled and unfinished code for interpreting this sequence.
+---
+seq:
+
+#### dcs ####
+#### numeric_parameter ####
+name: initialparameters
+----
+default: 
+----
+placeholder: Ⓢ
+#### final ####
+name: {
+#### numeric_parameter ####
+name: secondparameters
+----
+default: 
+----
+placeholder: Ⓢ
+#### st ####

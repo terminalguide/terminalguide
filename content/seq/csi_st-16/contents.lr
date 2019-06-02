@@ -1,0 +1,54 @@
+title: Report Cell Size in Pixels
+---
+body:
+
+Report the cell size in pixels.
+
+The terminal replies:
+
+{{seq('\033[6;')}}{{seq_param('heightpx')}}{{seq(';')}}{{seq_param('widthpx')}}{{seq('t')}}
+
+Where `heightpx` and `widthpx` are the size of one cell in pixels.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 
+----
+body: 
+#### impl ####
+impl: urxvt
+----
+level: ignored
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: ignored
+----
+since: 
+----
+body: 
+#### impl ####
+impl: vte
+----
+level: ignored
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### numeric_fixed ####
+val: 16
+#### final ####
+name: t

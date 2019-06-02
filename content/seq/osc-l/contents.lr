@@ -16,10 +16,12 @@ body:
 seq:
 
 #### osc ####
-#### numeric_fixed ####
-val: l
+#### intermediate ####
+name: l
 #### numeric_parameter ####
-name: p1
+name: text
 ----
 default: 
+----
+placeholder: Ⓢ
 #### st ####
