@@ -15,7 +15,7 @@ level: partial
 ----
 since: 
 ----
-body: xterm displays a single underline.
+body: {{miss}} xterm displays a single underline. With large font sizes the underline has double thickness.
 #### impl ####
 impl: konsole
 ----
