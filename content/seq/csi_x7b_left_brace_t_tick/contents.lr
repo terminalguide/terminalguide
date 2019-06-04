@@ -1,13 +1,24 @@
-title: DEC Locator ???
+title: DEC Locator Select Events
 ---
-body: {{snip('placeholder-page')}}
+body:
+
+Select which events are reported by the DEC locator feature.
+
+
+See also {{seq_link('csi_sz_t_tick')}}.
+
+If `cmd` = 0 deactivates sending events. Mouse position can still be polled by {{seq_link('csi_x7c_pipe_t_tick')}}.
+
+If `cmd` = 1 activate reporting of button press events. If `cmd` = 2 deactivate reporting of button press events. 
+
+If `cmd` = 3 activate reporting of button release events. If `cmd` = 4 deactivate reporting of button release events. 
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: disabled
 ----
 since: 
 ----
@@ -16,22 +27,15 @@ body:
 seq:
 
 #### csi ####
+#### group_start ####
 #### numeric_parameter ####
-name: p1
+name: cmd
 ----
-default: 
-#### numeric_parameter ####
-name: p2
+default: 0
 ----
-default: 
-#### numeric_parameter ####
-name: p3
-----
-default: 
-#### numeric_parameter ####
-name: p4
-----
-default: 
+placeholder: Ⓝ
+#### group_end ####
+optional: 
 #### intermediate ####
 name: '
 #### final ####

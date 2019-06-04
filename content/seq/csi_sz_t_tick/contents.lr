@@ -1,13 +1,53 @@
-title: DEC Locator ???
+title: DEC Locator Activate/Deactivate
 ---
-body: {{snip('placeholder-page')}}
+body:
+
+Enable or disable the DEC locator feature.
+
+The DEC locator feature is a mouse tracking mode. If `cmd` = 1 or `cmd` = 2 it is activated. Otherwise it's disabled. If `pixel` = 1 the reports will be send in pixels otherwise in cells.
+
+If `cmd` = 2 the locator will be enabled in single shot mode. In this mode it's automatically disabled after one report. Otherwise enable the locator until it's disabled by a later use of this sequence (or terminal reset).
+
+On pointer events the terminal sends the following:
+
+{{seq('\033[')}}{{seq_param('event')}}{{seq(';')}}{{seq_param('state')}}{{seq(';')}}{{seq_param('y')}}{{seq(';')}}{{seq_param('x')}}{{seq('&w')}}
+
+Where `event` is either a 0, 1, 10 or one of the following:
+<table class="visible-table">
+<tr><th><code>event</code></th><th>Meaning</th></tr>
+<tr><td>0</td><td>pointer is outside the terminal (either on {{seq_link('csi_x7c_pipe_t_tick')}}, {{seq_link('csi_sw_t_tick')}} or a mouse button event</td></tr>
+<tr><td>1</td><td>on {{seq_link('csi_x7c_pipe_t_tick')}} with pointer inside the terminal and reporting enabled</td></tr>
+<tr><td>2</td><td>left button pressed</td></tr>
+<tr><td>3</td><td>left button released</td></tr>
+<tr><td>4</td><td>middle button pressed</td></tr>
+<tr><td>5</td><td>middle button released</td></tr>
+<tr><td>6</td><td>right button pressed</td></tr>
+<tr><td>7</td><td>right button released</td></tr>
+<tr><td>9</td><td>scroll wheel up</td></tr>
+<tr><td>11</td><td>scroll wheel down</td></tr>
+<tr><td>10</td><td>pointer left watch rectangle or pointer entered terminal (while watching for pointer enter)</td><tr><td>16</td><td>button 8 pressed</td></tr>
+<tr><td>17</td><td>button 8 released</td></tr>
+<tr><td>18</td><td>button 9 pressed</td></tr>
+<tr><td>18</td><td>button 9 released</td></tr>
+</tr>
+</table>
+
+and `state` encodes the pressed buttons after the event (e.g. on release of the last button it is 0, on press of the left button it is 4). The left button is bit 2, the middle button is bit 1 and the right button is bit 0. Other buttons show up in `state` as bit (button number - 1) but only if that button was pressed/release in this event.
+
+`x` and `y` are the pointer coordinates. If pixel mode was selected in pixels otherwise in cells.
+
+When a pointer press or release event is reported while watching the pointer the DEC locator is deactivated.
+
+See also {{seq_link('csi_sw_t_tick')}}, {{seq_link('csi_x7b_left_brace_t_tick')}} and {{seq_link('csi_x7c_pipe_t_tick')}}.
+
+{{snip('incomplete')}}
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: disabled
 ----
 since: 
 ----
@@ -17,13 +57,17 @@ seq:
 
 #### csi ####
 #### numeric_parameter ####
-name: p1
+name: cmd
 ----
-default: 
+default: 0
+----
+placeholder: Ⓝ
 #### numeric_parameter ####
-name: p2
+name: pixel
 ----
-default: 
+default: 0
+----
+placeholder: Ⓝ
 #### intermediate ####
 name: '
 #### final ####

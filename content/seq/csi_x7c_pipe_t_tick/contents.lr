@@ -1,13 +1,29 @@
-title: DEC Locator ???
+title: DEC Locator Report Current Position
 ---
-body: {{snip('placeholder-page')}}
+body:
+
+Report the current location of the pointer using the DEC locator feature.
+
+If `cmd` < 2 and the terminal is watching the pointer, it disables the locator, disabled all locator events and just sends a report of type 0.
+
+If `cmd` < 2 and the mouse reporting mode is DEC locator:
+
+The terminal replies:
+
+{{seq('\033[0&w')}}
+
+if the DEC locator is not the currently active mouse tracking mode or the pointer is outside the terminal.
+
+Otherwise it reports the pointer position using a report of event type 1.
+
+If one-show activation is used after either reply the locator is disabled.
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: disabled
 ----
 since: 
 ----
@@ -17,9 +33,11 @@ seq:
 
 #### csi ####
 #### numeric_parameter ####
-name: p1
+name: cmd
 ----
-default: 
+default: 0
+----
+placeholder: Ⓝ
 #### intermediate ####
 name: '
 #### final ####

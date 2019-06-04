@@ -1,13 +1,37 @@
-title: DEC Locator ???
+title: DEC Locator Watch Pointer Leave
 ---
-body: {{snip('placeholder-page')}}
+body:
+
+DEC locator watch pointer location.
+
+If the current mouse reporting mode if not DEC locator this sequence does nothing.
+
+If the pointer is outside of the terminal window:
+* and all parameters are 0:
+ * Watch for the pointer to reenter the window. If the DEC locator is still active when that happens reports an event of type 10.
+* and some parameter is not 0:
+ * Immediately reports an event of type 0.
+
+Otherwise:
+
+Adjust all parameters that are 0 to the current pointer position (i.e. left and right to the current x coordinate of the pointer and top and bottom to the current y coordinate of the pointer).
+
+If `top` > `bottom` swap the values of `top` and `bottom`. If `left` > `right` swap the values of `left` and `right`.
+
+If the pointer is outside the rectangle described by `top`, `left`, `bottom` and `right` (all inclusive) the terminal reports an event of type 10.
+
+Otherwise the terminal watches the pointer and reports and an event of type 10 when the pointer leaves the rectangle.
+
+All events reported because of this sequence count for the single shot mode.
+
+See {{seq_link('csi_sz_t_tick')}} for details about the possible reports.
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: disabled
 ----
 since: 
 ----
@@ -17,21 +41,29 @@ seq:
 
 #### csi ####
 #### numeric_parameter ####
-name: p1
+name: top
 ----
-default: 
+default: 0
+----
+placeholder: Ⓝ
 #### numeric_parameter ####
-name: p2
+name: left
 ----
-default: 
+default: 0
+----
+placeholder: Ⓝ
 #### numeric_parameter ####
-name: p3
+name: bottom
 ----
-default: 
+default: 0
+----
+placeholder: Ⓝ
 #### numeric_parameter ####
-name: p4
+name: right
 ----
-default: 
+default: 0
+----
+placeholder: Ⓝ
 #### intermediate ####
 name: '
 #### final ####
