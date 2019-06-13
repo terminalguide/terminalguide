@@ -46,7 +46,7 @@
         {% endfor %}
     {% endif %}
     {% if blk._flowblock == 'numeric_parameter' and blk.default %}
-        {{ blk.name }} = {{ blk.default }} <br>
+        <code>{{ blk.name }}</code> = {{ blk.default }} <br>
     {% endif %}
     {% endfor %}
   </div>
