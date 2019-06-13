@@ -123,3 +123,13 @@ table.visible-table thead th {
 table.visible-table.rowspan tr:nth-child(even) {
     background: #FFFFFF;
 }
+
+table.light-table td, table.light-table th {
+    vertical-align: top;
+    border-top: rgba(0, 0, 0, 0.1) 1px dashed;
+}
+
+table.light-table td:first-child {
+    white-space: nowrap;
+    padding-right: 0.5em;
+}
