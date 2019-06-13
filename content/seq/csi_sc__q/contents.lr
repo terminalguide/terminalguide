@@ -86,7 +86,7 @@ level: unparsable
 ----
 since: 
 ----
-body: 
+body: {{info}} Properly ignored in 5.x
 ---
 seq:
 

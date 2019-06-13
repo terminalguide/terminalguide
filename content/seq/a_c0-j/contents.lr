@@ -46,7 +46,7 @@ body:
 #### impl ####
 impl: linuxvc
 ----
-level: todo
+level: full
 ----
 since: 
 ----
@@ -57,4 +57,4 @@ seq:
 #### c0 ####
 name: LF
 ----
-hex: A0
+hex: 0A

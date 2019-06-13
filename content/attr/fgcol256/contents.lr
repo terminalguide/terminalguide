@@ -66,8 +66,12 @@ body: xterm supports forms 1 and 3.
 #### impl ####
 impl: linuxvc
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
-body: 
+body:
+
+{{info}} linuxvc only supports form 3.
+{{info}} linuxvc uses a hardcoded palette. (even colors 0-15 need not match named colors)
+{{miss}} linuxvc approximates from a 8 or 16 color palette, by extracting a hue and brightness and selecting one of the 8 named colors and an intensity from that. See {{sgr_link('2')}} and {{sgr_link('fgcol8bright')}} for how intensity is rendered depending on configuration.

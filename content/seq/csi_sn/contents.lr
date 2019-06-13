@@ -37,7 +37,7 @@ body:
 #### impl ####
 impl: linuxvc
 ----
-level: todo
+level: full
 ----
 since: 
 ----
@@ -50,5 +50,7 @@ seq:
 name: cmd
 ----
 default: none
+----
+placeholder: Ⓝ
 #### final ####
 name: n

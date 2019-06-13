@@ -15,6 +15,14 @@ vte supports forms 1 and 4.
 Form 2 is supported when the color space id is empty (defaulted). Any digit in the color space id prevents this form from working (subparameters are still consumed)
 
 vte uses a reduced color resolution of (r4,g5,b4) internally.
+#### impl ####
+impl: linuxvc
+----
+level: ignored
+----
+since: 
+----
+body: {{miss}} Subparameters make the whole sequence ignored.
 ---
 number: 58:2:...
 ---

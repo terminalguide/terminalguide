@@ -50,11 +50,14 @@ body: Vte moves the cursor to the top left of the [current scroll region](/scrol
 #### impl ####
 impl: linuxvc
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
-body: 
+body:
+
+{{miss}} See linked sequences for differences.
+{{miss}} Also see {{seq_link('csi_ca')}}, {{seq_link('csi_cb')}}, {{seq_link('csi_cc')}} and {{seq_link('csi_cd')}}  for additional differences.
 ---
 number: ?6
 ---

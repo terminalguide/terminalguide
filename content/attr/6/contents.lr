@@ -42,6 +42,14 @@ body:
 mintty: 
 "Rapidly blink"
 https://github.com/mintty/mintty/wiki/Tips#text-attributes-and-rendering
+#### impl ####
+impl: linuxvc
+----
+level: ignored
+----
+since: 
+----
+body: 
 ---
 body: Alias for {{sgr_link('5')}}
 ---

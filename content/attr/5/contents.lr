@@ -42,11 +42,11 @@ body:
 #### impl ####
 impl: linuxvc
 ----
-level: todo
+level: unparsable
 ----
 since: 
 ----
-body: 
+body: {{miss}} When using the fbcon driver and a 256 glyph font this is actually bright background. When using the fbcon driver and a 512 glyph font this attribute does nothing. With the vgacon driver this attribute is either bright or blink (TODO depending on what?).
 ---
 number: 5
 ---

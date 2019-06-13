@@ -39,11 +39,11 @@ body: interacts with dim by using a dim background when enabled.
 #### impl ####
 impl: linuxvc
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
-body: 
+body: {{miss}} brightness is not swapped.
 ---
 number: 7
 ---

@@ -40,7 +40,7 @@ body: {{miss}} Does not reset pending wrap state.
 #### impl ####
 impl: linuxvc
 ----
-level: todo
+level: full
 ----
 since: 
 ----

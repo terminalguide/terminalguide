@@ -1,0 +1,1 @@
+Does not erase split multi cell characters. (linuxvc uses 2 replacement characters for multi cell characters)

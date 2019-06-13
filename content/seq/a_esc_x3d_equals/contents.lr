@@ -45,7 +45,7 @@ body: {{miss}} Only changes num pad divide, multiply, minus, plus and enter.
 #### impl ####
 impl: linuxvc
 ----
-level: todo
+level: full
 ----
 since: 
 ----

@@ -42,11 +42,21 @@ body:
 #### impl ####
 impl: linuxvc
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
-body: 
+body:
+
+{{info}} Does not reset its palette variant.
+{{miss}} Does not clear the scrollback buffer.
+{{info}} Sets G1 to DEC graphics.
+{{info}} Resets utf-8 mode to default.
+{{info}} Disables display of control characters.
+{{info}} Unsets {{sgr_link('11_linux')}} and {{sgr_link('12_linux')}}.
+{{info}} Resets linux pointer style.
+{{info}} Resets cursor blink interval.
+{{info}} Resets bell pitch and duration.
 ---
 seq:
 

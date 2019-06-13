@@ -37,11 +37,11 @@ body:
 #### impl ####
 impl: linuxvc
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
-body: 
+body: {{miss}} Uses current cursor column modulo 256 as tab position to mark.
 ---
 seq:
 

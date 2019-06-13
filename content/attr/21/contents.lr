@@ -43,11 +43,11 @@ body: disables bold
 #### impl ####
 impl: linuxvc
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
-body: 
+body: {{miss}} this is just an alias for {{sgr_link('4')}}.
 ---
 number: 21
 ---

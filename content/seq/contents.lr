@@ -36,7 +36,7 @@ Many applications still use DEC_Spec_Graphic ('0') instead of the corresponding 
 <tr><td>R</td><td>French</td></tr>
 <tr><td>f</td><td>French2</td></tr>
 <tr><td>Q</td><td>French_Canadian</td></tr>
-<tr><td>K</td><td>German</td></tr>
+<tr><td>K</td><td>German (linuxvc: user defined mapping)</td></tr>
 <tr><td>Y</td><td>Italian</td></tr>
 <tr><td>E</td><td>Norwegian_Danish2</td></tr>
 <tr><td>6</td><td>Norwegian_Danish3</td></tr>
@@ -57,6 +57,7 @@ Many applications still use DEC_Spec_Graphic ('0') instead of the corresponding 
 <tr><td>"4</td><td>DEC Hebrew Supplement</td></tr>
 <tr><td>"></td><td>Greek</td></tr>
 <tr><td>"?</td><td>DEC Greek Supplement</td></tr>
+<tr><td>U</td><td>IBM code page 437 (linuxvc only)</td></tr>
 </table>
 
 <p>Where rest96 is:</p>

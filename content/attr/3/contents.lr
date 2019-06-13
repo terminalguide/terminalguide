@@ -37,11 +37,14 @@ body: {{info}} Line drawing characters do not support italic font.
 #### impl ####
 impl: linuxvc
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
-body: 
+body:
+
+{{miss}} Italic is either ignored or a replacement color is used.
+{{miss}} The replacement color has priority over the selected foreground color.
 ---
 number: 3
 ---

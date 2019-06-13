@@ -37,7 +37,7 @@ body: When invoked from auto wrap it does not set the background of the newly ad
 #### impl ####
 impl: linuxvc
 ----
-level: todo
+level: full
 ----
 since: 
 ----
@@ -64,4 +64,4 @@ If the cursor is inside the scrolling region:
 
 {{snip('unset-pending-wrap')}}
 
-TODO: similar to LF / VMOT
+See also: {{seq_link('a_c0-j')}}, {{seq_link('a_c0-k')}} and {{seq_link('a_c0-l')}}.

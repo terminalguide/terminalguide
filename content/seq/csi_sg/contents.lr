@@ -52,11 +52,11 @@ body:
 #### impl ####
 impl: linuxvc
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
-body: 
+body: {{miss}} With `cmd´ = 0, uses current cursor column modulo 256 as tab position to erase.
 ---
 seq:
 

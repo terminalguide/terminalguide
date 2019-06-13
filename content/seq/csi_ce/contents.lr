@@ -37,11 +37,11 @@ body:
 #### impl ####
 impl: linuxvc
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
-body: 
+body: {{miss}} If {{mode_link('p6')}} is active the cursor is constrained to the [current scroll region](/scrolling-region). Otherwise the scroll region is ignored.
 ---
 seq:
 

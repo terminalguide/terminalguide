@@ -37,11 +37,15 @@ body:
 #### impl ####
 impl: linuxvc
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
-body: 
+body:
+
+{{info}} linuxvc uses a unified intensity model where faint uses intensity 0. Intensity is shared with {{sgr_link('1')}} and {{sgr_link('fgcol8bright')}}. Reset value for intensity is 1.
+{{info}} faint colors always render as grey (or as the color setup via {{seq_link('csi_x5D_square_bracket')}}).
+{{miss}} The default setting of faint only works with vgacon when using a 256 glyph font. When using a 512 glyph font with vgacon the default setup for faint renders as black.
 ---
 number: 2
 ---

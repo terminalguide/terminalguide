@@ -59,11 +59,14 @@ body:
 #### impl ####
 impl: linuxvc
 ----
-level: todo
+level: disabled
 ----
 since: 
 ----
-body: 
+body:
+
+{{info}} needs a user space mouse daemon with support for `TIOCL_SELMOUSEREPORT`.
+{{miss}} Only supports the basic 3 buttons and modifiers shift and alt due to a limitation in the api for the user space mouse daemon.
 ---
 number: ?1000
 ---

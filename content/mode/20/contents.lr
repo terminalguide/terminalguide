@@ -40,11 +40,11 @@ body: Only translates communication from terminal to application. Application to
 #### impl ####
 impl: linuxvc
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
-body: 
+body: {{miss}} Clipboard paste is not affected.
 ---
 number: 20
 ---

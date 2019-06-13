@@ -1,0 +1,22 @@
+title: Set IBM Code Page 437 Translation with Forced 8th bit
+---
+implnotes:
+
+#### impl ####
+impl: linuxvc
+----
+level: full
+----
+since: 
+----
+body: {{info}} Enables {{mode_link('3')}}.
+---
+number: 12
+---
+resetnumber: 10
+---
+body:
+
+Use IBM Code Page 437 mapping for characters. If characters are < 128 also add 128 to the character code.
+
+Printed characters are translated using IBM Code Page 437 with forced on 8th bit.

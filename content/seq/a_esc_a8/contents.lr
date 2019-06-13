@@ -55,11 +55,16 @@ body:
 #### impl ####
 impl: linuxvc
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
-body: 
+body:
+
+{{miss}} the current cursor position is not restored relative to the origin set via {{mode_link('p6')}}.
+{{miss}} Not restored:
+* the state of mode {{mode_link('p6')}}
+* pending wrap state (always unset after restore)
 ---
 seq:
 

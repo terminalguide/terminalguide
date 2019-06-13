@@ -45,11 +45,14 @@ body:
 #### impl ####
 impl: linuxvc
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
-body: 
+body:
+
+{{miss}} If any parameter has sub-parameters the whole sequence will be ignored.
+{{miss}} `attribute` = 0 does not unset {{sgr_link('11_linux')}} and {{sgr_link('12_linux')}}.
 ---
 seq:
 

@@ -46,11 +46,14 @@ body:
 #### impl ####
 impl: linuxvc
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
-body: 
+body:
+
+{{miss}} Does not set the cursor position.
+{{miss}} Does not reset margins.
 ---
 seq:
 

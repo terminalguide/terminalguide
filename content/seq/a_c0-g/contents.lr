@@ -43,7 +43,7 @@ body: audible beep, terminals that use vte can add additional behavior.
 #### impl ####
 impl: linuxvc
 ----
-level: todo
+level: full
 ----
 since: 
 ----

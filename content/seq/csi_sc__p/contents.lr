@@ -1,0 +1,85 @@
+title: Linux Cursor Style
+---
+body:
+
+Select linux cursor style.
+
+Where `shape` = `size` | `flags`.
+
+<table class="visible-table">
+<tr><th><code>size</code></th><th>meaning</th></tr>
+<tr><td>0</td><td>default<br>depending on driver: off, underline or block</td></tr>
+<tr><td>1</td><td>none</td></tr>
+<tr><td>2</td><td>underline</td></tr>
+<tr><td>3</td><td>lower third</td></tr>
+<tr><td>4</td><td>lower half</td></tr>
+<tr><td>5</td><td>two thirds</td></tr>
+<tr><td>6</td><td>block</td></tr>
+</table>
+
+<table class="visible-table">
+<tr><th><code>flags</code></th><th>meaning</th></tr>
+<tr><td>16</td><td>enable foreground and background change<br>When enabled the cursor changes the shown attributes of the cell it is on.<br>Some drivers force <code>size</code> = 1 (none) internally if this is set.</td></tr>
+<tr><td>32</td><td>ensure orginial background and cursor background differ.<br>If the original and cursor background would be identical invert all background color channels (but not brightness).</td></tr>
+<tr><td>64</td><td>ensure cursor foreground and background differ.<br>If the cursor background and foreground would be identical invert all foreground color channels (but not brightness).</td></tr>
+</table>
+
+Together `xor` and `or` define changes to foreground and background of the cell where the cursor is shown when `flags` has that feature enabled. Each bit in both parameters describes one aspect to change. The effective change depends on that bit in both.
+
+<table class="visible-table">
+<tr><th>bit in <code>or</code></th><th>bit in <code>xor</code></th><th>change</th></tr>
+<tr><td>0</td><td>0</td><td>no change</td></tr>
+<tr><td>1</td><td>0</td><td>enable</td></tr>
+<tr><td>0</td><td>1</td><td>toggle</td></tr>
+<tr><td>1</td><td>1</td><td>disable</td></tr>
+</table>
+
+The meanings of each bit are:
+<table class="visible-table">
+<tr><th>bit value</th><th>meaning</th></tr>
+<tr><td>1</td><td>foreground blue channel</td></tr>
+<tr><td>2</td><td>foreground green channel</td></tr>
+<tr><td>4</td><td>foreground red channel</td></tr>
+<tr><td>8</td><td>foreground brightness channel</td></tr>
+<tr><td>16</td><td>background blue channel</td></tr>
+<tr><td>32</td><td>background green channel</td></tr>
+<tr><td>64</td><td>background red channel</td></tr>
+<tr><td>128</td><td>background brightness</td></tr>
+</table>
+---
+implnotes:
+
+#### impl ####
+impl: linuxvc
+----
+level: full
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### intermediate ####
+name: ?
+#### numeric_parameter ####
+name: shape
+----
+default: 0
+----
+placeholder: Ⓝ
+#### numeric_parameter ####
+name: xor
+----
+default: 0
+----
+placeholder: Ⓝ
+#### numeric_parameter ####
+name: or
+----
+default: 0
+----
+placeholder: Ⓝ
+#### final ####
+name: c

@@ -1,13 +1,17 @@
-title: TODO Linux mouse pointer
+title: Linux Mouse Pointer Style
 ---
-body: {{snip('placeholder-page')}}
+body:
+
+Select linux mouse pointer style.
+
+The interpretation of `attr_xor` is similar to {{seq_link('csi_sc__p')}} but only allows to toggle each aspect. In addition `char_xor` allows to toggle bits in the glyph index into the terminal's font.
 ---
 implnotes:
 
 #### impl ####
 impl: linuxvc
 ----
-level: todo
+level: full
 ----
 since: 
 ----
@@ -22,9 +26,13 @@ name: ?
 name: attr_xor
 ----
 default: 
+----
+placeholder: Ⓝ
 #### numeric_parameter ####
 name: char_xor
 ----
 default: 
+----
+placeholder: Ⓝ
 #### final ####
-name: c
+name: m

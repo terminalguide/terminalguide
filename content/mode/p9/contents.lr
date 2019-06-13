@@ -54,11 +54,14 @@ body:
 #### impl ####
 impl: linuxvc
 ----
-level: todo
+level: disabled
 ----
 since: 
 ----
-body: 
+body:
+
+{{info}} needs a user space mouse daemon with support for `TIOCL_SELMOUSEREPORT`
+{{info}} Button number is limited to 4 bit.
 ---
 number: ?9
 ---

@@ -27,7 +27,7 @@ body: _currentScreen->displayCharacter     (    0x2592)
 #### impl ####
 impl: linuxvc
 ----
-level: todo
+level: full
 ----
 since: 
 ----

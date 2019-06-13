@@ -1,0 +1,57 @@
+title: Linux Palette Reset
+---
+body:
+
+{{snip('violates-parsing-rules')}}
+
+Reset palette to default values.
+
+---
+implnotes:
+
+#### impl ####
+impl: linuxvc
+----
+level: partial
+----
+since: 
+----
+body: {{miss}} When using the fbcon driver the reset palette only applies to cells drawn after this sequence.
+#### impl ####
+impl: urxvt
+----
+level: ignored
+----
+since: 
+----
+body: 
+#### impl ####
+impl: xterm
+----
+level: ignored
+----
+since: 
+----
+body: {{info}} beeps, but does not confuse the parser in default configuration.
+#### impl ####
+impl: vte
+----
+level: unparsable
+----
+since: 
+----
+body: 
+#### impl ####
+impl: konsole
+----
+level: unparsable
+----
+since: 
+----
+body: 
+---
+seq:
+
+#### osc ####
+#### final ####
+name: R

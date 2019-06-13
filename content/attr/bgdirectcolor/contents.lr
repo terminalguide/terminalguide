@@ -60,11 +60,14 @@ Form 2 is supported when the color space id is empty (defaulted). Any digit in t
 #### impl ####
 impl: linuxvc
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
-body: 
+body:
+
+{{info}} linuxvc only supports form 4.
+{{miss}} linuxvc approximates from a 8 color (non bright basic colors) palette using just the high bit of the color components.
 ---
 number: 48:2:...
 ---

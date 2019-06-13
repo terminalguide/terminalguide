@@ -41,7 +41,7 @@ body: * With origin mode, does not force the cursor row to be inside the scrolli
 #### impl ####
 impl: linuxvc
 ----
-level: todo
+level: full
 ----
 since: 
 ----
@@ -54,6 +54,8 @@ seq:
 name: column
 ----
 default: 1
+----
+placeholder: Ⓝ
 #### final ####
 name: `
 ---

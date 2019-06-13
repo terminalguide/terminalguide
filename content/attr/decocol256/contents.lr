@@ -10,6 +10,14 @@ level: full
 since: 
 ----
 body: xterm supports forms 1 and 3.
+#### impl ####
+impl: linuxvc
+----
+level: ignored
+----
+since: 
+----
+body: {{miss}} Subparameters make the whole sequence ignored.
 ---
 number: 58:5:...
 ---

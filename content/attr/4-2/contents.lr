@@ -1,6 +1,6 @@
 title: Alias: Underline Double
 ---
-body: Alias for [{{sgr_link('21')}}
+body: Alias for {{sgr_link('21')}}.
 ---
 implnotes:
 
@@ -12,6 +12,14 @@ level: full
 since: 
 ----
 body: 
+#### impl ####
+impl: linuxvc
+----
+level: ignored
+----
+since: 
+----
+body: {{miss}} Subparameters make the whole sequence ignored.
 ---
 number: 4:2
 ---

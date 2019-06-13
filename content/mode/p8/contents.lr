@@ -1,6 +1,10 @@
-title: Mode TODO ?8 (DECARM)
+title: Repeat Held Keys
 ---
-body: {{snip('placeholder-page')}}
+body:
+
+Repeat keys while being held down.
+
+If enabled a key held down automatically repeats in an implementation specific interval.
 ---
 implnotes:
 
@@ -23,7 +27,7 @@ body:
 #### impl ####
 impl: linuxvc
 ----
-level: todo
+level: full
 ----
 since: 
 ----

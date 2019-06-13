@@ -1,20 +1,26 @@
-title: TODO linux 3
+title: Display Control Characters
 ---
 body:
 
-{{snip('placeholder-page')}}
+Display control characters.
 
+If enabled:
+* display some control characters instead of interpreting them. The displayed controls are 1 to 7, 9, 11, 16-26, 28-31. Displayed controls loose their interpretation as control.
+* disables utf-8 decoding.
+
+If disabled:
+* only display a limited set of control characters (1 to 6, 16 to 23, 28-31) if not in utf-8 mode. In utf-8 mode don't display control characters.
 ---
 implnotes:
 
 #### impl ####
 impl: linuxvc
 ----
-level: todo
+level: full
 ----
 since: 
 ----
-body: 
+body: {{info}} in utf-8 mode the direct to font mapping unicode range (0xf000 to 0xf1ff) must be used instead of this.
 ---
 number: 3
 ---

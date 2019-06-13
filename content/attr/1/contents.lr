@@ -53,11 +53,15 @@ body:
 #### impl ####
 impl: linuxvc
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
-body: 
+body:
+
+{{info}} bold is encoded as brighter foreground color when available.
+{{info}} linuxvc uses a unified intensity model where bold uses intensity 2. Intensity is shared with {{sgr_link('2')}} and {{sgr_link('fgcol8bright')}}. Reset value for intensity is 1.
+{{miss}} bold is only available with vgacon when using a 256 glyph font. When using a 512 glyph font with vgacon bold is shown as intensity 1.
 ---
 number: 1
 ---

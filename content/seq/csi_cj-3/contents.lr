@@ -1,4 +1,4 @@
-title: ￼￼Erase Display Scroll-back
+title: Erase Display Scroll-back
 ---
 implnotes:
 
@@ -37,7 +37,7 @@ body: {{info}} if alternate screen buffer is selected erases scroll-back of prim
 #### impl ####
 impl: linuxvc
 ----
-level: todo
+level: full
 ----
 since: 
 ----

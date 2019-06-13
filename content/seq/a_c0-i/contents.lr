@@ -37,11 +37,11 @@ body: {{info}} vte tries to recreate tabs on copy to clipboard. The primary case
 #### impl ####
 impl: linuxvc
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
-body: 
+body: {{miss}} Tab stops repeat after the first 256 columns. I.e. the cursor position module 256 is used for finding tab stops.
 ---
 seq:
 

@@ -83,8 +83,11 @@ body: * cells belonging to split multi-cell characters are erased with the SGR s
 #### impl ####
 impl: linuxvc
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
-body: 
+body:
+
+{{miss}} `amount` = 0 is adjusted to 1.
+{{miss}} {{snip('split-dummy-impl')}}

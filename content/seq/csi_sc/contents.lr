@@ -79,11 +79,15 @@ Otherwies returns:
 #### impl ####
 impl: linuxvc
 ----
-level: todo
+level: full
 ----
 since: 
 ----
-body: 
+body:
+
+If `p1` is not zero no reply is sent, otherwise:
+
+{{seq('\033[6c')}}
 ---
 seq:
 

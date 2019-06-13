@@ -50,11 +50,11 @@ body: {{info}} Swaps default (unnamed) background and foreground colors when ren
 #### impl ####
 impl: linuxvc
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
-body: 
+body: {{miss}} brightness is not swapped.
 ---
 number: ?5
 ---

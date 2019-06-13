@@ -1,13 +1,27 @@
-title: TODO linux private control
+title: Linux Private Control (SETTERM)
 ---
-body: {{snip('placeholder-page')}}
+body:
+
+<table class="light-table">
+<tr><td><code>cmd</code> = 1</td><td>Set the color used for {{sgr_link('4')}}. Requires <code>param</code> < 16.</td></tr>
+<tr><td><code>cmd</code> = 2</td><td>Set the color used for {{sgr_link('2')}}. Requires <code>param</code> < 16.</td></tr>
+<tr><td><code>cmd</code> = 8</td><td>Save the currently selected color as default for this terminal. This color will be used after {{seq_link('a_esc_sc')}} and after {{seq_link('csi_sm')}} with parameter 0.</td></tr>
+<tr><td><code>cmd</code> = 9</td><td>Set console blanking interval to <code>param</code> minutes. If <code>param</code> > 60 sets blanking to 60 minutes.<br>This affects all virtual terminals.</td></tr>
+<tr><td><code>cmd</code> = 10</td><td>Set the frequency for {{seq_link('a_c0-g')}} to <code>param</code> Hz. If <code>param</code> is not specified reset to default.</td></tr>
+<tr><td><code>cmd</code> = 11</td><td>Set the duration for {{seq_link('a_c0-g')}} to <code>param</code> ms. If <code>param</code> = 0 or >= 2000 disable bell. If <code>param</code> is not specified reset to default.</td></tr>
+<tr><td><code>cmd</code> = 12</td><td>Switch visible console to console number <code>param</code>.</td></tr>
+<tr><td><code>cmd</code> = 13</td><td>Reset console blanking timer and unblank the console if needed.<br>This affects als virtual terminals.</td></tr>
+<tr><td><code>cmd</code> = 14</td><td>Set time from console blanking to switching the monitor to powersaving to <code>param</code> minutes. If <code>param</code> > 60 sets blanking to 60 minutes.<br>This only takes effect with additional configuration.<br>This affects all virtual terminals.</td></tr>
+<tr><td><code>cmd</code> = 15</td><td>Switch to previously visible console.</td></tr>
+<tr><td><code>cmd</code> = 16</td><td>Set cursor blinking interval to <code>param</code> milliseconds. If <code>param</code> < 50 or > 65535, reset to default (200ms).</td></tr>
+</table>
 ---
 implnotes:
 
 #### impl ####
 impl: linuxvc
 ----
-level: todo
+level: full
 ----
 since: 
 ----

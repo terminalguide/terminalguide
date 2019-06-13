@@ -37,11 +37,14 @@ body:
 #### impl ####
 impl: linuxvc
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
-body: 
+body:
+
+{{miss}} Underline is either ignored or a replacement color is used (possibly some monochrome drivers actually support underline?). See {{seq_link('csi_x5D_square_bracket')}} for configuration.
+{{miss}} The replacement color has priority over the selected foreground color.
 ---
 number: 4
 ---

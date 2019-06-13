@@ -55,11 +55,16 @@ body:
 #### impl ####
 impl: linuxvc
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
-body: 
+body:
+
+{{miss}} When the cursor is on the bottom-most line of the current scrolling region, it does not scroll/erase that line.
+{{miss}} if the cursor is above the current scrolling region: scrolls remaining lines until bottom most line of scroll region.
+{{miss}} Does not move the cursor to the left margin.
+{{miss}} `amount` = 0 is adjusted to 1.
 ---
 seq:
 
@@ -85,6 +90,6 @@ In {{mode_link('p69')}} mode the margins are respected; lines are only scrolled 
 
 If the cell movement splits a multi cell character that character cleared, by replacing it by spaces.
 
-All cleared space is colored according to the current [SGR state](/attr).
+All other cleared space is colored according to the current [SGR state](/attr).
 
 Moves the cursor to the left margin.

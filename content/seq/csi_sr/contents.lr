@@ -43,11 +43,11 @@ body:
 #### impl ####
 impl: linuxvc
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
-body: 
+body: {{miss}} If bottom is bigger than the number of the bottom-most row, the sequence is ignored.
 ---
 seq:
 

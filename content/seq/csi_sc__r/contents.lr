@@ -50,6 +50,14 @@ level: unparsable
 ----
 since: 
 ----
+body: {{info}} Properly ignored in 5.x
+#### impl ####
+impl: konsole
+----
+level: unparsable
+----
+since: 
+----
 body: 
 ---
 seq:

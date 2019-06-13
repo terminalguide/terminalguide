@@ -53,6 +53,14 @@ level: full
 since: 
 ----
 body: 
+#### impl ####
+impl: linuxvc
+----
+level: unparsable
+----
+since: 
+----
+body: {{miss}} This is just an alias to the non bright background colors.
 ---
 number: 100-107
 ---

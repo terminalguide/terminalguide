@@ -56,11 +56,11 @@ body:
 #### impl ####
 impl: linuxvc
 ----
-level: todo
+level: full
 ----
 since: 
 ----
-body: 
+body: {{info}} linuxvc has drivers that support monochrome mode, in which case the colors are ignored.
 ---
 number: 30-37
 ---

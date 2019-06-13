@@ -43,11 +43,14 @@ body: {{miss}} {{snipi('split-keep-bg')}}
 #### impl ####
 impl: linuxvc
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
-body: 
+body:
+
+{{miss}} {{snipi('split-dummy-impl')}}
+{{miss}} `amount` = 0 is adjusted to 1.
 ---
 seq:
 
@@ -76,5 +79,3 @@ All cleared space is colored according to the current {SGR state}.
 Does not change the cursor position.
 
 {{snip('unset-pending-wrap')}}
-
-TODO LineClrWrapped
