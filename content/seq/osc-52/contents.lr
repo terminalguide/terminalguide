@@ -14,6 +14,7 @@ The characters in `kinds` have the following meanings (these are X11 clipboard t
 ```
 s: configured default clipboard
 p: Primary
+q: Secondary
 c: Clipboard
 0-7: Cut buffers
 ```

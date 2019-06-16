@@ -20,7 +20,7 @@ Events
 These modes are mutually exclusive. The last activated mode wins.
 
 <table class='visible-table'>
-<tr><td>{{mode_link('p9')}}</td><td>Send mouse button press.<br>Button encoding <code>btn</code> does not contain bits for modifiers etc, but is the button number without moved bits.</td></tr>
+<tr><td>{{mode_link('p9')}}</td><td>Send mouse button press.<br>Button encoding <code>btn</code> does not contain bits for modifiers etc, but is the button number without moved bits. Only left, middle and right mouse buttons are reported</td></tr>
 <tr><td>{{mode_link('p1000')}}</td><td>Send mouse button press and release.<br>Also send scroll wheel events.</td></tr>
 <tr><td>{{mode_link('p1001')}}</td><td>Like {{mode_link('p1000')}}, but shows a text selection. <br><b>Needs a cooperating application to avoid rendering the terminal non operative</b></td></tr>
 <tr><td>{{mode_link('p1002')}}</td><td>Send mouse button press and release. Send mouse move events while a button is pressed.<br>Also send scroll wheel events.</td></tr>

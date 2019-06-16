@@ -2,11 +2,11 @@ title: Select Graphic Rendition (SGR)
 ---
 body:
 
-TODO: This sequence takes multiple parameters each with the same interpretation
-
 Set rendering attributes.
 
 See [attributes](/attr) for details about the attributes.
+
+If no `attribute` is given or `attribute` = 0, unset all attributes.
 ---
 implnotes:
 
@@ -57,9 +57,14 @@ body:
 seq:
 
 #### csi ####
+#### group_start ####
 #### numeric_parameter ####
 name: attribute
 ----
 default: 0
+----
+placeholder: Ⓝ
+#### group_end ####
+optional: yes
 #### final ####
 name: m

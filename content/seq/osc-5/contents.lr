@@ -29,7 +29,7 @@ since:
 body:
 
 {{info}} each attribute has a separate setting that needs to be enabled for the replacement colors to be used. These settings default to off
-{{info}} readback results in an osc 4 reply sequence.
+{{info}} Since xterm 345 readback results in a osc 5 reply sequence, in older versions readback results in an osc 4 reply sequence.
 #### impl ####
 impl: vte
 ----

@@ -13,7 +13,7 @@ implnotes:
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
 ----
 since: 
 ----
@@ -30,4 +30,4 @@ name: q
 val: *|
 #### st ####
 ---
-title: Report Lines (DECSNLS)
+title: Report Lines

@@ -1,4 +1,4 @@
-title: Activate/Deactivate attribute replacement colors.
+title: Activate/Deactivate attribute replacement colors
 ---
 body:
 
@@ -34,7 +34,7 @@ level: todo
 ----
 since: 315
 ----
-body: 
+body: {{info}} for xterm before 315 use {{seq_link('osc-6-color')}}.
 ---
 seq:
 

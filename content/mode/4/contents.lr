@@ -17,11 +17,11 @@ implnotes:
 #### impl ####
 impl: xterm
 ----
-level: full
+level: partial
 ----
 since: 
 ----
-body: 
+body: {{miss}} insert mode does not clear multi column characters correctly (background)
 #### impl ####
 impl: konsole
 ----

@@ -18,7 +18,9 @@ If the [current SGR](/attr) attributes have default background and foreground co
 
 The other attributes of the cells are replaced by the current [SGR state](/attr).
 
-If filling the cells splits a multi cell character that character cleared, by replacing it by spaces.
+If filling the cells splits a multi cell character that character cleared, by replacing it by spaces, keeping its current attributes.
+
+When only some of the lines have set {{seq_link('a_esc_zhash_a6')}}, the region this sequence acts upon might not look rectangular in to the user on display.
 ---
 implnotes:
 

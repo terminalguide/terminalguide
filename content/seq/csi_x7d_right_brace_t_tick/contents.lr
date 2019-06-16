@@ -2,7 +2,7 @@ title: Insert Column (DECIC)
 ---
 body:
 
-Inserts `amount` columns from the current cursor column. The contents of the column at the current cursor column and the columns to it's right (to the right-most line in the scrolling region) are shifted right by `amount` columns. The contents of the `amount` right-most columns in the [scroll region](/scrolling-region) are lost.
+Inserts `amount` columns (over the whole height of the current scrolling region) from the current cursor column. The contents of the column at the current cursor column and the columns to its right (to the right-most line in the scrolling region) are shifted right by `amount` columns. The contents of the `amount` right-most columns in the [scroll region](/scrolling-region) are lost.
 
 If the current cursor position is outside of the [current scroll region](/scrolling-region) it does nothing.
 
@@ -10,11 +10,11 @@ If `amount` is greater than the remaining number of columns in the scrolling reg
 
 In {{mode_link('p69')}} mode the margins are respected; columns are only scrolled in the scroll region.
 
-If the cell movement splits a multi cell character that character cleared, by replacing it by spaces.
+If the cell movement splits a multi cell character that character cleared, by replacing it by spaces, keeping its current attributes.
 
 All other cleared space is colored according to the current [SGR state](/attr).
 
-`amount` == 0 is adjusted to 1.
+If `amount` = 0 it's adjusted to 1.
 
 The Cursor position is not changed.
 ---
@@ -27,7 +27,7 @@ level: partial
 ----
 since: 
 ----
-body: {{miss}} xterm as of 345: split multi cell characters are erased using the current background color.
+body: {{miss}} As of xterm 346 split multi column cells are erased using the current [SGR state](/attr) instead of keeping the background color.
 ---
 seq:
 

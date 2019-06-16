@@ -5,11 +5,11 @@ implnotes:
 #### impl ####
 impl: xterm
 ----
-level: full
+level: partial
 ----
 since: 
 ----
-body: 
+body: {{miss}} As of xterm 346 split multi column cells are erased using the current [SGR state](/attr) instead of keeping the background color.
 #### impl ####
 impl: konsole
 ----
@@ -39,7 +39,7 @@ level: partial
 ----
 since: 
 ----
-body: {{miss}} {{snipi('split-keep-bg')}}
+body: {{miss}} vte sometimes colors the whole rest of the line with the current SGR state. (https://gitlab.gnome.org/GNOME/vte/issues/136)
 #### impl ####
 impl: linuxvc
 ----
@@ -72,9 +72,9 @@ If `amount` is greater than the remaining number of characters in the [scrolling
 
 In {{mode_link('p69')}} mode the margins are respected; lines are only scrolled in the scroll region.
 
-If the cell movement splits a multi cell character that character cleared, by replacing it by spaces.
+If the cell movement splits a multi cell character that character cleared, by replacing it by spaces, keeping its current attributes.
 
-All cleared space is colored according to the current {SGR state}.
+All the newly cleared space starting from the right margin is colored according to the current [SGR state](/attr).
 
 Does not change the cursor position.
 

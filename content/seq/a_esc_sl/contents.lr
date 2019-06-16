@@ -1,13 +1,13 @@
-title: ??? (HP_MEM_LOCK)
+title: HP Memory Lock
 ---
-body: Same as {{seq_link('a_esc_sm')}}
+body: Alias for {{seq_link('csi_sr')}} with the current cursor row as top and the bottom-most row of the terminal as bottom.
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
 ----
 since: 
 ----

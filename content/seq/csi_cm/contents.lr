@@ -9,13 +9,7 @@ level: partial
 ----
 since: 
 ----
-body:
-
-`amount` == 0 is adjusted to 1
-
-xterm as of 333 has the follwing glitches:
-* in left and right margin mode mode with set margins the terminal needs to be forced to redraw to see the actual cell buffer contents.
-* in left and right margin mode mode with set margins behaviour with multi cell characters is erratic.
+body: {{miss}} If `amount` = 0 it's adjusted to 1.
 #### impl ####
 impl: konsole
 ----
@@ -48,10 +42,7 @@ level: partial
 ----
 since: 
 ----
-body:
-
-{{miss}} vte ignores the top margin of the scrolling region.
-{{miss}} {{snipi('split-keep-bg')}}
+body: {{miss}} vte ignores the top margin of the scrolling region.
 #### impl ####
 impl: linuxvc
 ----
@@ -88,7 +79,7 @@ If `amount` is greater than the remaining number of lines in the scrolling regio
 
 In {{mode_link('p69')}} mode the margins are respected; lines are only scrolled in the scroll region.
 
-If the cell movement splits a multi cell character that character cleared, by replacing it by spaces.
+If the cell movement splits a multi cell character that character cleared, by replacing it by spaces, keeping its current attributes.
 
 All other cleared space is colored according to the current [SGR state](/attr).
 

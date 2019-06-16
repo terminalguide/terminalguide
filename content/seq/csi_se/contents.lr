@@ -57,5 +57,3 @@ Move the cursor `amount` lines down. The cursor column is not changed, unless or
 If moving `amount` rows down would be below the bottom-most line of the screen it is adjusted so the cursor is moved to the bottom-most row of the screen.
 
 If {{mode_link('p6')}} mode is set the cursor column will be forced inside the current scroll region.
-
-If {{mode_link('p6')}} mode is set the cursor is adjusted to be on or above of the bottom margin row.

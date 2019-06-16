@@ -15,8 +15,8 @@ overrides key encoding with data from the local terminfo dataset:
 <tr><td>end</td><td>kend</td><td>kEND</td></tr>
 <tr><td>left</td><td>kcub1</td><td>kLFT</td></tr>
 <tr><td>right</td><td>kcuf1</td><td>kRIT</td></tr>
-<tr><td>up</td><td>kcuu1</td><td>kind or kUP or kDN</td></tr>
-<tr><td>down</td><td>kcud1</td><td>kri</td></tr>
+<tr><td>up</td><td>kcuu1</td><td>kri or kUP or kDN</td></tr>
+<tr><td>down</td><td>kcud1</td><td>kind</td></tr>
 <tr><td>Fx with x from 1 to 35</td><td>kfx</td><td>n/a</td></tr>
 <tr><td>keypad home</td><td>ka1</td><td>n/a</td></tr>
 <tr><td>keypad end</td><td>kc1</td><td>n/a</td></tr>

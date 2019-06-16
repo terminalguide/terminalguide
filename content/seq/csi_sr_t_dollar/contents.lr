@@ -19,7 +19,7 @@ If {{seq_link('csi_sx_t_star')}} is set to rectangle (non default) the two point
  * the specified area is on `toprow` from `leftcolumn` (included) to the right-most column of [current scroll region](/scrolling-region). All lines between `toprow` (excluded) and `bottomrow` (excluded). And on `bottomrow` the left-most column of the [current scroll region](/scrolling-region) to `rightcolumn` (included).
 
 For each cell in the specified area and each value of `cmd` the attribute is changed corresponding to:
-<table class="visible-table">
+<table class="light-table">
 <tr><th>`cmd`</th><th>attribute</th></tr>
 <tr><td>0</td><td>clear all attributes</td></tr>
 <tr><td>1</td><td>set bold</td></tr>
@@ -33,6 +33,9 @@ For each cell in the specified area and each value of `cmd` the attribute is cha
 <tr><td>27</td><td>remove inverse</td></tr>
 <tr><td>28</td><td>remove invisible</td></tr>
 </table>
+
+
+When only some of the lines have set {{seq_link('a_esc_zhash_a6')}}, the region this sequence acts upon might not look rectangular in to the user on display.
 ---
 implnotes:
 

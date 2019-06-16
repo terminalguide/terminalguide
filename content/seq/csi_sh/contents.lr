@@ -2,8 +2,6 @@ title: Set Mode (SM)
 ---
 body:
 
-TODO: This sequence takes multiple parameters each with the same interpretation
-
 Set mode to active.
 
 See [the modes not prefixed with '?'][mode] for possible modes to use with this sequence.
@@ -58,9 +56,14 @@ body: {{info}} Supports activating up to 16 modes in one sequence.
 seq:
 
 #### csi ####
+#### group_start ####
 #### numeric_parameter ####
 name: mode
 ----
 default: 0
+----
+placeholder: Ⓝ
+#### group_end ####
+optional: 
 #### final ####
 name: h

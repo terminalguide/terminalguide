@@ -15,7 +15,7 @@ body:
 
 {{info}} Mouse actions with shift held are used for text selection. By default mouse actions with exactly ctrl held are used for xterms internal menu. Alt and ctrl-alt are passed to the application.
 {{info}} Alt + middle click is bound to a hard reset of the terminal in the default configuration.
-{{info}} Additional mouse buttons are reported since version 342.
+{{info}} Version 342 to 344 reported additional mouse buttons. Since 345 only the main 3 buttons are reported.
 #### impl ####
 impl: konsole
 ----

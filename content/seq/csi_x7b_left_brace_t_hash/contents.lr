@@ -4,8 +4,6 @@ body:
 
 Save the current graphic rendition [attributes](/attr/).
 
-TODO: This sequence takes multiple parameters each with the same interpretation
-
 Takes a list of codes to save. If no parameters are specified all attributes are saved.
 
 The current setting for each selected attribute is saved to a stack of implementation defined size. The topmost entry of the stack can be restored using {{seq_link('csi_x7d_right_brace_t_hash')}}.
@@ -22,8 +20,6 @@ The current setting for each selected attribute is saved to a stack of implement
 <tr><td>9</td><td>strikethrough</td><tr>
 <tr><td>10</td><td>foreground color</td><tr>
 <tr><td>11</td><td>background color</td><tr>
-<tr><td>12</td><td>direct color foreground</td><tr>
-<tr><td>13</td><td>direct color background</td><tr>
 <tr><td>21</td><td>double underline</td><tr>
 </table>
 ---
@@ -32,15 +28,14 @@ implnotes:
 #### impl ####
 impl: xterm
 ----
-level: partial
+level: full
 ----
-since: 
+since: 345
 ----
 body:
 
 {{info}} The stack has a maximum size of 10 entries.
-{{miss}} Using 'direct color foreground' without 'foreground color' can lead to glitches.
-{{miss}} Using 'direct color background' without 'background color' can lead to glitches.
+{{info}} in version 344 there have been values for `code` 12 and 13 which have been "direct color foreground" and "direct color background". These have been removed. Usage of color save/restore in version 344 can lead to glitches.
 #### impl ####
 impl: vte
 ----
@@ -53,10 +48,15 @@ body: {{info}} https://gitlab.gnome.org/GNOME/vte/issues/23
 seq:
 
 #### csi ####
+#### group_start ####
 #### numeric_parameter ####
 name: code
 ----
 default: 0
+----
+placeholder: Ⓝ
+#### group_end ####
+optional: 
 #### intermediate ####
 name: #
 #### final ####

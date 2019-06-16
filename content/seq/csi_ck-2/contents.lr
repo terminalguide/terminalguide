@@ -61,4 +61,6 @@ All erased space is colored according to the current [SGR state](/attr).
 
 Does not change the cursor position.
 
+Margins from {{mode_link('p69')}} do not apply for this sequence.
+
 {{snip('unset-pending-wrap')}}

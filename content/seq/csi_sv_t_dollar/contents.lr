@@ -1,17 +1,39 @@
 title: Copy rectangular area (DECCRA)
 ---
-body: {{snip('placeholder-page')}}
+body:
+
+Copy an rectangular area to another position in the terminal.
+
+If {{mode_link('p6')}} mode is set the rectangle is interpreted relative to the top left of the [current scroll region](/scrolling-region). Otherwise it's relative to the top left of the terminal.
+
+`bottomrow` and `rightcolumn` default to their bottom-most/right-most valid values.
+
+If {{mode_link('p6')}} mode is set and the rectangle exceeds the [current scroll region](/scrolling-region) it's clipped to the [current scroll region](/scrolling-region). Otherwise the rectangle is clipped to the full terminal.
+
+`ignored` is ignored.
+
+If `toprow` > `bottomrow` or `leftcolumn` > `rightcolumn` this sequence does nothing.
+
+If {{mode_link('p6')}} mode is set `destinationtoprow` and `destinationleftcolumn` are interpreted relative to the top left of the [current scroll region](/scrolling-region). Otherwise it's relative to the top left of the terminal.
+
+If `dummy` is not specified `destinationleftcolumn` is forced to it's default. If `destinationleftcolumn` is not specified, `destinationtoprow` is forced to it's default.
+
+The terminal copies the contents (characters and attributes) of all the cells in the rectangle from `toprow`, `leftcolumn` to `bottomrow`, `rightcolumn` (both inclusive) to a rectangle of the same size at the location `destinationtoprow` and `destinationleftcolumn`. Overlapping rectangles for source and destination are supported.
+
+All multi column cells that intersect the destination rectangle will be cleared without changing their background color. If the source rectangle has multi column cells that are only partially inside the source rectangle the copy will have cleared cells with the same background color in their place.
+
+When only some of the lines have set {{seq_link('a_esc_zhash_a6')}}, the region this sequence acts upon might not look rectangular in to the user on display.
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: partial
 ----
 since: 
 ----
-body: 
+body: {{miss}} xterm as of 346 has glitches with multi column cells.
 ---
 seq:
 
@@ -19,29 +41,29 @@ seq:
 #### numeric_parameter ####
 name: toprow
 ----
-default: 
+default: 1
 ----
 placeholder: Ⓝ
 #### numeric_parameter ####
 name: leftcolumn
 ----
-default: 
+default: 1
 ----
 placeholder: Ⓝ
 #### numeric_parameter ####
 name: bottomrow
 ----
-default: 
+default: see description
 ----
 placeholder: Ⓝ
 #### numeric_parameter ####
 name: rightcolumn
 ----
-default: 
+default: see description
 ----
 placeholder: Ⓝ
 #### numeric_parameter ####
-name: page
+name: ignored
 ----
 default: 
 ----
@@ -49,17 +71,17 @@ placeholder: Ⓝ
 #### numeric_parameter ####
 name: destinationtoprow
 ----
-default: 
+default: 1
 ----
 placeholder: Ⓝ
 #### numeric_parameter ####
 name: destinationleftcolumn
 ----
-default: 
+default: 1
 ----
 placeholder: Ⓝ
 #### numeric_parameter ####
-name: destinationpage
+name: dummy
 ----
 default: 
 ----

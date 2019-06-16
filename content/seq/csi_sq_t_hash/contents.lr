@@ -1,0 +1,22 @@
+title: Alias: Restore Rendition Attributes
+---
+body: Alias for {{seq_link('csi_x7d_right_brace_t_hash')}}.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 345
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### intermediate ####
+name: #
+#### final ####
+name: q

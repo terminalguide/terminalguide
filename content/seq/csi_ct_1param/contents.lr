@@ -50,9 +50,13 @@ name: T
 ---
 body:
 
-See also {{seq_link('csi_ct_5param')}} which shares this code. This command is distingished by having only one parameter and having the first parameter != 0
+[See also {{seq_link('csi_ct_5param')}} which shares this code. This command is distingished by having only one parameter and having the first parameter != 0]
 
-Inserts `amount` lines at the top of the [scroll region](/scrolling-region). Lines at the bottom of the scrolling region are lost.
+Inserts `amount` lines at the top of the [scroll region](/scrolling-region) shifting down the existing lines. Lines at the bottom of the scrolling region are lost.
+
+In {{mode_link('p69')}} mode the margins are respected; lines are only scrolled in the scroll region.
+
+If the cell movement splits a multi cell character that character is cleared, by replacing it by spaces, keeping its current attributes.
 
 The new lines are created according to the current [SGR state](/attr/)
 

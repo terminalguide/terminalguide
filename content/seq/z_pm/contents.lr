@@ -1,0 +1,29 @@
+title: (used by other terminals)
+---
+body: Privacy Message
+---
+implnotes:
+
+#### impl ####
+impl: other
+----
+level: 
+----
+since: 
+----
+body:
+
+espterm: 
+---
+seq:
+
+#### esc ####
+#### intermediate ####
+name: ^
+#### numeric_parameter ####
+name: rest
+----
+default: 
+----
+placeholder: Ⓢ
+#### st ####

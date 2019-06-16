@@ -9,7 +9,7 @@ level: full
 ----
 since: 
 ----
-body: Supports deactivating up to 30 modes in one sequence.
+body: {{info}} Supports deactivating up to 30 modes in one sequence.
 #### impl ####
 impl: konsole
 ----
@@ -25,7 +25,7 @@ level: full
 ----
 since: 
 ----
-body: Supports deactivating up to 31 modes in one sequence.
+body: {{info}} Supports deactivating up to 31 modes in one sequence.
 #### impl ####
 impl: vte
 ----
@@ -48,10 +48,15 @@ seq:
 #### csi ####
 #### intermediate ####
 name: ?
+#### group_start ####
 #### numeric_parameter ####
 name: mode
 ----
 default: 0
+----
+placeholder: Ⓝ
+#### group_end ####
+optional: 
 #### final ####
 name: l
 ---

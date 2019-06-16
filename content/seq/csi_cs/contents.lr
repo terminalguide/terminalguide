@@ -25,7 +25,7 @@ level: partial
 ----
 since: 
 ----
-body: * If `amount` = 0 does not adjust it to 1.
+body: {{miss}} If `amount` = 0 does not adjust it to 1.
 #### impl ####
 impl: vte
 ----
@@ -47,11 +47,13 @@ name: S
 ---
 body:
 
-Removes `amount` lines from the top of the [scroll region](/scrolling-region)
+Removes `amount` lines from the top of the [scroll region](/scrolling-region). The remaining lines to the bottom margin are shifted up and space from the bottom margin up is filled with empty lines.
 
 If `amount` = 0 adjust it to 1.
 
-Inserts `amount` lines at the bottom of the [scroll region](/scrolling-region). Lines at the top of the scrolling region are lost.
+In {{mode_link('p69')}} mode the margins are respected; lines are only scrolled in the scroll region.
+
+If the cell movement splits a multi cell character that character is cleared, by replacing it by spaces, keeping its current attributes.
 
 The new lines are created according to the current [SGR state](/attr/)
 

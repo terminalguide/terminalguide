@@ -2,8 +2,6 @@ title: Set Mode (?) (SM)
 ---
 body:
 
-TODO: This sequence takes multiple parameters each with the same interpretation
-
 Set mode to active.
 
 See [the modes prefixed with '?'][mode] for possible modes to use with this sequence.
@@ -21,7 +19,7 @@ level: full
 ----
 since: 
 ----
-body: Supports activating up to 30 modes in one sequence.
+body: {{info}} Supports activating up to 30 modes in one sequence.
 #### impl ####
 impl: konsole
 ----
@@ -37,7 +35,7 @@ level: full
 ----
 since: 
 ----
-body: Supports deactivating up to 31 modes in one sequence.
+body: {{info}} Supports deactivating up to 31 modes in one sequence.
 #### impl ####
 impl: vte
 ----
@@ -45,7 +43,7 @@ level: full
 ----
 since: 
 ----
-body: 
+body: {{info}} Supports activating up to 16 modes in one sequence.
 #### impl ####
 impl: linuxvc
 ----
@@ -60,9 +58,14 @@ seq:
 #### csi ####
 #### intermediate ####
 name: ?
+#### group_start ####
 #### numeric_parameter ####
 name: mode
 ----
 default: 0
+----
+placeholder: Ⓝ
+#### group_end ####
+optional: 
 #### final ####
 name: h

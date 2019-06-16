@@ -3,11 +3,11 @@ title: Insert Blanks (ICH)
 body:
 
 Inserts `amount` spaces at current cursor position moving existing cell contents to the right.
-Cell content that would be copied to the right of the {right margin} of the [current scroll region](/scrolling-region) is discarded. The cursor position is not changed.
+The contents of the `amount` right-most columns in the scroll region are lost. The cursor position is not changed.
 
 {{snip('unset-pending-wrap')}}
 
-If the insert of the spaces splits a multi cell character that character is replaced by spaces.
+If the insert of the spaces splits a multi cell character that character is replaced by spaces keeping its current attributes.
 If no right margin is set, if the move splits a multi cell character that character is replaced by spaces. In case a right margin is set, the multi cell character is clipped at the right margin.
 <!-- xterm test cases:
 no margins:
@@ -16,14 +16,11 @@ margins:
 echo -ne "\033[2J\033[1;1H\033[?69h\033[1;3s\033[42mあ23ぬ\033[0m\033[1;1H\033[2@\033[?69l\n\n"
 -->
 
-All cleared space is colored according to the current [SGR state](/attr).
+The inserted cells are colored according to the current [SGR state](/attr).
 
 The cells erased will be copy-able to via selection.
 
 In {{mode_link('p69')}} the margins are respected. If the current cursor position is outside of the current scroll region nothing is changed.
-
-
-
 ---
 seq:
 
@@ -40,11 +37,11 @@ implnotes:
 #### impl ####
 impl: xterm
 ----
-level: full
+level: partial
 ----
 since: 
 ----
-body: 
+body: {{miss}} As of xterm 346 split multi column cells are erased using the current [SGR state](/attr) instead of keeping the background color.
 #### impl ####
 impl: konsole
 ----
@@ -75,11 +72,11 @@ body:
 #### impl ####
 impl: vte
 ----
-level: partial
+level: full
 ----
 since: 
 ----
-body: * cells belonging to split multi-cell characters are erased with the SGR state of the first cell of that character.
+body: 
 #### impl ####
 impl: linuxvc
 ----

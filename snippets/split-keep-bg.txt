@@ -1,1 +1,0 @@
-Space erased to prevent split multi cell characters keeps it's original background.

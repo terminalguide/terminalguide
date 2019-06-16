@@ -1,11 +1,11 @@
-body: {{snip('placeholder-page')}}
+body: Alias for {{seq_link('csi_sr')}} without parameters (i.e. remove margins).
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
 ----
 since: 
 ----
@@ -17,4 +17,4 @@ seq:
 #### final ####
 name: m
 ---
-title: ??? (HP_MEM_UNLOCK)
+title: HP Memory Unlock

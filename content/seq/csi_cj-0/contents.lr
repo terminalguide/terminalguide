@@ -5,11 +5,11 @@ implnotes:
 #### impl ####
 impl: xterm
 ----
-level: full
+level: partial
 ----
 since: 
 ----
-body: 
+body: {{miss}} As of xterm 346 split multi column cells are erased using the current [SGR state](/attr) instead of keeping the background color.
 #### impl ####
 impl: konsole
 ----
@@ -35,11 +35,11 @@ body:
 #### impl ####
 impl: vte
 ----
-level: partial
+level: full
 ----
 since: 
 ----
-body: {{miss}} {{snip('split-keep-bg')}}
+body: 
 #### impl ####
 impl: linuxvc
 ----
@@ -71,13 +71,12 @@ Erase the right side of the line where the cursor is currently placed starting f
 
 All lines below the current cursor position are erased, by replacing all cell contents with space. These lines are reset to normal size(i.e. not double height or width).
 
-If the erase splits a multi cell character that character is erased by replacing it with spaces.
+If the erase splits a multi cell character that character is erased by replacing it with spaces, keeping its current attributes.
 
-All erased space is colored according to the current [SGR state](/attr).
+The erased space is colored according to the current [SGR state](/attr).
 
 {{snip('unset-pending-wrap')}}
 
 Resets the wrap heuristics so the lines erased are not considered to be wrapped.
-
 
 Does not change the cursor position.

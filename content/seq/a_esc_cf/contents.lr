@@ -1,19 +1,17 @@
-title: ???
+title: HP Home Down
 ---
 body:
 
-Some HP-UX applications are said to use this.
-
-<!-- xterm ref: HP_BUGGY_LL -->
-
 Moves the cursor to the lower left corner of the screen.
+
+Some HP-UX applications are said to use this as hard-coded sequence.
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: disabled
 ----
 since: 
 ----

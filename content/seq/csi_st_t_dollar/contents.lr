@@ -20,7 +20,7 @@ If {{seq_link('csi_sx_t_star')}} is set to rectangle (non default) the two point
 
 For each cell in the specified area and each value of `cmd` the attribute corresponding to `cmd` is toggled:
 
-<table class="visible-table">
+<table class="light-table">
 <tr><th>`cmd`</th><th>attribute</th></tr>
 <tr><td>1</td><td>bold</td></tr>
 <tr><td>4</td><td>underline</td></tr>
@@ -28,6 +28,9 @@ For each cell in the specified area and each value of `cmd` the attribute corres
 <tr><td>7</td><td>inverse</td></tr>
 <tr><td>8</td><td>invisible</td></tr>
 </table>
+
+
+When only some of the lines have set {{seq_link('a_esc_zhash_a6')}}, the region this sequence acts upon might not look rectangular in to the user on display.
 ---
 implnotes:
 

@@ -1,0 +1,31 @@
+title: Alias: Save Rendition Attributes
+---
+body: Alias for {{seq_link('csi_x7b_left_brace_t_hash')}}.
+---
+implnotes:
+
+#### impl ####
+impl: xterm
+----
+level: full
+----
+since: 345
+----
+body: 
+---
+seq:
+
+#### csi ####
+#### group_start ####
+#### numeric_parameter ####
+name: code
+----
+default: 
+----
+placeholder: Ⓝ
+#### group_end ####
+optional: 
+#### intermediate ####
+name: #
+#### final ####
+name: p

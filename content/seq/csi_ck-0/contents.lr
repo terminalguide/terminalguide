@@ -5,11 +5,11 @@ implnotes:
 #### impl ####
 impl: xterm
 ----
-level: full
+level: partial
 ----
 since: 
 ----
-body: 
+body: {{miss}} As of xterm 346 split multi column cells are erased using the current [SGR state](/attr) instead of keeping the background color.
 #### impl ####
 impl: konsole
 ----
@@ -38,9 +38,6 @@ since:
 ----
 body:
 
-{{miss}} {{snip('split-keep-bg')}}
-
-
 {{miss}} When the pending wrap state is set, vte does not clear anything nor reset the pending wrap state. So this is effectively {{seq_link('csi_ck-3')}}.
 {{info}} See https://bugzilla.gnome.org/show_bug.cgi?id=740789 for background.
 #### impl ####
@@ -66,14 +63,15 @@ Erase the right side of the line where the cursor is currently placed starting f
 
 In it's basic variant it will erase protected cells only when the semantics of {{seq_link('csi_sq_t_quote')}} are active. When called as {{seq_link('csi_ck__p')}} it will not erase protected cells in either protection semantics.
 
-If the erase splits a multi cell character that character is erased by replacing it with spaces.
+If the erase splits a multi cell character that character is erased by replacing it with spaces, keeping its current attributes.
 <!--
 echo -ne "\033[2J\033[1;1H\033[42mあ23ぬ\033[1;2H\033[0m\033[0K\n"
 -->
 
-All erased space is colored according to the current [SGR state](/attr).
+The erased space is colored according to the current [SGR state](/attr).
 
 Does not change the cursor position.
 
 {{snip('unset-pending-wrap')}}
 
+Margins from {{mode_link('p69')}} do not apply for this sequence.
