@@ -47,7 +47,7 @@ since:
 body:
 
 {{miss}} Screens have an independent version of the current mapping of GL. (Does this matter with the limited implementation of iso2022?)
-{{miss}} Independent for each screen cursor position, {{mode_link('p6')}},  {{mode_link('p7')}},  {{mode_link('4')}} and the pending wrap state.
+{{miss}} Independent for each screen: cursor position, {{mode_link('p6')}},  {{mode_link('p7')}},  {{mode_link('4')}} and the pending wrap state.
 {{miss}} force enables cursor on both screens.
 {{miss}} Scrollback buffer is shared between primary and secondary screen. Scrolling in alternative screen buffer still adds to scrollback buffer.
 #### impl ####

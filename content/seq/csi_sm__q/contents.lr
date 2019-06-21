@@ -2,7 +2,7 @@ title: Configure Modifier Key Reporting Formats
 ---
 body:
 
-Configure Modifier Key Reporting Formats.
+Configure modifier key reporting formats.
 
 If `cmd` is not given reset setting for `cmd` 1 to 5 to initial value.
 ---

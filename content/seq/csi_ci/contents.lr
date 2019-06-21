@@ -9,7 +9,7 @@ level: full
 ----
 since: 
 ----
-body: `amount` = 0 is adjusted to 1
+body: {{miss}} `amount` = 0 is adjusted to 1
 #### impl ####
 impl: konsole
 ----

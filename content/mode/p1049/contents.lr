@@ -1,4 +1,4 @@
-title: Alternate Screen Buffer, With Cursor Save and Clear on Enter.
+title: Alternate Screen Buffer, With Cursor Save and Clear on Enter
 ---
 body:
 
@@ -19,9 +19,8 @@ since:
 ----
 body:
 
-The 'titeInhibit' resource allows disabling of support for this mode. This setting itself is switchable from the application via mode {{mode_link('p1046')}}.
-
-* On activation this unsets the pending wrap state without wrapping.
+{{info}} The 'titeInhibit' resource allows disabling of support for this mode. This setting itself is switchable from the application via mode {{mode_link('p1046')}}.
+{{miss}} On activation this unsets the pending wrap state without wrapping.
 #### impl ####
 impl: konsole
 ----
@@ -29,7 +28,7 @@ level: partial
 ----
 since: 
 ----
-body: See {{mode_link('p47')}} and {{seq_link('a_esc_a7')}} for differences.
+body: {{info}} See {{mode_link('p47')}} and {{seq_link('a_esc_a7')}} for differences.
 #### impl ####
 impl: urxvt
 ----
@@ -37,7 +36,7 @@ level: partial
 ----
 since: 
 ----
-body: See {{mode_link('p47')}} and {{seq_link('a_esc_a7')}} for differences.
+body: {{info}} See {{mode_link('p47')}} and {{seq_link('a_esc_a7')}} for differences.
 #### impl ####
 impl: vte
 ----
@@ -45,7 +44,7 @@ level: partial
 ----
 since: 
 ----
-body: See {{mode_link('p47')}} and {{seq_link('a_esc_a7')}} for differences.
+body: {{info}} See {{mode_link('p47')}} and {{seq_link('a_esc_a7')}} for differences.
 ---
 number: ?1049
 ---

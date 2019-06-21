@@ -12,7 +12,6 @@ since:
 body:
 
 {{info}} Sets bold font and also forces named colors into the bright variant.
-
 {{info}} The bright variant is applied in a way that makes the background bright when combined with {{sgr_link('7')}}
 #### impl ####
 impl: konsole
@@ -32,9 +31,7 @@ since:
 body:
 
 {{info}} Sets bold font and if mode {{mode_link('p1021')}} is set also forces named foreground colors into the bright variant.
-
 {{info}} Also disables bold with 21.
-
 {{info}} For bold with default foreground the color can additionally be changed with {{seq_link('osc-706')}}.
 #### impl ####
 impl: vte
@@ -46,9 +43,7 @@ since:
 body:
 
 {{info}} VTE sets bold font. It does not emulate a bold variant if the font does not supply one.
-
 {{info}} Since [0.56](https://bugzilla.gnome.org/show_bug.cgi?id=762247) VTE no longer forces named colors into the bright variant. Color change can be still be enabled with vte api options.
-
 {{info}} Line drawing characters do not support bold font.
 #### impl ####
 impl: linuxvc

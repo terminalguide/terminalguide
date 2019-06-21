@@ -16,7 +16,7 @@ if the DEC locator is not the currently active mouse tracking mode or the pointe
 
 Otherwise it reports the pointer position using a report of event type 1.
 
-If one-show activation is used after either reply the locator is disabled.
+If one-shot activation is used after either reply the locator is disabled.
 ---
 implnotes:
 

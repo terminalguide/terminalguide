@@ -17,7 +17,7 @@ level: partial
 ----
 since: 
 ----
-body: If `bottom` is bigger than the number of the bottom-most row, the sequence is ignored.
+body: {{miss}} If `bottom` is bigger than the number of the bottom-most row, the sequence is ignored.
 #### impl ####
 impl: urxvt
 ----

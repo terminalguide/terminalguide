@@ -4,7 +4,7 @@ body:
 
 Query the current cursor style.
 
-This query the state set via {{seq_link('csi_sq_t_space')}}.
+This queries the state set via {{seq_link('csi_sq_t_space')}}.
 
 The terminal replies with {{seq('\033P1$r')}}{{seq_param('cmd')}}{{seq(' q\033\\')}}.
 

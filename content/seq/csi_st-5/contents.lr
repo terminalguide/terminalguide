@@ -47,4 +47,4 @@ body:
 
 Raise the terminal window to the top of the window stack.
 
-See also {{seq_link('cst_st-6')}}.
+See also {{seq_link('csi_st-6')}}.

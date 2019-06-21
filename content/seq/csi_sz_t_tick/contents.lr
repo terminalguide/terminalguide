@@ -13,7 +13,7 @@ On pointer events the terminal sends the following:
 {{seq('\033[')}}{{seq_param('event')}}{{seq(';')}}{{seq_param('state')}}{{seq(';')}}{{seq_param('y')}}{{seq(';')}}{{seq_param('x')}}{{seq('&w')}}
 
 Where `event` is either a 0, 1, 10 or one of the following:
-<table class="visible-table">
+<table class="light-table">
 <tr><th><code>event</code></th><th>Meaning</th></tr>
 <tr><td>0</td><td>pointer is outside the terminal (either on {{seq_link('csi_x7c_pipe_t_tick')}}, {{seq_link('csi_sw_t_tick')}} or a mouse button event</td></tr>
 <tr><td>1</td><td>on {{seq_link('csi_x7c_pipe_t_tick')}} with pointer inside the terminal and reporting enabled</td></tr>

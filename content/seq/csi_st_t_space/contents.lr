@@ -4,7 +4,7 @@ body:
 
 Sets warning bell volume.
 
-If 2 <= `volume` <= 4 the terminal uses low volume. If If 5 <= `volume` <= 8 or `volume` = 0 the terminal used high volume.  Otherwise it's off.
+If 2 <= `volume` <= 4 the terminal uses low volume. If 5 <= `volume` <= 8 or `volume` = 0 the terminal used high volume.  Otherwise it's off.
 ---
 implnotes:
 

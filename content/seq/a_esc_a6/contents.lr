@@ -17,7 +17,7 @@ level: unparsable
 ----
 since: 
 ----
-body: * If the cursor is in the left-most column of the screen it just scrolls the row that the cursor is on one cell to the right (clearing the left most cell).
+body: {{miss}} If the cursor is in the left-most column of the screen it just scrolls the row that the cursor is on one cell to the right (clearing the left most cell).
 ---
 seq:
 

@@ -23,7 +23,7 @@ level: partial
 ----
 since: 
 ----
-body: Does not set the cursor position.
+body: {{miss}} Does not set the cursor position.
 #### impl ####
 impl: urxvt
 ----
@@ -31,7 +31,7 @@ level: partial
 ----
 since: 
 ----
-body: Does not reset margins.
+body: {{miss}} Does not reset margins.
 #### impl ####
 impl: vte
 ----
@@ -41,8 +41,8 @@ since:
 ----
 body:
 
-* Does not set the cursor position.
-* Does not reset margins.
+{{miss}} Does not set the cursor position.
+{{miss}} Does not reset margins.
 #### impl ####
 impl: linuxvc
 ----

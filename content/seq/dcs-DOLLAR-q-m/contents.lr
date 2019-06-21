@@ -6,7 +6,7 @@ Queries currently active [SGR attributes](/attr).
 
 The terminal replies with 
 
-{{seq('\033P1$r0')}}{{seq_param('cmds')}}{{seq('m\033\\')}}
+{{seq('\033P1$r0')}}{{seq_param('cmds', 'Ⓢ')}}{{seq('m\033\\')}}
 
 Where `cmds` is a {{seq(';')}} separated list of SGR attributes currently set.
 ---

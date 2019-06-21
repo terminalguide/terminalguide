@@ -8,7 +8,7 @@ If `column` is 0, it is adjusted to 1. If `column` is greater than the right-mos
 
 If `row` is 0, it is adjusted to 1. If `row` is greater than the bottom-most row it is adjusted to the bottom-most row.
 
-`column` == 1 is the left-most column. `row` == 1 is the top-most row.
+`column` = 1 is the left-most column. `row` = 1 is the top-most row.
 
 {{ snip('unset-pending-wrap') }}
 

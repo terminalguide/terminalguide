@@ -64,6 +64,6 @@ Move the cursor to the row `row`. The cursor column is not changed, unless origi
 
 If `row` is 0, it is adjusted to 1. If `row` is greater than the bottom-most row of the screen it is adjusted to the bottom-most row of the screen.
 
-`row` == 1 is the top-most row.
+`row` = 1 is the top-most row.
 
 If {{mode_link('p6')}} mode is set the cursor will  be moved relative to the top margin row of the scrolling region and adjusted to be on or above of the bottom-most row of the scrolling region.

@@ -46,6 +46,6 @@ Repeat previously printed character `amount` times.
 
 Repeats the last previously printed character if it is a printable charcter. Only characters with codepoint < 256 are supported.
 
-If `amount` == 0, adjusts it to 1.
+If `amount` = 0, adjusts it to 1.
 
 This has the same effect as printing the character multiple times.

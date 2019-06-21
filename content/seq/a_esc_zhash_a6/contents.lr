@@ -33,6 +33,6 @@ Display double width and single height text.
 
 Sets a per line attribute that allows displaying double width text. Text is displayed using double the normal amount of cell spaces per character.
 
-If the line mode is switched from single width to this mode, the number of columns is halved. If the cursor was in the second half of the row, the cursor is moved to the new right-most column. The columns no longer visible keep their contents and are reveals when {{seq_link('a_esc_zhash_a5')}} is set for the line.
+If the line mode is switched from single width to this mode, the number of columns is halved. If the cursor was in the second half of the row, the cursor is moved to the new right-most column. The columns no longer visible keep their contents and are revealed when {{seq_link('a_esc_zhash_a5')}} is set for the line.
 
 In {{mode_link('p69')}} mode this control is ignored.

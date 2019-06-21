@@ -2,7 +2,7 @@ title: Request Tab Stop Report (DECTABSR)
 ---
 body:
 
-Request Tab Stop Report.
+Request tab stop report.
 
 The terminal sends a reply with the currently set tab stops as following:
 

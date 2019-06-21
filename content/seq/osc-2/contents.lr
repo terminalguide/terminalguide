@@ -20,11 +20,9 @@ since:
 ----
 body:
 
-Only works when AllowTitleOps is set (default)
-
-Maximum title length is 1024
-
-non printable characters are replaced with '?'
+{{info}} Only works when AllowTitleOps is set (default)
+{{info}} Maximum title length is 1024
+{{info}} non printable characters are replaced with '?'
 #### impl ####
 impl: konsole
 ----

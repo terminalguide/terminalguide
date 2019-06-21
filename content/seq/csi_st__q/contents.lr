@@ -8,11 +8,11 @@ The title modes are used when setting or retrieving the terminal title via {{seq
 
 If no parameter is given resets all title modes.
 
-<table class="visible-table">
+<table class="light-table">
 <tr><th>mode number</th><th>Description</th></tr>
 <tr><td>0</td><td>Title is set encoded in hex.</td></tr>
 <tr><td>1</td><td>Title is read-back encoded in hex.</td></tr>
-<tr><td>2</td><td>title is set in utf-8</td></tr>
+<tr><td>2</td><td>Title is set in utf-8</td></tr>
 <tr><td>3</td><td>Title is read-back encoded in utf8</td></tr>
 </table>
 

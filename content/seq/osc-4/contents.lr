@@ -7,7 +7,7 @@ Change/Read palette color
 Parses `text` as ';' separated list. For each pair of items (`color`, `str`):
 * Interpret `color` as index into the palette (possibly with special indexes following the proper palette). If `str` is '?' then this is a readback command, otherwise:  parse `str` as color (via XParseColor traditionally) and set the palette entry `color` to that color.
 
-If readback was requested resonds with a sequence of the same form that would set the current color.
+If readback was requested responds with a sequence of the same form that would set the current color.
 E.g. {{seq('\033]4;1;rgb:ffff/ffff/0000\033\\')}}
 
 Some terminals implement further colors after the proper palette that are reachable with this sequence. See {{seq_link('osc-5')}} for details.

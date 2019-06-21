@@ -67,7 +67,7 @@ Move the cursor to the column `column`. The cursor row is not changed, unless or
 
 If `column` is 0, it is adjusted to 1. If `column` is greater than the right-most column of the screen it is adjusted to the right-most column of the screen.
 
-`column` == 1 is the left-most column.
+`column` = 1 is the left-most column.
 
 If {{mode_link('p6')}} mode is set the cursor row will be forced inside the current scroll region.
 

@@ -17,7 +17,7 @@ The color palette can be modified by {{seq_link('osc-4')}}, {{seq_link('osc-5')}
 
 The default palette is the following:
 
-The color codes 0-7 alias the colors as set with {{sgr_link('fgcol8')}} and color codes 8-15 alias the colors as set with {{sgr_link('fgcol8bright')}}. The indexes 16-231 for a 6x6x6 rgb color cube. Indexes 232-255 form a grey ramp not touching black and white.
+The color codes 0-7 alias the colors as set with {{sgr_link('fgcol8')}} and color codes 8-15 alias the colors as set with {{sgr_link('fgcol8bright')}}. The indexes 16-231 form a 6x6x6 rgb color cube. Indexes 232-255 form a grey ramp not touching black and white.
 
 <img src="colors.png">
 

@@ -53,4 +53,4 @@ name: SPACE
 #### final ####
 name: q
 ---
-body: Set the cursor style to block and non-blinking
+body: Set the cursor style to block and non-blinking.

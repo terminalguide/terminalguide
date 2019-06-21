@@ -21,7 +21,7 @@ The replacement colors are used the next time the corresponding attribute is act
 
 In the default settings the substitution colors are only used if no color has been set explicitly for the text.
 
-Invers text printed with inverse attribute substitution disabled will be printed black on black while inverse attribute substitution is enabled.
+Inverse text printed with inverse attribute substitution disabled will be printed black on black while inverse attribute substitution is enabled.
 
 This sequence will not change rendering of text using only attributes except inverse when changed.
 ---

@@ -1,10 +1,10 @@
-title: Change / Delete an X-Property
+title: Change / Delete an X11-Property
 ---
 body:
 
-Change / Delete an X-property on the terminal window.
+Change / Delete an X11-property on the terminal window.
 
-If `text` contains a '=' sets a x-property on the terminal window named by the part before the first  '=' with the contents of the part after the first '=' as value.
+If `text` contains a '=' sets a X11-property on the terminal window named by the part before the first  '=' with the contents of the part after the first '=' as value.
 
 Otherwise remove the property with the name `text`
 ---

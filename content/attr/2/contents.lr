@@ -9,7 +9,7 @@ level: full
 ----
 since: 
 ----
-body: xterm multiplies each color component of the foreground color by 2/3. Thus this does not have an effect for black.
+body: {{info}} xterm multiplies each color component of the foreground color by 2/3. Thus this does not have an effect for black.
 #### impl ####
 impl: konsole
 ----
@@ -17,7 +17,7 @@ level: full
 ----
 since: 
 ----
-body: Faint is an third form of the named colors that is configurable.
+body: {{info}} Faint is an third form of the named colors that is configurable.
 #### impl ####
 impl: vte
 ----
@@ -25,7 +25,7 @@ level: full
 ----
 since: 
 ----
-body: vte multiplies each color component of the foreground color by 2/3. Thus this does not have an effect for black.
+body: {{info}} vte multiplies each color component of the foreground color by 2/3. Thus this does not have an effect for black.
 #### impl ####
 impl: urxvt
 ----

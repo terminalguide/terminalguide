@@ -31,7 +31,7 @@ level: partial
 ----
 since: 
 ----
-body: just enough to allow usage of the dec special graphics characters.
+body: {{miss}} just enough to allow usage of the dec special graphics characters.
 #### impl ####
 impl: vte
 ----

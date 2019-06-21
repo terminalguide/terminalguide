@@ -1,6 +1,6 @@
 title: Alias: Change/Read Special Text Foreground Color
 ---
-body: Alias deprecated for {{seq_link('osc-10')}}.
+body: Deprecated alias  for {{seq_link('osc-10')}}.
 ---
 implnotes:
 

@@ -19,7 +19,7 @@ If `p1` is zero the following sequence is returned to the application
 
 Where `version` is the xterm version number (patch level) and `model` is derived from -ti / decTerminalID as follows:
 
-<table class='visible-table'>
+<table class='light-table'>
 <tr><td>< 200</td><td>0</td></tr>
 <tr><td>220<br> or not in this table</td><td>1</td></tr>
 <tr><td>240</td><td>2</td></tr>

@@ -17,7 +17,7 @@ level: partial
 ----
 since: 
 ----
-body: Commonly disabled by distributions
+body: {{info}} Commonly disabled by distributions
 #### impl ####
 impl: konsole
 ----

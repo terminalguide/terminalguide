@@ -15,7 +15,7 @@ body:
 
 If `p1` is not zero no reply is sent, otherwise:
 
-The response depends von various runtime and compile-time parameters.
+The response depends on various runtime and compile-time parameters.
 
 For -ti / decTerminalID < 200:
 <table class='visible-table'>

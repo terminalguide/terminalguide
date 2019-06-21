@@ -4,7 +4,7 @@ body:
 
 Select Character Protection Attribute.
 
-if `cmd` = 1 the following printed characters are protected from selective erase. Otherwise the following printed characters are not protected from selective erase.
+If `cmd` = 1 the following printed characters are protected from selective erase. Otherwise the following printed characters are not protected from selective erase.
 
 This is like an additional [SGR State](/attr) in that it modifies cells changed after this sequence until deactivated again with `cmd` != 1.
 

@@ -17,7 +17,7 @@ level: unparsable
 ----
 since: 
 ----
-body: * If the cursor is in the right-most column of the screen it just scrolls the row that the cursor is on one cell to the left (clearing the right most cell). {{snip('unset-pending-wrap')}}
+body: {{miss}} If the cursor is in the right-most column of the screen it just scrolls the row that the cursor is on one cell to the left (clearing the right most cell). {{snip('unset-pending-wrap')}}
 ---
 seq:
 

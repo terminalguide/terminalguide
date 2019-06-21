@@ -37,6 +37,6 @@ Set the conformance level and encoding for C1 controls in terminal replies.
 
 If 'level' < 61 or high than the configured maximum this sequences does nothing.
 
-Otherwise `level` - 60 is the VT-xxx conformance level to activate (i.e. 'level' = 64 -> VT-4xx conformance).
+Otherwise `level` - 60 is the VT-xxx conformance level to activate (i.e. `level` = 64 -> VT-4xx conformance).
 
 If `level` > 61, the parameter `7bit` is used to set the encoding for C1 controls. If `7bit` = 1 then encoding is {{seq_link('a_esc_zspace_cf')}}. If `7bit` is 0 or 2 then encoding is {{seq_link('a_esc_zspace_cg')}}. If `7bit` is explicitly set to any other value the encoding is not changed.

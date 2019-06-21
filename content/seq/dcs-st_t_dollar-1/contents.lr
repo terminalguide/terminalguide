@@ -2,9 +2,9 @@ title: Restore Cursor Information Report
 ---
 body:
 
-Restore Cursor Information Report.
+Restore cursor information report.
 
-Restores the Information reported by {{seq_link('csi_sw_t_dollar-1')}}. The format is the same but using a {{seq('t')}} instead of a {{seq('u')}} as the 5th character.
+Restores the information reported by {{seq_link('csi_sw_t_dollar-1')}}. The format is the same but using a {{seq('t')}} instead of a {{seq('u')}} as the 5th character.
 
 Setting the pending wrap bit when positioning the cursor to a column other than the right most is possible.
 ---

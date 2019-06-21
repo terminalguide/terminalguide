@@ -4,7 +4,7 @@ body:
 
 Traditionally rings a bell.
 
-Current implementation vary in how this is interpretet. Most implementations still support an audible signal but often also offer setting window manager urgency hints or other advanced reactions.
+Current implementations vary in how this is interpreted. Most implementations still support an audible signal but often also offer setting window manager urgency hints or other advanced reactions.
 ---
 implnotes:
 
@@ -15,7 +15,7 @@ level: full
 ----
 since: 
 ----
-body: audible beep, urgency hint, visual bell, raise window
+body: {{info}} audible beep, urgency hint, visual bell, raise window
 #### impl ####
 impl: konsole
 ----
@@ -23,7 +23,7 @@ level: full
 ----
 since: 
 ----
-body: audible beep, visual bell, KNotify
+body: {{info}} audible beep, visual bell, KNotify
 #### impl ####
 impl: urxvt
 ----
@@ -31,7 +31,7 @@ level: full
 ----
 since: 
 ----
-body: audible beep, deiconify, urgency hint, visual bell
+body: {{info}} audible beep, deiconify, urgency hint, visual bell
 #### impl ####
 impl: vte
 ----
@@ -39,7 +39,7 @@ level: full
 ----
 since: 
 ----
-body: audible beep, terminals that use vte can add additional behavior.
+body: {{info}} audible beep, terminals that use vte can add additional behavior.
 #### impl ####
 impl: linuxvc
 ----

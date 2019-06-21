@@ -12,7 +12,7 @@ alt buf: p47, p1047, p1049 all restore the alt buf active state but don't have t
 
 Modes p9, p1000, p1001, p1002, p1003 and are grouped together and only one of them can be active at a time. Saving and restoring with any of these modes will restore the actually active mouse mode. All of those except p9 share storage.
 
-Similarly the modes for extended mouse coordinates (e.g.  p1005, p1006, p1015) aso form a similar group. They all share storage.
+Similarly the modes for extended mouse coordinates (e.g.  p1005, p1006, p1015) also form a similar group. They all share storage.
 
 The modes for the keyboard type (e.g. p1050, p1051, p1052, p1053, p1060, p1061) also form a group and share storage.
 

@@ -2,7 +2,7 @@ title: Bracketed Paste Mode
 ---
 body:
 
-Bracket paste contents in delimiter sequences.
+Bracket clipboard paste contents in delimiter sequences.
 
 When pasting from the (e.g. system) clipboard add {{seq('\033[200~')}} before the clipboard contents and {{seq('\033[201~')}} after the clipboard contents. This allows applications to distinguish clipboard contents from manually typed text.
 ---

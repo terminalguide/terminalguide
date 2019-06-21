@@ -53,7 +53,7 @@ body:
 
 Maximize terminal window.
 
-<table class="visible-table">
+<table class="light-table">
 <tr><th>cmd</th><th>action</th></tr>
 <tr><td>0</td><td>restore window to previous size</td></tr>
 <tr><td>1</td><td>maximize</td></tr>

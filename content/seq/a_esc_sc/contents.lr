@@ -11,8 +11,7 @@ since:
 ----
 body:
 
-In the default configuration xterm rings the terminal bell on reset.
-
+{{info}} In the default configuration xterm rings the terminal bell on reset.
 {{miss}} Does not correctly reset italic SGR attribute. italic needs to be enabled and disabled again to recover.
 {{info}} Does not clear the alternate screen.
 #### impl ####
@@ -66,7 +65,7 @@ name: c
 ---
 body:
 
-Full Reset
+Full reset.
 
 Changes:
 * Resets palette colors to initial state (like {{seq_link('osc-104')}} without parameter)
