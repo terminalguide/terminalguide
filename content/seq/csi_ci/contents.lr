@@ -5,7 +5,7 @@ implnotes:
 #### impl ####
 impl: xterm
 ----
-level: full
+level: partial
 ----
 since: 
 ----

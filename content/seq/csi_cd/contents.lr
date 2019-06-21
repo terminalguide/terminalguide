@@ -68,7 +68,7 @@ Else:
 * If the pending wrap state is set, reduce `amount` by one.
 * If the cursor is left of the left-most column of the scrolling region:
  * Move the cursor left `amount` of cells with the following rules:
-  *  Each time the cursor is advanced past the left screen edge set continue on the right-most column of the scrolling region on the line above. If that would be before the top-most line of the screen resume on the bottom most line of the screen (ignoring the top and bottom margins of the scrolling region).
+  *  Each time the cursor is advanced past the left screen edge, continue on the right-most column of the scrolling region on the line above. If that would be before the top-most line of the screen resume on the bottom most line of the screen (ignoring the top and bottom margins of the scrolling region).
 * If the cursor is on or right of the left-most column of the scrolling region:
  * Move the cursor left `amount` of cells with the following rules:
-  *  Each time the cursor is advanced past the left-most column of the scrolling region, set continue on the right-most column of the scrolling region on the line above. If that would be before the top-most line of the screen resume on the bottom most line of the screen (ignoring the top and bottom margins of the scrolling region).
+  *  Each time the cursor is advanced past the left-most column of the scrolling region, continue on the right-most column of the scrolling region on the line above. If that would be before the top-most line of the screen resume on the bottom most line of the screen (ignoring the top and bottom margins of the scrolling region).

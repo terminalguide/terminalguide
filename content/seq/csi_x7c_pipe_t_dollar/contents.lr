@@ -8,7 +8,7 @@ Modern terminals don't have a fixed width and users generally expect the termina
 
 If `columns` = 0 or `columns` = 80, resize the terminal to width 80. If `columns` = 132, resize the terminal to width 132. 
 
-If the cursor would right of the right-most column after the resize move it to the right-most column.
+If the cursor position is right of the right-most column after the resize move it to the right-most column.
 
 Also updates the state of {{mode_link('p3')}}.
 ---

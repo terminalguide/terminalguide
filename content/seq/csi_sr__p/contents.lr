@@ -2,9 +2,9 @@ title: Restore Mode
 ---
 body:
 
-TODO: Takes n arguments each processed on the way described below
-
 Restore mode `mode` to the last state saved with {{seq_link('csi_ss__p')}}.
+
+This sequence only applies to modes prefixed with {{seq('?')}}.
 
 The effect is generally the same as setting or resetting the mode depending of the state when the save sequence was used (i.e. restoring {{mode_link('p6')}} will move the cursor on each restore even if the restore does not change the current state of the mode)
 
@@ -64,9 +64,14 @@ seq:
 #### csi ####
 #### intermediate ####
 name: ?
+#### group_start ####
 #### numeric_parameter ####
 name: mode
 ----
 default: none
+----
+placeholder: Ⓝ
+#### group_end ####
+optional: 
 #### final ####
 name: r

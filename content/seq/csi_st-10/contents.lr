@@ -3,7 +3,7 @@ implnotes:
 #### impl ####
 impl: xterm
 ----
-level: full
+level: disabled
 ----
 since: 
 ----

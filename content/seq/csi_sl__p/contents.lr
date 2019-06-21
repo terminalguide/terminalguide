@@ -52,7 +52,7 @@ name: ?
 #### numeric_parameter ####
 name: mode
 ----
-default: 0
+default: none
 ----
 placeholder: Ⓝ
 #### group_end ####
@@ -62,9 +62,7 @@ name: l
 ---
 body:
 
-TODO: This sequence takes multiple parameters each with the same interpretation
-
-Set mode to active.
+Set mode to disabled.
 
 See [the modes prefixed with '?'][mode] for possible modes to use with this sequence.
 

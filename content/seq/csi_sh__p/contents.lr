@@ -62,7 +62,7 @@ name: ?
 #### numeric_parameter ####
 name: mode
 ----
-default: 0
+default: none
 ----
 placeholder: Ⓝ
 #### group_end ####

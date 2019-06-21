@@ -5,11 +5,11 @@ implnotes:
 #### impl ####
 impl: xterm
 ----
-level: full
+level: partial
 ----
 since: 
 ----
-body: 
+body: {{miss}} As of xterm 346 split multi column character leave glitches and don't keep their background color.
 #### impl ####
 impl: urxvt
 ----
@@ -29,10 +29,10 @@ body:
 
 If the cursor is not on the right-most column of the scroll region this is the same as {{seq_link('csi_cc')}} with `amount` = 1
 
-If the cursor is on the right-most column of the scroll region and on a row that is inside the [scroll region](/scrolling-region), the whole left-most column of the scroll region is deleted. The remaining characters are shifted to the left and space from the right margin is filled with spaces. If the cell movement splits a multi cell character that character is cleared, by replacing it by spaces.
+If the cursor is on the right-most column of the scroll region and on a row that is inside the [scroll region](/scrolling-region), the whole left-most column of the scroll region is deleted. The remaining characters are shifted to the left and space from the right margin is filled with spaces. If the cell movement splits a multi cell character that character is cleared, by replacing it by spaces, keeping its attributes.
 
 If the cursor is on the right-most column of the scroll region and on a row that is outside the scroll region, nothing is changed.
 
-All cleared space is colored according to the current [SGR state](/attr).
+The cleared space is colored according to the current [SGR state](/attr).
 
 Does not change the cursor position.

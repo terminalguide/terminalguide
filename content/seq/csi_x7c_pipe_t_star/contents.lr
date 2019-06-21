@@ -4,7 +4,7 @@ body:
 
 DEC Select Number of Lines per Screen.
 
-If `rows` >= and `rows` <= 255 resizes the terminal to `rows` rows.
+If `rows` >= 1 and `rows` <= 255 resizes the terminal to `rows` rows.
 
 Modern terminals don't have a fixed height and users generally expect the terminal to keep the size they assigned to the terminal. This control violates that expectation.
 ---

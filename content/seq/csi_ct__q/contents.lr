@@ -2,8 +2,6 @@ title: Unset Title Mode
 ---
 body:
 
-TODO: Takes n arguments each processed on the way described below
-
 Reset title modes
 
 If no parameter is given resets all title modes.

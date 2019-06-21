@@ -33,4 +33,4 @@ Print current terminal contents.
 
 See {{mode_link('p18')}} and {{mode_link('p19')}} for options used by this sequence.
 
-TODO: Document more about this.
+{{snip('incomplete')}}

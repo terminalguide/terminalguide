@@ -9,7 +9,7 @@ level: disabled
 ----
 since: 
 ----
-body: {{miss}} Windows with negative coordinates generated output with wrapped values (using 32bit)
+body: {{miss}} Windows with negative coordinates generated output with wrapped values (using 16bit)
 #### impl ####
 impl: urxvt
 ----
@@ -20,7 +20,7 @@ since:
 body:
 
 {{info}} Behaves always as if `cmd` = 2.
-{{miss}} Windows with negative coordinates generated output with '-' which creates invalid CSI sequences. (https://gitlab.gnome.org/GNOME/vte/issues/128)
+{{miss}} Windows with negative coordinates generated output with '-' which creates invalid CSI sequences. 
 #### impl ####
 impl: konsole
 ----
@@ -38,7 +38,7 @@ since:
 ----
 body:
 
-{{miss}} At least with gnome-terminal as embeder `xpos` sometimes wraps around to something close to 65500.
+{{miss}} At least with gnome-terminal as embeder `xpos` sometimes wraps around to something close to 65500.(https://gitlab.gnome.org/GNOME/vte/issues/128)
 {{info}} The source code contains a comment that this will just report fixed values when used with the wayland windowing system.
 ---
 seq:

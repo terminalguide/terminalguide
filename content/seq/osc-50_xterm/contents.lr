@@ -6,7 +6,7 @@ body:
 
 Set or query fonts.
 
-If `font` starts with {{seq('?')}} this is a query. Without further characters in `font` the terminal replies with the currently selected font as {{seq('\033];')}}{{seq_param('font', 'Ⓢ')}}{{seq('\033\\')}}. Otherwise the reply contains the slot number and the slot to query can be specified as a number optionally with +/- as described below (ommit the '#' in the query form). The response has the format {{seq('\033];#')}}{{seq_param('slot')}}{{seq(' ')}}{{seq_param('font', 'Ⓢ')}}{{seq('\033\\')}}.
+If `font` starts with {{seq('?')}} this is a query. Without further characters in `font` the terminal replies with the currently selected font as {{seq('\033]50;')}}{{seq_param('font', 'Ⓢ')}}{{seq('\033\\')}}. Otherwise the reply contains the slot number and the slot to query can be specified as a number optionally with +/- as described below (omit the '#' in the query form). The response has the format {{seq('\033]50;#')}}{{seq_param('slot')}}{{seq(' ')}}{{seq_param('font', 'Ⓢ')}}{{seq('\033\\')}}.
 
 If `font` starts with {{seq('#')}} followed by a number optionally prefixed with {{seq('-')}} or {{seq('+')}} then it selects one of xterms font slots. Without +/- this selects the font slot to act on. With +1 it selects the next bigger font from the font slots and with -1 it selects the next smaller font. Higher relative numbers are also supported. The relative selection does not wrap. The font slots are numbered 0 to 6.
 

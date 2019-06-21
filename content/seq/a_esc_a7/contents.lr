@@ -74,9 +74,9 @@ Save cursor position and further state.
 The primary and alternate screen have distinct save state.
 
 The following state is saved:
-* the state of mode {{mode_link('p6')}} (TODO but not it's mode save state??)
+* the state of mode {{mode_link('p6')}} (but not its saved state for {{seq_link('csi_sr__p')}})
 * the current [attributes](/attr)
-* protected area indication (TODO)
+* If newly printed characters are protected (like {{seq_link('a_esc_cv')}} or {{seq_link('csi_sq_t_quote')}})
 * the current cursor position, relative to the origin set via {{mode_link('p6')}}.
 * pending wrap state
 * GL and GR character sets.

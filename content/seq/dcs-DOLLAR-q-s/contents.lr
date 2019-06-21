@@ -6,7 +6,7 @@ Query left and right margins.
 
 The terminal replies with 
 
-{{seq('\033P1$r')}}{{seq_param('left')}}{{seq(';')}}{{seq_param('right')}}{{seq('\033\\')}}
+{{seq('\033P1$r')}}{{seq_param('left')}}{{seq(';')}}{{seq_param('right')}}{{seq('s\033\\')}}
 
 Where `left` is the left-most column of the [current scroll region](/scrolling-region)  and `right` is the right-most column of the [current scroll region](/scrolling-region) .
 

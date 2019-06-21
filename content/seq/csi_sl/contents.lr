@@ -50,7 +50,7 @@ seq:
 #### numeric_parameter ####
 name: mode
 ----
-default: 0
+default: none
 ----
 placeholder: Ⓝ
 #### group_end ####
@@ -60,7 +60,7 @@ name: l
 ---
 body:
 
-Set mode to active.
+Set mode to disabled.
 
 See [the modes not prefixed with '?'][mode] for possible modes to use with this sequence.
 

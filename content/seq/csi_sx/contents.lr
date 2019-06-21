@@ -7,13 +7,13 @@ implnotes:
 #### impl ####
 impl: xterm
 ----
-level: full
+level: disabled
 ----
 since: 
 ----
 body:
 
-If emulation level is 1:
+If configuration resource decTerminalID is set to an VT1xx model:
 
 if `p1` is zero:
 

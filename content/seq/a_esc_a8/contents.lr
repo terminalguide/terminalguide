@@ -12,7 +12,6 @@ since:
 body:
 
 {{info}}Until xterm 335 in {{mode_link('p69')}} restoring of the cursor position was broken.
-
 {{info}} TODO investigate if not restoring sgr_background has detectable consequences. Also if not using setExtended{BG,FG} has.
 #### impl ####
 impl: konsole
@@ -81,9 +80,9 @@ To save the state use {{seq_link('a_esc_a7')}}
 The primary and alternate screen have distinct save state.
 
 The following state is restored:
-* the state of mode {{mode_link('p6')}} (TODO but not it's mode save state??)
+* the state of mode {{mode_link('p6')}} (but not its saved state for {{seq_link('csi_sr__p')}})
 * the current [attributes](/attr)
-* protected area indication (TODO)
+* If newly printed characters are protected (like {{seq_link('a_esc_cv')}} or {{seq_link('csi_sq_t_quote')}})
 * the saved cursor position is relative to the origin set via {{mode_link('p6')}}.
 * pending wrap state
 * GL and GR character sets.

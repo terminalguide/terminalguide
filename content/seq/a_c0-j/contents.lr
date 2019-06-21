@@ -7,7 +7,7 @@ Invoke {{seq_link('a_esc_cd')}}
 If {{mode_link('20')}} is set:
 * Invoke {{seq_link('a_c0-m')}}
 
-TODO auto printing state
+If {{seq_link('csi_si__p-5')}} is active, print the current line.
 ---
 implnotes:
 

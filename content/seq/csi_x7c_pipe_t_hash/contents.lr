@@ -1,37 +1,66 @@
-title: TODO REPORT SGR RECT
+title: Report Common Attributes of Rectangular Area
 ---
-body: {{snip('placeholder-page')}}
+body:
+
+Report attributes common to all cells in a rectangular area.
+
+If {{mode_link('p6')}} mode is set the rectangle is interpreted relative to the top left of the [current scroll region](/scrolling-region). Otherwise it's relative to the top left of the terminal.
+
+`bottomrow` and `rightcolumn` default to their bottom-most/right-most valid values.
+
+If {{mode_link('p6')}} mode is set and the rectangle exceeds the [current scroll region](/scrolling-region) it's clipped to the [current scroll region](/scrolling-region). Otherwise the rectangle is clipped to the full terminal.
+
+If `toprow` > `bottomrow` or `leftcolumn` > `rightcolumn` this sequence will send a report with empty `cmds`.
+
+The terminal replies with 
+
+{{seq('\033[0;')}}{{seq_param('cmds', 'Ⓢ')}}{{seq('m')}}
+
+Where `cmds` is a {{seq(';')}} separated list of SGR attributes set on all cells in the rectangular area.
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
 ----
 since: 
 ----
-body: 
+body:
+
+{{info}} The {{sgr_link('5')}} attribute is normalized to `cmd` = 5 even if originally set with {{sgr_link('6')}}.
+{{info}} Direct colors are output like this {{seq('38:2::255:255:255')}}.
+{{info}} 256 colors are output like this {{seq('38:5:123')}}.
+{{info}} Named colors (including bright variants) and their palette colors index equivalent are reported (and compared) as named colors.
 ---
 seq:
 
 #### csi ####
 #### numeric_parameter ####
-name: 
+name: top
 ----
-default: 
+default: 1
+----
+placeholder: Ⓝ
 #### numeric_parameter ####
-name: 
+name: left
 ----
-default: 
+default: 1
+----
+placeholder: Ⓝ
 #### numeric_parameter ####
-name: 
+name: bottom
 ----
-default: 
+default: see description
+----
+placeholder: Ⓝ
 #### numeric_parameter ####
-name: 
+name: right
 ----
-default: 
+default: see description
+----
+placeholder: Ⓝ
 #### intermediate ####
 name: #
 #### final ####

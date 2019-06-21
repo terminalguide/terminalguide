@@ -18,6 +18,14 @@ level: unparsable
 since: 
 ----
 body: {{miss}} If the cursor is in the left-most column of the screen it just scrolls the row that the cursor is on one cell to the right (clearing the left most cell).
+#### impl ####
+impl: xterm
+----
+level: partial
+----
+since: 
+----
+body: {{miss}} As of xterm 346 split multi column character leave glitches and don't keep their background color.
 ---
 seq:
 
@@ -29,10 +37,10 @@ body:
 
 If the cursor is not on the left-most column of the scroll region this is the same as {{seq_link('csi_cd')}} with `amount` = 1
 
-If the cursor is on the left-most column of the scroll region and on a row that is inside the [scroll region](/scrolling-region), a new blank left-most column of the scroll region is inserted. The previous content of the scroll region are shifted to the right. The right-most column of the scroll region is discarded. If the cell movement splits a multi cell character that character cleared, by replacing it by spaces.
+If the cursor is on the left-most column of the scroll region and on a row that is inside the [scroll region](/scrolling-region), a new blank left-most column of the scroll region is inserted. The previous content of the scroll region are shifted to the right. The right-most column of the scroll region is discarded. If the cell movement splits a multi cell character that character cleared, by replacing it by spaces, keeping its attributes.
 
 If the cursor is on the left-most column of the scroll region and on a row that is outside the scroll region, nothing is changed.
 
-All cleared space is colored according to the current [SGR state](/attr).
+The cleared space is colored according to the current [SGR state](/attr).
 
 Does not change the cursor position.

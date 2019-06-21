@@ -47,4 +47,4 @@ The terminal replies with:
 
 If {{mode_link('p6')}} mode is set the cursor position is reported relative to the top  left corner of the scroll area.
 
-See {{seq_link('csi_sn-6')}} for a more widely supported variant of the command.
+See {{seq_link('csi_sn-6')}} for a more widely supported variant of the command (although that command's response conflicts with F1-key reporting).

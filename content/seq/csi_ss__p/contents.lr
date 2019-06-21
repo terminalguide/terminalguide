@@ -2,9 +2,9 @@ title: Save Mode
 ---
 body:
 
-TODO: Takes n arguments each processed on the way described below
-
 Save current enabled state of mode `mode`.
+
+This sequence only applies to modes prefixed with {{seq('?')}}.
 
 See {{seq_link('csi_sr__p')}} for restoring and further details.
 ---
@@ -48,9 +48,14 @@ seq:
 #### csi ####
 #### intermediate ####
 name: ?
+#### group_start ####
 #### numeric_parameter ####
 name: mode
 ----
 default: none
+----
+placeholder: Ⓝ
+#### group_end ####
+optional: 
 #### final ####
 name: s

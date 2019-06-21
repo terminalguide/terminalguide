@@ -10,7 +10,7 @@ The terminal replies with:
 
 If {{mode_link('p6')}} is set the cursor position is reported relative to the top  left corner of the scroll area.
 
-See {{seq_link('csi_sn__p-6')}} for a variant of the command that does result in a report that does not conflict with keyboard arrow left reporting.
+See {{seq_link('csi_sn__p-6')}} for a variant of the command that does result in a report that does not conflict with keyboard F1-key reporting.
 ---
 implnotes:
 

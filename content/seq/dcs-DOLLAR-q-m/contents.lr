@@ -23,7 +23,8 @@ body:
 
 {{info}} The {{sgr_link('5')}} attribute is normalized to `cmd` = 5 even if originally set with {{sgr_link('6')}}.
 {{info}} Direct colors are output like this {{seq('38:2::255:255:255')}}.
-{{info}} 256 colors are output like this {{seq('38:5::123')}}.
+{{info}} 256 colors are output like this {{seq('38:5:123')}}.
+{{info}} Named colors (including bright variants) and their palette colors index equivalent are reported as named colors.
 ---
 seq:
 
