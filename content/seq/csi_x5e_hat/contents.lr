@@ -1,17 +1,17 @@
-title: ???
+title: (Misprint in some ECMA-48 prints)
 ---
 body:
 
-Same as {{seq_link('csi_ct_1param')}}
+Same as {{seq_link('csi_ct_1param')}}.
 
-Note: xterm says this variant originated in a typographical error in ECMA-48
+This sequence originates from a misprint in some prints of ECMA-48, 5th Edition. The pdf version of "ECMA-48, 5th Edition, reprinted 1998" with modified date "7 July 1998" had an inconsistency between the summary table and the detailed sequence description which erroneously claimed this to be scroll down diverging from the information in editions 2 to 4. The current downloadable pdf for the 5th edition (modified date 21 January 2003) has the detailed description fixed again to use the correct sequence {{seq('\033[T')}}.
 ---
 implnotes:
 
 #### impl ####
 impl: xterm
 ----
-level: todo
+level: full
 ----
 since: 
 ----
