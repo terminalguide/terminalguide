@@ -3,14 +3,6 @@ title: Back Index (DECBI)
 implnotes:
 
 #### impl ####
-impl: xterm
-----
-level: full
-----
-since: 
-----
-body: 
-#### impl ####
 impl: urxvt
 ----
 level: unparsable
