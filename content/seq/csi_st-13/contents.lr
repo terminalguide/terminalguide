@@ -32,14 +32,14 @@ body:
 #### impl ####
 impl: vte
 ----
-level: partial
+level: disabled
 ----
 since: 
 ----
 body:
 
-{{miss}} At least with gnome-terminal as embeder `xpos` sometimes wraps around to something close to 65500.(https://gitlab.gnome.org/GNOME/vte/issues/128)
-{{info}} The source code contains a comment that this will just report fixed values when used with the wayland windowing system.
+{{miss}} Always returns 0, 0 since [vte 0.58](https://gitlab.gnome.org/GNOME/vte/issues/128#note_653699)
+{{miss}} Before 0.58: At least with gnome-terminal as embeder `xpos` sometimes wraps around to something close to 65500.(https://gitlab.gnome.org/GNOME/vte/issues/128)
 ---
 seq:
 
