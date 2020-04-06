@@ -3,3 +3,14 @@
   publish = "_site-build"
   command = "./netlify.sh"
 
+[[redirects]]
+  from = "https://terminalguide.netlify.com/*"
+  to = "https://terminalguide.namepad.de/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://terminalguide.netlify.app/*"
+  to = "https://terminalguide.namepad.de/:splat"
+  status = 301
+  force = true
