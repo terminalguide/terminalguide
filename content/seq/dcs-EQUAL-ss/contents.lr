@@ -1,0 +1,36 @@
+title: (used by other terminals)
+---
+seq:
+
+#### dcs ####
+#### intermediate ####
+name: =
+#### numeric_parameter ####
+name: cmd
+----
+default: 
+----
+placeholder: Ⓝ
+#### final ####
+name: s
+#### numeric_parameter ####
+name: other
+----
+default: 
+----
+placeholder: Ⓢ
+#### st ####
+---
+implnotes:
+
+#### impl ####
+impl: other
+----
+level: 
+----
+since: 
+----
+body:
+
+iterm2:
+https://gitlab.com/gnachman/iterm2/-/wikis/synchronized-updates-spec / https://gitlab.freedesktop.org/terminal-wg/specifications/-/issues/2 / https://gitlab.freedesktop.org/terminal-wg/specifications/-/merge_requests/2
