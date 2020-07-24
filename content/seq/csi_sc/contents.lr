@@ -25,7 +25,7 @@ For -ti / decTerminalID < 200:
 <tr><td>&lt; 200</td><td>{{seq('\033[?1;2c')}}</td></tr>
 </table>
 Else:
-A sequence is returned to the application that combines the following parts depending if the condition in the right oclumn is true.
+A sequence is returned to the application that combines the following parts depending if the condition in the right column is true.
 <table class='visible-table'>
 <tr><td>{{seq('\033[?')}}{{seq_param('level')}}{{seq(';1;2')}}</td><td>with <code>level</code> = 60 + (decTerminalID / 100) (default 64)</td></tr>
 <tr><td>{{seq(';3')}}</td><td>if decTerminalID in (240, 241, 330, 340) and regis support is compiled in</td></tr>
