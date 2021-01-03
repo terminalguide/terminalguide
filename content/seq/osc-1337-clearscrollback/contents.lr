@@ -1,0 +1,21 @@
+title: (used by other terminals)
+---
+seq:
+
+#### osc ####
+#### numeric_fixed ####
+val: 1337
+#### intermediate ####
+name: ;ClearScrollback
+#### st ####
+---
+implnotes:
+
+#### impl ####
+impl: other
+----
+level: 
+----
+since: 
+----
+body: iterm2: Clear Scrollback History https://iterm2.com/documentation-escape-codes.html

@@ -1,0 +1,25 @@
+title: (used by other terminals)
+---
+implnotes:
+
+#### impl ####
+impl: other
+----
+level: 
+----
+since: 
+----
+body:
+
+(originating from FinalTerm)
+
+iterm2: Shell Integration/FinalTerm https://iterm2.com/documentation-escape-codes.html
+---
+seq:
+
+#### osc ####
+#### numeric_fixed ####
+val: 133
+#### numeric_fixed ####
+val: D
+#### st ####

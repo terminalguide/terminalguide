@@ -57,7 +57,7 @@ def seq_link(seq):
         record = pad.get('/seq/' + seq)
         if record:
             title = record['title']
-            if title.endswith(')'):
+            if title.endswith(')') and title[:title.rindex('(')]:
                 title = title[:title.rindex('(')]
             title = title.lower()
         else:

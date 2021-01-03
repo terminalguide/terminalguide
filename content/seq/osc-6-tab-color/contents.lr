@@ -1,0 +1,26 @@
+title: (used by other terminals)
+---
+implnotes:
+
+#### impl ####
+impl: other
+----
+level: 
+----
+since: 
+----
+body: iterm2: Set window title and tab chrome background color https://iterm2.com/documentation-escape-codes.html
+---
+seq:
+
+#### osc ####
+#### numeric_fixed ####
+val: 6
+#### numeric_fixed ####
+val: 1
+#### numeric_parameter ####
+name: todo
+----
+default: 
+----
+placeholder: Ⓢ

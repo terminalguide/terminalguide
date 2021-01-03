@@ -1,0 +1,27 @@
+title: (used by other terminals)
+---
+seq:
+
+#### osc ####
+#### numeric_fixed ####
+val: 1337
+#### intermediate ####
+name: ;Copy=
+#### numeric_parameter ####
+name: data
+----
+default: 
+----
+placeholder: Ⓑ
+#### st ####
+---
+implnotes:
+
+#### impl ####
+impl: other
+----
+level: 
+----
+since: 
+----
+body: iterm2: Copy to Pasteboard https://iterm2.com/documentation-escape-codes.html

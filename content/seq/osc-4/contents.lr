@@ -65,6 +65,14 @@ body:
 {{miss}} #rgb style sequences are scaled instead of shifted when not using full 4 hex digits per color.
 {{miss}} rgb:r/g/b format only supports using the same number of digits for all components.
 {{info}} readback uses `rgb:%04x/%04x/%04x`
+#### impl ####
+impl: other
+----
+level: 
+----
+since: 
+----
+body: iterm2: Index -1 and -2 are used for default foreground and background color. https://iterm2.com/documentation-escape-codes.html
 ---
 seq:
 

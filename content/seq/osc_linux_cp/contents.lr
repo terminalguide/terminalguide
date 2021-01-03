@@ -42,6 +42,14 @@ level: unparsable
 since: 
 ----
 body: 
+#### impl ####
+impl: other
+----
+level: 
+----
+since: 
+----
+body: iterm2: properly uses ESC \\ to terminate the sequence, adds additional supported colors, recommends to use {{seq_link('osc-1337-setcolors')}} instead.
 ---
 seq:
 
