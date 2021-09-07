@@ -1,9 +1,10 @@
 {% extends "layout.html" %}
-{% from "macros/seq.html" import seq_list %}
+{% from "macros/seq.html" import seq_list, legend %}
 {% block title %}{{ this.title }}{% endblock %}
 {% block body %}
   <div class="container">
   <h2>{{ this.title }}</h2>
+    {{ legend() }}
     {{ seq_list(this.children) }}
   <div class='iso-2022'>
   {{ this.body }}
