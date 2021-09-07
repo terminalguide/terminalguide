@@ -126,3 +126,12 @@
     {% endfor %}
     </table>
 {% endmacro %}
+
+{% macro legend() %}
+<div class='legend-wrapper'><div class='legend'>
+    ✔ supported, ✓ see terminal specific details,<br>
+    🔧 available in non default configuration, ∅ cleanly ignored,<br>
+    ☹ misrenders / completely different effect,<br>
+    "todo" documentation entry not complete yet
+</div></div>
+{% endmacro %}

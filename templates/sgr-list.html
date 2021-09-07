@@ -1,5 +1,5 @@
 {% extends "layout.html" %}
-{% from "macros/seq.html" import seq_simple %}
+{% from "macros/seq.html" import seq_simple, legend %}
 {% block title %}{{ this.title }}{% endblock %}
 {% block body %}
   <div class="container">
@@ -41,6 +41,7 @@
     </tr>
     {% endfor %}
     </table>
+    {{ legend() }}
     {{this.body2}}
   </div>
 {% endblock %}
