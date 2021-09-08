@@ -133,3 +133,14 @@ table.light-table td:first-child {
     white-space: nowrap;
     padding-right: 0.5em;
 }
+
+.legend-wrapper {
+    text-align: right;
+}
+
+.legend {
+    display: inline-block;
+    text-align: right;
+    padding: .7em;
+    opacity: 40%;
+}
