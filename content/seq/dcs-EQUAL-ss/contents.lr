@@ -34,3 +34,4 @@ body:
 
 iterm2:
 https://gitlab.com/gnachman/iterm2/-/wikis/synchronized-updates-spec / https://gitlab.freedesktop.org/terminal-wg/specifications/-/issues/2 / https://gitlab.freedesktop.org/terminal-wg/specifications/-/merge_requests/2
+See also {{mode_link('p2026')}}

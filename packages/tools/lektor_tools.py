@@ -37,6 +37,11 @@ def mode_link(mode):
             if title.endswith(')'):
                 title = title[:title.rindex('(')]
             title = title.lower()
+            if not title:
+                if mode.startswith('p'):
+                    title = '?' + mode[1:]
+                else:
+                    title = mode
         else:
             title = "mode not found: " + mode
         title = title.strip()

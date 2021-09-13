@@ -1,0 +1,19 @@
+title: (used by other terminals)
+---
+implnotes:
+
+#### impl ####
+impl: other
+----
+level: 
+----
+since: 
+----
+body:
+
+iterm2/kitty/mintty/...: "Synchronized Output" https://gist.github.com/christianparpart/d8a62cc1ab659194337d73e399004036
+Update of {{seq_link('dcs-EQUAL-ss/')}}
+---
+number: ?2026
+---
+sort: 2026
