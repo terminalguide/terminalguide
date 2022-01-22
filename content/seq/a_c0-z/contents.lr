@@ -13,11 +13,14 @@ body:
 #### impl ####
 impl: konsole
 ----
-level: todo
+level: unparsable
 ----
 since: 
 ----
-body: _currentScreen->displayCharacter     (    0x2592)
+body:
+
+{{miss}} konsole prints {{seq('\x1a')}} as the unicode medium shade character (U+2592)
+
 #### impl ####
 impl: linuxvc
 ----

@@ -13,14 +13,14 @@ body:
 #### impl ####
 impl: konsole
 ----
-level: partial
+level: full
 ----
 since: 
 ----
 body:
 
-* when scrolling the full scrolling region size the last line is not scrolled out.
-* if `amount` is 0 adjusts it to 1.
+{{info}} Before version 21.12.0, when scrolling the full scrolling region size the last line is not scrolled out.
+{{miss}} if `amount` is 0 adjusts it to 1.
 #### impl ####
 impl: urxvt
 ----

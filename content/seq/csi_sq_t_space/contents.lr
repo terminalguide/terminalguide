@@ -21,7 +21,7 @@ level: full
 ----
 since: 
 ----
-body: {{info}} If `cmd ` == 0 uses blinking block
+body: {{info}} Before version 19.04.0: `cmd ` == 0 used blinking block instead of default.
 #### impl ####
 impl: urxvt
 ----

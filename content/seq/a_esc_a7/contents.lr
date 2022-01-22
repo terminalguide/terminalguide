@@ -20,7 +20,7 @@ since:
 body:
 
 {{miss}} Does not store G0 - G3. But stores current mapping of GL and GR.
-{{miss}} Does not store state of mode {{mode_link('p6')}}
+{{info}} Before version 22.04.0, did not store state of mode {{mode_link('p6')}}
 {{miss}} cursor position is stored absolute (not with regard to origin)
 {{miss}} Does not store pending wrap state.
 #### impl ####

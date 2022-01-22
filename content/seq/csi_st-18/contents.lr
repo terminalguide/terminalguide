@@ -21,9 +21,9 @@ body:
 #### impl ####
 impl: konsole
 ----
-level: ignored
+level: full
 ----
-since: 
+since: 22.04.0
 ----
 body: 
 #### impl ####

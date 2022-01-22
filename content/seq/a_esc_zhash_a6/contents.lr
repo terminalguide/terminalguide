@@ -13,7 +13,7 @@ body: Seems not to work with some fonts
 #### impl ####
 impl: konsole
 ----
-level: todo
+level: full
 ----
 since: 
 ----

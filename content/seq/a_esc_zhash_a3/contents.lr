@@ -19,9 +19,8 @@ since:
 ----
 body:
 
-Konsole threats this control and {{seq_link('a_esc_zhash_a4')}} identical. Konsole draws the first line with this per line attribute as double height and then unconditionally skips the next line.
-
-Interaction with view-port scrolling is erratic.
+{{info}} Konsole before version 21.08.0 threats this control and {{seq_link('a_esc_zhash_a4')}} identical. Konsole draws the first line with this per line attribute as double height and then unconditionally skips the next line.
+{{info}} Starting with version 21.08.0, correct usage of the bottom half/top half sequences is required, but different text on the top and buttom half are still not supported (if the text contents differ selection displays glitchy)
 ---
 seq:
 

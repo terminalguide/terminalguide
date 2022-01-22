@@ -16,6 +16,14 @@ level: todo
 since: 
 ----
 body: {{info}} TODO document effect on alternate screen switching.
+#### impl ####
+impl: konsole
+----
+level: todo
+----
+since: 20.12.0
+----
+body: commit faceafcc68365e3f27a
 ---
 seq:
 
