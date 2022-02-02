@@ -20,7 +20,7 @@ since:
 body:
 
 {{miss}} Does not unset pending wrap state.
-{{miss}} konsole ignores the top margin of the scrolling region.
+{{info}} Before version 21.12.0, konsole ignores the top margin of the scrolling region.
 {{miss}} does not move the cursor to the left margin
 #### impl ####
 impl: urxvt

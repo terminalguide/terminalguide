@@ -19,11 +19,14 @@ body:
 #### impl ####
 impl: konsole
 ----
-level: partial
+level: full
 ----
 since: 
 ----
-body: {{miss}} Does not set the cursor position.
+body:
+
+{{info}} Before version 22.04.0 did not set the cursor position.
+{{info}} All lines are reset to normal size(i.e. not double height or width).
 #### impl ####
 impl: urxvt
 ----

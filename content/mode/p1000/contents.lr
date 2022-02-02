@@ -32,6 +32,8 @@ body:
 {{miss}} When multiple buttons are held down while moving the mouse the report contains the held button with the highest id.
 {{miss}} Mouse mode can be disabled by resetting any of the mouse tracking modes. When activating all mouse tracking modes are handled the same, except that ?1000 alone produces non standard behavior while dragging the mouse. When not disabling the exact modes that have been activated partial state leaks into the next mouse mode activation.
 {{info}} Does not use {{seq('\0')}} for out of range in default reporting format.
+{{info}} Can be disabled from application menu (state is still handled, but no mouse events are send)
+{{info}} Before version 21.08.0, double click with right button was sent as down-up-up instead of down-up-down-up.
 #### impl ####
 impl: urxvt
 ----

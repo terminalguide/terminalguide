@@ -54,11 +54,19 @@ body: {{info}} Properly ignored in 5.x
 #### impl ####
 impl: konsole
 ----
-level: unparsable
+level: partial
 ----
-since: 
+since: 22.04.0
 ----
-body: 
+body:
+
+Reply is always:
+
+{{seq('\033P!|7E4B4445\033\\')}}
+
+Which is the hex encoding of the bytes {{seq('~KDE')}}
+
+{{miss}} The response is repeated for each additional argument.
 ---
 seq:
 

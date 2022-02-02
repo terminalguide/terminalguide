@@ -20,8 +20,8 @@ since:
 body:
 
 {{miss}} does not unset the pending wrap state.
-{{miss}} if the cursor is above the current scrolling region: scrolls remaining lines until bottom most line of scroll region.
-{{miss}} when scrolling the full scrolling region size the last line is not scrolled out.
+{{info}} Before version 21.12.0, if the cursor is above the current scrolling region: scrolls remaining lines until bottom most line of scroll region.
+{{info}} Before version 21.12.0, when scrolling the full scrolling region size the last line is not scrolled out.
 {{miss}} Does not move the cursor to the left margin
 #### impl ####
 impl: urxvt

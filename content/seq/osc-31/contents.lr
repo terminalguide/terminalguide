@@ -17,7 +17,7 @@ level: ignored
 ----
 since: 
 ----
-body: From commented code in konsole source.
+body: From commented code in konsole source. (completely removed in version 19.04.0)
 ---
 seq:
 

@@ -20,7 +20,7 @@ since:
 body:
 
 {{miss}} Does not reset pending wrap state.
-{{miss}} Adds screen content to scrollback before erasing the contents.
+{{info}} Before version 19.08.0 added screen content to scrollback before erasing the contents.
 #### impl ####
 impl: urxvt
 ----

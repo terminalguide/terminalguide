@@ -21,6 +21,7 @@ body:
 
 {{miss}} Does not unset the pending wrap state.
 {{miss}} Does not erase split multi cell characters.
+{{miss}} Since version 21.08.0, reset to normal size is only done if cursor is in the left most column.
 #### impl ####
 impl: urxvt
 ----

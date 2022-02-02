@@ -29,7 +29,10 @@ level: partial
 ----
 since: 
 ----
-body: Ignores {{mode_link('p6')}}.
+body:
+
+{{info}} Before version 21.12.0 ignored {{mode_link('p6')}}.
+{{miss}} Since version 21.12.0, if {{mode_link('p6')}} is active and the cursor is above the scroll region replies with broken sequence caused by printing a negative number into a CSI sequence.
 #### impl ####
 impl: urxvt
 ----
