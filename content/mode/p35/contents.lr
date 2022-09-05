@@ -17,7 +17,7 @@ since:
 ----
 body:
 
-Enables or Disables usage of larger-vt-font and smaller-vt-font (usually bound to shift + ctrl + KP-Add, shift + KP-Add, shift + KP_Substract.
+Enables or Disables usage of larger-vt-font and smaller-vt-font (usually bound to shift + ctrl + KP-Add, shift + KP-Add, shift + KP_Subtract.
 
 Does not allow applications to use these shortcuts even when terminal actions are disabled.
 #### impl ####

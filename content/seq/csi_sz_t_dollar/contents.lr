@@ -2,7 +2,7 @@ title: Erase Rectangular Area (DECERA)
 ---
 body:
 
-Clears an rectangular area with the space character.
+Clears a rectangular area with the space character.
 
 If {{mode_link('p6')}} mode is set the rectangle is interpreted relative to the top left of the [current scroll region](/scrolling-region). Otherwise it's relative to the top left of the terminal.
 

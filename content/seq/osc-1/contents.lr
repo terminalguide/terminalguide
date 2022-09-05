@@ -6,7 +6,7 @@ Set the icon name of the terminal
 
 The icon name is what is displayed in iconified form of the terminal window and in window choosers / taskbars.
 
-If title mode 0 (see {{seq_link('csi_st__q')}}) is set text is expect to be hex encoded (i.e. utf 8 with each code unit further encoded with two hex digets)
+If title mode 0 (see {{seq_link('csi_st__q')}}) is set text is expect to be hex encoded (i.e. utf 8 with each code unit further encoded with two hex digits)
 
 If title mode 2 (see {{seq_link('csi_st__q')}}) is set or the terminal is setup for unconditional utf-8 titles `text` is interpreted as utf-8. Else `text` is interpreted as latin1.
 

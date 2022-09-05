@@ -2,7 +2,7 @@ title: Selective erase rectangular area (DECSERA)
 ---
 body:
 
-Clears all non protected cells in an rectangular area with the space character. 
+Clears all non protected cells in a rectangular area with the space character. 
 
 This sequence only considers cells protected when in {{seq_link('csi_sq_t_quote')}} semantics.
 

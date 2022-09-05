@@ -6,7 +6,7 @@ Switch to alternate screen buffer.
 
 This basic mode is used by the more recent modes {{mode_link('p1047')}}, {{mode_link('p1049')}} as building block.
 
-Terminals supporting this mode offer a alternate screen buffer in addition to the primary buffer. The primary buffer usually supports scroll-back. The alternate buffer is for full screen applications. It does not support scroll-back (or displays scroll-back from the primary screen). Switching to the alternate screen buffer for fullscreen applications allows visually switching back to the contents of the primary buffer after the application terminates. 
+Terminals supporting this mode offer an alternate screen buffer in addition to the primary buffer. The primary buffer usually supports scroll-back. The alternate buffer is for full screen applications. It does not support scroll-back (or displays scroll-back from the primary screen). Switching to the alternate screen buffer for fullscreen applications allows visually switching back to the contents of the primary buffer after the application terminates. 
 
 Both buffers are partially independent. They have a separate:
 * cell matrix

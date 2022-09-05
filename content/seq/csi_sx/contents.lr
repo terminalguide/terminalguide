@@ -13,7 +13,7 @@ since:
 ----
 body:
 
-If configuration resource decTerminalID is set to an VT1xx model:
+If configuration resource decTerminalID is set to a VT1xx model:
 
 if `p1` is zero:
 

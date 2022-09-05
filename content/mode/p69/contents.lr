@@ -6,7 +6,7 @@ Enable usage of left and right margin.
 
 This enables usage of {{seq_link('csi_ss_2param')}}.
 
-Enabling this mode also disables support for double height or width font rendering (e.g .{{seq_link('a_esc_zhash_a6')}}, {{seq_link('a_esc_zhash_a3')}} , etc) and restores each line to the state as if {{seq_link('a_esc_zhash_a5')}} was called for it.
+Enabling this mode also disables support for double height or width font rendering (e.g. {{seq_link('a_esc_zhash_a6')}}, {{seq_link('a_esc_zhash_a3')}} , etc) and restores each line to the state as if {{seq_link('a_esc_zhash_a5')}} was called for it.
 
 Disabling this mode restores the scroll region to be the full terminal width.
 ---

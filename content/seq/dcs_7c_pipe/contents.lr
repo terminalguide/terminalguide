@@ -35,7 +35,7 @@ Change user defined keys. Only used in {{mode_link('p1061')}}.
 
 If `p` is zero reset all user defined keys before processing `str`.
 
-`str` is parsed as a {{seq(';')}} separated list of "{{seq_param('key')}}{{seq('/')}}{{seq_param('hex', 'Ⓢ')}}". Where `key` is the decimal encoded key number and `hex` is a even number of hex digits that specify the bytes that `key` will send.
+`str` is parsed as a {{seq(';')}} separated list of "{{seq_param('key')}}{{seq('/')}}{{seq_param('hex', 'Ⓢ')}}". Where `key` is the decimal encoded key number and `hex` is an even number of hex digits that specify the bytes that `key` will send.
 ---
 implnotes:
 

@@ -62,7 +62,7 @@ body:
 
 {{info}} linuxvc only supports form 3.
 {{info}} linuxvc uses a hardcoded palette. (even colors 0-15 need not match named colors)
-{{miss}} linuxvc approximates from a 8 color (non bright basic colors) palette using just the high bit of the color components.
+{{miss}} linuxvc approximates from an 8 color (non bright basic colors) palette using just the high bit of the color components.
 ---
 number: 48:5:...
 ---

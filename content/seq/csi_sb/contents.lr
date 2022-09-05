@@ -44,7 +44,7 @@ body:
 
 Repeat previously printed character `amount` times.
 
-Repeats the last previously printed character if it is a printable charcter. Only characters with codepoint < 256 are supported.
+Repeats the last previously printed character if it is a printable character. Only characters with codepoint < 256 are supported.
 
 If `amount` = 0, adjusts it to 1.
 

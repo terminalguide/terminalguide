@@ -2,9 +2,9 @@ title: Bold/Blinking cells are also bright.
 ---
 body:
 
-If a cell is rendered in bold, and it's foreground color is one of the 8 "named"  dark colors force that cell's foreground to be it's corresponding bright named color.
+If a cell is rendered in bold, and it's foreground color is one of the 8 "named"  dark colors force that cell's foreground to be its corresponding bright named color.
 
-If a cell is rendered as blinking, and it's background color is one of the 8 "named"  dark colors force that cell's background to be it's corresponding bright named color.
+If a cell is rendered as blinking, and it's background color is one of the 8 "named"  dark colors force that cell's background to be its corresponding bright named color.
 ---
 implnotes:
 

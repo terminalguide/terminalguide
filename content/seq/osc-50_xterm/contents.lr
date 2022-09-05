@@ -12,7 +12,7 @@ If `font` starts with {{seq('#')}} followed by a number optionally prefixed with
 
 If `font` does not start with #, acts on the currently selected font slot.
 
-The rest of `font` is interpreted as name of the font to set for the specified slot. The specified slot is also set as active slot. The font name is depending on configuration either a X11 font (XLFD) or a Xft font name.
+The rest of `font` is interpreted as name of the font to set for the specified slot. The specified slot is also set as active slot. The font name is depending on configuration either an X11 font (XLFD) or an Xft font name.
 ---
 implnotes:
 

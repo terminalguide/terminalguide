@@ -56,7 +56,7 @@ Always returns (`p1` is ignored):
 
 {{seq('\033[>85;95;0c')}}
 
-The urxvt source describes the history of responses for the rvxt line of history as:
+The urxvt source describes the history of responses for the rxvt line of history as:
 > first parameter is normally 0 for vt100, 1 for vt220, 'R' for rxvt,
 > 'U' for rxvt-unicode != 7.[34] (where it was broken).
 >
@@ -74,7 +74,7 @@ body:
 
 If `p1` is not zero no reply is sent, otherwise:
 
-Otherwies returns:
+Otherwise returns:
 
 {{seq('\033[>65;')}}{{seq_param('version')}}{{seq(';1c')}}
 

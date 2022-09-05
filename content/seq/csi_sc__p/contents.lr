@@ -20,7 +20,7 @@ Where `shape` = `size` | `flags`.
 <table class="visible-table">
 <tr><th><code>flags</code></th><th>meaning</th></tr>
 <tr><td>16</td><td>enable foreground and background change<br>When enabled the cursor changes the shown attributes of the cell it is on.<br>Some drivers force <code>size</code> = 1 (none) internally if this is set.</td></tr>
-<tr><td>32</td><td>ensure orginial background and cursor background differ.<br>If the original and cursor background would be identical invert all background color channels (but not brightness).</td></tr>
+<tr><td>32</td><td>ensure original background and cursor background differ.<br>If the original and cursor background would be identical invert all background color channels (but not brightness).</td></tr>
 <tr><td>64</td><td>ensure cursor foreground and background differ.<br>If the cursor background and foreground would be identical invert all foreground color channels (but not brightness).</td></tr>
 </table>
 

@@ -2,7 +2,7 @@ title: Copy rectangular area (DECCRA)
 ---
 body:
 
-Copy an rectangular area to another position in the terminal.
+Copy a rectangular area to another position in the terminal.
 
 If {{mode_link('p6')}} mode is set the rectangle is interpreted relative to the top left of the [current scroll region](/scrolling-region). Otherwise it's relative to the top left of the terminal.
 
