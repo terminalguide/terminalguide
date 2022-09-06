@@ -7,8 +7,8 @@ Disable modifier key reporting formats.
 <table class="visible-table">
 <tr><th><code>cmd</code></th><th></th></tr>
 <tr><td>0</td><td>Alias for {{seq_link('csi_sm__q-0')}} with cmd = 15</td></tr>
-<tr><td>1</td><td>Disable reporting of modifers for cursor keys.<br>See {{seq_link('csi_sm__q-1')}} for which keys are affected</td></tr>
-<tr><td>2</td><td>Disable reporting of modifers for function keys.<br>Depending on other configuration function keys might be shifted depending on modifiers</td></tr>
+<tr><td>1</td><td>Disable reporting of modifiers for cursor keys.<br>See {{seq_link('csi_sm__q-1')}} for which keys are affected</td></tr>
+<tr><td>2</td><td>Disable reporting of modifiers for function keys.<br>Depending on other configuration function keys might be shifted depending on modifiers</td></tr>
 <tr><td>4</td><td>Alias for {{seq_link('csi_sm__q-4')}} with mode = 0</td></tr>
 </table>
 

@@ -19,7 +19,7 @@ body:
 
 {{seq('\33]702;rxvt-unicode;')}}{{seq_param('progname')}}{{seq(';')}}{{seq_param('v1')}}{{seq(';')}}{{seq_param('v2')}}{{seq('\033\\')}}
 
-With `progname` set to the base name of the terminal executable (or it's invokations 0th argument) and `v1` and `v2` set to the first and third character in the version string. (i.e. for 9.21, `v1`='9' and `v2`='1')
+With `progname` set to the base name of the terminal executable (or it's invocations 0th argument) and `v1` and `v2` set to the first and third character in the version string. (i.e. for 9.21, `v1`='9' and `v2`='1')
 ---
 seq:
 

@@ -17,7 +17,7 @@ level: full
 ----
 since: 
 ----
-body: {{info}} Faint is an third form of the named colors that is configurable.
+body: {{info}} Faint is a third form of the named colors that is configurable.
 #### impl ####
 impl: vte
 ----

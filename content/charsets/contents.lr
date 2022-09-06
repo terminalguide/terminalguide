@@ -9,13 +9,13 @@ body:
 
 ## UTF-8
 
-Modern terminals support UTF-8 as an univeral character set.
+Modern terminals support UTF-8 as a universal character set.
 
 UTF-8 decoding is done before the escape sequence state machine.
 
 Conforming to the Unicode standard, invalid utf-8 sequences (malformed syntax, encoding of surrogates or overlong) are replaced with U+FFFD when encountered.
 ## Non UTF-8 usage
 
-Historically the computing industry used many different character sets. As terminals use a 8bit byte as basic communication unit many of these have been restricted to 256 code units.
+Historically the computing industry used many different character sets. As terminals use an 8bit byte as basic communication unit many of these have been restricted to 256 code units.
 
 TODO: Info on 7 bit charsets and switching.

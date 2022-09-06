@@ -20,7 +20,7 @@ echo -ne "\033[2J\033[0;0Hi\0314\0267\xCC\xAE\0314\0206xx\n"
 -->
 ### xterm
 saves 0-5 (option combiningChars: default 2) combining code points per cell in addition to the base character.
-If a the base character with the combining codepoint has a precomposed form xterm it does not take one of these storage slots by default(resource precompose).
+If the base character with the combining codepoint has a precomposed form xterm it does not take one of these storage slots by default(resource precompose).
 
 ### vte
 TODO

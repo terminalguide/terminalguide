@@ -4,7 +4,7 @@ body:
 
 Query keyboard mapping or miscellaneous information.
 
-`query` is a hex encoded string. It can be the encoded form of either a terminfo/termcap key names (e.g. 'kf1') or a string for one of the following additional informations:
+`query` is a hex encoded string. It can be the encoded form of either a terminfo/termcap key names (e.g. 'kf1') or a string for one of the following additional information:
 
 <table class="visible-table rowspan">
 <tr><th><code>query</code> pre hex encoding</th><th>meaning</th></tr>

@@ -2,7 +2,7 @@ title: Enable Margin Bell (MARGIN_BELL)
 ---
 body:
 
-Enables a indicator when the cursor moves near the right margin.
+Enables an indicator when the cursor moves near the right margin.
 
 When enabled the terminal will sounds its bell (or do a similar notification) when the cursor crosses from not near the right margin to near the right margin.
 

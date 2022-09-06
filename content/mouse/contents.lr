@@ -38,14 +38,14 @@ Reporting format
 with <code>btn</code>, <code>column</code> and <code>row</code> encoded as bytes with code 32 + value. This mode has a range from 1 to 223. If the value exceeds the range a {{seq('\0')}} is used as out of range marker. These are not encoded in utf-8 but output as raw bytes. There is no separator between the bytes.<br>(TODO: sometimes starts with {{seq('\033>M')}})</td></tr>
 <tr><td>{{mode_link('p1005')}}</td><td>Mouse information is reported as<br>
 {{seq('\033[M')}}{{seq_param('btn', 'Ⓒ')}}{{seq_param('column', 'Ⓒ')}}{{seq_param('row', 'Ⓒ')}}<br>
-with <code>btn</code>, <code>column</code> and <code>row</code> encoded as variable length byte sequences. For values < 96 the format is identical to the default mode. Values above that boundary are encoded as 2 bytes as if encoding codepoint value + 32 as utf-8. This mode has a range from 1 to 2015. If the value exceeds the range a {{seq('\0')}} is used as out of range marker. The output is decodable with an standard utf-8 decoder. There is no separator between the bytes.<br>(TODO: sometimes starts with {{seq('\033>M')}})</td></tr>
+with <code>btn</code>, <code>column</code> and <code>row</code> encoded as variable length byte sequences. For values < 96 the format is identical to the default mode. Values above that boundary are encoded as 2 bytes as if encoding codepoint value + 32 as utf-8. This mode has a range from 1 to 2015. If the value exceeds the range a {{seq('\0')}} is used as out of range marker. The output is decodable with a standard utf-8 decoder. There is no separator between the bytes.<br>(TODO: sometimes starts with {{seq('\033>M')}})</td></tr>
 <tr><td>{{mode_link('p1006')}}</td><td>Mouse information is reported as<br>
 {{seq('\033[<')}}{{seq_param('btn')}}{{seq(';')}}{{seq_param('column')}}{{seq(';')}}{{seq_param('row')}}{{seq('M')}} for button press or movement, and<br>
 {{seq('\033[<')}}{{seq_param('btn')}}{{seq(';')}}{{seq_param('column')}}{{seq(';')}}{{seq_param('row')}}{{seq('m')}} for button release<br>
-with <code>btn</code>, <code>column</code> and <code>row</code> encoded as variable length digit sequences in base 10. This mode does not have an arbitrary range limit. The output is decodable with an standard utf-8 decoder, because it only contains ascii characters.</td></tr>
+with <code>btn</code>, <code>column</code> and <code>row</code> encoded as variable length digit sequences in base 10. This mode does not have an arbitrary range limit. The output is decodable with a standard utf-8 decoder, because it only contains ascii characters.</td></tr>
 <tr><td>{{mode_link('p1015')}}</td><td>Mouse information is reported as<br>
 {{seq('\033[')}}{{seq_param('btn')}}{{seq(';')}}{{seq_param('column')}}{{seq(';')}}{{seq_param('row')}}{{seq('M')}}<br>
-with <code>btn</code>, <code>column</code> and <code>row</code> encoded as variable length digit sequences in base 10. For `btn` the encoded value is offset by the value 32(i.e. the right button is encoded as {{seq('34')}}). This mode does not have an arbitrary range limit. The output is decodable with an standard utf-8 decoder, because it only contains ascii characters.</td></tr>
+with <code>btn</code>, <code>column</code> and <code>row</code> encoded as variable length digit sequences in base 10. For `btn` the encoded value is offset by the value 32(i.e. the right button is encoded as {{seq('34')}}). This mode does not have an arbitrary range limit. The output is decodable with a standard utf-8 decoder, because it only contains ascii characters.</td></tr>
 </table>
 
 Mouse button ids:
@@ -103,7 +103,7 @@ Highlight tracking
 ---------------------------
 {{mode_link('p1001')}} is a special case.
 
-For left button clicks the terminal will render a text selection highlight starting at an application specified point and restricted to a application specified range of lines. After ending the selection it's not automatically transferred to the clipboard. After release of the mouse button the highlighting is automatically removed.
+For left button clicks the terminal will render a text selection highlight starting at an application specified point and restricted to an application specified range of lines. After ending the selection it's not automatically transferred to the clipboard. After release of the mouse button the highlighting is automatically removed.
 
 For other mouse button clicks the reporting is as in mode {{mode_link('p1000')}}.
 

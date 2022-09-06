@@ -6,7 +6,7 @@ Like {{seq_link('osc-4')}} but allows setting attribute replacement colors witho
 
 Readback mode may still use special indices as would be needed with {{seq_link('osc-4')}}
 
-Attributes replacement colors are used instead of some attributes under certain conditions. Conditons are terminal specific.
+Attributes replacement colors are used instead of some attributes under certain conditions. Conditions are terminal specific.
 
 <table class="visible-table">
 <tr><th>number osc 5</th><th>number osc 4</th><th>replaces</th></tr>

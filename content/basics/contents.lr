@@ -68,7 +68,7 @@ body:
 
 The communication between the application and the terminal consists of characters to display and in-band control information communicated by [control characters and escape sequences](/seq).
 
-The display model of an terminal is a two dimensional array of fixed size character cells. These cells have a character content (possible including [combining characters](/width)). Each cell also has additional attributes like foreground and background color and bold, etc.
+The display model of a terminal is a two dimensional array of fixed size character cells. These cells have a character content (possible including [combining characters](/width)). Each cell also has additional attributes like foreground and background color and bold, etc.
 
 As special case there are some characters, that occupy two of these cells. For example Japanese characters. These characters can occupy any two bordering cells on the same line.
 

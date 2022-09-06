@@ -39,7 +39,7 @@ name: T
 ---
 body:
 
-\[See also {{seq_link('csi_ct_1param')}} which shares this code and is distingished by having only one parameter and having the first parameter != 0\]
+\[See also {{seq_link('csi_ct_1param')}} which shares this code and is distinguished by having only one parameter and having the first parameter != 0\]
 
 This sequence is used with {{mode_link('p1001')}} to communicate the selection start and allowed rows.
 
