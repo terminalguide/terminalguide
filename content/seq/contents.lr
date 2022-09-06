@@ -72,3 +72,5 @@ Many applications still use DEC_Spec_Graphic ('0') instead of the corresponding 
 
 See https://github.com/ThomasDickey/xterm-snapshots/blob/master/charsets.c and "Digital ANSI-Compliant Printing Protocol Level 2 Programming Reference Manual EK–PPLV2–PM. B01" for detailed character mapping tables.
 ￼
+---
+bodytop: The following table is an overview of sequences in the application to terminal direction.

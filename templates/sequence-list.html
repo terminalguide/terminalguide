@@ -4,6 +4,9 @@
 {% block body %}
   <div class="container">
   <h2>{{ this.title }}</h2>
+  <div>
+    {{ this.bodytop }}
+  <div>
     {{ seq_list(this.children) }}
     {{ legend() }}
   <div class='iso-2022'>
