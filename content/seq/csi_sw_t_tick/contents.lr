@@ -4,7 +4,7 @@ body:
 
 DEC locator watch pointer location.
 
-If the current mouse reporting mode if not DEC locator this sequence does nothing.
+If the current mouse reporting mode is not DEC locator this sequence does nothing.
 
 If the pointer is outside of the terminal window:
 * and all parameters are 0:
