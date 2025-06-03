@@ -5,7 +5,7 @@ set -x
 
 echo $PATH
 
-go get -v github.com/asciitosvg/asciitosvg/cmd/a2s
+go install -v github.com/asciitosvg/asciitosvg/cmd/a2s@latest
 export PATH="$PATH:$GOPATH/bin"
 which a2s
 
